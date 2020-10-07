@@ -28,5 +28,6 @@
 
 #### 전용 장면표 설정
 <img src="https://raw.githubusercontent.com/tateck-develop/roll20CustomSheet/main/inSANe/insane_PRINARI/setting.png" width="500px"></img>
+
 Rollable 테이블에 이름을 장면표로 설정하여 항목을 등록한 뒤, 장면표 선택에서 전용 장면표를 선택하여 굴리면 Rollable 테이블에 등록한 장면표가 출력됩니다.
 전용 장면표를 설정하지 않을 시, 오류가 발생합니다.
