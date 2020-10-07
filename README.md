@@ -13,10 +13,10 @@ Roll20에서 사용할 수 있는 커스텀시트 코드를 공개하는 곳입�
 * [동양풍 세계관 전용](inSANe/inSANe_EAST)
 
 #### 은검의 스텔라나이츠
-* [기본 캐릭터 시트](/tree/main/stella/stella_BASIC)
+* [기본 캐릭터 시트](stella/stella_BASIC)
 
 #### 신화창세 아마데우스
-* [기본 캐릭터 시트](/tree/main/amade/amade_BASIC)
+* [기본 캐릭터 시트](amade/amade_BASIC)
 
 
 ## Roll20 Update Character Sheet List
