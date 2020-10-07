@@ -7,16 +7,16 @@ Roll20에서 사용할 수 있는 커스텀시트 코드를 공개하는 곳입�
 
 ## Character Sheet List
 #### inSANe
-* [기본 캐릭터 시트](https://github.com/tateck-develop/roll20CustomSheet/tree/main/inSANe)
-* 『프린세스가 되고싶어!』캠페인 전용
-* 『호그와트』캠페인 전용
-* 동양풍 세계관 전용
+* [기본 캐릭터 시트](/tateck-develop/roll20CustomSheet/tree/main/inSANe)
+* [『프린세스가 되고싶어!』캠페인 전용](/tateck-develop/roll20CustomSheet/tree/main/inSANe_PRINARI)
+* [『호그와트』캠페인 전용](/tateck-develop/roll20CustomSheet/tree/main/inSANe_HOGWARTS)
+* [동양풍 세계관 전용](/tateck-develop/roll20CustomSheet/tree/main/inSANe_EAST)
 
 #### 은검의 스텔라나이츠
-* 기본 캐릭터 시트
+* [기본 캐릭터 시트](/tateck-develop/roll20CustomSheet/tree/main/stella)
 
 #### 신화창세 아마데우스
-* 기본 캐릭터 시트
+* [기본 캐릭터 시트](/tateck-develop/roll20CustomSheet/tree/main/amade)
 
 
 ## Roll20 Update Character Sheet List
