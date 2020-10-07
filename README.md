@@ -7,10 +7,10 @@ Roll20에서 사용할 수 있는 커스텀시트 코드를 공개하는 곳입�
 
 ## Character Sheet List
 #### inSANe
-* [기본 캐릭터 시트](/tree/main/inSANe/insane_BASIC)
-* [『프린세스가 되고싶어!』캠페인 전용](/tree/main/inSANe/inSANe_PRINARI)
-* [『호그와트』캠페인 전용](/tree/main/inSANe/inSANe_HOGWARTS)
-* [동양풍 세계관 전용](/tree/main/inSANe/inSANe_EAST)
+* [기본 캐릭터 시트](inSANe/insane_BASIC)
+* [『프린세스가 되고싶어!』캠페인 전용](inSANe/inSANe_PRINARI)
+* [『호그와트』캠페인 전용](inSANe/inSANe_HOGWARTS)
+* [동양풍 세계관 전용](inSANe/inSANe_EAST)
 
 #### 은검의 스텔라나이츠
 * [기본 캐릭터 시트](/tree/main/stella/stella_BASIC)
