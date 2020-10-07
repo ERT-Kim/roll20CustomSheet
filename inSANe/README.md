@@ -1,12 +1,14 @@
 # 인세인 기본 캐릭터 시트
-* [미리보기][미리보기]
-* [코드 활용][코드 활용]
+* [미리보기](https://github.com/tateck-develop/roll20CustomSheet/tree/main/inSANe#%EB%AF%B8%EB%A6%AC%EB%B3%B4%EA%B8%B0)
+* [코드 활용](https://github.com/tateck-develop/roll20CustomSheet/tree/main/inSANe#%EC%BD%94%EB%93%9C-%ED%99%9C%EC%9A%A9)
 * [Roll20 적용 방법](https://tateck-scenario.postype.com/post/6370282)
 
 ------------------------------
 
 ### 미리보기
 <img src="https://raw.githubusercontent.com/tateck-develop/roll20CustomSheet/main/inSANe/guide.jpg" width="500px"></img>
+
+* * *
 
 ### 코드 활용
 #### 템플릿의 이용
