@@ -1,0 +1,378 @@
+select, div, button, textarea, span, input, img, label{box-sizing: border-box; outline:0;}
+.ui-dialog .charsheet {padding:0;}
+.sheet-ins-title {clear:both; position:relative; margin-bottom:15px; height:20px; line-height:20px; font-size:14px; font-weight:800; padding-left:45px; background:url('https://i.imgur.com/5ronWSd.png') no-repeat 0 50%;}
+.sheet-insane-wrap {font-size:12px; font-family:'Malgun Gothic'; color:#222; padding-bottom:50px; line-height:1.2;}
+.sheet-insane-wrap {position:relative; width:850px; min-height:400px; margin:0 -10px; background:url('https://i.imgur.com/Vpo3PwF.jpg') no-repeat 50% 0; background-size:contain;}
+.sheet-insane-wrap * {font-family:'Malgun Gothic';}
+.sheet-insane-wrap p {margin:0;}
+.sheet-insane-wrap input,
+.sheet-insane-wrap textarea,
+.sheet-insane-wrap select,
+.sheet-insane-wrap .uneditable-input {margin:0;}
+.sheet-insane-wrap input[type="text"],
+.sheet-insane-wrap input[type="number"] {border:none; height:30px; border-radius:8px; background:rgba(0,0,0,.1); padding:0 5px; font-size:12px; width:100%; color:#000;}
+.sheet-insane-wrap select {border:none; height:30px; padding:0 5px; font-size:12px; width:100%;}
+
+.sheet-insane-wrap .sheet-old-roll {margin:0 !important; padding:0 !important; width:20px; height:20px; overflow:hidden; color:#000 !important; font-weight: 600 !important;} 
+.sheet-insane-wrap .sheet-old-roll.sheet-ty2 {color:#fff !important; background:red; border-color:red;}
+.sheet-insane-wrap .sheet-old-roll.sheet-ty2:hover {background:#9c0e0e; border-color:#9c0e0e;}
+
+.sheet-ins-copy {font-size:11px; color:#aaa; text-align:right; padding:5px 0 0;}
+
+.sheet-insane-header {position:relative; height:123px;}
+.sheet-insane-header input[type="text"] {display:block; position:absolute; border-radius:0; width:175px; height:30px; border:none; background:transparent; font-weight:600; color:#333; font-size:14px; top:31px; right:10px;}
+
+.sheet-ins-profile {position:relative; float:left; width:391px; height:239px; overflow:hidden; padding:0 24px; margin-left:10px; box-sizing:border-box;}
+.sheet-ins-profile .sheet-ins-name {padding-bottom:18px;}
+.sheet-ins-profile .sheet-ins-name input[type="text"] {border:none; border-radius:0; text-align:center; background:transparent; margin-top:14px; height:37px; font-size:15px; font-weight:800;}
+.sheet-ins-prf-other .sheet-ins-row {position:relative; overflow:hidden; line-height:30px;}
+.sheet-ins-prf-other .sheet-ins-row + .sheet-ins-row {margin-top:8px;}
+.sheet-ins-prf-other .sheet-ins-row strong {display:block; position:absolute; top:0; left:0; font-size:13px; font-weight:400;}
+.sheet-ins-prf-other .sheet-ins-row span {display:block; margin-left:50px;}
+.sheet-ins-prf-other .sheet-ins-row.sheet-ins-col2 > div {width:50%; position:relative; float:left;}
+.sheet-ins-prf-other .sheet-ins-row.sheet-ins-col2 > div + div strong {padding-left:10px;}
+.sheet-ins-prf-other select {border-radius:8px; background:rgba(0,0,0,.1);}
+
+.sheet-ins-acc {position:relative; width:100%; height:38px; padding-left:90px; box-sizing:border-box; border-radius:5px; padding-right:10px; border:1px solid #000; border-left-width:10px; background:url('https://i.imgur.com/Ugtctdv.png') no-repeat 0 50%;}
+.sheet-ins-acc + .sheet-ins-acc {margin-top:3px;}
+.sheet-ins-acc-right {padding-right:38px;}
+.sheet-ins-acc-right:after {content:""; display:block; position:absolute; top:0; bottom:0; right:0; width:38px; background:url('https://i.imgur.com/7vnrOfH.png') no-repeat 100% 50%;}
+.sheet-ins-acc > strong {display:block; position:absolute; top:0; left:0; bottom:0; line-height:36px; color:#fff; font-weight:600;}
+.sheet-ins-acc .sheet-ins-acc-inner {position:relative; padding:2px 0;}
+.sheet-ins-acc .sheet-ins-acc-hasbtn {padding-right:35px !important;}
+.sheet-ins-acc .sheet-ins-acc-hasbtn2 {padding-right:70px !important;}
+.sheet-ins-acc .sheet-ins-acc-hasbtn button,
+.sheet-ins-acc .sheet-ins-acc-hasbtn2 button {display:block; position:absolute; width:20px; height:20px; overflow:hidden; right:0; top:50%; transform:translateY(-50%); -webkit-transform:translateY(-50%);}
+.sheet-ins-acc .sheet-ins-acc-hasbtn2 button + button {right:30px;}
+.sheet-ins-acc .sheet-ins-acc-item {display:inline-block; position:relative; vertical-align:middle; min-height:30px; line-height:30px;}
+.sheet-ins-acc .sheet-ins-acc-item + .sheet-ins-acc-item {padding-left:10px;}
+.sheet-ins-acc .sheet-ins-acc-item strong {font-weight:400;}
+.sheet-ins-acc .sheet-ins-acc-item select {width:60px; border-radius:8px; background:rgba(0,0,0,.1); height:25px;}
+.sheet-ins-acc .sheet-ins-acc-item input {height:25px;}
+.sheet-ins-acc .sheet-ins-acc-item.sheet-ins-acc-hasbtn {padding-right:25px !important;}
+
+.sheet-ins-action {position:relative; float:right; width:425px; margin-right:10px;}
+.sheet-ins-state {text-align:center; padding-bottom:10px;}
+.sheet-ins-state > div {display:inline-block; width:116px; height:66px; background:url('https://i.imgur.com/BjzgX7q.png') no-repeat 0 0; overflow:hidden; vertical-align:top;}
+.sheet-ins-state > div + div {margin-left:5px;}
+.sheet-ins-state > div input[type="text"],
+.sheet-ins-state > div input[type="number"] {border-radius:0; background:transparent; height:20px; width:30px; text-align:center; font-weight:800;}
+.sheet-ins-state > div input[type="text"] + input[type="text"],
+.sheet-ins-state > div input[type="number"] + input[type="number"] {color:#e60012;}
+.sheet-ins-state strong {display:block; font-weight:400; font-size:12px; padding:12px 0 5px;}
+
+.sheet-ins-state > div.sheet-ins-grade {background-image:url('https://i.imgur.com/BAP1usL.png')}
+.sheet-ins-state > div.sheet-ins-grade input[type="text"],
+.sheet-ins-state > div.sheet-ins-grade input[type="number"] {width:100%; font-size:13px;}
+
+.sheet-ins-fear-box input[type="text"],
+.sheet-ins-fear-box input[type="number"] {width:50px;}
+
+.sheet-ins-item {position:relative; clear:both; padding-top:5px;}
+.sheet-ins-item .sheet-ins-acc-inner {padding:0; overflow:hidden; height:100%; position:relative; z-index:0;}
+.sheet-ins-item .sheet-ins-left {float:left; height:100%; padding:2px 0; box-sizing:border-box;}
+.sheet-ins-item .sheet-ins-right {float:right; height:100%; padding:2px 40px 2px 20px; box-sizing:border-box; background:#ededed; border-left:2px dashed #333;}
+.sheet-ins-item input[type="text"],
+.sheet-ins-item input[type="number"] {width:50px; text-align:center;}
+.sheet-ins-item .sheet-ins-acc-item +.sheet-ins-acc-item {padding-left:5px;}
+.sheet-ins-item .sheet-ins-acc-right {padding-right:0;}
+.sheet-ins-item .sheet-ins-acc-right:after {z-index:2;}
+
+.sheet-ins-spectable {position:relative; margin:10px 0; clear:both; border-radius:10px; padding-top:10px;}
+/*.sheet-ins-spectable:before,
+.sheet-ins-spectable:after {content:""; display:block; position:relative; height:22px; background:url('https://i.imgur.com/dVxYgDh.png') no-repeat 50% 0;}
+.sheet-ins-spectable:before {background-position:50% 0;}
+.sheet-ins-spectable:after {background-position:50% 100%;}*/
+.sheet-ins-spectable .sheet-ins-spec {border:1px solid #000; border-radius:10px 10px 0 0; overflow:hidden;}
+
+.sheet-ins-spec table {width:100%; font-size:12px; border-spacing:0; border-collapse:collapse;}
+.sheet-ins-spec table td {border:1px solid #000;}
+.sheet-ins-spec table th {border:1px solid #fff; background:#000; color:#fff; text-align:center;}
+.sheet-ins-spec table tr > *:first-child {border-left-width:0 !important;}
+.sheet-ins-spec table tr > *:last-child {border-right-width:0 !important;}
+.sheet-ins-spec table thead th {padding:8px 0; border-top-width:0;}
+.sheet-ins-spec table tbody > tr:last-child > * {border-bottom-width:0 !important;}
+
+.sheet-ins-spec p {display:block; position:relative; width:119px; height:25px; box-sizing:border-box; padding: 0 20px 0 0; z-index:0;}
+.sheet-ins-spec p input[type="checkbox"] {display:block; position:absolute; top:0; left:0; width:20px; height:25px; border:none; background:#fff; margin:0; opacity:0; z-index:1; cursor:pointer;}
+.sheet-ins-spec p input[type="text"] {display:block; position:absolute; top:0; right:0; width:20px; height:25px; border:none; background:transparent; border-radius:0; text-align:right; padding:2px; text-align:center; border-left:1px solid rgba(0,0,0,.2); color:#666; font-size:11px;}
+.sheet-ins-spec .sheet-spec-roll {display:block; position:relative; width:100% !important; height:100% !important; padding:0 0 0 20px !important; border:none !important; background:transparent !important; z-index:0; margin:0 !important; font-size:12px !important;}
+.sheet-ins-spec .sheet-spec-roll:before {content:"" !important; display:block; position:absolute; top:50%; left:3px; width:14px; height:14px; box-sizing:border-box; margin-top:-7px; border:2px solid #333; border-radius:100%;}
+.sheet-ins-spec .sheet-spec-roll:after {content:"" !important; display:block; position:absolute; top:0; bottom:0; left:0px; width:20px; background:rgba(0,0,0,.2); opacity:0;}
+.sheet-ins-spec p input[type="checkbox"]:checked + .sheet-spec-roll:before {background:#d20000; border-color:#d20000;}
+.sheet-ins-spec p input[type="checkbox"]:hover + .sheet-spec-roll:after {opacity:1;}
+
+.sheet-ins-spec .sheet-ins-style-Z {display:none; background:#000;}
+
+.sheet-ins-spec-side {position:relative; border:1px solid #000; border-top-width:0; padding:5px 10px; overflow:hidden;}
+.sheet-ins-spec-side > div {display:block; position:relative; width:50%; height:30px; float:left; line-height:30px;}
+.sheet-ins-spec-side .sheet-spac-check input[type="checkbox"] {display:block; position:absolute; top:0; left:0; right:0; bottom:0; width:100%; height:100%; border:none; background:#fff; margin:0; opacity:0; z-index:1; cursor:pointer;}
+.sheet-ins-spec-side .sheet-spac-check span {display:block; position:relative; line-height:30px; padding-left:20px; font-weight:600;}
+.sheet-ins-spec-side .sheet-spac-check span:before {content:""; display:block; position:absolute; top:50%; left:3px; width:14px; height:14px; box-sizing:border-box; margin-top:-7px; border:2px solid #333; border-radius:100%;}
+.sheet-ins-spec-side .sheet-spac-check input[type="checkbox"]:checked + span:before {background:#d20000; border-color:#d20000;}
+.sheet-ins-spec-side .sheet-spac-dice {display:block; float:right; text-align:right;}
+.sheet-ins-spec-side .sheet-spac-dice > * {display:inline-block; vertical-align:middle;}
+.sheet-ins-spec-side .sheet-spac-dice input[type="text"] {width:80px; text-align:center; margin-left:5px; height:25px;}
+
+.sheet-ins-fight-wrap {overflow:hidden; padding-bottom:30px;}
+.sheet-ins-fight-wrap .sheet-ins-acc {background-position:-20px 50%; padding-left:70px;}
+.sheet-ins-fight-wrap .sheet-ins-left,
+.sheet-ins-fight-wrap .sheet-ins-right {float:left;}
+.sheet-ins-fight-wrap .sheet-ins-left {width:430px;}
+.sheet-ins-fight-wrap .sheet-ins-right {width:410px; floaT:right;}
+.sheet-ins-fight-wrap input[type="text"],
+.sheet-ins-fight-wrap input[type="number"] {width:40px; text-align:center;}
+.sheet-ins-fight-wrap input[type="checkbox"] {display:block; position:absolute; top:0; left:0; right:0; bottom:0; width:100%; height:100%; border:none; background:#fff; margin:0; opacity:0; z-index:1; cursor:pointer;}
+.sheet-ins-fight-wrap input[type="checkbox"] + span {display:block; position:relative; padding-left:20px; line-height:30px; font-weight:600; font-size:12px;}
+.sheet-ins-fight-wrap input[type="checkbox"] + span:before {content:""; display:block; position:absolute; top:50%; left:3px; width:14px; height:14px; box-sizing:border-box; margin-top:-7px; border:2px solid #333; border-radius:100%;}
+.sheet-ins-fight-wrap input[type="checkbox"]:checked + span:before {background:#d20000; border-color:#d20000;}
+.sheet-ins-fight-wrap .sheet-ins-acc .sheet-ins-acc-item + .sheet-ins-acc-item {padding-left:5px;}
+.sheet-plot-pannel {overflow:hidden; height:30px; line-height:30px;}
+.sheet-plot-pannel span {display:block; float:left; position:relative; width:50px; height:30px; z-index:0;}
+.sheet-plot-pannel em {display:block; text-align:center; position:relative; font-style:normal; line-height:1.2; font-weight:800; font-size:14px;}
+.sheet-plot-pannel i {display:block; text-align:center; position:relative; font-style:normal; line-height:1.2; font-size:11px; color:#999;}
+.sheet-plot-pannel span input[type="radio"] {display:block; position:absolute; top:0; left:0; right:0; bottom:0; width:100%; height:100%; border:none; background:#fff; margin:0; opacity:0; z-index:1; cursor:pointer;}
+.sheet-plot-pannel span input[type="radio"]:checked ~ em,
+.sheet-plot-pannel span input[type="radio"]:checked ~ i {color:red;}
+
+.sheet-ins-abill-wrap {position:relative; overflow:hidden; margin-bottom:40px;}
+.sheet-ins-abill-wrap .sheet-ins-left {width:460px; float:left;}
+.sheet-ins-abill-wrap .sheet-ins-right {width:355px; float:right;}
+.sheet-ins-abill-wrap fieldset {border:none; margin:0; padding:0;}
+
+.sheet-ins-abill-wrap .repcontrol {margin-top:10px; padding:0 0 0 30px;}
+.sheet-ins-abill-wrap .itemcontrol {z-index:3;}
+
+.sheet-abillty-list {display:block; position:relative;}
+.sheet-ab-item {display:block; position:relative; z-index:0; overflow:hidden;}
+.sheet-ab-item + * {margin-top:10px !important;}
+.sheet-ab-item > * {float:left; position:relative;}
+.sheet-ab-item > input[type="checkbox"] {display:block; position:absolute; top:0; left:0; width:30px; height:30px; border:none; margin:0; opacity:0; z-index:1; cursor:pointer;}
+.sheet-ab-item > input[type="checkbox"] + * {display:block; position:relative; min-height:30px; padding-left:30px !important; box-sizing:content-box; z-index:0;}
+.sheet-ab-item > input[type="checkbox"] + *:before {content:""; display:block; position:absolute; top:50%; left:3px; width:20px; height:20px; box-sizing:border-box; margin-top:-10px; background:url('https://i.imgur.com/mUcvIHM.png') no-repeat 50% 50%;}
+.sheet-ab-item > input[type="checkbox"]:checked + *:before {background-image:url('https://i.imgur.com/b0F6erg.png');}
+.sheet-ab-item > input[type="checkbox"]:checked ~ .sheet-ins-effect {display:block;}
+.sheet-ab-item .sheet-ins-effect {display:none; position:relative; clear:both; float:none; padding-top:5px;}
+.sheet-ab-item .sheet-ins-effect textarea {display:block; width:100%; border-radius:8px; background:rgba(0,0,0,.1); height:100px; resize:none; border:none; padding:10px; box-sizing:border-box; line-height:1.5;}
+.sheet-ab-item .sheet-ins-control {width:30px;}
+.sheet-ab-item .sheet-ins-control button {width:30px; height:30px; color:green !important; font-size:17px; font-weight:800;}
+.sheet-ab-item .sheet-ins-name {padding:0 5px; width:190px; float:left;}
+.sheet-ab-item .sheet-ins-type {width:70px;}
+.sheet-ab-item .sheet-ins-type select {width:100%; border-radius:8px; background:rgba(0,0,0,.1);}
+.sheet-ab-item .sheet-ins-spec {width:80px; padding:0 5px;}
+.sheet-ab-item .sheet-ins-mod {width:60px; text-align:center;}
+.sheet-ab-item .sheet-ins-mod * {text-align:center;}
+.sheet-ab-item .sheet-ins-option {width:50px;}
+.sheet-ab-item .sheet-ins-option input[type="checkbox"] {display:block; position:absolute; top:0; left:0; right:0; bottom:0; width:100%; height:100%; border:none; background:#fff; margin:0; opacity:0; z-index:1; cursor:pointer;}
+.sheet-ab-item .sheet-ins-option input[type="checkbox"] + span {display:block; position:relative; padding-left:20px; line-height:30px; font-weight:600; font-size:12px;}
+.sheet-ab-item .sheet-ins-option input[type="checkbox"] + span:before {content:""; display:block; position:absolute; top:50%; left:3px; width:14px; height:14px; box-sizing:border-box; margin-top:-7px; border:2px solid #333; border-radius:100%;}
+.sheet-ab-item .sheet-ins-option input[type="checkbox"]:checked + span:before {background:#d20000; border-color:#d20000;}
+.sheet-ab-item .sheet-ins-emotion {width:80px;}
+
+.repcontainer .repitem {margin-top:8px;}
+
+.sheet-ins-memo textarea {display:block; width:100%; border-radius:8px; background:rgba(0,0,0,.1); height:200px; resize:none; border:none; padding:10px; box-sizing:border-box; line-height:1.8;}
+
+.sheet-element-to-determine-style-Z[value='1'] ~ div .sheet-ins-style-Z {display:table-cell;}
+.sheet-element-to-determine-style-A[value='1'] ~ div .sheet-ins-style-A {background:#000;}
+.sheet-element-to-determine-style-B[value='1'] ~ div .sheet-ins-style-B {background:#000;}
+.sheet-element-to-determine-style-C[value='1'] ~ div .sheet-ins-style-C {background:#000;}
+.sheet-element-to-determine-style-D[value='1'] ~ div .sheet-ins-style-D {background:#000;}
+.sheet-element-to-determine-style-E[value='1'] ~ div .sheet-ins-style-E {background:#000;}
+
+.sheet-element-to-fear-style-A2[value='1'] ~ div .sheet-ins-style-A2,
+.sheet-element-to-fear-style-B2[value='1'] ~ div .sheet-ins-style-B2,
+.sheet-element-to-fear-style-C2[value='1'] ~ div .sheet-ins-style-C2,
+.sheet-element-to-fear-style-D2[value='1'] ~ div .sheet-ins-style-D2,
+.sheet-element-to-fear-style-E2[value='1'] ~ div .sheet-ins-style-E2,
+.sheet-element-to-fear-style-F2[value='1'] ~ div .sheet-ins-style-F2,
+.sheet-element-to-fear-style-A3[value='1'] ~ div .sheet-ins-style-A3,
+.sheet-element-to-fear-style-B3[value='1'] ~ div .sheet-ins-style-B3,
+.sheet-element-to-fear-style-C3[value='1'] ~ div .sheet-ins-style-C3,
+.sheet-element-to-fear-style-D3[value='1'] ~ div .sheet-ins-style-D3,
+.sheet-element-to-fear-style-E3[value='1'] ~ div .sheet-ins-style-E3,
+.sheet-element-to-fear-style-F3[value='1'] ~ div .sheet-ins-style-F3,
+.sheet-element-to-fear-style-A4[value='1'] ~ div .sheet-ins-style-A4,
+.sheet-element-to-fear-style-B4[value='1'] ~ div .sheet-ins-style-B4,
+.sheet-element-to-fear-style-C4[value='1'] ~ div .sheet-ins-style-C4,
+.sheet-element-to-fear-style-D4[value='1'] ~ div .sheet-ins-style-D4,
+.sheet-element-to-fear-style-E4[value='1'] ~ div .sheet-ins-style-E4,
+.sheet-element-to-fear-style-F4[value='1'] ~ div .sheet-ins-style-F4,
+.sheet-element-to-fear-style-A5[value='1'] ~ div .sheet-ins-style-A5,
+.sheet-element-to-fear-style-B5[value='1'] ~ div .sheet-ins-style-B5,
+.sheet-element-to-fear-style-C5[value='1'] ~ div .sheet-ins-style-C5,
+.sheet-element-to-fear-style-D5[value='1'] ~ div .sheet-ins-style-D5,
+.sheet-element-to-fear-style-E5[value='1'] ~ div .sheet-ins-style-E5,
+.sheet-element-to-fear-style-F5[value='1'] ~ div .sheet-ins-style-F5,
+.sheet-element-to-fear-style-A6[value='1'] ~ div .sheet-ins-style-A6,
+.sheet-element-to-fear-style-B6[value='1'] ~ div .sheet-ins-style-B6,
+.sheet-element-to-fear-style-C6[value='1'] ~ div .sheet-ins-style-C6,
+.sheet-element-to-fear-style-D6[value='1'] ~ div .sheet-ins-style-D6,
+.sheet-element-to-fear-style-E6[value='1'] ~ div .sheet-ins-style-E6,
+.sheet-element-to-fear-style-F6[value='1'] ~ div .sheet-ins-style-F6,
+.sheet-element-to-fear-style-A7[value='1'] ~ div .sheet-ins-style-A7,
+.sheet-element-to-fear-style-B7[value='1'] ~ div .sheet-ins-style-B7,
+.sheet-element-to-fear-style-C7[value='1'] ~ div .sheet-ins-style-C7,
+.sheet-element-to-fear-style-D7[value='1'] ~ div .sheet-ins-style-D7,
+.sheet-element-to-fear-style-E7[value='1'] ~ div .sheet-ins-style-E7,
+.sheet-element-to-fear-style-F7[value='1'] ~ div .sheet-ins-style-F7,
+.sheet-element-to-fear-style-A8[value='1'] ~ div .sheet-ins-style-A8,
+.sheet-element-to-fear-style-B8[value='1'] ~ div .sheet-ins-style-B8,
+.sheet-element-to-fear-style-C8[value='1'] ~ div .sheet-ins-style-C8,
+.sheet-element-to-fear-style-D8[value='1'] ~ div .sheet-ins-style-D8,
+.sheet-element-to-fear-style-E8[value='1'] ~ div .sheet-ins-style-E8,
+.sheet-element-to-fear-style-F8[value='1'] ~ div .sheet-ins-style-F8,
+.sheet-element-to-fear-style-A9[value='1'] ~ div .sheet-ins-style-A9,
+.sheet-element-to-fear-style-B9[value='1'] ~ div .sheet-ins-style-B9,
+.sheet-element-to-fear-style-C9[value='1'] ~ div .sheet-ins-style-C9,
+.sheet-element-to-fear-style-D9[value='1'] ~ div .sheet-ins-style-D9,
+.sheet-element-to-fear-style-E9[value='1'] ~ div .sheet-ins-style-E9,
+.sheet-element-to-fear-style-F9[value='1'] ~ div .sheet-ins-style-F9,
+.sheet-element-to-fear-style-A10[value='1'] ~ div .sheet-ins-style-A10,
+.sheet-element-to-fear-style-B10[value='1'] ~ div .sheet-ins-style-B10,
+.sheet-element-to-fear-style-C10[value='1'] ~ div .sheet-ins-style-C10,
+.sheet-element-to-fear-style-D10[value='1'] ~ div .sheet-ins-style-D10,
+.sheet-element-to-fear-style-E10[value='1'] ~ div .sheet-ins-style-E10,
+.sheet-element-to-fear-style-F10[value='1'] ~ div .sheet-ins-style-F10,
+.sheet-element-to-fear-style-A11[value='1'] ~ div .sheet-ins-style-A11,
+.sheet-element-to-fear-style-B11[value='1'] ~ div .sheet-ins-style-B11,
+.sheet-element-to-fear-style-C11[value='1'] ~ div .sheet-ins-style-C11,
+.sheet-element-to-fear-style-D11[value='1'] ~ div .sheet-ins-style-D11,
+.sheet-element-to-fear-style-E11[value='1'] ~ div .sheet-ins-style-E11,
+.sheet-element-to-fear-style-F11[value='1'] ~ div .sheet-ins-style-F11,
+.sheet-element-to-fear-style-A12[value='1'] ~ div .sheet-ins-style-A12,
+.sheet-element-to-fear-style-B12[value='1'] ~ div .sheet-ins-style-B12,
+.sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12,
+.sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12,
+.sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12,
+.sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:url('https://i.imgur.com/AmKnDrf.png');}
+.sheet-element-to-fear-style-A2[value='1'] ~ div .sheet-ins-style-A2 button,
+.sheet-element-to-fear-style-B2[value='1'] ~ div .sheet-ins-style-B2 button,
+.sheet-element-to-fear-style-C2[value='1'] ~ div .sheet-ins-style-C2 button,
+.sheet-element-to-fear-style-D2[value='1'] ~ div .sheet-ins-style-D2 button,
+.sheet-element-to-fear-style-E2[value='1'] ~ div .sheet-ins-style-E2 button,
+.sheet-element-to-fear-style-F2[value='1'] ~ div .sheet-ins-style-F2 button,
+.sheet-element-to-fear-style-A3[value='1'] ~ div .sheet-ins-style-A3 button,
+.sheet-element-to-fear-style-B3[value='1'] ~ div .sheet-ins-style-B3 button,
+.sheet-element-to-fear-style-C3[value='1'] ~ div .sheet-ins-style-C3 button,
+.sheet-element-to-fear-style-D3[value='1'] ~ div .sheet-ins-style-D3 button,
+.sheet-element-to-fear-style-E3[value='1'] ~ div .sheet-ins-style-E3 button,
+.sheet-element-to-fear-style-F3[value='1'] ~ div .sheet-ins-style-F3 button,
+.sheet-element-to-fear-style-A4[value='1'] ~ div .sheet-ins-style-A4 button,
+.sheet-element-to-fear-style-B4[value='1'] ~ div .sheet-ins-style-B4 button,
+.sheet-element-to-fear-style-C4[value='1'] ~ div .sheet-ins-style-C4 button,
+.sheet-element-to-fear-style-D4[value='1'] ~ div .sheet-ins-style-D4 button,
+.sheet-element-to-fear-style-E4[value='1'] ~ div .sheet-ins-style-E4 button,
+.sheet-element-to-fear-style-F4[value='1'] ~ div .sheet-ins-style-F4 button,
+.sheet-element-to-fear-style-A5[value='1'] ~ div .sheet-ins-style-A5 button,
+.sheet-element-to-fear-style-B5[value='1'] ~ div .sheet-ins-style-B5 button,
+.sheet-element-to-fear-style-C5[value='1'] ~ div .sheet-ins-style-C5 button,
+.sheet-element-to-fear-style-D5[value='1'] ~ div .sheet-ins-style-D5 button,
+.sheet-element-to-fear-style-E5[value='1'] ~ div .sheet-ins-style-E5 button,
+.sheet-element-to-fear-style-F5[value='1'] ~ div .sheet-ins-style-F5 button,
+.sheet-element-to-fear-style-A6[value='1'] ~ div .sheet-ins-style-A6 button,
+.sheet-element-to-fear-style-B6[value='1'] ~ div .sheet-ins-style-B6 button,
+.sheet-element-to-fear-style-C6[value='1'] ~ div .sheet-ins-style-C6 button,
+.sheet-element-to-fear-style-D6[value='1'] ~ div .sheet-ins-style-D6 button,
+.sheet-element-to-fear-style-E6[value='1'] ~ div .sheet-ins-style-E6 button,
+.sheet-element-to-fear-style-F6[value='1'] ~ div .sheet-ins-style-F6 button,
+.sheet-element-to-fear-style-A7[value='1'] ~ div .sheet-ins-style-A7 button,
+.sheet-element-to-fear-style-B7[value='1'] ~ div .sheet-ins-style-B7 button,
+.sheet-element-to-fear-style-C7[value='1'] ~ div .sheet-ins-style-C7 button,
+.sheet-element-to-fear-style-D7[value='1'] ~ div .sheet-ins-style-D7 button,
+.sheet-element-to-fear-style-E7[value='1'] ~ div .sheet-ins-style-E7 button,
+.sheet-element-to-fear-style-F7[value='1'] ~ div .sheet-ins-style-F7 button,
+.sheet-element-to-fear-style-A8[value='1'] ~ div .sheet-ins-style-A8 button,
+.sheet-element-to-fear-style-B8[value='1'] ~ div .sheet-ins-style-B8 button,
+.sheet-element-to-fear-style-C8[value='1'] ~ div .sheet-ins-style-C8 button,
+.sheet-element-to-fear-style-D8[value='1'] ~ div .sheet-ins-style-D8 button,
+.sheet-element-to-fear-style-E8[value='1'] ~ div .sheet-ins-style-E8 button,
+.sheet-element-to-fear-style-F8[value='1'] ~ div .sheet-ins-style-F8 button,
+.sheet-element-to-fear-style-A9[value='1'] ~ div .sheet-ins-style-A9 button,
+.sheet-element-to-fear-style-B9[value='1'] ~ div .sheet-ins-style-B9 button,
+.sheet-element-to-fear-style-C9[value='1'] ~ div .sheet-ins-style-C9 button,
+.sheet-element-to-fear-style-D9[value='1'] ~ div .sheet-ins-style-D9 button,
+.sheet-element-to-fear-style-E9[value='1'] ~ div .sheet-ins-style-E9 button,
+.sheet-element-to-fear-style-F9[value='1'] ~ div .sheet-ins-style-F9 button,
+.sheet-element-to-fear-style-A10[value='1'] ~ div .sheet-ins-style-A10 button,
+.sheet-element-to-fear-style-B10[value='1'] ~ div .sheet-ins-style-B10 button,
+.sheet-element-to-fear-style-C10[value='1'] ~ div .sheet-ins-style-C10 button,
+.sheet-element-to-fear-style-D10[value='1'] ~ div .sheet-ins-style-D10 button,
+.sheet-element-to-fear-style-E10[value='1'] ~ div .sheet-ins-style-E10 button,
+.sheet-element-to-fear-style-F10[value='1'] ~ div .sheet-ins-style-F10 button,
+.sheet-element-to-fear-style-A11[value='1'] ~ div .sheet-ins-style-A11 button,
+.sheet-element-to-fear-style-B11[value='1'] ~ div .sheet-ins-style-B11 button,
+.sheet-element-to-fear-style-C11[value='1'] ~ div .sheet-ins-style-C11 button,
+.sheet-element-to-fear-style-D11[value='1'] ~ div .sheet-ins-style-D11 button,
+.sheet-element-to-fear-style-E11[value='1'] ~ div .sheet-ins-style-E11 button,
+.sheet-element-to-fear-style-F11[value='1'] ~ div .sheet-ins-style-F11 button,
+.sheet-element-to-fear-style-A12[value='1'] ~ div .sheet-ins-style-A12 button,
+.sheet-element-to-fear-style-B12[value='1'] ~ div .sheet-ins-style-B12 button,
+.sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12 button,
+.sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12 button,
+.sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12 button,
+.sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 button {font-weight:600; text-shadow: 0px 0px 4px #ffffff;}
+
+
+.sheet-rolltemplate-InsaeContents {display:block; position:relative; max-width:500px; margin:0 auto; padding:7px 3px; box-sizing:border-box; z-index:0;}
+.sheet-rolltemplate-InsaeContents:before {content:""; display:block; position:absolute; top:0; left:0; right:0; bottom:0; z-index:-1; border:1px solid transparent;
+	border-image: url('https://i.imgur.com/uEbZDSh.png');
+	-webkit-border-image: url('https://i.imgur.com/uEbZDSh.png');
+	-moz-border-image: url('https://i.imgur.com/uEbZDSh.png');
+	border-image-slice:30;
+	border-image-repeat: round;
+	border-image-width:30px;
+}
+.sheet-rolltemplate-InsaeContents:after {content:""; display:block; position:absolute; top:29px; left:29px; bottom:29px; right:29px; background:#fdfaf9; z-index:-1;}
+.sheet-rolltemplate-InsaeContents em {color:#e60012; font-style:normal; font-weight:800 !important;}
+.sheet-rolltemplate-InsaeContents .sheet-ins-default-con {padding:20px 26px 30px; font-size:13px; line-height:1.5; min-height:60px; text-align:center; word-break:keep-all;}
+.sheet-rolltemplate-InsaeContents .sheet-ins-default-con .sheet-ins-tit {display:block; text-align:center; margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid rgba(0,0,0,.5); line-height:1.2;}
+.sheet-rolltemplate-InsaeContents .sheet-ins-default-con .sheet-ins-tit span,
+.sheet-rolltemplate-InsaeContents .sheet-ins-default-con .sheet-ins-tit strong {display:block;}
+.sheet-rolltemplate-InsaeContents .sheet-ins-default-con .sheet-ins-tit strong {font-size:16px; font-weight:800;}
+.sheet-rolltemplate-InsaeContents .sheet-ins-default-con .sheet-ins-tit strong em {color:#e60012;}
+.sheet-rolltemplate-InsaeContents .sheet-ins-default-con .sheet-ins-tit span {font-size:11px;}
+.sheet-rolltemplate-InsaeContents .sheet-emotion-box {overflow:hidden;}
+.sheet-rolltemplate-InsaeContents .sheet-emotion-box span {display:block; float:left; width:50%; text-align:center; font-weight:800; font-size:18px; box-sizing:border-box;}
+.sheet-rolltemplate-InsaeContents .sheet-emotion-box span.sheet-m:after {content:"-"; color:#ee5f5b; margin-left:5px;}
+.sheet-rolltemplate-InsaeContents .sheet-emotion-box span.sheet-p:before {content:"+"; color:#337ab7; margin-right:5px;}
+.sheet-rolltemplate-InsaeContents .sheet-emotion-box span.sheet-m {border-left:1px solid rgba(0,0,0,.3);}
+.sheet-rolltemplate-InsaeContents .sheet-big {font-size:16px; font-weight:800;}
+.sheet-rolltemplate-InsaeContents .inlinerollresult {display:inline; margin:0 !important; border:none !important; background:transparent !important; padding:0 !important; font-weight:400 !important;}
+
+.sheet-rolltemplate-InsaeDice {display:block; position:relative; max-width:500px; margin:0 auto; padding:7px 3px; box-sizing:border-box; z-index:0;}
+.sheet-rolltemplate-InsaeDice:before {content:""; display:block; position:absolute; top:0; left:0; right:0; bottom:0; z-index:-1; border:1px solid transparent;
+	border-image: url('https://i.imgur.com/uEbZDSh.png');
+	-webkit-border-image: url('https://i.imgur.com/uEbZDSh.png');
+	-moz-border-image: url('https://i.imgur.com/uEbZDSh.png');
+	border-image-slice:30;
+	border-image-repeat: round;
+	border-image-width:30px;
+}
+.sheet-rolltemplate-InsaeDice:after {content:""; display:block; position:absolute; top:29px; left:29px; bottom:29px; right:29px; background:#fdfaf9; z-index:-1;}
+.sheet-rolltemplate-InsaeDice em {color:#e60012; font-style:normal;}
+.sheet-rolltemplate-InsaeDice .sheet-ins-default-con {padding:20px 26px 30px; font-size:13px; line-height:1.5; min-height:60px; text-align:center; word-break:keep-all;}
+.sheet-rolltemplate-InsaeDice .sheet-ins-default-con .sheet-ins-tit {display:block; text-align:center; margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid rgba(0,0,0,.5); line-height:1.2;}
+.sheet-rolltemplate-InsaeDice .sheet-ins-default-con .sheet-ins-tit.sheet-noline {border-bottom:0; margin-bottom:0; padding-bottom:0;}
+.sheet-rolltemplate-InsaeDice .sheet-ins-default-con .sheet-ins-tit span,
+.sheet-rolltemplate-InsaeDice .sheet-ins-default-con .sheet-ins-tit strong {display:block;}
+.sheet-rolltemplate-InsaeDice .sheet-ins-default-con .sheet-ins-tit strong {font-size:16px; font-weight:800;}
+.sheet-rolltemplate-InsaeDice .sheet-ins-default-con .sheet-ins-tit strong em {color:#e60012;}
+.sheet-rolltemplate-InsaeDice .sheet-ins-default-con .sheet-ins-tit span {font-size:11px;}
+
+.sheet-rolltemplate-InsaeDice .inlinerollresult {display:inline; text-align:center; margin:0 !important; border:none !important; background:transparent !important; padding:0 !important; font-weight:800;}
+.sheet-rolltemplate-InsaeDice .inlinerollresult.fullcrit {color:#3FB315;}
+.sheet-rolltemplate-InsaeDice .inlinerollresult.fullfail {color:#B31515;}
+.sheet-rolltemplate-InsaeDice .sheet-ins-dice {font-size:20px; text-indent:.5rem; letter-spacing:.5em; margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid rgba(0,0,0,.5);}
+.sheet-rolltemplate-InsaeDice .sheet-ins-dice .inlinerollresult {font-size:20px !important;}
+.sheet-rolltemplate-InsaeDice .sheet-ins-target {font-size:14px;}
+.sheet-rolltemplate-InsaeDice .sheet-ins-target em {font-weight:800;}
+.sheet-rolltemplate-InsaeDice .sheet-ins-target .inlinerollresult {font-size:14px !important;}
+
+.sheet-rolltemplate-InsaeDice .sheet-ins-rollresult span {display:block; margin-top:-11px; padding:5px; margin-bottom:10px; font-size:14px; font-weight:800;}
+.sheet-rolltemplate-InsaeDice .sheet-ins-rollresult span.sheet-ins-ciri {color:#000; background:#75ff75;}
+.sheet-rolltemplate-InsaeDice .sheet-ins-rollresult span.sheet-ins-fumble {color:#fff; background:red;}
+
+.sheet-rolltemplate-InsaeDice .sheet-ins-effect {margin-top:10px; padding-top:10px; background:url('https://i.imgur.com/x7cYfNo.png') no-repeat 50% 0;}
+.sheet-rolltemplate-InsaeDice .sheet-ins-effect-inner {max-height:150px; overflow:auto; padding:10px; line-height:1.5; font-size:12px; text-align:left; background:rgba(255,255,255,.4);}
+.sheet-rolltemplate-InsaeDice .sheet-ins-effect-guide {padding:5px 0 10px;}
