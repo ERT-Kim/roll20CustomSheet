@@ -10,7 +10,7 @@
 ------------------------------
 
 ### 미리보기
-<img src="https://raw.githubusercontent.com/tateck-develop/roll20CustomSheet/main/inSANe/guide.jpg" width="500px"></img>
+<img src="https://raw.githubusercontent.com/tateck-develop/roll20CustomSheet/main/inSANe/insane_BASIC/guide.jpg" width="500px"></img>
 
 * * *
 
