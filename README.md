@@ -7,7 +7,7 @@ Roll20에서 사용할 수 있는 커스텀시트 코드를 공개하는 곳입�
 
 ## Character Sheet List
 #### inSANe
-* 기본 캐릭터 시트
+* [기본 캐릭터 시트](https://github.com/tateck-develop/roll20CustomSheet/tree/main/inSANe)
 * 『프린세스가 되고싶어!』캠페인 전용
 * 『호그와트』캠페인 전용
 * 동양풍 세계관 전용
