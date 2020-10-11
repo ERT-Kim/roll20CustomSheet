@@ -930,7 +930,7 @@
 			<div class="sheet-list">
 
 				<div class="sheet-data-item">
-					<input type="hidden" name="attr_Magic_01_target" value="" />
+					<input type="hidden" name="attr_Magic_01_target" value="-1" />
 					<input name="attr_Magic_01_close" type="checkbox" value="1" class="sheet-Magic_close"/>
 					<span class="sheet-Magic_close-label"></span>
 					<input name="attr_Magic_01_flag" type="checkbox" value="1" class="sheet-Magic_flag" />
@@ -939,30 +939,30 @@
 						<div class="sheet-defalut">
 							<div class="sheet-subj">
 								<button type="roll" class="sheet-btn-dice" value="&{template:MagiDice}{{name=@{character_name}}}{{skillname=@{Magic_01_Name}}}{{skilltype=@{Magic_01_Types}}}{{skilltarget_txt=@{Magic_01_Assigned_Skill}}}{{skilltarget=[[@{Magic_01_target}]]}}{{dicecount=[[@{Magic_01_dice}]]}}{{cost=@{Magic_01_Cost}}}{{skillwho=@{Magic_01_skillTarget}}}{{spelluse=[[@{Magic_01_spelluse}]]}}{{spelluse2=[[@{Magic_01_spelluse2}]]}}{{spell=@{Magic_01_Recite}}}{{effect=@{Magic_01_Effect}}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{close=[[@{Magic_01_close}]]}}{{mod=@{Magic_01_Correction}}}"></button>
-								<input type="text" name="attr_Magic_01_Name" value="" placeholder="장서명" title="장서명"/>
+								<input type="text" name="attr_Magic_01_Name" value="긴급 소환" placeholder="장서명" title="장서명"/>
 							</div>
 							<div class="sheet-type">
 								<select name="attr_Magic_01_Types" title="장서타입">
 									<option value="">타입</option>
-									<option value="소환">소환</option>
+									<option value="소환" selected>소환</option>
 									<option value="주문">주문</option>
 									<option value="장비">장비</option>
 								</select>
 							</div>
 							<div class="sheet-skill">
-								<input type="text" name="attr_Magic_01_Assigned_Skill" value="" placeholder="지정특기" title="지정특기 (가변/특기명)"/>
+								<input type="text" name="attr_Magic_01_Assigned_Skill" value="가변" placeholder="지정특기" title="지정특기 (가변/특기명)"/>
 							</div>
 							<div class="sheet-dice">
 								<input type="number" name="attr_Magic_01_dice" value="2" min="1" max="5" title="다이스 갯수"/><span>D6+</span><input type="number" name="attr_Magic_01_Correction" value="0" title="다이스 수정치"/>
 							</div>
 							<div class="sheet-cost">
-								<input type="text" name="attr_Magic_01_Cost" value="" placeholder="-" />
+								<input type="text" name="attr_Magic_01_Cost" value="-" placeholder="-" />
 							</div>
 							<div class="sheet-charge">
 								<input type="number" name="attr_Magic_01_Charge" value="" placeholder="0"/><span>/</span><input type="number" name="attr_Magic_01_Charge_max" value=""/>
 							</div>
 							<div class="sheet-target">
-								<input type="text" name="attr_Magic_01_skillTarget" value="" placeholder="목표" title="목표" />
+								<input type="text" name="attr_Magic_01_skillTarget" value="없음" placeholder="목표" title="목표" />
 							</div>
 							<div class="sheet-spell-use">
 								<input name="attr_Magic_01_spelluse" type="checkbox" value="1" title="주구 영창"/>
@@ -974,8 +974,8 @@
 							</div>
 						</div>
 						<div class="sheet-option">
-							<textarea name="attr_Magic_01_Effect" value="" placeholder="장서 효과 작성"></textarea>
-							<textarea name="attr_Magic_01_Recite" value="" placeholder="주구 작성"></textarea>
+							<textarea name="attr_Magic_01_Effect" value="" placeholder="장서 효과 작성">무작위로 특기 하나를 선택한다. 그것이 지정특기가 된다. 지정특기 판정에 성공하면 「(특기명)의 정령」을 한 개체 소환할 수 있다.</textarea>
+							<textarea name="attr_Magic_01_Recite" value="" placeholder="주구 작성">향기로운 바람이여, 회답하는 이를 옮겨오라!</textarea>
 						</div>
 					</div>
 				</div>
