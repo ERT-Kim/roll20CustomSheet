@@ -18,6 +18,8 @@ Roll20에서 사용할 수 있는 커스텀시트 코드를 공개하는 곳입�
 #### 신화창세 아마데우스
 * [기본 캐릭터 시트](amade/amade_BASIC)
 
+#### 마도서대전 TRPG 마기카로기아
+* [기본 캐릭터 시트](magica_logia/magi_BASIC)
 
 ## Roll20 Update Character Sheet List
 #### 오메가버스 TRPG
