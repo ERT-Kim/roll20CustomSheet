@@ -3620,47 +3620,49 @@ on("change:bas",
 		{{#skillname}}
 			<div class="sheet-title">{{skillname}}</div>
 
-			<div class="sheet-dice">
-				{{#rollTotal() skilltarget -1}}
-					<span class="sheet-fumble">판정할 수 없습니다.</span>
-				{{/rollTotal() skilltarget -1}}
-				
-				{{#^rollTotal() skilltarget -1}}{{#^rollTotal() skilltarget -3}}
-					{{roll1}}
-					{{#rollGreater() dicecount 1}}
-						{{roll2}}
-					{{/rollGreater() dicecount 1}}
-					{{#rollGreater() dicecount 2}}
-						{{roll3}}
-					{{/rollGreater() dicecount 2}}
-					{{#rollGreater() dicecount 3}}
-						{{roll4}}
-					{{/rollGreater() dicecount 3}}
-					{{#rollGreater() dicecount 4}}
-						{{roll5}}
-					{{/rollGreater() dicecount 4}}
-					{{#rollGreater() dicecount 5}}
-						{{roll6}}
-					{{/rollGreater() dicecount 5}}
-					{{#rollGreater() dicecount 6}}
-						{{roll7}}
-					{{/rollGreater() dicecount 6}}
-					{{#rollGreater() dicecount 7}}
-						{{roll8}}
-					{{/rollGreater() dicecount 7}}
-					{{#rollGreater() dicecount 8}}
-						{{roll9}}
-					{{/rollGreater() dicecount 8}}
-					{{#rollGreater() dicecount 9}}
-						{{roll10}}
-					{{/rollGreater() dicecount 9}}
-					{{#mod}}
-						{{#^rollTotal() mod 0}}
-							<div class="sheet-dice-mod">{{#rollGreater() mod 0}}+{{/rollGreater() mod 0}}{{mod}}</div>
-						{{/^rollTotal() mod 0}}
-					{{/mod}}
-				{{/^rollTotal() skilltarget -3}}{{/^rollTotal() skilltarget -1}}
-			</div>
+			{{#^rollTotal() skilltarget -3}}
+				<div class="sheet-dice">
+					{{#rollTotal() skilltarget -1}}
+						<span class="sheet-fumble">판정할 수 없습니다.</span>
+					{{/rollTotal() skilltarget -1}}
+					
+					{{#^rollTotal() skilltarget -1}}
+						{{roll1}}
+						{{#rollGreater() dicecount 1}}
+							{{roll2}}
+						{{/rollGreater() dicecount 1}}
+						{{#rollGreater() dicecount 2}}
+							{{roll3}}
+						{{/rollGreater() dicecount 2}}
+						{{#rollGreater() dicecount 3}}
+							{{roll4}}
+						{{/rollGreater() dicecount 3}}
+						{{#rollGreater() dicecount 4}}
+							{{roll5}}
+						{{/rollGreater() dicecount 4}}
+						{{#rollGreater() dicecount 5}}
+							{{roll6}}
+						{{/rollGreater() dicecount 5}}
+						{{#rollGreater() dicecount 6}}
+							{{roll7}}
+						{{/rollGreater() dicecount 6}}
+						{{#rollGreater() dicecount 7}}
+							{{roll8}}
+						{{/rollGreater() dicecount 7}}
+						{{#rollGreater() dicecount 8}}
+							{{roll9}}
+						{{/rollGreater() dicecount 8}}
+						{{#rollGreater() dicecount 9}}
+							{{roll10}}
+						{{/rollGreater() dicecount 9}}
+						{{#mod}}
+							{{#^rollTotal() mod 0}}
+								<div class="sheet-dice-mod">{{#rollGreater() mod 0}}+{{/rollGreater() mod 0}}{{mod}}</div>
+							{{/^rollTotal() mod 0}}
+						{{/mod}}
+					{{/^rollTotal() skilltarget -1}}
+				</div>
+			{{/^rollTotal() skilltarget -3}}
 
 			{{#^rollTotal() skilltarget -3}}
 				{{#skilltarget_txt}}
