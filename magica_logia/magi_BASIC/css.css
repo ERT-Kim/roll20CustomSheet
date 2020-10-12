@@ -450,8 +450,8 @@ td.sheet-style-F {background:#fff !important;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-dice .sheet-fumble {display:block; text-align:center; padding-top:10px; font-size:12px; color:red; font-weight:800;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-dice .sheet-specail {display:block; text-align:center; padding-top:10px; font-size:12px; color:#0095ff; font-weight:800;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-dice .sheet-dice-mod {font-weight:800; vertical-align:middle; font-size:16px;}
-.sheet-rolltemplate-MagiDice .sheet-magibox .sheet-dice .inlinerollresult {display:inline-block; position:relative; width:30px; height:30px; margin:7px; vertical-align:middle; text-align:center; line-height:30px; vertical-align:middle; background-color:transparent !important; border:0 !important; padding:0 !important; font-weight:bold; cursor:default; font-size:20px; z-index:0;}
-.sheet-rolltemplate-MagiDice .sheet-magibox .sheet-dice .inlinerollresult:before {content:""; display:block; position:absolute; width:100%; height:100%; transform:rotate(-45deg); border:1px solid #baa98d; background:rgba(255,255,255,.8); z-index:-1;}
+.sheet-rolltemplate-MagiDice .sheet-magibox .sheet-dice > .inlinerollresult {display:inline-block; position:relative; width:30px; height:30px; margin:7px; vertical-align:middle; text-align:center; line-height:30px; vertical-align:middle; background-color:transparent !important; border:0 !important; padding:0 !important; font-weight:bold; cursor:default; font-size:20px; z-index:0;}
+.sheet-rolltemplate-MagiDice .sheet-magibox .sheet-dice > .inlinerollresult:before {content:""; display:block; position:absolute; width:100%; height:100%; transform:rotate(-45deg); border:1px solid #baa98d; background:rgba(255,255,255,.8); z-index:-1;}
 
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-info {line-height:1.5; border:none !important; margin:0 -20px !important; padding:10px; background:rgba(0,0,0,.5); text-align:center; color:#fff !important;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-info span {color:#fff; font-size:13px;}
@@ -463,3 +463,19 @@ td.sheet-style-F {background:#fff !important;}
 .sheet-rolltemplate-MagiDice .sheet-con p > span {display:inline-block; vertical-align:middle; padding:1px 3px; border-radius:3px; background:#baa98d; color:#fff;}
 .sheet-rolltemplate-MagiDice .sheet-con p > span.sheet-target {background:#73706b;}
 .sheet-rolltemplate-MagiDice .sheet-con p > span.sheet-close {background:red;}
+
+
+
+.sheet-rolltemplate-MagiSpell {position:relative;}
+.sheet-rolltemplate-MagiSpell * {font-family:'맑은고딕', 'Malgun Gothic';}
+.sheet-rolltemplate-MagiSpell .sheet-magibox-spell {position:relative; overflow:hidden;}
+.sheet-rolltemplate-MagiSpell .sheet-magibox-spell .sheet-txt {display:table; width:100%; position:relative; z-index:1;}
+.sheet-rolltemplate-MagiSpell .sheet-magibox-spell .sheet-txt > p {display:table-cell; vertical-align:middle; padding:20px 10px; height:120px; text-align:center; line-height:1.3; font-size:14px; color:#000; font-weight:800; word-break:keep-all;}
+.sheet-rolltemplate-MagiSpell .sheet-magibox-spell .sheet-bak {position:absolute; width:240px; height:240px; top:50%; left:50%; opacity:.6; transform:translate(-50%, -50%); -webkit-transform:translateY(-50%, -50%); z-index:0;}
+.sheet-rolltemplate-MagiSpell .sheet-magibox-spell .sheet-bak img {display:block; position:relative; margin:0 auto;
+	animation-name: spinner;
+	animation-duration: 5s;
+	animation-delay: 0;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
