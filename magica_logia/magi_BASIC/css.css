@@ -423,28 +423,23 @@ td.sheet-style-F {background:#fff !important;}
 	animation-timing-function: linear;
 }
 
-.sheet-rolltemplate-MagiDice .sheet-magibox {display:block; position:relative; border:1px solid #574e4c; background:#cecece; padding:2px;}
+.sheet-rolltemplate-MagiDice .sheet-magibox {display:block; position:relative; margin:10px 0; border:1px solid #574e4c; background:#cecece; padding:2px;}
 .sheet-rolltemplate-MagiDice .sheet-magibox * {font-size:12px; color:#2a2625;}
 .sheet-rolltemplate-MagiDice .sheet-magibox *[class^="sheet-acc"] {display:block; position:absolute; z-index:1;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-acc-tl {top:-6px; left:-6px;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-acc-tr {top:-6px; right:-6px;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-acc-bl {bottom:-6px; left:-6px;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-acc-br {bottom:-6px; right:-6px;}
-
 .sheet-rolltemplate-MagiDice .sheet-magibox .inlinerollresult {display:inline; position:relative; margin:0px; vertical-align:middle; background-color:transparent !important; border:0 !important; padding:0 !important; cursor:default; font-size:1em;}
-
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-inner {display:block; position:relative; padding:10px 20px; min-height:50px; border:1px solid #574e4c; background:url('https://i.imgur.com/8fLVOV1.png'); z-index:0;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-inner > *:first-child {padding-top:0;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-subtitle {text-align:center; font-size:12px; font-weight:600;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-subtitle:before,
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-subtitle:after {content:"◆"; color:#baa98d; margin:0 5px;}
-
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-title {display:block; text-align:center; padding:5px 0 10px; font-size:14px; font-weight:800;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-title + * {padding-top:10px; border-top:1px solid #574e4c;}
-
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-subject {display:block; text-align:center; padding:5px 0 0; font-size:16px; font-weight:800;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-subject em {font-style:normal; font-size:16px; color:#b74c00;}
-
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-dice {display:block; position:relative; margin-top:0 !important; padding:10px 0 !important; text-align:center;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-dice > * {display:inline-block; vertical-align:middle;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-dice .sheet-fumble {display:block; text-align:center; padding-top:10px; font-size:12px; color:red; font-weight:800;}
@@ -452,7 +447,6 @@ td.sheet-style-F {background:#fff !important;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-dice .sheet-dice-mod {font-weight:800; vertical-align:middle; font-size:16px;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-dice > .inlinerollresult {display:inline-block; position:relative; width:30px; height:30px; margin:7px; vertical-align:middle; text-align:center; line-height:30px; vertical-align:middle; background-color:transparent !important; border:0 !important; padding:0 !important; font-weight:bold; cursor:default; font-size:20px; z-index:0;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-dice > .inlinerollresult:before {content:""; display:block; position:absolute; width:100%; height:100%; transform:rotate(-45deg); border:1px solid #baa98d; background:rgba(255,255,255,.8); z-index:-1;}
-
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-info {line-height:1.5; border:none !important; margin:0 -20px !important; padding:10px; background:rgba(0,0,0,.5); text-align:center; color:#fff !important;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-info span {color:#fff; font-size:13px;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-info span + span:before {content:"|"; margin:0 5px; font-size:12px;}
@@ -463,8 +457,6 @@ td.sheet-style-F {background:#fff !important;}
 .sheet-rolltemplate-MagiDice .sheet-con p > span {display:inline-block; vertical-align:middle; padding:1px 3px; border-radius:3px; background:#baa98d; color:#fff;}
 .sheet-rolltemplate-MagiDice .sheet-con p > span.sheet-target {background:#73706b;}
 .sheet-rolltemplate-MagiDice .sheet-con p > span.sheet-close {background:red;}
-
-
 
 .sheet-rolltemplate-MagiSpell {position:relative;}
 .sheet-rolltemplate-MagiSpell * {font-family:'맑은고딕', 'Malgun Gothic';}
