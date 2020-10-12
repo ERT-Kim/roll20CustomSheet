@@ -154,7 +154,7 @@
 		<div class="sheet-profile-state">
 			<div class="sheet-mp">
 				<div class="sheet-item">
-					<span>최대마력</span>
+					<span><button type="roll" value="&{template:MagiDice}{{name=@{character_name}}}{{mp=[[1d6+@{lev}]]}}" >최대마력</button></span>
 					<input type="number" name="attr_mp_max" min="0" value="" placeholder="0"/>
 				</div>
 				<div class="sheet-item">
@@ -884,7 +884,7 @@
 						<td class="sheet-style-C12">
 							<p>
 								<input type="checkbox" name="attr_C12" value="1" />
-								<button class="sheet-spec-roll" type="roll" value="&{template:MagiDice} {{name=@{character_name}}}{{spec=원한}}{{target=[[@{C12_value}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}">원한</button>
+								<button class="sheet-spec-roll" type="roll" value="&{template:MagiDice} {{name=@{character_name}}}{{spec=원환}}{{target=[[@{C12_value}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}">원환</button>
 								<input type="text" value="" name="attr_C12_value" />
 							</p>
 						</td>
@@ -2593,7 +2593,7 @@ function getName(type) {
 		'우레': '@{C9_value}',
 		'불': '@{C10_value}',
 		'빛': '@{C11_value}',
-		'원한': '@{C12_value}',
+		'원환': '@{C12_value}',
 
 		'이야기': '@{D2_value}',
 		'선율': '@{D3_value}',
@@ -2904,7 +2904,7 @@ on("change:state_06_value change:status_06",
 				if(temp_str=="우레") {setAttrs({C9_unluck:'1'}); setAttrs({C_unluck:'1'}); } else setAttrs({C9_unluck:''});
 				if(temp_str=="불") {setAttrs({C10_unluck:'1'}); setAttrs({C_unluck:'1'}); } else setAttrs({C10_unluck:''});
 				if(temp_str=="빛") {setAttrs({C11_unluck:'1'}); setAttrs({C_unluck:'1'}); } else setAttrs({C11_unluck:''});
-				if(temp_str=="원한") {setAttrs({C12_unluck:'1'}); setAttrs({C_unluck:'1'}); } else setAttrs({C12_unluck:''});
+				if(temp_str=="원환") {setAttrs({C12_unluck:'1'}); setAttrs({C_unluck:'1'}); } else setAttrs({C12_unluck:''});
 
 				if(temp_str=="이야기") {setAttrs({D2_unluck:'1'}); setAttrs({D_unluck:'1'}); } else setAttrs({D2_unluck:''});
 				if(temp_str=="선율") {setAttrs({D3_unluck:'1'}); setAttrs({D_unluck:'1'}); } else setAttrs({D3_unluck:''});
@@ -3321,7 +3321,7 @@ on("change:bas",
 					{{#rollTotal() roll2d6 9}}<div class="sheet-subject">3. 힘 : <em>우레</em></div>{{/rollTotal() roll2d6 9}}
 					{{#rollTotal() roll2d6 10}}<div class="sheet-subject">3. 힘 : <em>불</em></div>{{/rollTotal() roll2d6 10}}
 					{{#rollTotal() roll2d6 11}}<div class="sheet-subject">3. 힘 : <em>빛</em></div>{{/rollTotal() roll2d6 11}}
-					{{#rollTotal() roll2d6 12}}<div class="sheet-subject">3. 힘 : <em>원한</em></div>{{/rollTotal() roll2d6 12}}
+					{{#rollTotal() roll2d6 12}}<div class="sheet-subject">3. 힘 : <em>원환</em></div>{{/rollTotal() roll2d6 12}}
 				{{/rollTotal() roll1d6 3}}
 				{{#rollTotal() roll1d6 4}}
 					{{#rollTotal() roll2d6 2}}<div class="sheet-subject">4. 노래 : <em>이야기</em></div>{{/rollTotal() roll2d6 2}}
@@ -3400,7 +3400,7 @@ on("change:bas",
 				{{#rollTotal() roll2d6 9}}<div class="sheet-subject">3. 힘 : <em>우레</em></div>{{/rollTotal() roll2d6 9}}
 				{{#rollTotal() roll2d6 10}}<div class="sheet-subject">3. 힘 : <em>불</em></div>{{/rollTotal() roll2d6 10}}
 				{{#rollTotal() roll2d6 11}}<div class="sheet-subject">3. 힘 : <em>빛</em></div>{{/rollTotal() roll2d6 11}}
-				{{#rollTotal() roll2d6 12}}<div class="sheet-subject">3. 힘 : <em>원한</em></div>{{/rollTotal() roll2d6 12}}
+				{{#rollTotal() roll2d6 12}}<div class="sheet-subject">3. 힘 : <em>원환</em></div>{{/rollTotal() roll2d6 12}}
 			{{/rollTotal() randomspec 3}}
 			{{#rollTotal() randomspec 4}}
 				{{#rollTotal() roll2d6 2}}<div class="sheet-subject">4. 노래 : <em>이야기</em></div>{{/rollTotal() roll2d6 2}}
@@ -3482,6 +3482,13 @@ on("change:bas",
 				{{custom}}
 			</div>
 		{{/custom}}
+
+		{{#mp}}
+			<div class="sheet-title">마력결정</div>
+			<div class="sheet-dice">
+				{{mp}}
+			</div>
+		{{/mp}}
 
 		{{#spec}}
 			<div class="sheet-title">{{spec}}</div>
@@ -3600,7 +3607,7 @@ on("change:bas",
 									{{#rollTotal() roll2d6 9}}《3. 힘 : 우레》{{/rollTotal() roll2d6 9}}
 									{{#rollTotal() roll2d6 10}}《3. 힘 : 불》{{/rollTotal() roll2d6 10}}
 									{{#rollTotal() roll2d6 11}}《3. 힘 : 빛》{{/rollTotal() roll2d6 11}}
-									{{#rollTotal() roll2d6 12}}《3. 힘 : 원한》{{/rollTotal() roll2d6 12}}
+									{{#rollTotal() roll2d6 12}}《3. 힘 : 원환》{{/rollTotal() roll2d6 12}}
 								{{/rollTotal() roll1d6 3}}
 								{{#rollTotal() roll1d6 4}}
 									{{#rollTotal() roll2d6 2}}《4. 노래 : 이야기》{{/rollTotal() roll2d6 2}}
