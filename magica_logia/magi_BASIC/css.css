@@ -208,6 +208,14 @@ td.sheet-style-F {background:#fff !important;}
 .sheet-element-to-determine-style-D[value='1'] ~ div th.sheet-style-D {border-color:#fff !important;}
 .sheet-element-to-determine-style-E[value='1'] ~ div th.sheet-style-E {border-color:#fff !important;}
 
+/* 상흔 체크 **/
+.sheet-hurt-style-A[value='1'] ~ div th[class*="sheet-hurt-A"] {background:#000; color:#777;}
+.sheet-hurt-style-B[value='1'] ~ div th[class*="sheet-hurt-B"] {background:#000; color:#777;}
+.sheet-hurt-style-C[value='1'] ~ div th[class*="sheet-hurt-C"] {background:#000; color:#777;}
+.sheet-hurt-style-D[value='1'] ~ div th[class*="sheet-hurt-D"] {background:#000; color:#777;}
+.sheet-hurt-style-E[value='1'] ~ div th[class*="sheet-hurt-E"] {background:#000; color:#777;}
+.sheet-hurt-style-F[value='1'] ~ div th[class*="sheet-hurt-F"] {background:#000; color:#777;}
+
 /* 불운 체크 **/
 .sheet-unluck-style-A[value='1'] ~ div td[class*="sheet-style-A"] {background:#e8e1d4;}
 .sheet-unluck-style-B[value='1'] ~ div td[class*="sheet-style-B"] {background:#e8e1d4;}
@@ -378,7 +386,7 @@ td.sheet-style-F {background:#fff !important;}
 .sheet-anker-list .sheet-data-item .sheet-subj {padding-left:0; width:148px;}
 .sheet-anker-list .sheet-data-item .sheet-type {width:50px; margin-right:0;}
 .sheet-anker-list .sheet-data-item .sheet-type input {text-align:center;}
-.sheet-data-item .sheet-fate {width:75px; padding-left:45px; margin-right:3px;}
+.sheet-data-item .sheet-fate {width:86px; padding-left:45px; margin-right:3px;}
 .sheet-data-item .sheet-fate:before {content:"운명점"; display:block; position:absolute; top:0; left:5px; line-height:25px; color:#9f9b9b;}
 .sheet-data-item .sheet-fate input {padding:0; text-align:center;}
 
@@ -410,6 +418,7 @@ td.sheet-style-F {background:#fff !important;}
 **************************/
 
 .sheet-rolltemplate-MagiDice {position:relative;}
+.sheet-rolltemplate-MagiDice .sheet-magiDiceWrap {overflow:hidden; padding:6px;}
 .sheet-rolltemplate-MagiDice * {font-family:'맑은고딕', 'Malgun Gothic';}
 .sheet-rolltemplate-MagiDice .sheet-magibox-spell {position:relative; overflow:hidden;}
 .sheet-rolltemplate-MagiDice .sheet-magibox-spell .sheet-txt {display:table; width:100%; position:relative; z-index:1;}
@@ -423,7 +432,7 @@ td.sheet-style-F {background:#fff !important;}
 	animation-timing-function: linear;
 }
 
-.sheet-rolltemplate-MagiDice .sheet-magibox {display:block; position:relative; margin:10px 0; border:1px solid #574e4c; background:#cecece; padding:2px;}
+.sheet-rolltemplate-MagiDice .sheet-magibox {display:block; position:relative; border:1px solid #574e4c; background:#cecece; padding:2px;}
 .sheet-rolltemplate-MagiDice .sheet-magibox * {font-size:12px; color:#2a2625;}
 .sheet-rolltemplate-MagiDice .sheet-magibox *[class^="sheet-acc"] {display:block; position:absolute; z-index:1;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-acc-tl {top:-6px; left:-6px;}

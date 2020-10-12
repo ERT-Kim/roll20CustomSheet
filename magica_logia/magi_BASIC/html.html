@@ -6,6 +6,13 @@
 <input type="hidden" name="attr_D" class="element-to-determine-style-D" value="">
 <input type="hidden" name="attr_E" class="element-to-determine-style-E" value="">
 
+<input type="hidden" name="attr_A_hurt" class="sheet-hurt-style-A" value="">
+<input type="hidden" name="attr_B_hurt" class="sheet-hurt-style-B" value="">
+<input type="hidden" name="attr_C_hurt" class="sheet-hurt-style-C" value="">
+<input type="hidden" name="attr_D_hurt" class="sheet-hurt-style-D" value="">
+<input type="hidden" name="attr_E_hurt" class="sheet-hurt-style-E" value="">
+<input type="hidden" name="attr_F_hurt" class="sheet-hurt-style-F" value="">
+
 <input type="hidden" name="attr_A_unluck" class="sheet-unluck-style-A" value="">
 <input type="hidden" name="attr_B_unluck" class="sheet-unluck-style-B" value="">
 <input type="hidden" name="attr_C_unluck" class="sheet-unluck-style-C" value="">
@@ -270,17 +277,17 @@
 				<thead>
 					<tr>
 						<th></th>
-						<th style="width:14%;">1.별</th>
+						<th style="width:14%;" class="sheet-hurt-A">1.별</th>
 						<th style="width:1.5%;" class="sheet-style-A sheet-chk"><input type="checkbox" name="attr_chk_A" value="1" /></th>
-						<th style="width:14%;">2.짐승</th>
+						<th style="width:14%;" class="sheet-hurt-B">2.짐승</th>
 						<th style="width:1.5%;" class="sheet-style-B sheet-chk"><input type="checkbox" name="attr_chk_B" value="1" /></th>
-						<th style="width:14%;">3.힘</th>
+						<th style="width:14%;" class="sheet-hurt-C">3.힘</th>
 						<th style="width:1.5%;" class="sheet-style-C sheet-chk"><input type="checkbox" name="attr_chk_C" value="1" /></th>
-						<th style="width:14%;">4.노래</th>
+						<th style="width:14%;" class="sheet-hurt-D">4.노래</th>
 						<th style="width:1.5%;" class="sheet-style-D sheet-chk"><input type="checkbox" name="attr_chk_D" value="1" /></th>
-						<th style="width:14%;">5.꿈</th>
+						<th style="width:14%;" class="sheet-hurt-E">5.꿈</th>
 						<th style="width:1.5%;" class="sheet-style-E sheet-chk"><input type="checkbox" name="attr_chk_E" value="1" /></th>
-						<th style="width:14%;">6.어둠</th>
+						<th style="width:14%;" class="sheet-hurt-F">6.어둠</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -1954,12 +1961,7 @@
 
 		<div class="sheet-anker-list">
 			<div class="sheet-title"><span>관계</span></div>
-			<input type="hidden" name="attr_anker_viewbox" class="sheet-viewbox" value="" />
-			<div class="sheet-view-count">
-				<input type="number" min="1" max="20" name="attr_anker_count" value="10" />개 보기
-			</div>
 			<div class="sheet-list">
-
 				<div class="sheet-data-item">
 					<input name="attr_relation_01_flag" type="checkbox" value="1" class="sheet-Magic_flag" />
 					<span class="sheet-Magic_flag-label"></span>
@@ -1971,7 +1973,7 @@
 								<input type="text" name="attr_relation_name_01" value="" placeholder="앵커이름" title="앵커이름"/>
 							</div>
 							<div class="sheet-fate">
-								<input type="number" name="attr_relation_fate_01" value="" placeholder="0" title="운명점"/>
+								<input type="text" name="attr_relation_fate_01" value="" placeholder="0" title="운명점"/>
 							</div>
 							<div class="sheet-type">
 								<input type="text" name="attr_relation_link_01" value="" placeholder="속성" title="속성"/>
@@ -1994,7 +1996,7 @@
 								<input type="text" name="attr_relation_name_02" value="" placeholder="앵커이름" title="앵커이름"/>
 							</div>
 							<div class="sheet-fate">
-								<input type="number" name="attr_relation_fate_02" value="" placeholder="0" title="운명점"/>
+								<input type="text" name="attr_relation_fate_02" value="" placeholder="0" title="운명점"/>
 							</div>
 							<div class="sheet-type">
 								<input type="text" name="attr_relation_link_02" value="" placeholder="속성" title="속성"/>
@@ -2017,7 +2019,7 @@
 								<input type="text" name="attr_relation_name_03" value="" placeholder="앵커이름" title="앵커이름"/>
 							</div>
 							<div class="sheet-fate">
-								<input type="number" name="attr_relation_fate_03" value="" placeholder="0" title="운명점"/>
+								<input type="text" name="attr_relation_fate_03" value="" placeholder="0" title="운명점"/>
 							</div>
 							<div class="sheet-type">
 								<input type="text" name="attr_relation_link_03" value="" placeholder="속성" title="속성"/>
@@ -2040,7 +2042,7 @@
 								<input type="text" name="attr_relation_name_04" value="" placeholder="앵커이름" title="앵커이름"/>
 							</div>
 							<div class="sheet-fate">
-								<input type="number" name="attr_relation_fate_04" value="" placeholder="0" title="운명점"/>
+								<input type="text" name="attr_relation_fate_04" value="" placeholder="0" title="운명점"/>
 							</div>
 							<div class="sheet-type">
 								<input type="text" name="attr_relation_link_04" value="" placeholder="속성" title="속성"/>
@@ -2063,7 +2065,7 @@
 								<input type="text" name="attr_relation_name_05" value="" placeholder="앵커이름" title="앵커이름"/>
 							</div>
 							<div class="sheet-fate">
-								<input type="number" name="attr_relation_fate_05" value="" placeholder="0" title="운명점"/>
+								<input type="text" name="attr_relation_fate_05" value="" placeholder="0" title="운명점"/>
 							</div>
 							<div class="sheet-type">
 								<input type="text" name="attr_relation_link_05" value="" placeholder="속성" title="속성"/>
@@ -2086,7 +2088,7 @@
 								<input type="text" name="attr_relation_name_06" value="" placeholder="앵커이름" title="앵커이름"/>
 							</div>
 							<div class="sheet-fate">
-								<input type="number" name="attr_relation_fate_06" value="" placeholder="0" title="운명점"/>
+								<input type="text" name="attr_relation_fate_06" value="" placeholder="0" title="운명점"/>
 							</div>
 							<div class="sheet-type">
 								<input type="text" name="attr_relation_link_06" value="" placeholder="속성" title="속성"/>
@@ -2109,7 +2111,7 @@
 								<input type="text" name="attr_relation_name_07" value="" placeholder="앵커이름" title="앵커이름"/>
 							</div>
 							<div class="sheet-fate">
-								<input type="number" name="attr_relation_fate_07" value="" placeholder="0" title="운명점"/>
+								<input type="text" name="attr_relation_fate_07" value="" placeholder="0" title="운명점"/>
 							</div>
 							<div class="sheet-type">
 								<input type="text" name="attr_relation_link_07" value="" placeholder="속성" title="속성"/>
@@ -2132,7 +2134,7 @@
 								<input type="text" name="attr_relation_name_08" value="" placeholder="앵커이름" title="앵커이름"/>
 							</div>
 							<div class="sheet-fate">
-								<input type="number" name="attr_relation_fate_08" value="" placeholder="0" title="운명점"/>
+								<input type="text" name="attr_relation_fate_08" value="" placeholder="0" title="운명점"/>
 							</div>
 							<div class="sheet-type">
 								<input type="text" name="attr_relation_link_08" value="" placeholder="속성" title="속성"/>
@@ -2155,7 +2157,7 @@
 								<input type="text" name="attr_relation_name_09" value="" placeholder="앵커이름" title="앵커이름"/>
 							</div>
 							<div class="sheet-fate">
-								<input type="number" name="attr_relation_fate_09" value="" placeholder="0" title="운명점"/>
+								<input type="text" name="attr_relation_fate_09" value="" placeholder="0" title="운명점"/>
 							</div>
 							<div class="sheet-type">
 								<input type="text" name="attr_relation_link_09" value="" placeholder="속성" title="속성"/>
@@ -2178,7 +2180,7 @@
 								<input type="text" name="attr_relation_name_10" value="" placeholder="앵커이름" title="앵커이름"/>
 							</div>
 							<div class="sheet-fate">
-								<input type="number" name="attr_relation_fate_10" value="" placeholder="0" title="운명점"/>
+								<input type="text" name="attr_relation_fate_10" value="" placeholder="0" title="운명점"/>
 							</div>
 							<div class="sheet-type">
 								<input type="text" name="attr_relation_link_10" value="" placeholder="속성" title="속성"/>
@@ -2186,236 +2188,6 @@
 						</div>
 						<div class="sheet-option">
 							<textarea name="attr_relation_10" value="" placeholder="설정"></textarea>
-						</div>
-					</div>
-				</div>
-
-				<div class="sheet-data-item">
-					<input name="attr_relation_11_flag" type="checkbox" value="1" class="sheet-Magic_flag" />
-					<span class="sheet-Magic_flag-label"></span>
-					<input name="attr_relation_11_close" type="checkbox" value="1" class="sheet-relation_close"/>
-					<span class="sheet-relation_close-label"></span>
-					<div class="sheet-it">
-						<div class="sheet-defalut">
-							<div class="sheet-subj">
-								<input type="text" name="attr_relation_name_11" value="" placeholder="앵커이름" title="앵커이름"/>
-							</div>
-							<div class="sheet-fate">
-								<input type="number" name="attr_relation_fate_11" value="" placeholder="0" title="운명점"/>
-							</div>
-							<div class="sheet-type">
-								<input type="text" name="attr_relation_link_11" value="" placeholder="속성" title="속성"/>
-							</div>
-						</div>
-						<div class="sheet-option">
-							<textarea name="attr_relation_11" value="" placeholder="설정"></textarea>
-						</div>
-					</div>
-				</div>
-
-				<div class="sheet-data-item">
-					<input name="attr_relation_12_flag" type="checkbox" value="1" class="sheet-Magic_flag" />
-					<span class="sheet-Magic_flag-label"></span>
-					<input name="attr_relation_12_close" type="checkbox" value="1" class="sheet-relation_close"/>
-					<span class="sheet-relation_close-label"></span>
-					<div class="sheet-it">
-						<div class="sheet-defalut">
-							<div class="sheet-subj">
-								<input type="text" name="attr_relation_name_12" value="" placeholder="앵커이름" title="앵커이름"/>
-							</div>
-							<div class="sheet-fate">
-								<input type="number" name="attr_relation_fate_12" value="" placeholder="0" title="운명점"/>
-							</div>
-							<div class="sheet-type">
-								<input type="text" name="attr_relation_link_12" value="" placeholder="속성" title="속성"/>
-							</div>
-						</div>
-						<div class="sheet-option">
-							<textarea name="attr_relation_12" value="" placeholder="설정"></textarea>
-						</div>
-					</div>
-				</div>
-
-				<div class="sheet-data-item">
-					<input name="attr_relation_13_flag" type="checkbox" value="1" class="sheet-Magic_flag" />
-					<span class="sheet-Magic_flag-label"></span>
-					<input name="attr_relation_13_close" type="checkbox" value="1" class="sheet-relation_close"/>
-					<span class="sheet-relation_close-label"></span>
-					<div class="sheet-it">
-						<div class="sheet-defalut">
-							<div class="sheet-subj">
-								<input type="text" name="attr_relation_name_13" value="" placeholder="앵커이름" title="앵커이름"/>
-							</div>
-							<div class="sheet-fate">
-								<input type="number" name="attr_relation_fate_13" value="" placeholder="0" title="운명점"/>
-							</div>
-							<div class="sheet-type">
-								<input type="text" name="attr_relation_link_13" value="" placeholder="속성" title="속성"/>
-							</div>
-						</div>
-						<div class="sheet-option">
-							<textarea name="attr_relation_13" value="" placeholder="설정"></textarea>
-						</div>
-					</div>
-				</div>
-
-				<div class="sheet-data-item">
-					<input name="attr_relation_14_flag" type="checkbox" value="1" class="sheet-Magic_flag" />
-					<span class="sheet-Magic_flag-label"></span>
-					<input name="attr_relation_14_close" type="checkbox" value="1" class="sheet-relation_close"/>
-					<span class="sheet-relation_close-label"></span>
-					<div class="sheet-it">
-						<div class="sheet-defalut">
-							<div class="sheet-subj">
-								<input type="text" name="attr_relation_name_14" value="" placeholder="앵커이름" title="앵커이름"/>
-							</div>
-							<div class="sheet-fate">
-								<input type="number" name="attr_relation_fate_14" value="" placeholder="0" title="운명점"/>
-							</div>
-							<div class="sheet-type">
-								<input type="text" name="attr_relation_link_14" value="" placeholder="속성" title="속성"/>
-							</div>
-						</div>
-						<div class="sheet-option">
-							<textarea name="attr_relation_14" value="" placeholder="설정"></textarea>
-						</div>
-					</div>
-				</div>
-
-				<div class="sheet-data-item">
-					<input name="attr_relation_15_flag" type="checkbox" value="1" class="sheet-Magic_flag" />
-					<span class="sheet-Magic_flag-label"></span>
-					<input name="attr_relation_15_close" type="checkbox" value="1" class="sheet-relation_close"/>
-					<span class="sheet-relation_close-label"></span>
-					<div class="sheet-it">
-						<div class="sheet-defalut">
-							<div class="sheet-subj">
-								<input type="text" name="attr_relation_name_15" value="" placeholder="앵커이름" title="앵커이름"/>
-							</div>
-							<div class="sheet-fate">
-								<input type="number" name="attr_relation_fate_15" value="" placeholder="0" title="운명점"/>
-							</div>
-							<div class="sheet-type">
-								<input type="text" name="attr_relation_link_15" value="" placeholder="속성" title="속성"/>
-							</div>
-						</div>
-						<div class="sheet-option">
-							<textarea name="attr_relation_15" value="" placeholder="설정"></textarea>
-						</div>
-					</div>
-				</div>
-
-				<div class="sheet-data-item">
-					<input name="attr_relation_16_flag" type="checkbox" value="1" class="sheet-Magic_flag" />
-					<span class="sheet-Magic_flag-label"></span>
-					<input name="attr_relation_16_close" type="checkbox" value="1" class="sheet-relation_close"/>
-					<span class="sheet-relation_close-label"></span>
-					<div class="sheet-it">
-						<div class="sheet-defalut">
-							<div class="sheet-subj">
-								<input type="text" name="attr_relation_name_16" value="" placeholder="앵커이름" title="앵커이름"/>
-							</div>
-							<div class="sheet-fate">
-								<input type="number" name="attr_relation_fate_16" value="" placeholder="0" title="운명점"/>
-							</div>
-							<div class="sheet-type">
-								<input type="text" name="attr_relation_link_16" value="" placeholder="속성" title="속성"/>
-							</div>
-						</div>
-						<div class="sheet-option">
-							<textarea name="attr_relation_16" value="" placeholder="설정"></textarea>
-						</div>
-					</div>
-				</div>
-
-				<div class="sheet-data-item">
-					<input name="attr_relation_17_flag" type="checkbox" value="1" class="sheet-Magic_flag" />
-					<span class="sheet-Magic_flag-label"></span>
-					<input name="attr_relation_17_close" type="checkbox" value="1" class="sheet-relation_close"/>
-					<span class="sheet-relation_close-label"></span>
-					<div class="sheet-it">
-						<div class="sheet-defalut">
-							<div class="sheet-subj">
-								<input type="text" name="attr_relation_name_17" value="" placeholder="앵커이름" title="앵커이름"/>
-							</div>
-							<div class="sheet-fate">
-								<input type="number" name="attr_relation_fate_17" value="" placeholder="0" title="운명점"/>
-							</div>
-							<div class="sheet-type">
-								<input type="text" name="attr_relation_link_17" value="" placeholder="속성" title="속성"/>
-							</div>
-						</div>
-						<div class="sheet-option">
-							<textarea name="attr_relation_17" value="" placeholder="설정"></textarea>
-						</div>
-					</div>
-				</div>
-
-				<div class="sheet-data-item">
-					<input name="attr_relation_18_flag" type="checkbox" value="1" class="sheet-Magic_flag" />
-					<span class="sheet-Magic_flag-label"></span>
-					<input name="attr_relation_18_close" type="checkbox" value="1" class="sheet-relation_close"/>
-					<span class="sheet-relation_close-label"></span>
-					<div class="sheet-it">
-						<div class="sheet-defalut">
-							<div class="sheet-subj">
-								<input type="text" name="attr_relation_name_18" value="" placeholder="앵커이름" title="앵커이름"/>
-							</div>
-							<div class="sheet-fate">
-								<input type="number" name="attr_relation_fate_18" value="" placeholder="0" title="운명점"/>
-							</div>
-							<div class="sheet-type">
-								<input type="text" name="attr_relation_link_18" value="" placeholder="속성" title="속성"/>
-							</div>
-						</div>
-						<div class="sheet-option">
-							<textarea name="attr_relation_18" value="" placeholder="설정"></textarea>
-						</div>
-					</div>
-				</div>
-
-				<div class="sheet-data-item">
-					<input name="attr_relation_19_flag" type="checkbox" value="1" class="sheet-Magic_flag" />
-					<span class="sheet-Magic_flag-label"></span>
-					<input name="attr_relation_19_close" type="checkbox" value="1" class="sheet-relation_close"/>
-					<span class="sheet-relation_close-label"></span>
-					<div class="sheet-it">
-						<div class="sheet-defalut">
-							<div class="sheet-subj">
-								<input type="text" name="attr_relation_name_19" value="" placeholder="앵커이름" title="앵커이름"/>
-							</div>
-							<div class="sheet-fate">
-								<input type="number" name="attr_relation_fate_19" value="" placeholder="0" title="운명점"/>
-							</div>
-							<div class="sheet-type">
-								<input type="text" name="attr_relation_link_19" value="" placeholder="속성" title="속성"/>
-							</div>
-						</div>
-						<div class="sheet-option">
-							<textarea name="attr_relation_19" value="" placeholder="설정"></textarea>
-						</div>
-					</div>
-				</div>
-
-				<div class="sheet-data-item">
-					<input name="attr_relation_20_flag" type="checkbox" value="1" class="sheet-Magic_flag" />
-					<span class="sheet-Magic_flag-label"></span>
-					<input name="attr_relation_20_close" type="checkbox" value="1" class="sheet-relation_close"/>
-					<span class="sheet-relation_close-label"></span>
-					<div class="sheet-it">
-						<div class="sheet-defalut">
-							<div class="sheet-subj">
-								<input type="text" name="attr_relation_name_20" value="" placeholder="앵커이름" title="앵커이름"/>
-							</div>
-							<div class="sheet-fate">
-								<input type="number" name="attr_relation_fate_20" value="" placeholder="0" title="운명점"/>
-							</div>
-							<div class="sheet-type">
-								<input type="text" name="attr_relation_link_20" value="" placeholder="속성" title="속성"/>
-							</div>
-						</div>
-						<div class="sheet-option">
-							<textarea name="attr_relation_20" value="" placeholder="설정"></textarea>
 						</div>
 					</div>
 				</div>
@@ -2888,12 +2660,11 @@ on("change:chk_A change:chk_B change:chk_C change:chk_D change:chk_E",
 );
 
 // 목록 보기 체크
-on("change:book_count change:anker_count",
+on("change:book_count",
 	function() {
-		getAttrs(["book_count", "anker_count"],
+		getAttrs(["book_count"],
 			function(values) {
 				setAttrs({book_viewbox:values.book_count});
-				setAttrs({anker_viewbox:values.anker_count});
 			}
 		);
 	}
@@ -2901,10 +2672,9 @@ on("change:book_count change:anker_count",
 
 on("sheet:opened",
 	function() {
-		getAttrs(["book_count", "anker_count"],
+		getAttrs(["book_count"],
 			function(values) {
 				setAttrs({book_viewbox:values.book_count});
-				setAttrs({anker_viewbox:values.anker_count});
 			}
 		);
 	}
@@ -2964,6 +2734,121 @@ on("change:Magic_01_Assigned_Skill change:Magic_02_Assigned_Skill change:Magic_0
 		);
 	}
 );
+
+// 앵커 속성이 변동될 시 체크
+on("change:relation_fate_01 change:relation_fate_02 change:relation_fate_03 change:relation_fate_04 change:relation_fate_05 change:relation_fate_06 change:relation_fate_07 change:relation_fate_08 change:relation_fate_09 change:relation_fate_10 change:relation_link_01 change:relation_link_02 change:relation_link_03 change:relation_link_04 change:relation_link_05 change:relation_link_06 change:relation_link_07 change:relation_link_08 change:relation_link_09 change:relation_link_10", function() {
+	getAttrs(["relation_fate_01", "relation_fate_02", "relation_fate_03", "relation_fate_04", "relation_fate_05", "relation_fate_06", "relation_fate_07", "relation_fate_08", "relation_fate_09", "relation_fate_10", "relation_link_01", "relation_link_02", "relation_link_03", "relation_link_04", "relation_link_05", "relation_link_06", "relation_link_07", "relation_link_08", "relation_link_09", "relation_link_10"], function(values) {
+		setAttrs({A_hurt:''});
+		setAttrs({B_hurt:''});
+		setAttrs({C_hurt:''});
+		setAttrs({D_hurt:''});
+		setAttrs({E_hurt:''});
+		setAttrs({F_hurt:''});
+
+		if(values.relation_fate_01 == "상흔") {
+			switch(values.relation_link_01) {
+				case "별": setAttrs({A_hurt:'1'}); break;
+				case "짐승": setAttrs({B_hurt:'1'}); break;
+				case "힘": setAttrs({C_hurt:'1'}); break;
+				case "노래": setAttrs({D_hurt:'1'}); break;
+				case "꿈": setAttrs({E_hurt:'1'}); break;
+				case "어둠": setAttrs({F_hurt:'1'}); break;
+			}
+		}
+		if(values.relation_fate_02 == "상흔") {
+			switch(values.relation_link_02) {
+				case "별": setAttrs({A_hurt:'1'}); break;
+				case "짐승": setAttrs({B_hurt:'1'}); break;
+				case "힘": setAttrs({C_hurt:'1'}); break;
+				case "노래": setAttrs({D_hurt:'1'}); break;
+				case "꿈": setAttrs({E_hurt:'1'}); break;
+				case "어둠": setAttrs({F_hurt:'1'}); break;
+			}
+		}
+		if(values.relation_fate_03 == "상흔") {
+			switch(values.relation_link_03) {
+				case "별": setAttrs({A_hurt:'1'}); break;
+				case "짐승": setAttrs({B_hurt:'1'}); break;
+				case "힘": setAttrs({C_hurt:'1'}); break;
+				case "노래": setAttrs({D_hurt:'1'}); break;
+				case "꿈": setAttrs({E_hurt:'1'}); break;
+				case "어둠": setAttrs({F_hurt:'1'}); break;
+			}
+		}
+		if(values.relation_fate_04 == "상흔") {
+			switch(values.relation_link_04) {
+				case "별": setAttrs({A_hurt:'1'}); break;
+				case "짐승": setAttrs({B_hurt:'1'}); break;
+				case "힘": setAttrs({C_hurt:'1'}); break;
+				case "노래": setAttrs({D_hurt:'1'}); break;
+				case "꿈": setAttrs({E_hurt:'1'}); break;
+				case "어둠": setAttrs({F_hurt:'1'}); break;
+			}
+		}
+		if(values.relation_fate_05 == "상흔") {
+			switch(values.relation_link_05) {
+				case "별": setAttrs({A_hurt:'1'}); break;
+				case "짐승": setAttrs({B_hurt:'1'}); break;
+				case "힘": setAttrs({C_hurt:'1'}); break;
+				case "노래": setAttrs({D_hurt:'1'}); break;
+				case "꿈": setAttrs({E_hurt:'1'}); break;
+				case "어둠": setAttrs({F_hurt:'1'}); break;
+			}
+		}
+		if(values.relation_fate_06 == "상흔") {
+			switch(values.relation_link_06) {
+				case "별": setAttrs({A_hurt:'1'}); break;
+				case "짐승": setAttrs({B_hurt:'1'}); break;
+				case "힘": setAttrs({C_hurt:'1'}); break;
+				case "노래": setAttrs({D_hurt:'1'}); break;
+				case "꿈": setAttrs({E_hurt:'1'}); break;
+				case "어둠": setAttrs({F_hurt:'1'}); break;
+			}
+		}
+		if(values.relation_fate_07 == "상흔") {
+			switch(values.relation_link_07) {
+				case "별": setAttrs({A_hurt:'1'}); break;
+				case "짐승": setAttrs({B_hurt:'1'}); break;
+				case "힘": setAttrs({C_hurt:'1'}); break;
+				case "노래": setAttrs({D_hurt:'1'}); break;
+				case "꿈": setAttrs({E_hurt:'1'}); break;
+				case "어둠": setAttrs({F_hurt:'1'}); break;
+			}
+		}
+		if(values.relation_fate_08 == "상흔") {
+			switch(values.relation_link_08) {
+				case "별": setAttrs({A_hurt:'1'}); break;
+				case "짐승": setAttrs({B_hurt:'1'}); break;
+				case "힘": setAttrs({C_hurt:'1'}); break;
+				case "노래": setAttrs({D_hurt:'1'}); break;
+				case "꿈": setAttrs({E_hurt:'1'}); break;
+				case "어둠": setAttrs({F_hurt:'1'}); break;
+			}
+		}
+		if(values.relation_fate_09 == "상흔") {
+			switch(values.relation_link_09) {
+				case "별": setAttrs({A_hurt:'1'}); break;
+				case "짐승": setAttrs({B_hurt:'1'}); break;
+				case "힘": setAttrs({C_hurt:'1'}); break;
+				case "노래": setAttrs({D_hurt:'1'}); break;
+				case "꿈": setAttrs({E_hurt:'1'}); break;
+				case "어둠": setAttrs({F_hurt:'1'}); break;
+			}
+		}
+		if(values.relation_fate_10 == "상흔") {
+			switch(values.relation_link_10) {
+				case "별": setAttrs({A_hurt:'1'}); break;
+				case "짐승": setAttrs({B_hurt:'1'}); break;
+				case "힘": setAttrs({C_hurt:'1'}); break;
+				case "노래": setAttrs({D_hurt:'1'}); break;
+				case "꿈": setAttrs({E_hurt:'1'}); break;
+				case "어둠": setAttrs({F_hurt:'1'}); break;
+			}
+		}
+	});
+
+});
+
 
 // 불운 특기 명 체크 
 on("change:state_06_value change:status_06",
@@ -3095,6 +2980,7 @@ on("change:bas",
 
 
 <rolltemplate class="sheet-rolltemplate-MagiDice">
+<div class="sheet-magiDiceWrap">
 {{#spell}}
 	{{#rollTotal() spelluse 1}}
 		{{#^rollTotal() spelluse2 1}}
@@ -3789,6 +3675,8 @@ on("change:bas",
 			<div class="sheet-con">{{content}}</div>
 		{{/content}}
 	</div>
+</div>
+
 </div>
 </rolltemplate>
 
