@@ -3109,6 +3109,16 @@ on("change:bas",
 	{{/rollTotal() spelluse 1}}
 {{/spell}}
 
+{{#holy}}
+<div class="sheet-magibox-spell">
+	<div class="sheet-txt">
+		<p>{{holy}}</p>
+	</div>
+	<div class="sheet-bak"><img src="https://i.imgur.com/sfrDNai.png" alt="" /></div>
+</div>
+{{/holy}}
+
+{{#^holy}}
 <div class="sheet-magibox">
 	<div class="sheet-acc-tl"><img src="https://i.imgur.com/EGwBGD2.png" /></div>
 	<div class="sheet-acc-tr"><img src="https://i.imgur.com/dhgn76T.png" /></div>
@@ -3782,4 +3792,5 @@ on("change:bas",
 		{{/content}}
 	</div>
 </div>
+{{/^holy}}
 </rolltemplate>
