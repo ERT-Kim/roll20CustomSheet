@@ -86,7 +86,7 @@
 							<input type="radio" name="attr_exp" value="3" />
 							<input type="radio" name="attr_exp" value="2" />
 							<input type="radio" name="attr_exp" value="1" />
-							<input type="radio" name="attr_exp" class="sheet-zero" value="0" />
+							<input type="radio" name="attr_exp" class="sheet-zero" checked value="0" />
 						</div>
 					</div>
 
@@ -104,7 +104,7 @@
 							<input type="radio" name="attr_stress" value="3" />
 							<input type="radio" name="attr_stress" value="2" />
 							<input type="radio" name="attr_stress" value="1" />
-							<input type="radio" name="attr_stress" class="sheet-zero" value="0" />
+							<input type="radio" name="attr_stress" class="sheet-zero" checked value="0" />
 						</div>
 					</div>
 
@@ -121,18 +121,10 @@
 						<span>흉터</span>
 						<div class="sheet-bar sheet-heart">
 							<input type="radio" name="attr_scar" value="4" />
-							
-
 							<input type="radio" name="attr_scar" value="3" />
-							
-
 							<input type="radio" name="attr_scar" value="2" />
-							
-
 							<input type="radio" name="attr_scar" value="1" />
-							
-
-							<input type="radio" name="attr_scar" class="sheet-zero" value="0" />
+							<input type="radio" name="attr_scar" class="sheet-zero" checked value="0" />
 						</div>
 					</div>
 				</div>
@@ -159,7 +151,7 @@
 						<div class="sheet-prop-list">
 							<div class="sheet-dl">
 								<div class="sheet-dt">
-									<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}{{prop=육체}}{{target=[[@{prop_A}+@{prop_A_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">육체</button>
+									<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{prop=육체}}{{target=[[@{prop_A}+@{prop_A_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">육체</button>
 									<input type="hidden" name="attr_prop_A" value="" />
 									<span>
 										<input type="number" name="attr_prop_A_mod" value="0" />
@@ -172,10 +164,10 @@
 										<input type="radio" name="attr_prop_A01" value="3" />
 										<input type="radio" name="attr_prop_A01" value="2" />
 										<input type="radio" name="attr_prop_A01" value="1" />
-										<input type="radio" name="attr_prop_A01" class="sheet-zero" value="0" />
+										<input type="radio" name="attr_prop_A01" class="sheet-zero" checked value="0" />
 									</div>
 									<div class="sheet-bar-control">
-										<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}{{prop=민첩}}{{target=[[@{prop_A01}+@{prop_A01_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">민첩</button>
+										<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{prop=민첩}}{{target=[[@{prop_A01}+@{prop_A01_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">민첩</button>
 										<span>
 											<input type="number" name="attr_prop_A01_mod" value="0" />
 										</span>
@@ -188,10 +180,10 @@
 										<input type="radio" name="attr_prop_A02" value="3" />
 										<input type="radio" name="attr_prop_A02" value="2" />
 										<input type="radio" name="attr_prop_A02" value="1" />
-										<input type="radio" name="attr_prop_A02" class="sheet-zero" value="0" />
+										<input type="radio" name="attr_prop_A02" class="sheet-zero" checked value="0" />
 									</div>
 									<div class="sheet-bar-control">
-										<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}{{prop=파괴}}{{target=[[@{prop_A02}+@{prop_A02_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">파괴</button>
+										<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{prop=파괴}}{{target=[[@{prop_A02}+@{prop_A02_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">파괴</button>
 										<span>
 											<input type="number" name="attr_prop_A02_mod" value="0" />
 										</span>
@@ -204,10 +196,10 @@
 										<input type="radio" name="attr_prop_A03" value="3" />
 										<input type="radio" name="attr_prop_A03" value="2" />
 										<input type="radio" name="attr_prop_A03" value="1" />
-										<input type="radio" name="attr_prop_A03" class="sheet-zero" value="0" />
+										<input type="radio" name="attr_prop_A03" class="sheet-zero" checked value="0" />
 									</div>
 									<div class="sheet-bar-control">
-										<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}{{prop=은밀}}{{target=[[@{prop_A03}+@{prop_A03_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">은밀</button>
+										<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{prop=은밀}}{{target=[[@{prop_A03}+@{prop_A03_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">은밀</button>
 										<span>
 											<input type="number" name="attr_prop_A03_mod" value="0" />
 										</span>
@@ -220,10 +212,10 @@
 										<input type="radio" name="attr_prop_A04" value="3" />
 										<input type="radio" name="attr_prop_A04" value="2" />
 										<input type="radio" name="attr_prop_A04" value="1" />
-										<input type="radio" name="attr_prop_A04" class="sheet-zero" value="0" />
+										<input type="radio" name="attr_prop_A04" class="sheet-zero" checked value="0" />
 									</div>
 									<div class="sheet-bar-control">
-										<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}{{prop=체력}}{{target=[[@{prop_A04}+@{prop_A04_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">체력</button>
+										<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{prop=체력}}{{target=[[@{prop_A04}+@{prop_A04_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">체력</button>
 										<span>
 											<input type="number" name="attr_prop_A04_mod" value="0" />
 										</span>
@@ -233,7 +225,7 @@
 
 							<div class="sheet-dl">
 								<div class="sheet-dt">
-									<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}{{prop=지성}}{{target=[[@{prop_B}+@{prop_B_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">지성</button>
+									<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{prop=지성}}{{target=[[@{prop_B}+@{prop_B_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">지성</button>
 									<input type="hidden" name="attr_prop_B" value="" />
 									<span>
 										<input type="number" name="attr_prop_B_mod" value="0" />
@@ -246,10 +238,10 @@
 										<input type="radio" name="attr_prop_B01" value="3" />
 										<input type="radio" name="attr_prop_B01" value="2" />
 										<input type="radio" name="attr_prop_B01" value="1" />
-										<input type="radio" name="attr_prop_B01" class="sheet-zero" value="0" />
+										<input type="radio" name="attr_prop_B01" class="sheet-zero" checked value="0" />
 									</div>
 									<div class="sheet-bar-control">
-										<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}{{prop=제작}}{{target=[[@{prop_B01}+@{prop_B01_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">제작</button>
+										<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{prop=제작}}{{target=[[@{prop_B01}+@{prop_B01_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">제작</button>
 										<span>
 											<input type="number" name="attr_prop_B01_mod" value="0" />
 										</span>
@@ -262,10 +254,10 @@
 										<input type="radio" name="attr_prop_B02" value="3" />
 										<input type="radio" name="attr_prop_B02" value="2" />
 										<input type="radio" name="attr_prop_B02" value="1" />
-										<input type="radio" name="attr_prop_B02" class="sheet-zero" value="0" />
+										<input type="radio" name="attr_prop_B02" class="sheet-zero" checked value="0" />
 									</div>
 									<div class="sheet-bar-control">
-										<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}{{prop=조작}}{{target=[[@{prop_B02}+@{prop_B02_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">조작</button>
+										<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{prop=조작}}{{target=[[@{prop_B02}+@{prop_B02_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">조작</button>
 										<span>
 											<input type="number" name="attr_prop_B02_mod" value="0" />
 										</span>
@@ -278,10 +270,10 @@
 										<input type="radio" name="attr_prop_B03" value="3" />
 										<input type="radio" name="attr_prop_B03" value="2" />
 										<input type="radio" name="attr_prop_B03" value="1" />
-										<input type="radio" name="attr_prop_B03" class="sheet-zero" value="0" />
+										<input type="radio" name="attr_prop_B03" class="sheet-zero" checked value="0" />
 									</div>
 									<div class="sheet-bar-control">
-										<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}{{prop=해킹}}{{target=[[@{prop_B03}+@{prop_B03_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">해킹</button>
+										<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{prop=해킹}}{{target=[[@{prop_B03}+@{prop_B03_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">해킹</button>
 										<span>
 											<input type="number" name="attr_prop_B03_mod" value="0" />
 										</span>
@@ -294,10 +286,10 @@
 										<input type="radio" name="attr_prop_B04" value="3" />
 										<input type="radio" name="attr_prop_B04" value="2" />
 										<input type="radio" name="attr_prop_B04" value="1" />
-										<input type="radio" name="attr_prop_B04" class="sheet-zero" value="0" />
+										<input type="radio" name="attr_prop_B04" class="sheet-zero" checked value="0" />
 									</div>
 									<div class="sheet-bar-control">
-										<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}{{prop=관찰}}{{target=[[@{prop_B04}+@{prop_B04_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">관찰</button>
+										<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{prop=관찰}}{{target=[[@{prop_B04}+@{prop_B04_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">관찰</button>
 										<span>
 											<input type="number" name="attr_prop_B04_mod" value="0" />
 										</span>
@@ -307,7 +299,7 @@
 
 							<div class="sheet-dl">
 								<div class="sheet-dt">
-									<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}{{prop=감성}}{{target=[[@{prop_C}+@{prop_C_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">감성</button>
+									<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{prop=감성}}{{target=[[@{prop_C}+@{prop_C_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">감성</button>
 									<input type="hidden" name="attr_prop_C" value="" />
 									<span>
 										<input type="number" name="attr_prop_C_mod" value="0" />
@@ -320,10 +312,10 @@
 										<input type="radio" name="attr_prop_C01" value="3" />
 										<input type="radio" name="attr_prop_C01" value="2" />
 										<input type="radio" name="attr_prop_C01" value="1" />
-										<input type="radio" name="attr_prop_C01" class="sheet-zero" value="0" />
+										<input type="radio" name="attr_prop_C01" class="sheet-zero" checked value="0" />
 									</div>
 									<div class="sheet-bar-control">
-										<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}{{prop=대화}}{{target=[[@{prop_C01}+@{prop_C01_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">대화</button>
+										<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{prop=대화}}{{target=[[@{prop_C01}+@{prop_C01_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">대화</button>
 										<span>
 											<input type="number" name="attr_prop_C01_mod" value="0" />
 										</span>
@@ -336,10 +328,10 @@
 										<input type="radio" name="attr_prop_C02" value="3" />
 										<input type="radio" name="attr_prop_C02" value="2" />
 										<input type="radio" name="attr_prop_C02" value="1" />
-										<input type="radio" name="attr_prop_C02" class="sheet-zero" value="0" />
+										<input type="radio" name="attr_prop_C02" class="sheet-zero" checked value="0" />
 									</div>
 									<div class="sheet-bar-control">
-										<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}{{prop=선동}}{{target=[[@{prop_C02}+@{prop_C02_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">선동</button>
+										<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{prop=선동}}{{target=[[@{prop_C02}+@{prop_C02_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">선동</button>
 										<span>
 											<input type="number" name="attr_prop_C02_mod" value="0" />
 										</span>
@@ -352,10 +344,10 @@
 										<input type="radio" name="attr_prop_C03" value="3" />
 										<input type="radio" name="attr_prop_C03" value="2" />
 										<input type="radio" name="attr_prop_C03" value="1" />
-										<input type="radio" name="attr_prop_C03" class="sheet-zero" value="0" />
+										<input type="radio" name="attr_prop_C03" class="sheet-zero" checked value="0" />
 									</div>
 									<div class="sheet-bar-control">
-										<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}{{prop=협박}}{{target=[[@{prop_C03}+@{prop_C03_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">협박</button>
+										<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{prop=협박}}{{target=[[@{prop_C03}+@{prop_C03_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">협박</button>
 										<span>
 											<input type="number" name="attr_prop_C03_mod" value="0" />
 										</span>
@@ -368,10 +360,10 @@
 										<input type="radio" name="attr_prop_C04" value="3" />
 										<input type="radio" name="attr_prop_C04" value="2" />
 										<input type="radio" name="attr_prop_C04" value="1" />
-										<input type="radio" name="attr_prop_C04" class="sheet-zero" value="0" />
+										<input type="radio" name="attr_prop_C04" class="sheet-zero" checked value="0" />
 									</div>
 									<div class="sheet-bar-control">
-										<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}{{prop=SNS}}{{target=[[@{prop_C04}+@{prop_C04_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">SNS</button>
+										<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{prop=SNS}}{{target=[[@{prop_C04}+@{prop_C04_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">SNS</button>
 										<span>
 											<input type="number" name="attr_prop_C04_mod" value="0" />
 										</span>
@@ -466,7 +458,7 @@
 
 								<div class="sheet-skill-name">
 									<strong>자동문*</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{A01=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{A01=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 태그가 없는 문을 여는 데는 판정이 필요하지 않습니다. 태그가 있는 문을 열 때는 판정 시 판정 등급이 한 단계 오릅니다.
@@ -481,7 +473,7 @@
 
 								<div class="sheet-skill-name">
 									<strong>소매치기*</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{A02=1}}{{target=[[@{prop_A01}+@{prop_A01_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{A02=1}}{{target=[[@{prop_A01}+@{prop_A01_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}"></button>
 								</div>
 								<div class="sheet-txt">
 									상대와 짧은 시간 동안 접촉해서 민첩으로 판정해 상대의 #태그가 붙은 중요한 물건 등을 빼냅니다.
@@ -502,7 +494,7 @@
 
 								<div class="sheet-skill-name">
 									<strong>고양이처럼 날렵한*</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{A03=1}}{{target=[[@{prop_A01}+@{prop_A01_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{A03=1}}{{target=[[@{prop_A01}+@{prop_A01_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 은밀 판정을 하거나 피해를 거절할 때, 마스터가 지정한 영역 대신 민첩으로 굴릴 수 있습니다.
@@ -517,7 +509,7 @@
 
 								<div class="sheet-skill-name">
 									<strong>보안 전문가</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{A04=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{A04=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 보안이 잘 된 시설에 잠입할 때, 상황 단계를 하나 낮추거나 보안 상태에 관련된 태그를 하나 없앨 수 있습니다.
@@ -532,13 +524,13 @@
 
 								<div class="sheet-skill-name">
 									<strong>벽타기꾼</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{A05=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{A05=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 플레이 중 언제든 높이에 대한 태그에 영향을 받지 않습니다. 또한 세션당 한 번, 지금 등장한 장소에 #고층 태그를 붙일 수 있습니다.
 								</div>
 								<div class="sheet-counter">
-									<input type="checkbox" name="attr_skill_A05_chk01" class="sheet-skill-count" value="1" />
+									<input type="checkbox" name="attr_skill_A05_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
 								</div>
 							</div>
 						</div>
@@ -550,13 +542,13 @@
 
 								<div class="sheet-skill-name">
 									<strong>밤눈</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{A06=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{A06=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 플레이 중 언제든 어둠에 대한 태그에 영향을 받지 않습니다. 또한 세션당 한 번, 지금 등장한 장면에 #어둠 태그를 붙일 수 있습니다.
 								</div>
 								<div class="sheet-counter">
-									<input type="checkbox" name="attr_skill_A06_chk01" class="sheet-skill-count" value="1" />
+									<input type="checkbox" name="attr_skill_A06_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
 								</div>
 							</div>
 						</div>
@@ -568,7 +560,7 @@
 
 								<div class="sheet-skill-name">
 									<strong>운동선수</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{A06=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{A06=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신이 민첩 판정을 위해 집중할 때, 스트레스 비용이 1로 줄어듭니다.
@@ -586,7 +578,7 @@
 
 								<div class="sheet-skill-name">
 									<strong>리더의 재질</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{B01=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{B01=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 스트레스를 하나 받은 뒤 두 개의 도움 주사위를 팀원에게 건넬 수 있습니다. 상황이 허락한다면 각자 다른 사람에게 줄 수도 있습니다.
@@ -601,7 +593,7 @@
 
 								<div class="sheet-skill-name">
 									<strong>카리스마</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{B02=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{B02=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									세션마다 협박, 대화, 선동 중 하나를 고르고 이 중 하나의 특성치로 판정할 때 주사위 하나를 더 받습니다. 이 능력은 매 세션이 시작할 때마다 새롭게 고를 수 있으며, 이 효과는 세션이 끝날 때마다 사라집니다.
@@ -616,7 +608,7 @@
 
 								<div class="sheet-skill-name">
 									<strong>뒤처리 전문가</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{B03=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{B03=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 팀원이 판정이 실패했을 때 위기 타이머나 대결 타이머가 채워지는 것을 막을 수 있습니다. 막는 것에는 판정이 필요 없으나 그 대가에 대해서는 판정이 필요합니다. 사고를 친 플레이어가 먼저 1D를 굴린 뒤 리더가 주사위를 굴려 해당 주사위 숫자의 차만큼 스트레스를 받게 됩니다.
@@ -631,7 +623,7 @@
 
 								<div class="sheet-skill-name">
 									<strong>얼버무리기</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{B04=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{B04=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									만약 당신이 지시한 대로 팀원들이 행동했을 경우, 주목도가 올라갈 수 있는 상황에서도 주목도를 올리지 않습니다.
@@ -646,7 +638,7 @@
 
 								<div class="sheet-skill-name">
 									<strong>단단한 결속력</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{B05=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{B05=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 언제나 팀 시트의 결속력보다 한 단계 높은 보너스를 받습니다.
@@ -661,7 +653,7 @@
 
 								<div class="sheet-skill-name">
 									<strong>다재다능</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{B06=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{B06=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 자신이 판정할 때 원하는 만큼 스트레스를 받을 수 있고, 스트레스를 받은 만큼 자신의 판정에 주사위를 추가합니다. 사용할 수 있는 스트레스는 최대 팀 레벨만큼입니다.
@@ -676,7 +668,7 @@
 
 								<div class="sheet-skill-name">
 									<strong>은밀한 명성</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{B07=1}}{{target=[[@{prop_B04}+@{prop_B04_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{B07=1}}{{target=[[@{prop_B04}+@{prop_B04_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신에 대한 소문은 수면 아래서 은밀하게 떠다니고 있습니다. 당신이 누군지 눈치챌 만한 사람을 만날 때 관찰로 판정합니다. 판정에 따라 다음과 같은 효과가 발생합니다.
@@ -699,7 +691,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>달변가*</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{C01=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{C01=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									오프라인에서 누군가를 직접 만나 상대할 때, 그 장면의 대화 판정에서 주사위 눈을 1 올릴 수 있습니다.
@@ -713,7 +705,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>유리가면*</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{C02=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{C02=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									상대방을 속이기 위해 특정 인물/지위/직업을 연기합니다. 이 능력을 쓰고 대화를 할 때, 상대방의 의심 타이머를 하나 그린 뒤 실패나 대가 있는 성공을 할 때마다 이를 채웁니다. 의심 타이머의 칸이 모두 차면 사기꾼의 정체가 드러납니다. 하지만 상대가 당신을 해당 인물이라고 믿고 있는 동안은 다음과 같은 효과를 받을 수 있습니다.<br />
@@ -730,7 +722,7 @@
 
 								<div class="sheet-skill-name">
 									<strong>뒷조사*</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{C03=1}}{{target=[[1+?{추가다이스|0}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{C03=1}}{{target=[[1+?{추가다이스|0}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신이 알 법한 NPC가 등장할 때 당신은 그 사람에 대한 이야기를 안다고 말하고 판정할 수 있습니다.
@@ -750,7 +742,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>보이스 피싱</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{C04=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{C04=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신의 유려한 말솜씨로 상대에게 거짓 정보를 흘려 이 장면에서 무조건 퇴장하게 할 수 있습니다. 단 상대는 이 일을 잊지 않을 것이고, 왓슨은 #거짓말에 속은 사람, 혹은 그와 유사한 내용의 태그를 하나 만듭니다.
@@ -764,7 +756,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>미인계</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{C05=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{C05=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신이 상대를 유혹할 때, 대화를 통해 판정한 뒤 그 결과에 따라 당신에 대한 상대의 호감도를 판정합니다.
@@ -778,7 +770,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>본업에 충실</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{C06=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{C06=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 일상 장면에서 자산획득을 할 때 받는 월급에 +2합니다.
@@ -792,7 +784,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>도망자</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{C07=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{C07=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 사람들의 시선을 피하는 판정을 할 때 주사위를 한 개 더 받습니다.
@@ -809,7 +801,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>건물주*</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{D01=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{D01=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 매 세션이 시작할 때마다 5 월급을 받고 시작합니다.
@@ -823,7 +815,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>전문가 초빙*</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{D02=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{D02=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 2 월급을 사용하면 어떤 행동도 가장 높은 특성치로 판정할 수 있습니다.
@@ -837,7 +829,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>PPL</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{D03=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{D03=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신이 플레이 중 (억지로라도) 특정 소지품을 사용해 문제를 해결할 때마다 이번 세션이 끝난 뒤의 성공 보수에 2 월급씩 추가됩니다. 플레이어는 플레이 시작 전에 모두와 상의해 자신이 사용할 물품을 하나 정합니다.
@@ -851,7 +843,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>#방탕한_파티</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{D04=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{D04=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									논란이 될 정도로 화려한 파티를 열고 SNS에 올립니다. 4 월급을 소모해서 현재의 주목도를 3 감소시키거나 팀원 전원의 스트레스를 3까지 해소할 수 있습니다.
@@ -865,7 +857,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>여기를 보세요</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{D05=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{D05=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									주목도를 1 올리고, 순간적으로 해당 장면에 등장한 모든 캐릭터의 주의를 끌 수 있습니다. 이때 행동하는 다른 팀원들은 모두 행동에 1D의 다이스를 추가로 받습니다.
@@ -879,7 +871,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>#지금_여기</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{D06=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{D06=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									자신의 트윙클 계정에 일부러 자신의 셀카를 올려 주변에 있던 사람들 모이게 해서 #팔로워나 #군중, 혹은 그와 유사한 내용의 태그를 만듭니다.
@@ -893,7 +885,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>이 영상이 재밌으셨다면 구독과 좋아요를 눌러주세요</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{D07=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{D07=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									플레이 중 모두에게 박수를 받을 만한 멋진 롤플레잉이나 눈물이 날 정도로 웃긴 말을 하면 주사위를 하나 받습니다. 주사위를 받을 만한 말이나 행동이었다는 사실에 전원 동의해야 합니다.
@@ -910,7 +902,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>괴력난신*</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{E01=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{E01=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 집중했을 때 태그가 없는 다수의 적을 한 번에 쓰러트리거나, 태그가 붙은 구조물이나 장치를 별도의 태그 없이 파괴할 수 있습니다.
@@ -923,7 +915,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>위기에 강함*</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{E02=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{E02=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 수많은 위기 속에서 살아남은 경험으로 '진짜 위기'가 왔을 때 평소보다 더 폭발적인 능력을 발휘합니다. 위험한 상황에서 판정할 때 +1D를 받습니다.
@@ -936,7 +928,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>생활의 달인</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{E03=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{E03=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 소지품을 사용하지 않고도 주변의 물건을 무기로 활용하여 파괴에 +1D를 받거나 효과 등급을 한 단계 올릴 수 있습니다.
@@ -949,7 +941,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>포식자</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{E04=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{E04=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 협박할 때 +1D를 받습니다. 조금 전에 당신이 싸우는 모습을 본 상대라면 +2D를 받습니다.
@@ -962,7 +954,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>불살의 무도가</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{E05=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{E05=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									언제든지 적을 기절시키려 할 때 파괴 판정에 보너스 주사위를 하나 더 받습니다. 그때마다 #기절한 NPC 태그가 새롭게 붙습니다.
@@ -975,7 +967,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>말하기 싫은 과거</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{E06=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{E06=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 세션당 한 번 자신의 숨겨진 과거에 대해 묘사하고, 자신에게 없던 특성치를 굴릴 때 자신의 특성치 중 가장 높은 특성치로 굴릴 수 있습니다.
@@ -988,7 +980,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>내 뒤에 서 있어</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{E07=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{E07=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 피해를 피하고자 거절 판정을 할 때 추가로 주사위를 하나 더 받습니다. 다른 팀원이 상처를 입을 때 거절 판정을 자신이 굴리고 그 피해를 받는 데도 사용할 수 있습니다.
@@ -1005,7 +997,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>포터블 팩토리*</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{F01=1}}{{target=[[1+?{추가다이스|0}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{F01=1}}{{target=[[1+?{추가다이스|0}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}"></button>
 								</div>
 								<div class="sheet-txt">
 									언제 어디서든 그 상황에 필요한 장비를 임시로 만들어낼 수 있습니다. 다만 주사위를 굴려서 그 결과에 따라 최대 두 가지의 조건을 달성해야 합니다.
@@ -1024,13 +1016,13 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>적재적소 mk.1*</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{F02=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{F02=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 자신의 소지품을 사용해서 집중을 1회 공짜로 할 수 있습니다. 단 이 경우 어떤 방식으로 소지품을 사용해 집중했는지를 묘사해야 합니다.
 								</div>
 								<div class="sheet-counter">
-									<input type="checkbox" name="attr_skill_F02_chk01" class="sheet-skill-count" value="1" />
+									<input type="checkbox" name="attr_skill_F02_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
 								</div>
 							</div>
 						</div>
@@ -1040,13 +1032,13 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>적재적소 mk.2*</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{F03=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{F03=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 타인의 소지품을 사용해 집중을 1회 공짜로 시킬 수 있습니다. 단 이 경우 어떤 방식으로 소지품을 분해하거나 사용해 도움을 주었는지를 묘사해야 합니다.
 								</div>
 								<div class="sheet-counter">
-									<input type="checkbox" name="attr_skill_F03_chk01" class="sheet-skill-count" value="1" />
+									<input type="checkbox" name="attr_skill_F03_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
 								</div>
 							</div>
 						</div>
@@ -1056,7 +1048,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>만반의 준비*</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{F04=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{F04=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									회상 장면을 통해 받는 스트레스가 1 줄어듭니다.
@@ -1069,14 +1061,14 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>마개조 전문가</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{F05=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{F05=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 세션당 두 번, 타인의 소지품이나 장비에 태그를 하나 추가해줄 수 있습니다.
 								</div>
 								<div class="sheet-counter">
-									<input type="checkbox" name="attr_skill_F05_chk01" class="sheet-skill-count" value="1" />
-									<input type="checkbox" name="attr_skill_F05_chk03" class="sheet-skill-count" value="1" />
+									<input type="checkbox" name="attr_skill_F05_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
+									<input type="checkbox" name="attr_skill_F05_chk03" class="sheet-checkbox sheet-skill-count" value="1" />
 								</div>
 							</div>
 						</div>
@@ -1086,13 +1078,13 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>귀가 택배</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{F06=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{F06=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									세션당 한 번, 당신의 소지품 세 칸을 비울 수 있습니다. 이 능력으로 지워진 소지품은 그날 플레이에 다시 등장하지 못합니다.
 								</div>
 								<div class="sheet-counter">
-									<input type="checkbox" name="attr_skill_F06_chk01" class="sheet-skill-count" value="1" />
+									<input type="checkbox" name="attr_skill_F06_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
 								</div>
 							</div>
 						</div>
@@ -1102,7 +1094,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>특허 보유자</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{F07=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{F07=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 매 세션이 시작할 때마다 2 월급을 받고 시작합니다.
@@ -1117,7 +1109,7 @@
 							<div class="sheet-skill-con">
 								<div class="sheet-skill-name">
 									<strong>베테랑</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{E01=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{E01=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									전직요원은 기본적으로 1회 더 성장하고 시작합니다. (특성치나 특수능력 추가)<br />
@@ -1132,15 +1124,15 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>요원의 감</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{G02=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{G02=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									세션 중 3회, 자신을 포함한 팀원의 판정 중 실패할 것 같은 판정에 "실패할 것 같아요" 라고 선언하고 정말 실패하면 해당 판정을 다시 굴립니다. 만약 상대가 판정에 성공해도 기회는 소모합니다.
 								</div>
 								<div class="sheet-counter">
-									<input type="checkbox" name="attr_skill_G02_chk01" class="sheet-skill-count" value="1" />
-									<input type="checkbox" name="attr_skill_G02_chk02" class="sheet-skill-count" value="1" />
-									<input type="checkbox" name="attr_skill_G02_chk03" class="sheet-skill-count" value="1" />
+									<input type="checkbox" name="attr_skill_G02_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
+									<input type="checkbox" name="attr_skill_G02_chk02" class="sheet-checkbox sheet-skill-count" value="1" />
+									<input type="checkbox" name="attr_skill_G02_chk03" class="sheet-checkbox sheet-skill-count" value="1" />
 								</div>
 							</div>
 						</div>
@@ -1150,7 +1142,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>은밀한 공격</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{G03=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{G03=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 조용하게 무기를 쓰는 법을 알고 있습니다. 모든 무기를 사용한 판정에서 파괴나 민첩 대신 은밀로 판정할 수 있습니다.
@@ -1163,7 +1155,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>가벼운 몸놀림</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{G04=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{G04=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 소지품이 하나도 없을 때 은밀에 +1D를 받습니다.
@@ -1176,7 +1168,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>On-Line</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{G05=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{G05=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									해커였던 요원은 온라인에 연결할 수 있는 상황이라면 장소의 제약 없이, 다른 장소에 있는 동료에게도 도움을 줄 수 있습니다.
@@ -1189,7 +1181,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>도망자</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{G06=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{G06=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									대인 지원 업무를 맡았던 당신은 사람들의 시선을 피하는 판정을 할 때 주사위를 한 개 더 받습니다.
@@ -1202,7 +1194,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>뒤처리 전문가</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{G07=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{G07=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									지휘를 맡았던 당신은 팀원이 판정이 실패했을 때 위기 타이머나 대결 타이머가 채워지는 것을 막을 수 있습니다. 막는 것에는 판정이 필요 없으나 그 대가에 대해서는 판정이 필요합니다. 사고를 친 플레이어가 먼저 1D를 굴린 뒤 리더가 주사위를 굴려 해당 주사위 숫자의 차만큼 스트레스를 받게 됩니다.
@@ -1215,7 +1207,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>생활의 달인</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{G08=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{G08=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									전투요원이었던 당신은 소지품을 사용하지 않고도 주변의 물건을 무기로 활용할 수 있습니다.
@@ -1230,7 +1222,7 @@
 							<div class="sheet-skill-con">
 								<div class="sheet-skill-name">
 									<strong>특수조작</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{H01=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{H01=1}}{{target=[[@{prop_B02}+@{prop_B02_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}"></button>
 								</div>
 								<div class="sheet-txt">
 									기본적으로 컨트롤러는 특수조작 능력을 가지고 시작합니다. 컨트롤러는 각종 기계를 움직일 때마다 조작 판정을 해서 결과값에 따라 일정한 조작 포인트를 얻고, 이를 소비해 자신이 선택한 특수능력을 사용합니다. 포인트를 얻는 기준은 다음과 같습니다.
@@ -1255,7 +1247,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>드론 조종</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{H02=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{H02=1}}{{point=[[?{조작|잠입(야외),1|잠입(실내),2|촬영,3|운반,4}]]}}"></button>
 								</div>
 								<div class="sheet-txt">
 									드론은 기본적으로 3차원적으로 이동할 수 있으며, 이동시 어느 정도의 소음이 나곤 합니다만 잠입부터 운반까지 광범위한 일을 할 수 있습니다.
@@ -1299,7 +1291,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>스파이 로봇 조종</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{H03=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{H03=1}}{{point=[[?{조작|잠입(실내),1|촬영,2|데이터 탈취,3|운반,4}]]}}"></button>
 								</div>
 								<div class="sheet-txt">
 									스파이 로봇은 기본적으로 빠르고 작으며, 눈에 띄지 않도록 설계되어 있습니다. 조작이 간편하나 할 수 있는 일이 제한적입니다.
@@ -1343,7 +1335,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>차량 조종</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{H04=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{H04=1}}{{point=[[?{조작|미행,1|차량 탈취,2|추격,3|곡예 주행,4}]]}}"></button>
 								</div>
 								<div class="sheet-txt">
 									우리가 알고 있는 일반적인 차량입니다. 당신은 자차가 아니라 자율주행 택시로도 레이스를 펼칠 수 있습니다. 물론 평범한 운전을 위해서는 포인트를 쓸 필요가 없습니다.
@@ -1387,7 +1379,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>태생적 라이더</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{H05=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{H05=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 특수 조작에서 기본적으로 받는 조작 포인트에 추가로 1점을 받습니다.
@@ -1400,7 +1392,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>조작의 달인</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{H06=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{H06=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 언제나 조작으로 판정할 때 1D를 받습니다.
@@ -1413,14 +1405,14 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>최고의 조종사</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{H07=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{H07=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 세션당 두 번 조작으로 판정할 때 효과 등급을 한 단계 올릴 수 있습니다.
 								</div>
 								<div class="sheet-counter">
-									<input type="checkbox" name="attr_skill_H07_chk01" class="sheet-skill-count" value="1" />
-									<input type="checkbox" name="attr_skill_H07_chk02" class="sheet-skill-count" value="1" />
+									<input type="checkbox" name="attr_skill_H07_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
+									<input type="checkbox" name="attr_skill_H07_chk02" class="sheet-checkbox sheet-skill-count" value="1" />
 								</div>
 							</div>
 						</div>
@@ -1430,13 +1422,13 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>이것만은 안 쓰려고 했는데</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{H08=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{H08=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 세션당 한 번 1 월급을 소모해서 조작 판정에만 사용할 수 있는 주사위 두 개를 더 받을 수 있습니다.
 								</div>
 								<div class="sheet-counter">
-									<input type="checkbox" name="attr_skill_H08_chk01" class="sheet-skill-count" value="1" />
+									<input type="checkbox" name="attr_skill_H08_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
 								</div>
 							</div>
 						</div>
@@ -1450,7 +1442,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>백도어*</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{I01=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{I01=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									해커 캐릭터 전용으로 색이 다른 전용 주사위를 하나 받습니다. 이 주사위는 1이 나오면 다시 굴릴 수 있으며, 자신이 사용할 뿐만 아니라 타인에게 도움을 주기 위해서도 사용할 수 있습니다.
@@ -1464,7 +1456,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>On-Line*</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{I02=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{I02=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									해커는 온라인에 연결할 수 있는 상황이라면 장소의 제약 없이, 다른 장소에 있는 동료에게도 도움을 줄 수 있습니다.
@@ -1477,15 +1469,15 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>Off-Line</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{I03=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{I03=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									이전에 On-Line 을 골라야 선택할 수 있는 능력입니다. On-Line 능력을 통해서 도움을 줄 때 해커는 세션마다 세 번까지 스트레스 없이 도움을 줄 수 있습니다.
 								</div>
 								<div class="sheet-counter">
-									<input type="checkbox" name="attr_skill_I03_chk01" class="sheet-skill-count" value="1" />
-									<input type="checkbox" name="attr_skill_I03_chk02" class="sheet-skill-count" value="1" />
-									<input type="checkbox" name="attr_skill_I03_chk03" class="sheet-skill-count" value="1" />
+									<input type="checkbox" name="attr_skill_I03_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
+									<input type="checkbox" name="attr_skill_I03_chk02" class="sheet-checkbox sheet-skill-count" value="1" />
+									<input type="checkbox" name="attr_skill_I03_chk03" class="sheet-checkbox sheet-skill-count" value="1" />
 								</div>
 							</div>
 						</div>
@@ -1495,14 +1487,14 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>씬 스틸러</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{I04=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{I04=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									프로젝트당 한 번, 왓슨이 어떤 장면을 연출 중일 때 그 장면을 해커가 뺏어갑니다!<br />
 									이로 인해 새로 시작되는 장면의 묘사를 왓슨이 아니라 해커가 합니다. 이렇게 장면이 전환되면서 불리한 상황을 유리하게 만들거나, 혹은 곤란한 장애물을 해결할 수 있습니다.
 								</div>
 								<div class="sheet-counter">
-									<input type="checkbox" name="attr_skill_I04_chk01" class="sheet-skill-count" value="1" />
+									<input type="checkbox" name="attr_skill_I04_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
 								</div>
 							</div>
 						</div>
@@ -1512,7 +1504,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>^__^</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{I05=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{I05=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 온라인상에서 발자취를 남기지 않고 은밀하게 움직이는 것에 익숙합니다. 온라인상에서 은밀 판정을 해야 할 때 +1D를 받으며, 편안하거나 불안한 상황에서는 추적되지 않습니다.
@@ -1525,7 +1517,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>온라인 특화</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{I06=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{I06=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 온라인상에서 자신의 아바타로 나서거나 만나서 대화를 할 때는 대화, 선동 판정을 해킹으로 판정할 수 있습니다.
@@ -1538,7 +1530,7 @@
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
 									<strong>호접지몽</strong>
-									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}{{I07=1}}"></button>
+									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{I07=1}}"></button>
 								</div>
 								<div class="sheet-txt">
 									당신은 온라인을 넘어 오프라인에까지 영향력을 발휘합니다. 스트레스를 2 받으면 해킹 스킬을 활용해서 현실에 있는 태그를 지우거나 하나 새롭게 만들 수 있습니다. 어떤 방식으로 자신이 오프라인의 태그를 지우거나 새롭게 만들었는지 묘사합니다.
@@ -1577,6 +1569,11 @@
 						<input type="text" name="attr_inven_08" value="" />
 					</div>
 				</div>
+			</div>
+
+			<div class="sheet-inven">
+				<p><strong>장비</strong></p>
+				<textarea name="attr_items"></textarea>
 			</div>
 
 			<div class="sheet-money">
@@ -1623,35 +1620,620 @@
 		<div class="sheet-defaultWrap">
 			<div class="sheet-rows">
 				<div class="sheet-cols1">
-					임시
+					<div class="sheet-tit">아지트</div>
+					<div class="sheet-chk-input">
+						<strong><input type="checkbox" class="sheet-checkbox" name="attr_house_online" value="1" /> 온라인</strong>
+						<input type="text" name="attr_house_online_name" value="" />
+					</div>
+					<div class="sheet-chk-input">
+						<strong><input type="checkbox" class="sheet-checkbox" name="attr_house_offline" value="1" /> 오프라인</strong>
+						<input type="text" name="attr_house_offline_name" value="" />
+					</div>
 
+					<div class="sheet-notice">
+						<div class="sheet-tit">주목도</div>
+						<div class="sheet-bar sheet-squed">
+							<input type="radio" class="sheet-last" name="attr_notice" value="7" />
+							<input type="radio" name="attr_notice" value="6" />
+							<input type="radio" name="attr_notice" value="5" />
+							<input type="radio" name="attr_notice" value="4" />
+							<input type="radio" name="attr_notice" value="3" />
+							<input type="radio" name="attr_notice" value="2" />
+							<input type="radio" name="attr_notice" value="1" />
+							<input type="radio" name="attr_notice" class="sheet-zero" checked value="0" />
+						</div>
+					</div>
+					<div class="sheet-report">
+						<div class="sheet-tit">수배단계</div>
+						<div class="sheet-bar sheet-squed">
+							<input type="radio" class="sheet-last" name="attr_report" value="4" />
+							<input type="radio" name="attr_report" value="3" />
+							<input type="radio" name="attr_report" value="2" />
+							<input type="radio" name="attr_report" value="1" />
+							<input type="radio" name="attr_report" class="sheet-zero" checked value="0" />
+						</div>
+					</div>
 				</div>
 				<div class="sheet-cols2">
-					임시
-
+					<div class="sheet-team-spec">
+						<div class="sheet-tit">팀 특성치</div>
+						
+						<div class="sheet-dl">
+							<div class="sheet-dt">결속력</div>
+							<div class="sheet-dd">
+								<div class="sheet-bar sheet-squed">
+									<input type="radio" name="attr_team_spec_01" value="3" />
+									<input type="radio" name="attr_team_spec_01" value="2" />
+									<input type="radio" name="attr_team_spec_01" value="1" />
+									<input type="radio" name="attr_team_spec_01" class="sheet-zero" checked value="0" />
+								</div>
+								팀원간의 돕기 판정에 추가 효과
+							</div>
+						</div>
+						<div class="sheet-dl">
+							<div class="sheet-dt">커넥션</div>
+							<div class="sheet-dd">
+								<div class="sheet-bar sheet-squed">
+									<input type="radio" name="attr_team_spec_02" value="3" />
+									<input type="radio" name="attr_team_spec_02" value="2" />
+									<input type="radio" name="attr_team_spec_02" value="1" />
+									<input type="radio" name="attr_team_spec_02" class="sheet-zero" checked value="0" />
+								</div>
+								플레이 도중 올리간 주목도를 낮추거나 방지
+							</div>
+						</div>
+						<div class="sheet-dl">
+							<div class="sheet-dt">은밀도</div>
+							<div class="sheet-dd">
+								<div class="sheet-bar sheet-squed">
+									<input type="radio" name="attr_team_spec_03" value="3" />
+									<input type="radio" name="attr_team_spec_03" value="2" />
+									<input type="radio" name="attr_team_spec_03" value="1" />
+									<input type="radio" name="attr_team_spec_03" class="sheet-zero" checked value="0" />
+								</div>
+								팀에 없는 특성치를 가진 조력자를 지원
+							</div>
+						</div>
+						<div class="sheet-dl">
+							<div class="sheet-dt">자금지원</div>
+							<div class="sheet-dd">
+								<div class="sheet-bar sheet-squed">
+									<input type="radio" name="attr_team_spec_04" value="3" />
+									<input type="radio" name="attr_team_spec_04" value="2" />
+									<input type="radio" name="attr_team_spec_04" value="1" />
+									<input type="radio" name="attr_team_spec_04" class="sheet-zero" checked value="0" />
+								</div>
+								자금지원
+							</div>
+						</div>
+					</div>
+					<div class="sheet-team-money">
+						<div class="sheet-tit">팀 자금</div>
+						<input type="text" name="attr_team_money" value="" />
+					</div>
 				</div>
 				<div class="sheet-cols3">
-					임시
+					<div class="sheet-dl">
+						<div class="sheet-dt">팀 레벨</div>
+						<div class="sheet-dd">
+							<input type="number" name="attr_team_lv" value="" />
+						</div>
+					</div>
+					<div class="sheet-dl sheet-exp">
+						<div class="sheet-dt">경험치</div>
+						<div class="sheet-dd">
+							<div class="sheet-bar sheet-default-black">
+								<input type="radio" name="attr_team_exp" class="sheet-last" value="6" />
+								<input type="radio" name="attr_team_exp" value="5" />
+								<input type="radio" name="attr_team_exp" value="4" />
+								<input type="radio" name="attr_team_exp" value="3" />
+								<input type="radio" name="attr_team_exp" value="2" />
+								<input type="radio" name="attr_team_exp" value="1" />
+								<input type="radio" name="attr_team_exp" class="sheet-zero" checked value="0" />
+							</div>
+						</div>
+					</div>
 
 				</div>
+			</div>
+		</div>
+
+		<div class="sheet-userWrap">
+			<p>요원요람</p>
+			<div class="sheet-prof-card">
+				
+
+
+			</div>
+		</div>
+
+		<div class="sheet-teamSkillWrap">
+			<div class="sheet-title">팀 특수능력</div>
+
+			<div class="sheet-team-skill-list">
+				
+				<div class="sheet-skillBox">
+					<div class="sheet-skill-name">
+						<strong>한계 돌파</strong>
+						<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{TA01=1}}"></button>
+					</div>
+					<div class="sheet-txt">
+						특성치의 최대 한도를 1 올립니다. 세 번 까지 중복해 찍을 수 있습니다.
+					</div>
+					<div class="sheet-counter">
+						<input type="checkbox" name="attr_skill_TA01_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
+						<input type="checkbox" name="attr_skill_TA01_chk02" class="sheet-checkbox sheet-skill-count" value="1" />
+						<input type="checkbox" name="attr_skill_TA01_chk03" class="sheet-checkbox sheet-skill-count" value="1" />
+					</div>
+				</div>
+
+				<div class="sheet-skillBox">
+					<div class="sheet-skill-name">
+						<strong>물품 지원</strong>
+						<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{TA02=1}}"></button>
+					</div>
+					<div class="sheet-txt">
+						팀 시트에 소모성 아이템을 사용할 수 있는 3칸의 자리가 생깁니다.
+					</div>
+					<div class="sheet-counter">
+						<input type="checkbox" name="attr_skill_TA02_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
+					</div>
+				</div>
+
+				<div class="sheet-skillBox">
+					<div class="sheet-skill-name">
+						<strong>전용 병실</strong>
+						<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{TA03=1}}"></button>
+					</div>
+					<div class="sheet-txt">
+						중상, 치명상으로 입원할 때 스트레스가 1 줄어듭니다.
+					</div>
+					<div class="sheet-counter">
+						<input type="checkbox" name="attr_skill_TA03_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
+					</div>
+				</div>
+
+
 			</div>
 		</div>
 	</div>
 
 	<div class="sheet-memoWrap">
-		<textarea name="attr_memo"></textarea>
+		<div class="sheet-helper">
+			<p>조력자</p>
+			<textarea name="attr_helper"></textarea>
+		</div>
+		<div class="sheet-memo">
+			<p>메모</p>
+			<textarea name="attr_memo"></textarea>
+		</div>
 	</div>
 
 </div>
 
 
 <script type="text/worker">
-
-on("change:job", function() {
-	getAttrs(["job"], function(values) {
-		
-		setAttrs({job_check:values.job});
+	on("change:job", function() {
+		getAttrs(["job"], function(values) {
+			setAttrs({job_check:values.job});
+		});
 	});
-});
 
+	on("change:prop_A01 change:prop_A02 change:prop_A03 change:prop_A04 change:prop_B01 change:prop_B02 change:prop_B03 change:prop_B04 change:prop_C01 change:prop_C02 change:prop_C03 change:prop_C04", function() {
+		getAttrs(["prop_A01", "prop_A02", "prop_A03", "prop_A04", "prop_B01", "prop_B02", "prop_B03", "prop_B04", "prop_C01", "prop_C02", "prop_C03", "prop_C04", ], function(values) {
+			var p_A = 0;
+			var p_B = 0;
+			var p_C = 0;
+
+			if(values.prop_A01 > 0) p_A++;
+			if(values.prop_A02 > 0) p_A++;
+			if(values.prop_A03 > 0) p_A++;
+			if(values.prop_A04 > 0) p_A++;
+
+			if(values.prop_B01 > 0) p_B++;
+			if(values.prop_B02 > 0) p_B++;
+			if(values.prop_B03 > 0) p_B++;
+			if(values.prop_B04 > 0) p_B++;
+
+			if(values.prop_C01 > 0) p_C++;
+			if(values.prop_C02 > 0) p_C++;
+			if(values.prop_C03 > 0) p_C++;
+			if(values.prop_C04 > 0) p_C++;
+
+			setAttrs({prop_A:p_A});
+			setAttrs({prop_B:p_B});
+			setAttrs({prop_C:p_C});
+		});
+	});
 </script>
+
+<rolltemplate class="sheet-rolltemplate-SkillDice">
+<div class="sheet-SkillBox">
+	<div class="sheet-SkillTop"><img src="https://i.imgur.com/picohvZ.png" /></div>
+	<div class="sheet-SkillPannel">
+		{{#name}}
+		<div class="sheet-nameBox">
+			<div class="sheet-nick">
+				{{nick}}
+			</div>
+			<div class="sheet-name">
+				<strong>{{name}}</strong>
+				<span>
+					{{#rollTotal() job 1}}도둑 Thief{{/rollTotal() job 1}}
+					{{#rollTotal() job 2}}리더 Leader{{/rollTotal() job 2}}
+					{{#rollTotal() job 3}}사기꾼 Swindler{{/rollTotal() job 3}}
+					{{#rollTotal() job 4}}셀럽 Celebrity{{/rollTotal() job 4}}
+					{{#rollTotal() job 5}}싸움꾼 Fighter{{/rollTotal() job 5}}
+					{{#rollTotal() job 6}}엔지니어 Engineer{{/rollTotal() job 6}}
+					{{#rollTotal() job 7}}전직요원 Ex-Agent{{/rollTotal() job 7}}
+					{{#rollTotal() job 8}}컨트롤러 Controller{{/rollTotal() job 8}}
+					{{#rollTotal() job 9}}해커 Hacker{{/rollTotal() job 9}}
+				</span>
+			</div>
+		</div>
+		{{/name}}
+
+		{{#title}}
+		<div class="sheet-prop-name">
+			<span>{{title}}</span>
+		</div>
+		{{/title}}
+		{{#content}}
+		<div class='sheet-prop-text'>
+			{{content}}
+		</div>
+		{{/content}}
+
+		{{#prop}}
+		<div class="sheet-prop-name">
+			<span>{{prop}}</span>
+		</div>
+		{{/prop}}
+
+		{{#A01}}<div class="sheet-prop-name"><span>자동문</span></div>{{/A01}}
+		{{#A02}}<div class="sheet-prop-name"><span>소매치기</span></div>{{/A02}}
+		{{#A03}}<div class="sheet-prop-name"><span>고양이처럼 날렵한</span></div>{{/A03}}
+		{{#A04}}<div class="sheet-prop-name"><span>보안 전문가</span></div>{{/A04}}
+		{{#A05}}<div class="sheet-prop-name"><span>벽타기꾼</span></div>{{/A05}}
+		{{#A06}}<div class="sheet-prop-name"><span>밤눈</span></div>{{/A06}}
+		{{#A07}}<div class="sheet-prop-name"><span>운동선수</span></div>{{/A07}}
+
+		{{#B01}}<div class="sheet-prop-name"><span>리더의 재질</span></div>{{/B01}}
+		{{#B02}}<div class="sheet-prop-name"><span>카리스마</span></div>{{/B02}}
+		{{#B03}}<div class="sheet-prop-name"><span>뒤처리 전문가</span></div>{{/B03}}
+		{{#B04}}<div class="sheet-prop-name"><span>얼버무리기</span></div>{{/B04}}
+		{{#B05}}<div class="sheet-prop-name"><span>단단한 결속력</span></div>{{/B05}}
+		{{#B06}}<div class="sheet-prop-name"><span>다재다능</span></div>{{/B06}}
+		{{#B07}}<div class="sheet-prop-name"><span>은밀한 명성</span></div>{{/B07}}
+
+		{{#C01}}<div class="sheet-prop-name"><span>달변가</span></div>{{/C01}}
+		{{#C02}}<div class="sheet-prop-name"><span>유리가면</span></div>{{/C02}}
+		{{#C03}}<div class="sheet-prop-name"><span>뒷조사</span></div>{{/C03}}
+		{{#C04}}<div class="sheet-prop-name"><span>보이스 피싱</span></div>{{/C04}}
+		{{#C05}}<div class="sheet-prop-name"><span>미인계</span></div>{{/C05}}
+		{{#C06}}<div class="sheet-prop-name"><span>본업에 충실</span></div>{{/C06}}
+		{{#C07}}<div class="sheet-prop-name"><span>도망자</span></div>{{/C07}}
+
+		{{#D01}}<div class="sheet-prop-name"><span>건물주</span></div>{{/D01}}
+		{{#D02}}<div class="sheet-prop-name"><span>전문가 초빙</span></div>{{/D02}}
+		{{#D03}}<div class="sheet-prop-name"><span>PPL</span></div>{{/D03}}
+		{{#D04}}<div class="sheet-prop-name"><span>#방탕한_파티</span></div>{{/D04}}
+		{{#D05}}<div class="sheet-prop-name"><span>여기를 보세요</span></div>{{/D05}}
+		{{#D06}}<div class="sheet-prop-name"><span>#지금_여기</span></div>{{/D06}}
+		{{#D07}}<div class="sheet-prop-name"><span>이 영상이 재밌으셨다면 구독과 좋아요를 눌러주세요</span></div>{{/D07}}
+
+		{{#E01}}<div class="sheet-prop-name"><span>괴력난신</span></div>{{/E01}}
+		{{#E02}}<div class="sheet-prop-name"><span>위기에 강함</span></div>{{/E02}}
+		{{#E03}}<div class="sheet-prop-name"><span>생활의 달인</span></div>{{/E03}}
+		{{#E04}}<div class="sheet-prop-name"><span>포식자</span></div>{{/E04}}
+		{{#E05}}<div class="sheet-prop-name"><span>불살의 무도가</span></div>{{/E05}}
+		{{#E06}}<div class="sheet-prop-name"><span>말하기 싫은 과거</span></div>{{/E06}}
+		{{#E07}}<div class="sheet-prop-name"><span>내 뒤에 서 있어</span></div>{{/E07}}
+
+		{{#F01}}<div class="sheet-prop-name"><span>포터블 팩토리</span></div>{{/F01}}
+		{{#F02}}<div class="sheet-prop-name"><span>적재적속 mk.1</span></div>{{/F02}}
+		{{#F03}}<div class="sheet-prop-name"><span>적재적속 mk.2</span></div>{{/F03}}
+		{{#F04}}<div class="sheet-prop-name"><span>만반의 준비</span></div>{{/F04}}
+		{{#F05}}<div class="sheet-prop-name"><span>마개조 전문가</span></div>{{/F05}}
+		{{#F06}}<div class="sheet-prop-name"><span>귀가 택배</span></div>{{/F06}}
+		{{#F07}}<div class="sheet-prop-name"><span>특허 보유자</span></div>{{/F07}}
+
+		{{#G01}}<div class="sheet-prop-name"><span>베테랑</span></div>{{/G01}}
+		{{#G02}}<div class="sheet-prop-name"><span>요원의 감</span></div>{{/G02}}
+		{{#G03}}<div class="sheet-prop-name"><span>은밀한 공격</span></div>{{/G03}}
+		{{#G04}}<div class="sheet-prop-name"><span>가벼운 몸놀림</span></div>{{/G04}}
+		{{#G05}}<div class="sheet-prop-name"><span>On-Line</span></div>{{/G05}}
+		{{#G06}}<div class="sheet-prop-name"><span>도망자</span></div>{{/G06}}
+		{{#G07}}<div class="sheet-prop-name"><span>뒤처리 전문가</span></div>{{/G07}}
+		{{#G08}}<div class="sheet-prop-name"><span>생활의 달인</span></div>{{/G08}}
+
+		{{#H01}}<div class="sheet-prop-name"><span>특수조작</span></div>{{/H01}}
+		{{#H02}}<div class="sheet-prop-name"><span>드론 조종</span></div>{{/H02}}
+		{{#H03}}<div class="sheet-prop-name"><span>스파이 로봇 조종</span></div>{{/H03}}
+		{{#H04}}<div class="sheet-prop-name"><span>차량 조종</span></div>{{/H04}}
+		{{#H05}}<div class="sheet-prop-name"><span>태생적 라이더</span></div>{{/H05}}
+		{{#H06}}<div class="sheet-prop-name"><span>조작의 달인</span></div>{{/H06}}
+		{{#H07}}<div class="sheet-prop-name"><span>최고의 조종사</span></div>{{/H07}}
+		{{#H08}}<div class="sheet-prop-name"><span>이것만은 안 쓰려고 했는데</span></div>{{/H08}}
+
+		{{#I01}}<div class="sheet-prop-name"><span>백도어</span></div>{{/I01}}
+		{{#I02}}<div class="sheet-prop-name"><span>On-Line</span></div>{{/I02}}
+		{{#I03}}<div class="sheet-prop-name"><span>Off-Line</span></div>{{/I03}}
+		{{#I04}}<div class="sheet-prop-name"><span>씬 스틸러</span></div>{{/I04}}
+		{{#I05}}<div class="sheet-prop-name"><span>^__^</span></div>{{/I05}}
+		{{#I06}}<div class="sheet-prop-name"><span>온라인 특화</span></div>{{/I06}}
+		{{#I07}}<div class="sheet-prop-name"><span>호접지몽</span></div>{{/I07}}
+
+		{{#target}}
+			{{#^rollGreater() target 0}}
+				<!-- 0보다 작거나 같을 경우 불리한 판정 -->
+				<div class="sheet-dice sheet-minus">
+			{{/^rollGreater() target 0}}
+			{{#rollGreater() target 0}}
+				<!-- 0보다 클경우 일반 판정 -->
+				<div class="sheet-dice sheet-plus">
+			{{/rollGreater() target 0}}
+
+			{{#rollTotal() roll1 1}}<div class="sheet-dice-1">1</div>{{/rollTotal() roll1 1}}
+			{{#rollTotal() roll1 2}}<div class="sheet-dice-2">2</div>{{/rollTotal() roll1 2}}
+			{{#rollTotal() roll1 3}}<div class="sheet-dice-3">3</div>{{/rollTotal() roll1 3}}
+			{{#rollTotal() roll1 4}}<div class="sheet-dice-4">4</div>{{/rollTotal() roll1 4}}
+			{{#rollTotal() roll1 5}}<div class="sheet-dice-5">5</div>{{/rollTotal() roll1 5}}
+			{{#rollTotal() roll1 6}}<div class="sheet-dice-6">6</div>{{/rollTotal() roll1 6}}
+
+			{{#^rollGreater() target 0}}
+				{{#rollTotal() roll2 1}}<div class="sheet-dice-1">1</div>{{/rollTotal() roll2 1}}
+				{{#rollTotal() roll2 2}}<div class="sheet-dice-2">2</div>{{/rollTotal() roll2 2}}
+				{{#rollTotal() roll2 3}}<div class="sheet-dice-3">3</div>{{/rollTotal() roll2 3}}
+				{{#rollTotal() roll2 4}}<div class="sheet-dice-4">4</div>{{/rollTotal() roll2 4}}
+				{{#rollTotal() roll2 5}}<div class="sheet-dice-5">5</div>{{/rollTotal() roll2 5}}
+				{{#rollTotal() roll2 6}}<div class="sheet-dice-6">6</div>{{/rollTotal() roll2 6}}
+			{{/^rollGreater() target 0}}
+			{{#rollGreater() target 1}}
+				{{#rollTotal() roll2 1}}<div class="sheet-dice-1">1</div>{{/rollTotal() roll2 1}}
+				{{#rollTotal() roll2 2}}<div class="sheet-dice-2">2</div>{{/rollTotal() roll2 2}}
+				{{#rollTotal() roll2 3}}<div class="sheet-dice-3">3</div>{{/rollTotal() roll2 3}}
+				{{#rollTotal() roll2 4}}<div class="sheet-dice-4">4</div>{{/rollTotal() roll2 4}}
+				{{#rollTotal() roll2 5}}<div class="sheet-dice-5">5</div>{{/rollTotal() roll2 5}}
+				{{#rollTotal() roll2 6}}<div class="sheet-dice-6">6</div>{{/rollTotal() roll2 6}}
+			{{/rollGreater() target 1}}
+			{{#rollGreater() target 2}}
+				{{#rollTotal() roll3 1}}<div class="sheet-dice-1">1</div>{{/rollTotal() roll3 1}}
+				{{#rollTotal() roll3 2}}<div class="sheet-dice-2">2</div>{{/rollTotal() roll3 2}}
+				{{#rollTotal() roll3 3}}<div class="sheet-dice-3">3</div>{{/rollTotal() roll3 3}}
+				{{#rollTotal() roll3 4}}<div class="sheet-dice-4">4</div>{{/rollTotal() roll3 4}}
+				{{#rollTotal() roll3 5}}<div class="sheet-dice-5">5</div>{{/rollTotal() roll3 5}}
+				{{#rollTotal() roll3 6}}<div class="sheet-dice-6">6</div>{{/rollTotal() roll3 6}}
+			{{/rollGreater() target 2}}
+			{{#rollGreater() target 3}}
+				{{#rollTotal() roll4 1}}<div class="sheet-dice-1">1</div>{{/rollTotal() roll4 1}}
+				{{#rollTotal() roll4 2}}<div class="sheet-dice-2">2</div>{{/rollTotal() roll4 2}}
+				{{#rollTotal() roll4 3}}<div class="sheet-dice-3">3</div>{{/rollTotal() roll4 3}}
+				{{#rollTotal() roll4 4}}<div class="sheet-dice-4">4</div>{{/rollTotal() roll4 4}}
+				{{#rollTotal() roll4 5}}<div class="sheet-dice-5">5</div>{{/rollTotal() roll4 5}}
+				{{#rollTotal() roll4 6}}<div class="sheet-dice-6">6</div>{{/rollTotal() roll4 6}}
+			{{/rollGreater() target 3}}
+			{{#rollGreater() target 4}}
+				{{#rollTotal() roll5 1}}<div class="sheet-dice-1">1</div>{{/rollTotal() roll5 1}}
+				{{#rollTotal() roll5 2}}<div class="sheet-dice-2">2</div>{{/rollTotal() roll5 2}}
+				{{#rollTotal() roll5 3}}<div class="sheet-dice-3">3</div>{{/rollTotal() roll5 3}}
+				{{#rollTotal() roll5 4}}<div class="sheet-dice-4">4</div>{{/rollTotal() roll5 4}}
+				{{#rollTotal() roll5 5}}<div class="sheet-dice-5">5</div>{{/rollTotal() roll5 5}}
+				{{#rollTotal() roll5 6}}<div class="sheet-dice-6">6</div>{{/rollTotal() roll5 6}}
+			{{/rollGreater() target 4}}
+			{{#rollGreater() target 5}}
+				{{#rollTotal() roll6 1}}<div class="sheet-dice-1">1</div>{{/rollTotal() roll6 1}}
+				{{#rollTotal() roll6 2}}<div class="sheet-dice-2">2</div>{{/rollTotal() roll6 2}}
+				{{#rollTotal() roll6 3}}<div class="sheet-dice-3">3</div>{{/rollTotal() roll6 3}}
+				{{#rollTotal() roll6 4}}<div class="sheet-dice-4">4</div>{{/rollTotal() roll6 4}}
+				{{#rollTotal() roll6 5}}<div class="sheet-dice-5">5</div>{{/rollTotal() roll6 5}}
+				{{#rollTotal() roll6 6}}<div class="sheet-dice-6">6</div>{{/rollTotal() roll6 6}}
+			{{/rollGreater() target 5}}
+			{{#rollGreater() target 6}}
+				{{#rollTotal() roll7 1}}<div class="sheet-dice-1">1</div>{{/rollTotal() roll7 1}}
+				{{#rollTotal() roll7 2}}<div class="sheet-dice-2">2</div>{{/rollTotal() roll7 2}}
+				{{#rollTotal() roll7 3}}<div class="sheet-dice-3">3</div>{{/rollTotal() roll7 3}}
+				{{#rollTotal() roll7 4}}<div class="sheet-dice-4">4</div>{{/rollTotal() roll7 4}}
+				{{#rollTotal() roll7 5}}<div class="sheet-dice-5">5</div>{{/rollTotal() roll7 5}}
+				{{#rollTotal() roll7 6}}<div class="sheet-dice-6">6</div>{{/rollTotal() roll7 6}}
+			{{/rollGreater() target 6}}
+			{{#rollGreater() target 7}}
+				{{#rollTotal() roll8 1}}<div class="sheet-dice-1">1</div>{{/rollTotal() roll8 1}}
+				{{#rollTotal() roll8 2}}<div class="sheet-dice-2">2</div>{{/rollTotal() roll8 2}}
+				{{#rollTotal() roll8 3}}<div class="sheet-dice-3">3</div>{{/rollTotal() roll8 3}}
+				{{#rollTotal() roll8 4}}<div class="sheet-dice-4">4</div>{{/rollTotal() roll8 4}}
+				{{#rollTotal() roll8 5}}<div class="sheet-dice-5">5</div>{{/rollTotal() roll8 5}}
+				{{#rollTotal() roll8 6}}<div class="sheet-dice-6">6</div>{{/rollTotal() roll8 6}}
+			{{/rollGreater() target 7}}
+			{{#rollGreater() target 8}}
+				{{#rollTotal() roll9 1}}<div class="sheet-dice-1">1</div>{{/rollTotal() roll9 1}}
+				{{#rollTotal() roll9 2}}<div class="sheet-dice-2">2</div>{{/rollTotal() roll9 2}}
+				{{#rollTotal() roll9 3}}<div class="sheet-dice-3">3</div>{{/rollTotal() roll9 3}}
+				{{#rollTotal() roll9 4}}<div class="sheet-dice-4">4</div>{{/rollTotal() roll9 4}}
+				{{#rollTotal() roll9 5}}<div class="sheet-dice-5">5</div>{{/rollTotal() roll9 5}}
+				{{#rollTotal() roll9 6}}<div class="sheet-dice-6">6</div>{{/rollTotal() roll9 6}}
+			{{/rollGreater() target 8}}
+			{{#rollGreater() target 9}}
+				{{#rollTotal() roll10 1}}<div class="sheet-dice-1">1</div>{{/rollTotal() roll10 1}}
+				{{#rollTotal() roll10 2}}<div class="sheet-dice-2">2</div>{{/rollTotal() roll10 2}}
+				{{#rollTotal() roll10 3}}<div class="sheet-dice-3">3</div>{{/rollTotal() roll10 3}}
+				{{#rollTotal() roll10 4}}<div class="sheet-dice-4">4</div>{{/rollTotal() roll10 4}}
+				{{#rollTotal() roll10 5}}<div class="sheet-dice-5">5</div>{{/rollTotal() roll10 5}}
+				{{#rollTotal() roll10 6}}<div class="sheet-dice-6">6</div>{{/rollTotal() roll10 6}}
+			{{/rollGreater() target 9}}
+
+				<div class="sheet-result">
+					<div class="sheet-special">대성공</div>
+					<div class="sheet-succed">성공</div>
+					<div class="sheet-semi">대가있는 성공</div>
+					<div class="sheet-fail">실패</div>
+
+					<div class="sheet-fail-minus">실패</div>
+					<div class="sheet-semi-minus">대가있는 성공</div>
+					<div class="sheet-succed-minus">성공</div>
+				</div>
+			{{/target}}
+
+			{{#A01}}<div class='sheet-prop-text'>당신은 태그가 없는 문을 여는 데는 판정이 필요하지 않습니다. 태그가 있는 문을 열 때는 판정 시 판정 등급이 한 단계 오릅니다.</div>{{/A01}}
+			{{#A02}}
+				<div class='sheet-prop-text'>상대와 짧은 시간 동안 접촉해서 민첩으로 판정해 상대의 #태그가 붙은 중요한 물건 등을 빼냅니다.
+					<div class="sheet-line"></div>
+					<p class="sheet-special"><strong>대성공</strong> 상대는 이 상황을 눈치채지 못합니다.상대의 태그를 유리한 태그로 전환합니다.</p>
+					<p class="sheet-succed"><strong>6</strong> 상대의 태그를 유리한 태그로 전환합니다.</p>
+					<p class="sheet-semi"><strong>4~6</strong> 불리한 태그를 지웁니다.</p>
+					<p class="sheet-fail"><strong>실패</strong> 왓슨의 마음대로 상황이 진행됩니다.</p>
+
+					<p class="sheet-fail-minus"><strong>실패</strong> 왓슨의 마음대로 상황이 진행됩니다.</p>
+					<p class="sheet-semi-minus"><strong>4~6</strong> 불리한 태그를 지웁니다.</p>
+					<p class="sheet-succed-minus"><strong>6</strong> 상대의 태그를 유리한 태그로 전환합니다.</p>
+				</div>
+			{{/A02}}
+			{{#A03}}<div class='sheet-prop-text'>당신은 은밀 판정을 하거나 피해를 거절할 때, 마스터가 지정한 영역 대신 민첩으로 굴릴 수 있습니다.</div>{{/A03}}
+			{{#A04}}<div class='sheet-prop-text'>당신은 보안이 잘 된 시설에 잠입할 때, 상황 단계를 하나 낮추거나 보안 상태에 관련된 태그를 하나 없앨 수 있습니다.</div>{{/A04}}
+			{{#A05}}<div class='sheet-prop-text'>당신은 플레이 중 언제든 높이에 대한 태그에 영향을 받지 않습니다. 또한 세션당 한 번, 지금 등장한 장소에 #고층 태그를 붙일 수 있습니다.</div>{{/A05}}
+			{{#A06}}<div class='sheet-prop-text'>당신은 플레이 중 언제든 어둠에 대한 태그에 영향을 받지 않습니다. 또한 세션당 한 번, 지금 등장한 장면에 #어둠 태그를 붙일 수 있습니다.</div>{{/A06}}
+			{{#A07}}<div class='sheet-prop-text'>당신이 민첩 판정을 위해 집중할 때, 스트레스 비용이 1로 줄어듭니다.</div>{{/A07}}
+			{{#B01}}<div class='sheet-prop-text'>당신은 스트레스를 하나 받은 뒤 두 개의 도움 주사위를 팀원에게 건넬 수 있습니다. 상황이 허락한다면 각자 다른 사람에게 줄 수도 있습니다.</div>{{/B01}}
+			{{#B02}}<div class='sheet-prop-text'>세션마다 협박, 대화, 선동 중 하나를 고르고 이 중 하나의 특성치로 판정할 때 주사위 하나를 더 받습니다. 이 능력은 매 세션이 시작할 때마다 새롭게 고를 수 있으며, 이 효과는 세션이 끝날 때마다 사라집니다.</div>{{/B02}}
+			{{#B03}}<div class='sheet-prop-text'>당신은 팀원이 판정이 실패했을 때 위기 타이머나 대결 타이머가 채워지는 것을 막을 수 있습니다. 막는 것에는 판정이 필요 없으나 그 대가에 대해서는 판정이 필요합니다. 사고를 친 플레이어가 먼저 1D를 굴린 뒤 리더가 주사위를 굴려 해당 주사위 숫자의 차만큼 스트레스를 받게 됩니다.</div>{{/B03}}
+			{{#B04}}<div class='sheet-prop-text'>만약 당신이 지시한 대로 팀원들이 행동했을 경우, 주목도가 올라갈 수 있는 상황에서도 주목도를 올리지 않습니다.</div>{{/B04}}
+			{{#B05}}<div class='sheet-prop-text'>당신은 언제나 팀 시트의 결속력보다 한 단계 높은 보너스를 받습니다.</div>{{/B05}}
+			{{#B06}}<div class='sheet-prop-text'>당신은 자신이 판정할 때 원하는 만큼 스트레스를 받을 수 있고, 스트레스를 받은 만큼 자신의 판정에 주사위를 추가합니다. 사용할 수 있는 스트레스는 최대 팀 레벨만큼입니다.</div>{{/B06}}
+			{{#B07}}
+				<div class='sheet-prop-text'>당신에 대한 소문은 수면 아래서 은밀하게 떠다니고 있습니다. 당신이 누군지 눈치챌 만한 사람을 만날 때 관찰로 판정합니다. 판정에 따라 다음과 같은 효과가 발생합니다.
+					<div class="sheet-line"></div>
+					<p class="sheet-special"><strong>대성공</strong> 플레이어가 자신에 대한 소문을 결정하고 이 소문과 관련된 판정에서 쓸 수 있는 보너스 주사위를 하나 받습니다.</p>
+					<p class="sheet-succed"><strong>6</strong> 플레이어가 자신에 대한 소문을 결정합니다.</p>
+					<p class="sheet-semi"><strong>4-5</strong> 플레이어가 자신에 대한 소문을 결정하고, 왓슨이 그 소문으로 인한 부작용을 정합니다.</p>
+					<p class="sheet-fail"><strong>실패</strong> 왓슨이 소문을 결정합니다.</p>
+
+					<p class="sheet-fail-minus"><strong>실패</strong> 왓슨이 소문을 결정합니다.</p>
+					<p class="sheet-semi-minus"><strong>4-5</strong> 플레이어가 자신에 대한 소문을 결정하고, 왓슨이 그 소문으로 인한 부작용을 정합니다.</p>
+					<p class="sheet-succed-minus"><strong>6</strong> 플레이어가 자신에 대한 소문을 결정합니다.</p>
+
+				</div>
+			{{/B07}}
+			{{#C01}}<div class='sheet-prop-text'>오프라인에서 누군가를 직접 만나 상대할 때, 그 장면의 대화 판정에서 주사위 눈을 1 올릴 수 있습니다.</div>{{/C01}}
+			{{#C02}}<div class='sheet-prop-text'>상대방을 속이기 위해 특정 인물/지위/직업을 연기합니다. 이 능력을 쓰고 대화를 할 때, 상대방의 의심 타이머를 하나 그린 뒤 실패나 대가 있는 성공을 할 때마다 이를 채웁니다. 의심 타이머의 칸이 모두 차면 사기꾼의 정체가 드러납니다. 하지만 상대가 당신을 해당 인물이라고 믿고 있는 동안은 다음과 같은 효과를 받을 수 있습니다.<br />
+				- 상대가 가진 태그를 하나 무시합니다.<br />
+				- 상대에 대한 판정에서 1-2가 나오면 다시 굴릴 수 있는 주사위를 하나 받습니다.
+			</div>{{/C02}}
+			{{#C03}}
+				<div class='sheet-prop-text'>당신이 알 법한 NPC가 등장할 때 당신은 그 사람에 대한 이야기를 안다고 말하고 판정할 수 있습니다.
+					<div class="sheet-line"></div>
+					<p class="sheet-special"><strong>대성공</strong> 당신은 해당 캐릭터의 모든 것을 알고 있습니다. 아무도 모르는 비밀까지도요! 해당 캐릭터에 대한 태그를 하나 만들어서 가집니다.</p>
+					<p class="sheet-succed"><strong>6</strong> 당신은 해당 캐릭터의 모든 것을 알고 있습니다.</p>
+					<p class="sheet-semi"><strong>4-5</strong> 당신은 해당 캐릭터에 대해 대부분 알고 있지만 틀린 정보가 일부 포함되어있을 수도 있습니다.</p>
+					<p class="sheet-fail"><strong>실패</strong> 당신은 해당 캐릭터에 대해 모든 것을 알고 있다...고 생각합니다! 해당 캐릭터에 대해서 마음대로 묘사하되 그 사실 중 무엇이 '진실'인지는 왓슨만이 알고 있습니다.</p>
+
+					<p class="sheet-fail-minus"><strong>실패</strong> 당신은 해당 캐릭터에 대해 모든 것을 알고 있다...고 생각합니다! 해당 캐릭터에 대해서 마음대로 묘사하되 그 사실 중 무엇이 '진실'인지는 왓슨만이 알고 있습니다.</p>
+					<p class="sheet-semi-minus"><strong>4-5</strong> 당신은 해당 캐릭터에 대해 대부분 알고 있지만 틀린 정보가 일부 포함되어있을 수도 있습니다.</p>
+					<p class="sheet-succed-minus"><strong>6</strong> 당신은 해당 캐릭터의 모든 것을 알고 있습니다.</p>
+				</div>
+			{{/C03}}
+			{{#C04}}<div class='sheet-prop-text'>당신의 유려한 말솜씨로 상대에게 거짓 정보를 흘려 이 장면에서 무조건 퇴장하게 할 수 있습니다. 단 상대는 이 일을 잊지 않을 것이고, 왓슨은 #거짓말에 속은 사람, 혹은 그와 유사한 내용의 태그를 하나 만듭니다.</div>{{/C04}}
+			{{#C05}}<div class='sheet-prop-text'>당신이 상대를 유혹할 때, 대화를 통해 판정한 뒤 그 결과에 따라 당신에 대한 상대의 호감도를 판정합니다.</div>{{/C05}}
+			{{#C06}}<div class='sheet-prop-text'>당신은 일상 장면에서 자산획득을 할 때 받는 월급에 +2합니다.</div>{{/C06}}
+			{{#C07}}<div class='sheet-prop-text'>당신은 사람들의 시선을 피하는 판정을 할 떄 주사위를 한 개 더 받습니다.</div>{{/C07}}
+			{{#D01}}<div class='sheet-prop-text'>당신은 매 세션이 시작할 때마다 5 월급을 받고 시작합니다.</div>{{/D01}}
+			{{#D02}}<div class='sheet-prop-text'>당신은 2 월급을 사용하면 어떤 행동도 가장 높은 특성치로 판정할 수 있습니다.</div>{{/D02}}
+			{{#D03}}<div class='sheet-prop-text'>당신이 플레이 중 (억지로라도) 특정 소지품을 사용해 문제를 해결할 때마다 이번 세션이 끝난 뒤의 성공 보수에 2 월급씩 추가됩니다. 플레이어는 플레이 시작 전에 모두와 상의해 자신이 사용할 물품을 하나 정합니다.</div>{{/D03}}
+			{{#D04}}<div class='sheet-prop-text'>논란이 될 정도로 화려한 파티를 열고 SNS에 올립니다. 4 월급을 소모해서 현재의 주목도를 3 감소시키거나 팀원 전원의 스트레스를 3까지 해소할 수 있습니다.</div>{{/D04}}
+			{{#D05}}<div class='sheet-prop-text'>주목도를 1 올리고, 순간적으로 해당 장면에 등장한 모든 캐릭터의 주의를 끌 수 있습니다. 이때 행동하는 다른 팀원들은 모두 행동에 1D의 다이스를 추가로 받습니다.</div>{{/D05}}
+			{{#D06}}<div class='sheet-prop-text'>자신의 트윙클 계정에 일부러 자신의 셀카를 올려 주변에 있던 사람들 모이게 해서 #팔로워나 #군중, 혹은 그와 유사한 내용의 태그를 만듭니다.</div>{{/D06}}
+			{{#D07}}<div class='sheet-prop-text'>플레이 중 모두에게 박수를 받을 만한 멋진 롤플레잉이나 눈물이 날 정도로 웃긴 말을 하면 주사위를 하나 받습니다. 주사위를 받을 만한 말이나 행동이었다는 사실에 전원 동의해야 합니다.</div>{{/D07}}
+			{{#E01}}<div class='sheet-prop-text'>당신은 집중했을 때 태그가 없는 다수의 적을 한 번에 쓰러트리거나, 태그가 붙은 구조물이나 장치를 별도의 태그 없이 파괴할 수 있습니다.</div>{{/E01}}
+			{{#E02}}<div class='sheet-prop-text'>당신은 수많은 위기 속에서 살아남은 경험으로 '진짜 위기'가 왔을 때 평소보다 더 폭발적인 능력을 발휘합니다. 위험한 상황에서 판정할 때 +1D를 받습니다.</div>{{/E02}}
+			{{#E03}}<div class='sheet-prop-text'>당신은 소지품을 사용하지 않고도 주변의 물건을 무기로 활용하여 파괴에 +1D를 받거나 효과 등급을 한 단계 올릴 수 있습니다.</div>{{/E03}}
+			{{#E04}}<div class='sheet-prop-text'>당신은 협박할 때 +1D를 받습니다. 조금 전에 당신이 싸우는 모습을 본 상대라면 +2D를 받습니다.</div>{{/E04}}
+			{{#E05}}<div class='sheet-prop-text'>언제든지 적을 기절시키려 할 때 파괴 판정에 보너스 주사위를 하나 더 받습니다. 그때마다 #기절한 NPC 태그가 새롭게 붙습니다.</div>{{/E05}}
+			{{#E06}}<div class='sheet-prop-text'>당신은 세션당 한 번 자신의 숨겨진 과거에 대해 묘사하고, 자신에게 없던 특성치를 굴릴 때 자신의 특성치 중 가장 높은 특성치로 굴릴 수 있습니다.</div>{{/E06}}
+			{{#E07}}<div class='sheet-prop-text'>당신은 피해를 피하고자 거절 판정을 할 때 추가로 주사위를 하나 더 받습니다. 다른 팀원이 상처를 입을 때 거절 판정을 자신이 굴리고 그 피해를 받는 데도 사용할 수 있습니다.</div>{{/E07}}
+			{{#F01}}
+				<div class='sheet-prop-text'>언제 어디서든 그 상황에 필요한 장비를 임시로 만들어낼 수 있습니다. 다만 주사위를 굴려서 그 결과에 따라 최대 두 가지의 조건을 달성해야 합니다.
+					<div class="sheet-line"></div>
+					<p class="sheet-special"><strong>대성공</strong> 조건 없이 물건이 만들어지고 해당 물건에 태그가 붙습니다.</p>
+					<p class="sheet-succed"><strong>6</strong> 조건 없이 물건이 만들어집니다.</p>
+					<p class="sheet-semi"><strong>4-5</strong> 한 가지 필요한 조건이 있습니다.</p>
+					<p class="sheet-fail"><strong>실패</strong> 두 가지 필요한 조건이 있습니다.</p>
+
+					<p class="sheet-fail-minus"><strong>실패</strong> 두 가지 필요한 조건이 있습니다.</p>
+					<p class="sheet-semi-minus"><strong>4-5</strong> 한 가지 필요한 조건이 있습니다.</p>
+					<p class="sheet-succed-minus"><strong>6</strong> 조건 없이 물건이 만들어집니다.</p>
+				</div>
+			{{/F01}}
+			{{#F02}}<div class='sheet-prop-text'>당신은 자신의 소지품을 사용해서 집중을 1회 공짜로 할 수 있습니다. 단 이 경우 어떤 방식으로 소지품을 사용해 집중했는지를 묘사해야 합니다.</div>{{/F02}}
+			{{#F03}}<div class='sheet-prop-text'>당신은 타인의 소지품을 사용해 집중을 1회 공짜로 시킬 수 있습니다. 단 이 경우 어떤 방식으로 소지품을 분해하거나 사용해 도움을 주었는지를 묘사해야 합니다.</div>{{/F03}}
+			{{#F04}}<div class='sheet-prop-text'>회상 장면을 통해 받는 스트레스가 1 줄어듭니다.</div>{{/F04}}
+			{{#F05}}<div class='sheet-prop-text'>당신은 세션당 두 번, 타인의 소지품이나 장비에 태그를 하나 추가해줄 수 있습니다.</div>{{/F05}}
+			{{#F06}}<div class='sheet-prop-text'>세션당 한 번, 당신의 소지품 세 칸을 비울 수 있습니다. 이 능력으로 지워진 소지품은 그날 플레이에 다시 등장하지 못합니다.</div>{{/F06}}
+			{{#F07}}<div class='sheet-prop-text'>당신은 매 세션이 시작할 때마다 2 월급을 받고 시작합니다.</div>{{/F07}}
+			{{#G01}}<div class='sheet-prop-text'>전직요원은 기본적으로 1회 더 성장하고 시작합니다. (특성치나 특수능력 추가)
+			대신 흉터 하나를 받고 시작합니다. 이미 현역에서 근무하다가 은퇴한 사람이기 때문입니다.</div>{{/G01}}
+			{{#G02}}<div class='sheet-prop-text'>세션 중 3회, 자신을 포함한 팀원의 판정 중 실패할 것 같은 판정에 "실패할 것 같아요" 라고 선언하고 정말 실패하면 해당 판정을 다시 굴립니다. 만약 상대가 판정에 성공해도 기회는 소모합니다.</div>{{/G02}}
+			{{#G03}}<div class='sheet-prop-text'>당신은 조용하게 무기를 쓰는 법을 알고 있습니다. 모든 무기를 사용한 판정에서 파괴나 민첩 대신 은밀로 판정할 수 있습니다.</div>{{/G03}}
+			{{#G04}}<div class='sheet-prop-text'>당신은 소지품이 하나도 없을 때 은밀에 +1D를 받습니다.</div>{{/G04}}
+			{{#G05}}<div class='sheet-prop-text'>해커였던 요원은 온라인에 연결할 수 있는 상황이라면 장소의 제약 없이, 다른 장소에 있는 동료에게도 도움을 줄 수 있습니다.</div>{{/G05}}
+			{{#G06}}<div class='sheet-prop-text'>대인 지원 업무를 맡았던 당신은 사람들의 시선을 피하는 판정을 할 때 주사위를 한 개 더 받습니다.</div>{{/G06}}
+			{{#G07}}<div class='sheet-prop-text'>지휘를 맡았던 당신은 팀원이 판정이 실패했을 때 위기 타이머나 대결 타이머가 채워지는 것을 막을 수 있습니다. 막는 것에는 판정이 필요 없으나 그 대가에 대해서는 판정이 필요합니다. 사고를 친 플레이어가 먼저 1D를 굴린 뒤 리더가 주사위를 굴려 해당 주사위 숫자의 차만큼 스트레스를 받게 됩니다.</div>{{/G07}}
+			{{#G08}}<div class='sheet-prop-text'>전투요원이었던 당신은 소지품을 사용하지 않고도 주변의 물건을 무기로 활용할 수 있습니다.
+			이 물건을 어떻게 활용했는지 묘사하면 파괴에 +1D를 받거나 효과 등급을 한 단계 올릴 수 있습니다.</div>{{/G08}}
+			{{#H01}}
+				<div class='sheet-prop-text'>기본적으로 컨트롤러는 특수조작 능력을 가지고 시작합니다. 컨트롤러는 각종 기계를 움직일 때마다 조작 판정을 해서 결과값에 따라 일정한 조작 포인트를 얻고, 이를 소비해 자신이 선택한 특수능력을 사용합니다. 포인트를 얻는 기준은 다음과 같습니다.
+					<div class="sheet-line"></div>
+					<p class="sheet-special"><strong>대성공</strong> 5포인트</p>
+					<p class="sheet-succed"><strong>6</strong> 3포인트</p>
+					<p class="sheet-semi"><strong>4-5</strong> 2포인트</p>
+					<p class="sheet-fail"><strong>실패</strong> 1포인트</p>
+
+					<p class="sheet-fail-minus"><strong>실패</strong> 1포인트</p>
+					<p class="sheet-semi-minus"><strong>4-5</strong> 2포인트</p>
+					<p class="sheet-succed-minus"><strong>6</strong> 3포인트</p>
+
+					조작 포인트를 소모할 때 위험한 상황이면 비용이 1 더 추가됩니다.
+				</div>
+			{{/H01}}
+			{{#H02}}
+				<div class='sheet-prop-text'>드론은 기본적으로 3차원적으로 이동할 수 있으며, 이동시 어느 정도의 소음이 나곤 합니다만 잠입부터 운반까지 광범위한 일을 할 수 있습니다.
+					<div class="sheet-line"></div>
+					{{#rollTotal() point 1}}<p><em>1pt</em><strong>잠입(야외)</strong> 드론을 조종해 통제 중인 야외 시설에 잠입할 수 있습니다.</p>{{/rollTotal() point 1}}
+					{{#rollTotal() point 2}}<p><em>1pt</em><strong>잠입(실내)</strong> 드론을 조종해 굳건히 잠긴 실내 공장, 폐건물 등에 잠입할 수 있습니다. 사람이 너무 많은 곳에서는 사용에 주의해 주세요. 누군가 드론을 잡거나 뭔가 던질 수도 있습니다.</p>{{/rollTotal() point 2}}
+					{{#rollTotal() point 3}}<p><em>2pt</em><strong>촬영</strong> 드론을 통해 가벼운 장면을 촬영하고 클라우드에 업로드할 수 있습니다. 드론을 통해서는 한 장면만을 촬영할 수 있습니다. 그 이상은 촬영할 수 없습니다.</p>{{/rollTotal() point 3}}
+					{{#rollTotal() point 4}}<p><em>3pt</em><strong>운반</strong> 드론을 통해 특정 사물이나 대상을 운반할 수 있습니다. 소지품의 한 칸을 소모했을 경우 작은 물건, 소지품의 두 칸을 소모했을 경우 뚱뚱한 고양이 크기 혹은 개인이 운반 가능한 무게의 물건, 소지품의 세 칸을 소모했을 경우 사람 크기의 물건을 운반할 수 있습니다.</p>{{/rollTotal() point 4}}
+				</div>
+			{{/H02}}
+			{{#H03}}
+				<div class='sheet-prop-text'>스파이 로봇은 기본적으로 빠르고 작으며, 눈에 띄지 않도록 설계되어 있습니다. 조작이 간편하나 할 수 있는 일이 제한적입니다.
+					<div class="sheet-line"></div>
+					{{#rollTotal() point 1}}<p><em>1pt</em><strong>잠입(실내)</strong> 스파이 로봇을 통해 굳건히 잠긴 실내 공장, 폐건물 등에 잠입할 수 있습니다. 드론보다는 눈에 덜 띄지만, 너무 밝은 곳에서는 들킬 수 있습니다.</p>{{/rollTotal() point 1}}
+					{{#rollTotal() point 2}}<p><em>2pt</em><strong>촬영</strong> 스파이 로봇을 통해 가벼운 영상을 촬영하고 서버에 업로드할 수 있습니다. 스파이 로봇을 통해서는 한 장면만을 촬영할 수 있습니다. 그 이상은 촬영할 수 없습니다.</p>{{/rollTotal() point 2}}
+					{{#rollTotal() point 3}}<p><em>2pt</em><strong>데이터 탈취</strong> 스파이 로봇을 통해 특정 PC나 하드, 서버에 접근, 데이터를 탈취할 수 있습니다. 왓슨이 정한 만큼의 시간이 소요됩니다. 그동안 시간을 끌어주는 것은 다른 동료들의 몫입니다.</p>{{/rollTotal() point 3}}
+					{{#rollTotal() point 4}}<p><em>2pt</em><strong>운반</strong> 스파이 로봇을 통해 특정 물건을 밀반입할 수 있습니다. 무조건 작은 물건에 한하며(최대 USB 사이즈), 이 경우 눈에 띄지 않고 감시 카메라 등에 걸리지도 않습니다.</p>{{/rollTotal() point 4}}
+				</div>
+			{{/H03}}
+			{{#H04}}
+				<div class='sheet-prop-text'>우리가 알고 있는 일반적인 차량입니다. 당신은 자차가 아니라 자율주행 택시로도 레이스를 펼칠 수 있습니다. 물론 평범한 운전을 위해서는 포인트를 쓸 필요가 없습니다.
+					<div class="sheet-line"></div>
+					{{#rollTotal() point 1}}<p><em>1pt</em><strong>미행</strong> 일정 거리를 유지하며 눈에 안 띄게 다른 차량을 따라갈 수 있습니다.</p>{{/rollTotal() point 1}}
+					{{#rollTotal() point 2}}<p><em>1pt</em><strong>차량 탈취</strong> 자신의 자동차나 아닌 다른 차를 멋대로 사용합니다. 자율주행 택시도 뜯어서 준법적 모드의 자율주행 모드를 취소하고 최고속력 이상으로 법을 무시해가며 운전할 수 있습니다.</p>{{/rollTotal() point 2}}
+					{{#rollTotal() point 3}}<p><em>2pt</em><strong>추격</strong> 규정 속도와 신호, 모든 것을 위반하며 목표물을 쫓아갈 수 있습니다.</p>{{/rollTotal() point 3}}
+					{{#rollTotal() point 4}}<p><em>3pt</em><strong>곡예 주행</strong> 이걸 통과하기엔 너무 말이 안 된다 싶은 넓이의 골목도 한쪽 바퀴를 번쩍 들어 통과할 수 있습니다. 붐비는 고속도로나 정신없는 시내 한복판에서도 어떻게든 경찰을 따돌리고 도망갈 수 있습니다.</p>{{/rollTotal() point 4}}
+				</div>
+			{{/H04}}
+			{{#H05}}<div class='sheet-prop-text'>당신은 특수 조작에서 기본적으로 받는 조작 포인트에 추가로 1점을 받습니다.</div>{{/H05}}
+			{{#H06}}<div class='sheet-prop-text'>당신은 언제나 조작으로 판정할 때 1D를 받습니다.</div>{{/H06}}
+			{{#H07}}<div class='sheet-prop-text'>당신은 세션당 두 번 조작으로 판정할 때 효과 등급을 한 단계 올릴 수 있습니다.</div>{{/H07}}
+			{{#H08}}<div class='sheet-prop-text'>당신은 세션당 한 번 1 월급을 소모해서 조작 판정에만 사용할 수 있는 주사위 두 개를 더 받을 수 있습니다.</div>{{/H08}}
+			{{#I01}}<div class='sheet-prop-text'>해커 캐릭터 전용으로 색이 다른 전용 주사위를 하나 받습니다. 이 주사위는 1이 나오면 다시 굴릴 수 있으며, 자신이 사용할 뿐만 아니라 타인에게 도움을 주기 위해서도 사용할 수 있습니다.</div>{{/I01}}
+			{{#I02}}<div class='sheet-prop-text'>해커는 온라인에 연결할 수 있는 상황이라면 장소의 제약 없이, 다른 장소에 있는 동료에게도 도움을 줄 수 있습니다.</div>{{/I02}}
+			{{#I03}}<div class='sheet-prop-text'>이전에 On-Line 을 골라야 선택할 수 있는 능력입니다. On-Line 능력을 통해서 도움을 줄 때 해커는 세션마다 세 번까지 스트레스 없이 도움을 줄 수 있습니다.</div>{{/I03}}
+			{{#I04}}<div class='sheet-prop-text'>프로젝트당 한 번, 왓슨이 어떤 장면을 연출 중일 때 그 장면을 해커가 뺏어갑니다!
+			이로 인해 새로 시작되는 장면의 묘사를 왓슨이 아니라 해커가 합니다. 이렇게 장면이 전환되면서 불리한 상황을 유리하게 만들거나, 혹은 곤란한 장애물을 해결할 수 있습니다.</div>{{/I04}}
+			{{#I05}}<div class='sheet-prop-text'>당신은 온라인상에서 발자취를 남기지 않고 은밀하게 움직이는 것에 익숙합니다. 온라인상에서 은밀 판정을 해야 할 때 +1D를 받으며, 편안하거나 불안한 상황에서는 추적되지 않습니다.</div>{{/I05}}
+			{{#I06}}<div class='sheet-prop-text'>당신은 온라인상에서 자신의 아바타로 나서거나 만나서 대화를 할 때는 대화, 선동 판정을 해킹으로 판정할 수 있습니다.</div>{{/I06}}
+			{{#I07}}<div class='sheet-prop-text'>당신은 온라인을 넘어 오프라인에까지 영향력을 발휘합니다. 스트레스를 2 받으면 해킹 스킬을 활용해서 현실에 있는 태그를 지우거나 하나 새롭게 만들 수 있습니다. 어떤 방식으로 자신이 오프라인의 태그를 지우거나 새롭게 만들었는지 묘사합니다.</div>{{/I07}}
+		{{#target}}</div>{{/target}}
+	</div>
+	<div class="sheet-SkillBottom"><img src="https://i.imgur.com/fjgcpwf.png" /></div>
+</div>
+</rolltemplate>
