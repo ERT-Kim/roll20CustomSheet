@@ -157,15 +157,15 @@
 						<span>특성치</span>
 						<span class="sheet-guide">※ 각항목명을클릭하면 주사위가굴러갑니다.</span>
 						<div class="sheet-prop-list">
-							<dl>
-								<dt>
+							<div class="sheet-dl">
+								<div class="sheet-dt">
 									<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}{{prop=육체}}{{target=[[@{prop_A}+@{prop_A_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">육체</button>
 									<input type="hidden" name="attr_prop_A" value="" />
 									<span>
 										<input type="number" name="attr_prop_A_mod" value="0" />
 									</span>
-								</dt>
-								<dd>
+								</div>
+								<div class="sheet-dd">
 									<div class="sheet-bar sheet-diamond">
 										<input type="radio" name="attr_prop_A01" value="5" />
 										<input type="radio" name="attr_prop_A01" value="4" />
@@ -180,8 +180,8 @@
 											<input type="number" name="attr_prop_A01_mod" value="0" />
 										</span>
 									</div>
-								</dd>
-								<dd>
+								</div>
+								<div class="sheet-dd">
 									<div class="sheet-bar sheet-diamond">
 										<input type="radio" name="attr_prop_A02" value="5" />
 										<input type="radio" name="attr_prop_A02" value="4" />
@@ -196,8 +196,8 @@
 											<input type="number" name="attr_prop_A02_mod" value="0" />
 										</span>
 									</div>
-								</dd>
-								<dd>
+								</div>
+								<div class="sheet-dd">
 									<div class="sheet-bar sheet-diamond">
 										<input type="radio" name="attr_prop_A03" value="5" />
 										<input type="radio" name="attr_prop_A03" value="4" />
@@ -212,8 +212,8 @@
 											<input type="number" name="attr_prop_A03_mod" value="0" />
 										</span>
 									</div>
-								</dd>
-								<dd>
+								</div>
+								<div class="sheet-dd">
 									<div class="sheet-bar sheet-diamond">
 										<input type="radio" name="attr_prop_A04" value="5" />
 										<input type="radio" name="attr_prop_A04" value="4" />
@@ -228,18 +228,18 @@
 											<input type="number" name="attr_prop_A04_mod" value="0" />
 										</span>
 									</div>
-								</dd>
-							</dl>
+								</div>
+							</div>
 
-							<dl>
-								<dt>
+							<div class="sheet-dl">
+								<div class="sheet-dt">
 									<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}{{prop=지성}}{{target=[[@{prop_B}+@{prop_B_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">지성</button>
 									<input type="hidden" name="attr_prop_B" value="" />
 									<span>
 										<input type="number" name="attr_prop_B_mod" value="0" />
 									</span>
-								</dt>
-								<dd>
+								</div>
+								<div class="sheet-dd">
 									<div class="sheet-bar sheet-diamond">
 										<input type="radio" name="attr_prop_B01" value="5" />
 										<input type="radio" name="attr_prop_B01" value="4" />
@@ -254,8 +254,8 @@
 											<input type="number" name="attr_prop_B01_mod" value="0" />
 										</span>
 									</div>
-								</dd>
-								<dd>
+								</div>
+								<div class="sheet-dd">
 									<div class="sheet-bar sheet-diamond">
 										<input type="radio" name="attr_prop_B02" value="5" />
 										<input type="radio" name="attr_prop_B02" value="4" />
@@ -270,8 +270,8 @@
 											<input type="number" name="attr_prop_B02_mod" value="0" />
 										</span>
 									</div>
-								</dd>
-								<dd>
+								</div>
+								<div class="sheet-dd">
 									<div class="sheet-bar sheet-diamond">
 										<input type="radio" name="attr_prop_B03" value="5" />
 										<input type="radio" name="attr_prop_B03" value="4" />
@@ -286,8 +286,8 @@
 											<input type="number" name="attr_prop_B03_mod" value="0" />
 										</span>
 									</div>
-								</dd>
-								<dd>
+								</div>
+								<div class="sheet-dd">
 									<div class="sheet-bar sheet-diamond">
 										<input type="radio" name="attr_prop_B04" value="5" />
 										<input type="radio" name="attr_prop_B04" value="4" />
@@ -302,18 +302,18 @@
 											<input type="number" name="attr_prop_B04_mod" value="0" />
 										</span>
 									</div>
-								</dd>
-							</dl>
+								</div>
+							</div>
 
-							<dl>
-								<dt>
+							<div class="sheet-dl">
+								<div class="sheet-dt">
 									<button type="roll" value="&{template:SkillDice}{{name=@{character_name}}{{prop=감성}}{{target=[[@{prop_C}+@{prop_C_mod}]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{roll3=[[1d6]]}}{{roll4=[[1d6]]}}{{roll5=[[1d6]]}}{{roll6=[[1d6]]}}{{roll7=[[1d6]]}}{{roll8=[[1d6]]}}{{roll9=[[1d6]]}}{{roll10=[[1d6]]}}">감성</button>
 									<input type="hidden" name="attr_prop_C" value="" />
 									<span>
 										<input type="number" name="attr_prop_C_mod" value="0" />
 									</span>
-								</dt>
-								<dd>
+								</div>
+								<div class="sheet-dd">
 									<div class="sheet-bar sheet-diamond">
 										<input type="radio" name="attr_prop_C01" value="5" />
 										<input type="radio" name="attr_prop_C01" value="4" />
@@ -328,8 +328,8 @@
 											<input type="number" name="attr_prop_C01_mod" value="0" />
 										</span>
 									</div>
-								</dd>
-								<dd>
+								</div>
+								<div class="sheet-dd">
 									<div class="sheet-bar sheet-diamond">
 										<input type="radio" name="attr_prop_C02" value="5" />
 										<input type="radio" name="attr_prop_C02" value="4" />
@@ -344,8 +344,8 @@
 											<input type="number" name="attr_prop_C02_mod" value="0" />
 										</span>
 									</div>
-								</dd>
-								<dd>
+								</div>
+								<div class="sheet-dd">
 									<div class="sheet-bar sheet-diamond">
 										<input type="radio" name="attr_prop_C03" value="5" />
 										<input type="radio" name="attr_prop_C03" value="4" />
@@ -360,8 +360,8 @@
 											<input type="number" name="attr_prop_C03_mod" value="0" />
 										</span>
 									</div>
-								</dd>
-								<dd>
+								</div>
+								<div class="sheet-dd">
 									<div class="sheet-bar sheet-diamond">
 										<input type="radio" name="attr_prop_C04" value="5" />
 										<input type="radio" name="attr_prop_C04" value="4" />
@@ -376,8 +376,8 @@
 											<input type="number" name="attr_prop_C04_mod" value="0" />
 										</span>
 									</div>
-								</dd>
-							</dl>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -485,12 +485,12 @@
 								</div>
 								<div class="sheet-txt">
 									상대와 짧은 시간 동안 접촉해서 민첩으로 판정해 상대의 #태그가 붙은 중요한 물건 등을 빼냅니다.
-									<dl>
-										<dt>대성공</dt><dd>상대는 이 상황을 눈치채지 못합니다. 상대의 태그를 유리한 태그로 전환합니다.</dd>
-										<dt>6</dt><dd>상대의 태그를 유리한 태그로 전환합니다.</dd>
-										<dt>4~6</dt><dd>불리한 태그를 지웁니다.</dd>
-										<dt>실패</dt><dd>왓슨의 마음대로 상황이 진행됩니다.</dd>
-									</dl>
+									<div class="sheet-dl">
+										<div class="sheet-dt">대성공</div><div class="sheet-dd">상대는 이 상황을 눈치채지 못합니다. 상대의 태그를 유리한 태그로 전환합니다.</div>
+										<div class="sheet-dt">6</div><div class="sheet-dd">상대의 태그를 유리한 태그로 전환합니다.</div>
+										<div class="sheet-dt">4~6</div><div class="sheet-dd">불리한 태그를 지웁니다.</div>
+										<div class="sheet-dt">실패</div><div class="sheet-dd">왓슨의 마음대로 상황이 진행됩니다.</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -680,12 +680,12 @@
 								</div>
 								<div class="sheet-txt">
 									당신에 대한 소문은 수면 아래서 은밀하게 떠다니고 있습니다. 당신이 누군지 눈치챌 만한 사람을 만날 때 관찰로 판정합니다. 판정에 따라 다음과 같은 효과가 발생합니다.
-									<dl>
-										<dt>대성공</dt><dd>플레이어가 자신에 대한 소문을 결정하고 이 소문과 관련된 판정에서 쓸 수 있는 보너스 주사위를 하나 받습니다.</dd>
-										<dt>6</dt><dd>플레이어가 자신에 대한 소문을 결정합니다.</dd>
-										<dt>4-5</dt><dd>플레이어가 자신에 대한 소문을 결정하고, 왓슨이 그 소문으로 인한 부작용을 정합니다.</dd>
-										<dt>실패</dt><dd>왓슨이 소문을 결정합니다.</dd>
-									</dl>
+									<div class="sheet-dl">
+										<div class="sheet-dt">대성공</div><div class="sheet-dd">플레이어가 자신에 대한 소문을 결정하고 이 소문과 관련된 판정에서 쓸 수 있는 보너스 주사위를 하나 받습니다.</div>
+										<div class="sheet-dt">6</div><div class="sheet-dd">플레이어가 자신에 대한 소문을 결정합니다.</div>
+										<div class="sheet-dt">4-5</div><div class="sheet-dd">플레이어가 자신에 대한 소문을 결정하고, 왓슨이 그 소문으로 인한 부작용을 정합니다.</div>
+										<div class="sheet-dt">실패</div><div class="sheet-dd">왓슨이 소문을 결정합니다.</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -734,12 +734,12 @@
 								</div>
 								<div class="sheet-txt">
 									당신이 알 법한 NPC가 등장할 때 당신은 그 사람에 대한 이야기를 안다고 말하고 판정할 수 있습니다.
-									<dl>
-										<dt>대성공</dt><dd>당신은 해당 캐릭터의 모든 것을 알고 있습니다. 아무도 모르는 비밀까지도요! 해당 캐릭터에 대한 태그를 하나 만들어서 가집니다.</dd>
-										<dt>6</dt><dd>당신은 해당 캐릭터의 모든 것을 알고 있습니다.</dd>
-										<dt>4-5</dt><dd>당신은 해당 캐릭터에 대해 대부분 알고 있지만 틀린 정보가 일부 포함되어있을 수도 있습니다.</dd>
-										<dt>실패</dt><dd>당신은 해당 캐릭터에 대해 모든 것을 알고 있다...고 생각합니다! 해당 캐릭터에 대해서 마음대로 묘사하되 그 사실 중 무엇이 '진실'인지는 왓슨만이 알고 있습니다.</dd>
-									</dl>
+									<div class="sheet-dl">
+										<div class="sheet-dt">대성공</div><div class="sheet-dd">당신은 해당 캐릭터의 모든 것을 알고 있습니다. 아무도 모르는 비밀까지도요! 해당 캐릭터에 대한 태그를 하나 만들어서 가집니다.</div>
+										<div class="sheet-dt">6</div><div class="sheet-dd">당신은 해당 캐릭터의 모든 것을 알고 있습니다.</div>
+										<div class="sheet-dt">4-5</div><div class="sheet-dd">당신은 해당 캐릭터에 대해 대부분 알고 있지만 틀린 정보가 일부 포함되어있을 수도 있습니다.</div>
+										<div class="sheet-dt">실패</div><div class="sheet-dd">당신은 해당 캐릭터에 대해 모든 것을 알고 있다...고 생각합니다! 해당 캐릭터에 대해서 마음대로 묘사하되 그 사실 중 무엇이 '진실'인지는 왓슨만이 알고 있습니다.</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -1009,12 +1009,12 @@
 								</div>
 								<div class="sheet-txt">
 									언제 어디서든 그 상황에 필요한 장비를 임시로 만들어낼 수 있습니다. 다만 주사위를 굴려서 그 결과에 따라 최대 두 가지의 조건을 달성해야 합니다.
-									<dl>
-										<dt>대성공</dt><dd>조건 없이 물건이 만들어지고 해당 물건에 태그가 붙습니다.</dd>
-										<dt>6</dt><dd>조건 없이 물건이 만들어집니다.</dd>
-										<dt>4-5</dt><dd>한 가지 필요한 조건이 있습니다.</dd>
-										<dt>실패</dt><dd>두 가지 필요한 조건이 있습니다.</dd>
-									</dl>
+									<div class="sheet-dl">
+										<div class="sheet-dt">대성공</div><div class="sheet-dd">조건 없이 물건이 만들어지고 해당 물건에 태그가 붙습니다.</div>
+										<div class="sheet-dt">6</div><div class="sheet-dd">조건 없이 물건이 만들어집니다.</div>
+										<div class="sheet-dt">4-5</div><div class="sheet-dd">한 가지 필요한 조건이 있습니다.</div>
+										<div class="sheet-dt">실패</div><div class="sheet-dd">두 가지 필요한 조건이 있습니다.</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -1234,12 +1234,12 @@
 								</div>
 								<div class="sheet-txt">
 									기본적으로 컨트롤러는 특수조작 능력을 가지고 시작합니다. 컨트롤러는 각종 기계를 움직일 때마다 조작 판정을 해서 결과값에 따라 일정한 조작 포인트를 얻고, 이를 소비해 자신이 선택한 특수능력을 사용합니다. 포인트를 얻는 기준은 다음과 같습니다.
-									<dl>
-										<dt>대성공</dt><dd>5포인트</dd>
-										<dt>6</dt><dd>3포인트</dd>
-										<dt>4-5</dt><dd>2포인트</dd>
-										<dt>실패</dt><dd>1포인트</dd>
-									</dl>
+									<div class="sheet-dl">
+										<div class="sheet-dt">대성공</div><div class="sheet-dd">5포인트</div>
+										<div class="sheet-dt">6</div><div class="sheet-dd">3포인트</div>
+										<div class="sheet-dt">4-5</div><div class="sheet-dd">2포인트</div>
+										<div class="sheet-dt">실패</div><div class="sheet-dd">1포인트</div>
+									</div>
 									<p>조작 포인트를 소모할 때 위험한 상황이면 비용이 1 더 추가됩니다.</p>
 								</div>
 								<div class="sheet-counter">
@@ -1554,29 +1554,29 @@
 		<div class="sheet-otherWrap">
 			<div class="sheet-inven">
 				<p><strong>소지품</strong> <span>평소에 가지고 다닐 법한 물건</span></p>
-				<dl>
-					<dt>가볍다</dt>
-					<dd>
+				<div class="sheet-dl">
+					<div class="sheet-dt">가볍다</div>
+					<div class="sheet-dd">
 						<input type="text" name="attr_inven_01" value="" />
 						<input type="text" name="attr_inven_02" value="" />
 						<input type="text" name="attr_inven_03" value="" />
-					</dd>
-				</dl>
-				<dl>
-					<dt>무겁다</dt>
-					<dd>
+					</div>
+				</div>
+				<div class="sheet-dl">
+					<div class="sheet-dt">무겁다</div>
+					<div class="sheet-dd">
 						<input type="text" name="attr_inven_04" value="" />
 						<input type="text" name="attr_inven_05" value="" />
 						<input type="text" name="attr_inven_06" value="" />
-					</dd>
-				</dl>
-				<dl>
-					<dt>힘겹다</dt>
-					<dd>
+					</div>
+				</div>
+				<div class="sheet-dl">
+					<div class="sheet-dt">힘겹다</div>
+					<div class="sheet-dd">
 						<input type="text" name="attr_inven_07" value="" />
 						<input type="text" name="attr_inven_08" value="" />
-					</dd>
-				</dl>
+					</div>
+				</div>
 			</div>
 
 			<div class="sheet-money">
@@ -1643,3 +1643,15 @@
 	</div>
 
 </div>
+
+
+<script type="text/worker">
+
+on("change:job", function() {
+	getAttrs(["job"], function(values) {
+		
+		setAttrs({job_check:values.job});
+	});
+});
+
+</script>
