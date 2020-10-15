@@ -133,6 +133,7 @@
 					<div class="sheet-job sheet-input">
 						<span>직업</span>
 						<select name="attr_job">
+							<option value="">직업선택</option>
 							<option value="1">도둑</option>
 							<option value="2">리더</option>
 							<option value="3">사기꾼</option>
@@ -2090,33 +2091,177 @@
 	on("change:job", function() {
 		getAttrs(["job"], function(values) {
 			setAttrs({job_check:values.job});
+			setAttrs({prop_A:0});
+			setAttrs({prop_A01:0});
+			setAttrs({prop_A02:0});
+			setAttrs({prop_A03:0});
+			setAttrs({prop_A04:0});
+
+			setAttrs({prop_B:0});
+			setAttrs({prop_B01:0});
+			setAttrs({prop_B02:0});
+			setAttrs({prop_B03:0});
+			setAttrs({prop_B04:0});
+
+			setAttrs({prop_C:0});
+			setAttrs({prop_C01:0});
+			setAttrs({prop_C02:0});
+			setAttrs({prop_C03:0});
+			setAttrs({prop_C04:0});
+
+			switch(values.job) {
+				case "1" :
+					// 도둑
+					setAttrs({prop_A:1});
+					setAttrs({prop_A01:2});
+				break;
+				case "2" :
+					// 리더
+					setAttrs({prop_A:1});
+					setAttrs({prop_A04:1});
+
+					setAttrs({prop_B:1});
+					setAttrs({prop_B04:1});
+
+					setAttrs({prop_C:1});
+					setAttrs({prop_C01:1});
+				break;
+				case "3" :
+					// 사기꾼
+					setAttrs({prop_C:1});
+					setAttrs({prop_C01:2});
+				break;
+				case "4" :
+					// 셀럽
+					setAttrs({prop_C:1});
+					setAttrs({prop_C04:2});
+				break;
+				case "5" :
+					// 싸움꾼
+					setAttrs({prop_A:1});
+					setAttrs({prop_A02:2});
+				break;
+				case "6" :
+					// 엔지니어
+					setAttrs({prop_B:1});
+					setAttrs({prop_B01:2});
+				break;
+				case "7" :
+					// 전직요원
+					setAttrs({prop_A:1});
+					setAttrs({prop_A03:2});
+				break;
+				case "8" :
+					// 컨트롤러
+					setAttrs({prop_B:1});
+					setAttrs({prop_B02:2});
+				break;
+				case "9" :
+					// 해커
+					setAttrs({prop_B:1});
+					setAttrs({prop_B03:2});
+				break;
+			}
 		});
 	});
 
 	on("change:prop_A01 change:prop_A02 change:prop_A03 change:prop_A04 change:prop_B01 change:prop_B02 change:prop_B03 change:prop_B04 change:prop_C01 change:prop_C02 change:prop_C03 change:prop_C04", function() {
-		getAttrs(["prop_A01", "prop_A02", "prop_A03", "prop_A04", "prop_B01", "prop_B02", "prop_B03", "prop_B04", "prop_C01", "prop_C02", "prop_C03", "prop_C04", ], function(values) {
+		getAttrs(["prop_A01", "prop_A02", "prop_A03", "prop_A04", "prop_B01", "prop_B02", "prop_B03", "prop_B04", "prop_C01", "prop_C02", "prop_C03", "prop_C04", "job"], function(values) {
 			var p_A = 0;
 			var p_B = 0;
 			var p_C = 0;
 
-			if(values.prop_A01 > 0) p_A++;
-			if(values.prop_A02 > 0) p_A++;
-			if(values.prop_A03 > 0) p_A++;
-			if(values.prop_A04 > 0) p_A++;
+			var p_A01 = values.prop_A01;
+			var p_A02 = values.prop_A02;
+			var p_A03 = values.prop_A03;
+			var p_A04 = values.prop_A04;
 
-			if(values.prop_B01 > 0) p_B++;
-			if(values.prop_B02 > 0) p_B++;
-			if(values.prop_B03 > 0) p_B++;
-			if(values.prop_B04 > 0) p_B++;
+			var p_B01 = values.prop_B01;
+			var p_B02 = values.prop_B02;
+			var p_B03 = values.prop_B03;
+			var p_B04 = values.prop_B04;
 
-			if(values.prop_C01 > 0) p_C++;
-			if(values.prop_C02 > 0) p_C++;
-			if(values.prop_C03 > 0) p_C++;
-			if(values.prop_C04 > 0) p_C++;
+			var p_C01 = values.prop_C01;
+			var p_C02 = values.prop_C02;
+			var p_C03 = values.prop_C03;
+			var p_C04 = values.prop_C04;
+
+			switch(values.job) {
+				case "1" :
+					// 도둑
+					if(p_A01 < 2) p_A01 = 2;
+				break;
+				case "2" :
+					// 리더
+					if(p_A04 < 1) p_A04 = 1;
+					if(p_B05 < 1) p_B05 = 1;
+					if(p_C01 < 1) p_C01 = 1;
+				break;
+				case "3" :
+					// 사기꾼
+					if(p_C01 < 2) p_C01 = 2;
+				break;
+				case "4" :
+					// 셀럽
+					if(p_C04 < 2) p_C04 = 2;
+				break;
+				case "5" :
+					// 싸움꾼
+					if(p_A02 < 2) p_A02 = 2;
+				break;
+				case "6" :
+					// 엔지니어
+					if(p_B01 < 2) p_B01 = 2;
+				break;
+				case "7" :
+					// 전직요원
+					if(p_A03 < 2) p_A03 = 2;
+				break;
+				case "8" :
+					// 컨트롤러
+					if(p_B02 < 2) p_B02 = 2;
+				break;
+				case "9" :
+					// 해커
+					if(p_B03 < 2) p_B03 = 2;
+				break;
+			}
+
+
+
+			if(p_A01 > 0) p_A++;
+			if(p_A02 > 0) p_A++;
+			if(p_A03 > 0) p_A++;
+			if(p_A04 > 0) p_A++;
+
+			if(p_B01 > 0) p_B++;
+			if(p_B02 > 0) p_B++;
+			if(p_B03 > 0) p_B++;
+			if(p_B04 > 0) p_B++;
+
+			if(p_C01 > 0) p_C++;
+			if(p_C02 > 0) p_C++;
+			if(p_C03 > 0) p_C++;
+			if(p_C04 > 0) p_C++;
 
 			setAttrs({prop_A:p_A});
 			setAttrs({prop_B:p_B});
 			setAttrs({prop_C:p_C});
+
+			setAttrs({prop_A01:p_A01});
+			setAttrs({prop_A02:p_A02});
+			setAttrs({prop_A03:p_A03});
+			setAttrs({prop_A04:p_A04});
+
+			setAttrs({prop_B01:p_B01});
+			setAttrs({prop_B02:p_B02});
+			setAttrs({prop_B03:p_B03});
+			setAttrs({prop_B04:p_B04});
+
+			setAttrs({prop_C01:p_C01});
+			setAttrs({prop_C02:p_C02});
+			setAttrs({prop_C03:p_C03});
+			setAttrs({prop_C04:p_C04});
 		});
 	});
 </script>

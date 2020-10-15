@@ -248,7 +248,6 @@ select, div, button, textarea, span, input, img, label{box-sizing: border-box; o
 .sheet-job-pannel .sheet-job-H,
 .sheet-job-pannel .sheet-job-I {display:none;}
 
-.sheet-job-check[value=""] ~ .sheet-job-pannel .sheet-job-A,
 .sheet-job-check[value="1"] ~ .sheet-job-pannel .sheet-job-A,
 .sheet-job-check[value="2"] ~ .sheet-job-pannel .sheet-job-B,
 .sheet-job-check[value="3"] ~ .sheet-job-pannel .sheet-job-C,
