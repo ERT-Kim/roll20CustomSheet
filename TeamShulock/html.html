@@ -2094,6 +2094,12 @@
 			setAttrs({prop_C03:0});
 			setAttrs({prop_C04:0});
 
+			setAttrs({scar:0});
+			if(values.job == "7") {
+				// 전직 요원일 경우
+				setAttrs({scar:1});
+			}
+
 			switch(values.job) {
 				case "1" :
 					// 도둑
@@ -2155,10 +2161,7 @@
 			if(values.job == "7") {
 				// 전직 요원일 경우
 				var t_scar = values.scar;
-
-				if(t_scar < 1) {
-					t_scar = 1;
-				}
+				if(t_scar < 1) { t_scar = 1; }
 				setAttrs({scar:t_scar});
 			}
 		});
