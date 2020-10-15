@@ -56,7 +56,7 @@ select, div, button, textarea, span, input, img, label{box-sizing: border-box; o
 .sheet-wrap .sheet-skillBox .sheet-skill-name .sheet-dice {position:absolute; top:1px; left:-30px;}
 .sheet-wrap .sheet-skillBox .sheet-skill-name strong {color:#000000; font-weight:800;}
 .sheet-wrap .sheet-skillBox .sheet-txt {display:block; position:relative;}
-.sheet-wrap .sheet-skillBox .sheet-txt .sheet-dl {display:block; position:relative; overflow:hidden;}
+.sheet-wrap .sheet-skillBox .sheet-txt .sheet-dl {display:block; position:relative; overflow:hidden; margin-top:20px;}
 .sheet-wrap .sheet-skillBox .sheet-txt .sheet-dl > * {display:inline-block; vertical-align:top; margin:0;}
 .sheet-wrap .sheet-skillBox .sheet-txt .sheet-dt {width:9%; font-weight:800; border-right:1px solid #ddd; }
 .sheet-wrap .sheet-skillBox .sheet-txt .sheet-dd {width:89%; padding-bottom:5px; padding-left:5px;}
@@ -121,8 +121,14 @@ select, div, button, textarea, span, input, img, label{box-sizing: border-box; o
 /** 기본 배경 **/
 .sheet-wrap {position:relative; width:850px; min-height:500px; box-sizing:border-box; margin:0 -10px; font-family:'맑은고딕', 'Malgun Gothic'; z-index:0; font-size:12px; letter-spacing:-0.02em;}
 
-.sheet-memoWrap {display:block; clear:both; padding-top:10px;}
-.sheet-memoWrap textarea {height:250px;}
+.sheet-memoWrap {display:block; clear:both; padding:30px 10px 10px; overflow:hidden;}
+.sheet-memoWrap textarea {height:150px;}
+.sheet-memoWrap .sheet-helper {width:38.5%; float:left;}
+.sheet-memoWrap .sheet-memo {width:60%; float:right;}
+.sheet-memoWrap > * > p {position:relative;font-size:18px; color:#000; font-weight:800; margin-bottom:16px; padding-left:28px; clear:both;}
+.sheet-memoWrap > * > p {font-size:18px; color:#000; font-weight:800;}
+.sheet-memoWrap > * > p:before {content:""; display:block; position:absolute; width:21px; height:21px; background:url('https://i.imgur.com/stpnsW0.png') no-repeat -186px -64px; top:0px; left:3px;}
+.sheet-memoWrap > .sheet-memo > p:before {background-position:-234px -65px;}
 
 /** 탭 설정 **/
 .sheet-wrap *[class^="sheet-tab-pannel"] {display:block; position:absolute; top:0; height:50px; width:50%; z-index:1; opacity:0;}
@@ -254,7 +260,8 @@ select, div, button, textarea, span, input, img, label{box-sizing: border-box; o
 .sheet-job-check[value="9"] ~ .sheet-job-pannel .sheet-job-I {display:block;}
 
 .sheet-skill-list {position:relative;}
-.sheet-skill-list .sheet-tit {position:relative;font-size:18px; color:#000; font-weight:800; margin-bottom:10px; padding-left:25px;}
+.sheet-skill-list .sheet-tit {position:relative;font-size:18px; color:#000; font-weight:800; margin-bottom:16px; padding-left:25px;}
+.sheet-skill-list .sheet-tit p {font-size:18px; color:#000; font-weight:800;}
 .sheet-skill-list .sheet-tit:before {content:""; display:block; position:absolute; width:23px; height:20px; background:url('https://i.imgur.com/stpnsW0.png') no-repeat -105px -63px; top:2px; left:0;}
 .sheet-skill-list .sheet-tit > div {position:absolute; top:0; right:0; padding-right:50px; font-size:12px; font-weight:400; line-height:20px;}
 .sheet-skill-list .sheet-skill-filter {display:block; position:absolute; top:0; right:0; width:40px; height:20px; background:#7f7f7f; border-radius:9em; opacity:0; z-index:10;}
@@ -276,21 +283,44 @@ select, div, button, textarea, span, input, img, label{box-sizing: border-box; o
 /**************************************
 	Team 시트
 **************************************/
-.sheet-tm .sheet-defaultWrap {background:#000;}
+.sheet-tm .sheet-defaultWrap {background:#000; margin-bottom:20px;}
 .sheet-tm .sheet-defaultWrap * {color:#fff;}
 .sheet-tm .sheet-defaultWrap input[type="text"],
 .sheet-tm .sheet-defaultWrap input[type="number"],
 .sheet-tm .sheet-defaultWrap select,
 .sheet-tm .sheet-defaultWrap textarea {background:rgba(255,255,255,.2);}
-
 .sheet-tm .sheet-defaultWrap .sheet-rows {display:table; padding:15px 0; width:100%; table-layout:fixed;}
 .sheet-tm .sheet-defaultWrap .sheet-rows + .sheet-rows {border-top:2px dashed #333333;}
 .sheet-tm .sheet-defaultWrap .sheet-rows > * {display:table-cell; vertical-align:top; padding:0 15px;}
 .sheet-tm .sheet-defaultWrap .sheet-rows > * + * {border-left:1px solid #333333;}
-
 .sheet-tm .sheet-defaultWrap .sheet-rows .sheet-cols1 {width:275px;}
 .sheet-tm .sheet-defaultWrap .sheet-rows .sheet-cols3 {width:190px;}
 
+.sheet-userWrap {float:left; width:270px; padding:10px;}
+.sheet-userWrap > p {position:relative;font-size:18px; color:#000; font-weight:800; margin-bottom:16px; padding-left:28px; clear:both;}
+.sheet-userWrap > p {font-size:18px; color:#000; font-weight:800;}
+.sheet-userWrap > p:before {content:""; display:block; position:absolute; width:21px; height:21px; background:url('https://i.imgur.com/stpnsW0.png') no-repeat -103px -171px; top:2px; left:3px;}
+
+.sheet-teamSkillWrap {float:right; width:565px; padding:10px;}
+.sheet-team-skill-list {position:relative; overflow:hidden;}
+.sheet-team-skill-list .sheet-tit {position:relative;font-size:18px; color:#000; font-weight:800; margin-bottom:16px; padding-left:28px; clear:both;}
+.sheet-team-skill-list .sheet-tit p {font-size:18px; color:#000; font-weight:800;}
+.sheet-team-skill-list .sheet-tit:before {content:""; display:block; position:absolute; width:23px; height:20px; background:url('https://i.imgur.com/stpnsW0.png') no-repeat -105px -63px; top:0px; left:3px;}
+.sheet-team-skill-list .sheet-tit > div {position:absolute; top:0; right:0; padding-right:50px; font-size:12px; font-weight:400; line-height:20px;}
+.sheet-team-skill-list .sheet-skill-filter {display:block; position:absolute; top:0; right:0; width:40px; height:20px; background:#7f7f7f; border-radius:9em; opacity:0; z-index:10;}
+.sheet-team-skill-list .sheet-skill-filter-label {display:block; position:absolute; top:0; right:0; width:40px; height:20px; background:#7f7f7f; border-radius:9em; opacity:.5; transition:.3s all; -webkit-transition:.3s all;}
+.sheet-team-skill-list .sheet-skill-filter-label:before {content:""; display:block; position:absolute; width:16px; height:16px; background:#fff; border-radius:100%; top:2px; left:2px; transition:.3s all; -webkit-transition:.3s all;}
+.sheet-team-skill-list .sheet-skill-filter:checked ~ .sheet-tit .sheet-skill-filter-label {opacity:1;}
+.sheet-team-skill-list .sheet-skill-filter:checked ~ .sheet-tit .sheet-skill-filter-label:before {left:22px;}
+.sheet-team-skill-list .sheet-skillBox .sheet-skill-con {margin:3px;}
+.sheet-team-skill-list .sheet-skill-filter:checked ~ * .sheet-skill-con {display:block !important;}
+.sheet-team-skill-list .sheet-skill-filter:checked ~ * .sheet-skill-chk,
+.sheet-team-skill-list .sheet-skill-filter:checked ~ * .sheet-skill-chk-label {display:block;}
+.sheet-team-skill-list .sheet-skill-filter:checked ~ * .sheet-dice {display:none;}
+.sheet-team-skill-list .sheet-skillBox {width:50%; float:left;}
+.sheet-team-skill-list .sheet-skillBox .sheet-txt {min-height:5em;}
+.sheet-team-skill-list .sheet-skill-con {display:none;}
+.sheet-team-skill-list .sheet-skill-chk:checked ~ .sheet-skill-con {display:block !important;}
 
 
 /**************************************

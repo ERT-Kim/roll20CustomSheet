@@ -1748,48 +1748,193 @@
 		</div>
 
 		<div class="sheet-teamSkillWrap">
-			<div class="sheet-title">팀 특수능력</div>
-
 			<div class="sheet-team-skill-list">
-				
-				<div class="sheet-skillBox">
-					<div class="sheet-skill-name">
-						<strong>한계 돌파</strong>
-						<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{TA01=1}}"></button>
-					</div>
-					<div class="sheet-txt">
-						특성치의 최대 한도를 1 올립니다. 세 번 까지 중복해 찍을 수 있습니다.
-					</div>
-					<div class="sheet-counter">
-						<input type="checkbox" name="attr_skill_TA01_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
-						<input type="checkbox" name="attr_skill_TA01_chk02" class="sheet-checkbox sheet-skill-count" value="1" />
-						<input type="checkbox" name="attr_skill_TA01_chk03" class="sheet-checkbox sheet-skill-count" value="1" />
+				<input type="checkbox" name="attr_team_skill_filter" class="sheet-skill-filter" value="1" checked/>
+				<div class="sheet-tit">
+					<p>팀 특수능력</p>
+					<div>
+						특수능력 설정
+						<span class="sheet-skill-filter-label"></span>
 					</div>
 				</div>
 
 				<div class="sheet-skillBox">
-					<div class="sheet-skill-name">
-						<strong>물품 지원</strong>
-						<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{TA02=1}}"></button>
-					</div>
-					<div class="sheet-txt">
-						팀 시트에 소모성 아이템을 사용할 수 있는 3칸의 자리가 생깁니다.
-					</div>
-					<div class="sheet-counter">
-						<input type="checkbox" name="attr_skill_TA02_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
+					<input type="checkbox" name="attr_skill_TA01" class="sheet-skill-chk" value="1" />
+					<div class="sheet-skill-con">
+						<span class="sheet-skill-chk-label"></span>
+						<div class="sheet-skill-name">
+							<strong>한계 돌파</strong>
+							<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{TA01=1}}"></button>
+						</div>
+						<div class="sheet-txt">
+							특성치의 최대 한도를 1 올립니다. 세 번 까지 중복해 찍을 수 있습니다.
+						</div>
+						<div class="sheet-counter">
+							<input type="checkbox" name="attr_skill_TA01_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
+							<input type="checkbox" name="attr_skill_TA01_chk02" class="sheet-checkbox sheet-skill-count" value="1" />
+							<input type="checkbox" name="attr_skill_TA01_chk03" class="sheet-checkbox sheet-skill-count" value="1" />
+						</div>
 					</div>
 				</div>
 
 				<div class="sheet-skillBox">
-					<div class="sheet-skill-name">
-						<strong>전용 병실</strong>
-						<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{TA03=1}}"></button>
+					<input type="checkbox" name="attr_skill_TA02" class="sheet-skill-chk" value="1" />
+					<div class="sheet-skill-con">
+						<span class="sheet-skill-chk-label"></span>
+						<div class="sheet-skill-name">
+							<strong>물품 지원</strong>
+							<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{TA02=1}}"></button>
+						</div>
+						<div class="sheet-txt">
+							팀 시트에 소모성 아이템을 사용할 수 있는 3칸의 자리가 생깁니다.
+						</div>
 					</div>
-					<div class="sheet-txt">
-						중상, 치명상으로 입원할 때 스트레스가 1 줄어듭니다.
+				</div>
+
+				<div class="sheet-skillBox">
+					<input type="checkbox" name="attr_skill_TA03" class="sheet-skill-chk" value="1" />
+					<div class="sheet-skill-con">
+						<span class="sheet-skill-chk-label"></span>
+						<div class="sheet-skill-name">
+							<strong>전용 병실</strong>
+							<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{TA03=1}}"></button>
+						</div>
+						<div class="sheet-txt">
+							중상, 치명상으로 입원할 때 스트레스가 1 줄어듭니다.
+						</div>
 					</div>
-					<div class="sheet-counter">
-						<input type="checkbox" name="attr_skill_TA03_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
+				</div>
+
+				<div class="sheet-skillBox">
+					<input type="checkbox" name="attr_skill_TA04" class="sheet-skill-chk" value="1" />
+					<div class="sheet-skill-con">
+						<span class="sheet-skill-chk-label"></span>
+						<div class="sheet-skill-name">
+							<strong>겉 보기엔 장난감</strong>
+							<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{TA04=1}}"></button>
+						</div>
+						<div class="sheet-txt">
+							해당 무기를 사용해도 주목도가 올라가지 않습니다.
+						</div>
+					</div>
+				</div>
+				<div class="sheet-skillBox">
+					<input type="checkbox" name="attr_skill_TA05" class="sheet-skill-chk" value="1" />
+					<div class="sheet-skill-con">
+						<span class="sheet-skill-chk-label"></span>
+						<div class="sheet-skill-name">
+							<strong>미담탐정 셜록</strong>
+							<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{TA05=1}}"></button>
+						</div>
+						<div class="sheet-txt">
+							세션에 한 번, 주목도가 2 이상 올라갔다면 조력자 1인이나 주사위 1개, 1월급 중 하나로 치환해 다음에 쓸 수 있습니다.
+						</div>
+						<div class="sheet-counter">
+							<input type="checkbox" name="attr_skill_TA05_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
+						</div>
+					</div>
+				</div>
+				<div class="sheet-skillBox">
+					<input type="checkbox" name="attr_skill_TA06" class="sheet-skill-chk" value="1" />
+					<div class="sheet-skill-con">
+						<span class="sheet-skill-chk-label"></span>
+						<div class="sheet-skill-name">
+							<strong>AI PT 룸</strong>
+							<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{TA06=1}}"></button>
+						</div>
+						<div class="sheet-txt">
+							일상당 한 번, 자기계발 중 훈련시 경험치를 1 더 받습니다.
+						</div>
+						<div class="sheet-counter">
+							<input type="checkbox" name="attr_skill_TA06_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
+						</div>
+					</div>
+				</div>
+				<div class="sheet-skillBox">
+					<input type="checkbox" name="attr_skill_TA07" class="sheet-skill-chk" value="1" />
+					<div class="sheet-skill-con">
+						<span class="sheet-skill-chk-label"></span>
+						<div class="sheet-skill-name">
+							<strong>요구사항이 많은 편</strong>
+							<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{TA07=1}}"></button>
+						</div>
+						<div class="sheet-txt">
+							요원들의 시트에 신념을 하나 더 쓸 수 있습니다.
+						</div>
+					</div>
+				</div>
+				<div class="sheet-skillBox">
+					<input type="checkbox" name="attr_skill_TA08" class="sheet-skill-chk" value="1" />
+					<div class="sheet-skill-con">
+						<span class="sheet-skill-chk-label"></span>
+						<div class="sheet-skill-name">
+							<strong>훌륭한 협상가</strong>
+							<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{TA08=1}}"></button>
+						</div>
+						<div class="sheet-txt">
+							각 요원이 세션당 한 번씩 거절 판정에서 스트레스를 1 덜 받습니다.
+						</div>
+						<div class="sheet-counter">
+							<input type="checkbox" name="attr_skill_TA08_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
+						</div>
+					</div>
+				</div>
+				<div class="sheet-skillBox">
+					<input type="checkbox" name="attr_skill_TA09" class="sheet-skill-chk" value="1" />
+					<div class="sheet-skill-con">
+						<span class="sheet-skill-chk-label"></span>
+						<div class="sheet-skill-name">
+							<strong>급발진</strong>
+							<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{TA09=1}}"></button>
+						</div>
+						<div class="sheet-txt">
+							언제든 타이머를 두 칸 채울 수 있는 뭔가를 왓슨에게 받았습니다.
+						</div>
+						<div class="sheet-counter">
+							<input type="checkbox" name="attr_skill_TA09_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
+						</div>
+					</div>
+				</div>
+				<div class="sheet-skillBox">
+					<input type="checkbox" name="attr_skill_TA10" class="sheet-skill-chk" value="1" />
+					<div class="sheet-skill-con">
+						<span class="sheet-skill-chk-label"></span>
+						<div class="sheet-skill-name">
+							<strong>위험할 때는 이걸 열어보렴</strong>
+							<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{TA10=1}}"></button>
+						</div>
+						<div class="sheet-txt">
+							시작할 때 팀은 # 만 붙어있는 종이나 핸드아웃을 하나 받습니다.
+						</div>
+					</div>
+				</div>
+				<div class="sheet-skillBox">
+					<input type="checkbox" name="attr_skill_TA11" class="sheet-skill-chk" value="1" />
+					<div class="sheet-skill-con">
+						<span class="sheet-skill-chk-label"></span>
+						<div class="sheet-skill-name">
+							<strong>비슷한 취향</strong>
+							<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{TA11=1}}"></button>
+						</div>
+						<div class="sheet-txt">
+							팀원과 함께 취미생활을 해도 페널티를 받지 않습니다.
+						</div>
+					</div>
+				</div>
+				<div class="sheet-skillBox">
+					<input type="checkbox" name="attr_skill_TA12" class="sheet-skill-chk" value="1" />
+					<div class="sheet-skill-con">
+						<span class="sheet-skill-chk-label"></span>
+						<div class="sheet-skill-name">
+							<strong>프로젝트 매니저</strong>
+							<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{TA12=1}}"></button>
+						</div>
+						<div class="sheet-txt">
+							아무 판정에나 쓸 수 있는 주사위를 하나 받고 시작합니다.
+						</div>
+						<div class="sheet-counter">
+							<input type="checkbox" name="attr_skill_TA12_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
+						</div>
 					</div>
 				</div>
 
@@ -1963,6 +2108,19 @@
 		{{#I05}}<div class="sheet-prop-name"><span>^__^</span></div>{{/I05}}
 		{{#I06}}<div class="sheet-prop-name"><span>온라인 특화</span></div>{{/I06}}
 		{{#I07}}<div class="sheet-prop-name"><span>호접지몽</span></div>{{/I07}}
+
+		{{#TA01}}<div class="sheet-prop-name"><span>한계 돌파</span></div>{{/TA01}}
+		{{#TA02}}<div class="sheet-prop-name"><span>물품 지원</span></div>{{/TA02}}
+		{{#TA03}}<div class="sheet-prop-name"><span>전용 병실</span></div>{{/TA03}}
+		{{#TA04}}<div class="sheet-prop-name"><span>겉 보기엔 장난감</span></div>{{/TA04}}
+		{{#TA05}}<div class="sheet-prop-name"><span>미담탐정 셜록</span></div>{{/TA05}}
+		{{#TA06}}<div class="sheet-prop-name"><span>AI PT룸</span></div>{{/TA06}}
+		{{#TA07}}<div class="sheet-prop-name"><span>요구사항이 많은 편</span></div>{{/TA07}}
+		{{#TA08}}<div class="sheet-prop-name"><span>훌륭한 협상가</span></div>{{/TA08}}
+		{{#TA09}}<div class="sheet-prop-name"><span>급발진</span></div>{{/TA09}}
+		{{#TA10}}<div class="sheet-prop-name"><span>위험할 때는 이걸 열어보렴</span></div>{{/TA10}}
+		{{#TA11}}<div class="sheet-prop-name"><span>비슷한 취향</span></div>{{/TA11}}
+		{{#TA12}}<div class="sheet-prop-name"><span>프로젝트 매니저</span></div>{{/TA12}}
 
 		{{#target}}
 			{{#^rollGreater() target 0}}
@@ -2232,6 +2390,20 @@
 			{{#I05}}<div class='sheet-prop-text'>당신은 온라인상에서 발자취를 남기지 않고 은밀하게 움직이는 것에 익숙합니다. 온라인상에서 은밀 판정을 해야 할 때 +1D를 받으며, 편안하거나 불안한 상황에서는 추적되지 않습니다.</div>{{/I05}}
 			{{#I06}}<div class='sheet-prop-text'>당신은 온라인상에서 자신의 아바타로 나서거나 만나서 대화를 할 때는 대화, 선동 판정을 해킹으로 판정할 수 있습니다.</div>{{/I06}}
 			{{#I07}}<div class='sheet-prop-text'>당신은 온라인을 넘어 오프라인에까지 영향력을 발휘합니다. 스트레스를 2 받으면 해킹 스킬을 활용해서 현실에 있는 태그를 지우거나 하나 새롭게 만들 수 있습니다. 어떤 방식으로 자신이 오프라인의 태그를 지우거나 새롭게 만들었는지 묘사합니다.</div>{{/I07}}
+
+			{{#TA01}}<div class='sheet-prop-text'>특성치의 최대 한도를 1 올립니다. 세 번 까지 중복해 찍을 수 있습니다.</div>{{/TA01}}
+			{{#TA02}}<div class='sheet-prop-text'>팀 시트에 소모성 아이템을 사용할 수 있는 3칸의 자리가 생깁니다.</div>{{/TA02}}
+			{{#TA03}}<div class='sheet-prop-text'>중상, 치명상으로 입원할 때 스트레스가 1 줄어듭니다.</div>{{/TA03}}
+			{{#TA04}}<div class='sheet-prop-text'>해당 무기를 사용해도 주목도가 올라가지 않습니다.</div>{{/TA04}}
+			{{#TA05}}<div class='sheet-prop-text'>세션에 한 번, 주목도가 2 이상 올라갔다면 조력자 1인이나 주사위 1개, 1월급 중 하나로 치환해 다음에 쓸 수 있습니다.</div>{{/TA05}}
+			{{#TA06}}<div class='sheet-prop-text'>일상당 한 번, 자기계발 중 훈련시 경험치를 1 더 받습니다.</div>{{/TA06}}
+			{{#TA07}}<div class='sheet-prop-text'>요원들의 시트에 신념을 하나 더 쓸 수 있습니다.</div>{{/TA07}}
+			{{#TA08}}<div class='sheet-prop-text'>각 요원이 세션당 한 번씩 거절 판정에서 스트레스를 1 덜 받습니다.</div>{{/TA08}}
+			{{#TA09}}<div class='sheet-prop-text'>언제든 타이머를 두 칸 채울 수 있는 뭔가를 왓슨에게 받았습니다.</div>{{/TA09}}
+			{{#TA10}}<div class='sheet-prop-text'>시작할 때 팀은 # 만 붙어있는 종이나 핸드아웃을 하나 받습니다.</div>{{/TA10}}
+			{{#TA11}}<div class='sheet-prop-text'>팀원과 함께 취미생활을 해도 페널티를 받지 않습니다.</div>{{/TA11}}
+			{{#TA12}}<div class='sheet-prop-text'>아무 판정에나 쓸 수 있는 주사위를 하나 받고 시작합니다.</div>{{/TA12}}
+
 		{{#target}}</div>{{/target}}
 	</div>
 	<div class="sheet-SkillBottom"><img src="https://i.imgur.com/fjgcpwf.png" /></div>
