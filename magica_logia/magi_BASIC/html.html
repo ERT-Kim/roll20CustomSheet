@@ -277,6 +277,7 @@
 				<thead>
 					<tr>
 						<th></th>
+						<th style="width:1.5%;" class="sheet-style-Z sheet-chk"><input type="checkbox" name="attr_chk_Z" value="1" /></th>
 						<th style="width:14%;" class="sheet-hurt-A">1.별</th>
 						<th style="width:1.5%;" class="sheet-style-A sheet-chk"><input type="checkbox" name="attr_chk_A" value="1" /></th>
 						<th style="width:14%;" class="sheet-hurt-B">2.짐승</th>
@@ -293,6 +294,7 @@
 				<tbody>
 					<tr>
 						<th>2</th>
+						<td class="sheet-style-Z"></td>
 						<td class="sheet-style-A2">
 							<p>
 								<input type="checkbox" name="attr_A2" value="1" />
@@ -349,7 +351,7 @@
 
 					<tr>
 						<th>3</th>
-
+						<td class="sheet-style-Z"></td>
 						<td class="sheet-style-A3">
 							<p>
 								<input type="checkbox" name="attr_A3" value="1" />
@@ -406,7 +408,7 @@
 
 					<tr>
 						<th>4</th>
-
+						<td class="sheet-style-Z"></td>
 						<td class="sheet-style-A4">
 							<p>
 								<input type="checkbox" name="attr_A4" value="1" />
@@ -463,7 +465,7 @@
 
 					<tr>
 						<th>5</th>
-
+						<td class="sheet-style-Z"></td>
 						<td class="sheet-style-A5">
 							<p>
 								<input type="checkbox" name="attr_A5" value="1" />
@@ -520,7 +522,7 @@
 
 					<tr>
 						<th>6</th>
-
+						<td class="sheet-style-Z"></td>
 						<td class="sheet-style-A6">
 							<p>
 								<input type="checkbox" name="attr_A6" value="1" />
@@ -577,7 +579,7 @@
 
 					<tr>
 						<th>7</th>
-
+						<td class="sheet-style-Z"></td>
 						<td class="sheet-style-A7">
 							<p>
 								<input type="checkbox" name="attr_A7" value="1" />
@@ -634,7 +636,7 @@
 
 					<tr>
 						<th>8</th>
-
+						<td class="sheet-style-Z"></td>
 						<td class="sheet-style-A8">
 							<p>
 								<input type="checkbox" name="attr_A8" value="1" />
@@ -691,7 +693,7 @@
 
 					<tr>
 						<th>9</th>
-
+						<td class="sheet-style-Z"></td>
 						<td class="sheet-style-A9">
 							<p>
 								<input type="checkbox" name="attr_A9" value="1" />
@@ -748,7 +750,7 @@
 
 					<tr>
 						<th>10</th>
-
+						<td class="sheet-style-Z"></td>
 						<td class="sheet-style-A10">
 							<p>
 								<input type="checkbox" name="attr_A10" value="1" />
@@ -805,7 +807,7 @@
 
 					<tr>
 						<th>11</th>
-
+						<td class="sheet-style-Z"></td>
 						<td class="sheet-style-A11">
 							<p>
 								<input type="checkbox" name="attr_A11" value="1" />
@@ -862,7 +864,7 @@
 
 					<tr>
 						<th>12</th>
-
+						<td class="sheet-style-Z"></td>
 						<td class="sheet-style-A12">
 							<p>
 								<input type="checkbox" name="attr_A12" value="1" />
@@ -2638,16 +2640,18 @@ function getName(type) {
 }
 
 // 갭 체크
-on("change:chk_A change:chk_B change:chk_C change:chk_D change:chk_E",
+on("change:chk_Z change:chk_A change:chk_B change:chk_C change:chk_D change:chk_E",
 	function() {
-		getAttrs(["chk_A", "chk_B", "chk_C", "chk_D", "chk_E"],
+		getAttrs(["chk_Z", "chk_A", "chk_B", "chk_C", "chk_D", "chk_E"],
 			function(values) {
+				setAttrs({Z:''});
 				setAttrs({A:''});
 				setAttrs({B:''});
 				setAttrs({C:''});
 				setAttrs({D:''});
 				setAttrs({E:''});
 
+				if(values.chk_Z == 1) { setAttrs({Z:'1'}); }
 				if(values.chk_A == 1) { setAttrs({A:'1'}); }
 				if(values.chk_B == 1) { setAttrs({B:'1'}); }
 				if(values.chk_C == 1) { setAttrs({C:'1'}); }

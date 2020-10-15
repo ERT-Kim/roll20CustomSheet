@@ -200,11 +200,13 @@ td.sheet-style-C {background:#fff !important;}
 td.sheet-style-D {background:#fff !important;}
 td.sheet-style-E {background:#fff !important;}
 td.sheet-style-F {background:#fff !important;}
+.sheet-element-to-determine-style-Z[value='1'] ~ div .sheet-style-Z {background:#60594f !important; border-color:#60594f !important;}
 .sheet-element-to-determine-style-A[value='1'] ~ div .sheet-style-A {background:#60594f !important; border-color:#60594f !important;}
 .sheet-element-to-determine-style-B[value='1'] ~ div .sheet-style-B {background:#60594f !important; border-color:#60594f !important;}
 .sheet-element-to-determine-style-C[value='1'] ~ div .sheet-style-C {background:#60594f !important; border-color:#60594f !important;}
 .sheet-element-to-determine-style-D[value='1'] ~ div .sheet-style-D {background:#60594f !important; border-color:#60594f !important;}
 .sheet-element-to-determine-style-E[value='1'] ~ div .sheet-style-E {background:#60594f !important; border-color:#60594f !important;}
+.sheet-element-to-determine-style-Z[value='1'] ~ div th.sheet-style-Z {border-color:#fff !important;}
 .sheet-element-to-determine-style-A[value='1'] ~ div th.sheet-style-A {border-color:#fff !important;}
 .sheet-element-to-determine-style-B[value='1'] ~ div th.sheet-style-B {border-color:#fff !important;}
 .sheet-element-to-determine-style-C[value='1'] ~ div th.sheet-style-C {border-color:#fff !important;}
