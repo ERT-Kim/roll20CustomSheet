@@ -361,6 +361,22 @@ select, div, button, textarea, span, input, img, label{box-sizing: border-box; o
 .sheet-team-skill-list .sheet-skill-chk:checked ~ .sheet-skill-con {display:block !important;}
 
 
+.sheet-prof-card .sheet-member {display:block; position:relative; border-radius:5px; background:rgba(0,0,0,.05); margin-bottom:5px; padding:5px;}
+.sheet-prof-card .sheet-member input[type="text"],
+.sheet-prof-card .sheet-member input[type="number"] {padding:0 5px; background:transparent;}
+.sheet-prof-card .sheet-member input[type="text"]:hover,
+.sheet-prof-card .sheet-member input[type="number"]:hover,
+.sheet-prof-card .sheet-member input[type="text"]:focus,
+.sheet-prof-card .sheet-member input[type="number"]:focus {background:rgba(0,0,0,.1);}
+
+.sheet-prof-card .sheet-member .sheet-input {clear:both; margin:0;}
+.sheet-prof-card .sheet-member .sheet-input span {color:#777;}
+.sheet-prof-card .sheet-member .sheet-nick {width:35%; clear:none;}
+.sheet-prof-card .sheet-member .sheet-name {position:absolute; left:40%; right:5px; top:5px; clear:none;}
+.sheet-prof-card .sheet-member .sheet-follower {width:35%; float:left; clear:none;}
+.sheet-prof-card .sheet-member .sheet-job {width:60%; float:right; clear:none;}
+
+
 /**************************************
 	템플릿 시트
 **************************************/
