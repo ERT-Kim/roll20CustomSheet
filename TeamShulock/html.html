@@ -578,7 +578,7 @@
 								<span class="sheet-skill-chk-label"></span>
 
 								<div class="sheet-skill-name">
-									<strong>리더의 재질</strong>
+									<strong>리더의 재질*</strong>
 									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{B01=1}}"></button>
 								</div>
 								<div class="sheet-txt">
@@ -593,7 +593,7 @@
 								<span class="sheet-skill-chk-label"></span>
 
 								<div class="sheet-skill-name">
-									<strong>카리스마</strong>
+									<strong>카리스마*</strong>
 									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{B02=1}}"></button>
 								</div>
 								<div class="sheet-txt">
@@ -1109,7 +1109,7 @@
 						<div class="sheet-skillBox sheet-fix">
 							<div class="sheet-skill-con">
 								<div class="sheet-skill-name">
-									<strong>베테랑</strong>
+									<strong>베테랑*</strong>
 									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{E01=1}}"></button>
 								</div>
 								<div class="sheet-txt">
@@ -1124,7 +1124,7 @@
 							<div class="sheet-skill-con">
 								<span class="sheet-skill-chk-label"></span>
 								<div class="sheet-skill-name">
-									<strong>요원의 감</strong>
+									<strong>요원의 감*</strong>
 									<button type="roll" class="sheet-dice" value="&{template:SkillDice}{{name=@{character_name}}}{{nick=@{character_nick}}}{{job=[[@{job}]]}}{{G02=1}}"></button>
 								</div>
 								<div class="sheet-txt">
@@ -1959,9 +1959,6 @@
 						<div class="sheet-txt">
 							세션에 한 번, 주목도가 2 이상 올라갔다면 조력자 1인이나 주사위 1개, 1월급 중 하나로 치환해 다음에 쓸 수 있습니다.
 						</div>
-						<div class="sheet-counter">
-							<input type="checkbox" name="attr_skill_TA05_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
-						</div>
 					</div>
 				</div>
 				<div class="sheet-skillBox">
@@ -1974,9 +1971,6 @@
 						</div>
 						<div class="sheet-txt">
 							일상당 한 번, 자기계발 중 훈련시 경험치를 1 더 받습니다.
-						</div>
-						<div class="sheet-counter">
-							<input type="checkbox" name="attr_skill_TA06_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
 						</div>
 					</div>
 				</div>
@@ -2004,9 +1998,6 @@
 						<div class="sheet-txt">
 							각 요원이 세션당 한 번씩 거절 판정에서 스트레스를 1 덜 받습니다.
 						</div>
-						<div class="sheet-counter">
-							<input type="checkbox" name="attr_skill_TA08_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
-						</div>
 					</div>
 				</div>
 				<div class="sheet-skillBox">
@@ -2019,9 +2010,6 @@
 						</div>
 						<div class="sheet-txt">
 							언제든 타이머를 두 칸 채울 수 있는 뭔가를 왓슨에게 받았습니다.
-						</div>
-						<div class="sheet-counter">
-							<input type="checkbox" name="attr_skill_TA09_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
 						</div>
 					</div>
 				</div>
@@ -2061,9 +2049,6 @@
 						</div>
 						<div class="sheet-txt">
 							아무 판정에나 쓸 수 있는 주사위를 하나 받고 시작합니다.
-						</div>
-						<div class="sheet-counter">
-							<input type="checkbox" name="attr_skill_TA12_chk01" class="sheet-checkbox sheet-skill-count" value="1" />
 						</div>
 					</div>
 				</div>
@@ -2165,8 +2150,22 @@
 		});
 	});
 
+	on("change:job change:scar", function() {
+		getAttrs(["job", "scar"], function(values) {
+			if(values.job == "7") {
+				// 전직 요원일 경우
+				var t_scar = values.scar;
+
+				if(t_scar < 1) {
+					t_scar = 1;
+				}
+				setAttrs({scar:t_scar});
+			}
+		});
+	});
+
 	on("change:prop_A01 change:prop_A02 change:prop_A03 change:prop_A04 change:prop_B01 change:prop_B02 change:prop_B03 change:prop_B04 change:prop_C01 change:prop_C02 change:prop_C03 change:prop_C04", function() {
-		getAttrs(["prop_A01", "prop_A02", "prop_A03", "prop_A04", "prop_B01", "prop_B02", "prop_B03", "prop_B04", "prop_C01", "prop_C02", "prop_C03", "prop_C04", "job"], function(values) {
+		getAttrs(["skill_TA01", "skill_TA01_chk01", "skill_TA01_chk02", "skill_TA01_chk03", "prop_A01", "prop_A02", "prop_A03", "prop_A04", "prop_B01", "prop_B02", "prop_B03", "prop_B04", "prop_C01", "prop_C02", "prop_C03", "prop_C04", "job"], function(values) {
 			var p_A = 0;
 			var p_B = 0;
 			var p_C = 0;
@@ -2186,6 +2185,7 @@
 			var p_C03 = values.prop_C03;
 			var p_C04 = values.prop_C04;
 
+			// 최소값 판정
 			switch(values.job) {
 				case "1" :
 					// 도둑
@@ -2227,6 +2227,28 @@
 				break;
 			}
 
+			// 최대값 판정
+			var max_point = 2;
+			if(values.skill_TA01 == "1") {
+				if(values.skill_TA01_chk01 == "1") { max_point++; }
+				if(values.skill_TA01_chk02 == "1") { max_point++; }
+				if(values.skill_TA01_chk03 == "1") { max_point++; }
+			}
+
+			if(p_A01 > max_point) p_A01 = max_point;
+			if(p_A02 > max_point) p_A02 = max_point;
+			if(p_A03 > max_point) p_A03 = max_point;
+			if(p_A04 > max_point) p_A04 = max_point;
+
+			if(p_B01 > max_point) p_B01 = max_point;
+			if(p_B02 > max_point) p_B02 = max_point;
+			if(p_B03 > max_point) p_B03 = max_point;
+			if(p_B04 > max_point) p_B04 = max_point;
+
+			if(p_C01 > max_point) p_C01 = max_point;
+			if(p_C02 > max_point) p_C02 = max_point;
+			if(p_C03 > max_point) p_C03 = max_point;
+			if(p_C04 > max_point) p_C04 = max_point;
 
 
 			if(p_A01 > 0) p_A++;
