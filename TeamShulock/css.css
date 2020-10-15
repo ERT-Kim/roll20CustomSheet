@@ -102,7 +102,7 @@ select, div, button, textarea, span, input, img, label{box-sizing: border-box; o
 .sheet-bar.sheet-diamond input[type="radio"]:checked,
 .sheet-bar.sheet-diamond input[type="radio"]:checked ~ input[type="radio"] {background-position:-135px -26px;}
 
-.sheet-bar.sheet-squed input[type="radio"] {width:20px; height:20px; border:1px solid #fff; background:url('https://i.imgur.com/stpnsW0.png') no-repeat -227px -1px;}
+.sheet-bar.sheet-squed input[type="radio"] {width:20px; height:20px; margin-left:2px; border:1px solid #fff; background:url('https://i.imgur.com/stpnsW0.png') no-repeat -227px -1px;}
 .sheet-bar.sheet-squed input[type="radio"].sheet-zero {background-color:#000 !imporant;}
 .sheet-bar.sheet-squed input[type="radio"].sheet-last {background-position:-252px -1px !important;}
 .sheet-bar.sheet-squed input[type="radio"].sheet-last:checked {background-position:-277px -1px !important;}
@@ -288,13 +288,51 @@ select, div, button, textarea, span, input, img, label{box-sizing: border-box; o
 .sheet-tm .sheet-defaultWrap input[type="text"],
 .sheet-tm .sheet-defaultWrap input[type="number"],
 .sheet-tm .sheet-defaultWrap select,
-.sheet-tm .sheet-defaultWrap textarea {background:rgba(255,255,255,.2);}
+.sheet-tm .sheet-defaultWrap textarea {background:rgba(255,255,255,.2); color:#fff;}
+
 .sheet-tm .sheet-defaultWrap .sheet-rows {display:table; padding:15px 0; width:100%; table-layout:fixed;}
 .sheet-tm .sheet-defaultWrap .sheet-rows + .sheet-rows {border-top:2px dashed #333333;}
 .sheet-tm .sheet-defaultWrap .sheet-rows > * {display:table-cell; vertical-align:top; padding:0 15px;}
 .sheet-tm .sheet-defaultWrap .sheet-rows > * + * {border-left:1px solid #333333;}
-.sheet-tm .sheet-defaultWrap .sheet-rows .sheet-cols1 {width:275px;}
-.sheet-tm .sheet-defaultWrap .sheet-rows .sheet-cols3 {width:190px;}
+
+.sheet-tm .sheet-defaultWrap .sheet-rows .sheet-cols1 {width:268px;}
+.sheet-tm .sheet-defaultWrap .sheet-rows .sheet-cols3 {width:200px;}
+
+.sheet-chk-input {position:relative; padding-left:85px; line-height:25px;}
+.sheet-chk-input + .sheet-chk-input {margin-top:5px;}
+.sheet-chk-input strong {position:absolute; top:0; left:0;}
+.sheet-chk-input strong input[type="checkbox"] {display:inline-block !important; margin-top:-5px;}
+
+.sheet-tm .sheet-defaultWrap .sheet-tit {position:relative; font-size:16px; font-weight:600; padding-left:24px; margin-bottom:5px; line-height:25px;}
+.sheet-tm .sheet-defaultWrap .sheet-tit:before {content:""; display:block; position:absolute; width:24px; height:23px; left:0; top:2px; background:url('https://i.imgur.com/stpnsW0.png') no-repeat -2px -177px;}
+
+.sheet-notice,
+.sheet-report {margin-top:17px;}
+
+.sheet-notice {display:block; position:relative; overflow:hidden;}
+.sheet-notice .sheet-tit {position:absolute !important; top:0; left:0;}
+.sheet-notice .sheet-tit:before {background-position:-2px -212px !important;}
+.sheet-notice .sheet-bar {float:right; padding:2px 0;}
+.sheet-report {display:block; position:relative; overflow:hidden;}
+.sheet-report .sheet-tit {position:absolute !important; top:0; left:0;}
+.sheet-report .sheet-tit:before {background-position:-2px -246px !important;}
+.sheet-report .sheet-bar {float:right; padding:2px 0;}
+
+.sheet-team-spec .sheet-tit:before {background-position:-2px -280px !important;}
+.sheet-team-spec .sheet-dl {position:relative; padding-left:68px; line-height:20px;}
+.sheet-team-spec .sheet-dl + .sheet-dl {margin-top:5px;}
+.sheet-team-spec .sheet-dt {position:absolute; left:10px; top:0; font-size:13px;}
+.sheet-team-spec .sheet-dd {font-size:11px; letter-spacing:-0.05em; color:rgba(255,255,255,.7);}
+.sheet-team-spec .sheet-bar {margin-right:5px;}
+.sheet-team-money  {position:relative; padding-left:90px; margin-top:20px;}
+.sheet-team-money .sheet-tit {display:block; position:absolute !important; top:0; left:0;}
+.sheet-team-money .sheet-tit:before {background-position:-2px -316px !important;}
+
+.sheet-tm .sheet-cols3 .sheet-dl {display:block; position:relative; padding-left:65px;}
+.sheet-tm .sheet-cols3 .sheet-dt {display:block; position:absolute; top:0; left:0; width:65px; text-align:center; font-weight:600; font-size:16px;}
+.sheet-tm .sheet-cols3 .sheet-dd input[type="number"] {height:50px; text-align:center; font-size:25px; font-weight:800;}
+.sheet-tm .sheet-cols3 .sheet-exp {padding-left:50px; margin-top:20px;}
+.sheet-tm .sheet-cols3 .sheet-exp .sheet-dt {font-size:13px; width:50px;}
 
 .sheet-userWrap {float:left; width:270px; padding:10px;}
 .sheet-userWrap > p {position:relative;font-size:18px; color:#000; font-weight:800; margin-bottom:16px; padding-left:28px; clear:both;}
