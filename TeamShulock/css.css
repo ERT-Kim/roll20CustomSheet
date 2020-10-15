@@ -248,6 +248,7 @@ select, div, button, textarea, span, input, img, label{box-sizing: border-box; o
 .sheet-job-pannel .sheet-job-H,
 .sheet-job-pannel .sheet-job-I {display:none;}
 
+.sheet-job-check[value=""] ~ .sheet-job-pannel:before {content:""; display:block; position:absolute; top:20px; left:-250px; right:10px; height:110px;background:url('https://i.imgur.com/o2h1Jv7.png') no-repeat 50% 50%; opacity:.3;}
 .sheet-job-check[value="1"] ~ .sheet-job-pannel .sheet-job-A,
 .sheet-job-check[value="2"] ~ .sheet-job-pannel .sheet-job-B,
 .sheet-job-check[value="3"] ~ .sheet-job-pannel .sheet-job-C,
