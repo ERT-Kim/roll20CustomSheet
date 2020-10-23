@@ -20,6 +20,9 @@ select, div, button, textarea, span, input, img, label{box-sizing: border-box; o
 .sheet-wrap button:before {display:none !important;}
 .repcontainer.editmode .repitem .itemcontrol {z-index:999;}
 
+.sheet-wrap input::placeholder {color:#ddd;}
+.sheet-wrap textarea::placeholder {color:#ddd;}
+
 /* ------------------------------------------
 	Layout
 ------------------------------------------ */
@@ -38,7 +41,7 @@ select, div, button, textarea, span, input, img, label{box-sizing: border-box; o
 /** 기본 배경 **/
 .sheet-wrap {position:relative; width:850px; min-height:500px; padding:20px; box-sizing:border-box; margin:-28px -10px 0; background:url('https://i.imgur.com/7nuidDR.jpg') no-repeat 50% 0; font-family:'맑은고딕', 'Malgun Gothic'; z-index:0; font-size:12px;}
 .sheet-wrap:before {content:"Made by. @tateck_trpg"; display:block; position:absolute; top:100px; right:20px; font-size:11px; color:rgba(0,0,0,.5); opacity:.5; z-index:9999;}
-.sheet-wrap:after {content:"Thx to.K"; display:block; position:absolute; top:113px; right:20px; font-size:11px; color:rgba(0,0,0,.5); opacity:.5; z-index:9999;}
+.sheet-wrap:after {content:"Thx to.K & 주뜨"; display:block; position:absolute; top:113px; right:20px; font-size:11px; color:rgba(0,0,0,.5); opacity:.5; z-index:9999;}
 
 
 /** 기본 영역 레이아웃 **/
@@ -463,12 +466,15 @@ td.sheet-style-F {background:#fff !important;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-dice > .inlinerollresult:before {content:""; display:block; position:absolute; width:100%; height:100%; transform:rotate(-45deg); border:1px solid #baa98d; background:rgba(255,255,255,.8); z-index:-1;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-info {line-height:1.5; border:none !important; margin:0 -20px !important; padding:10px; background:rgba(0,0,0,.5); text-align:center; color:#fff !important;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-info span {color:#fff; font-size:13px;}
+.sheet-rolltemplate-MagiDice .sheet-magibox .sheet-info span em {font-style:normal; font-size:1.1em; color:#fffa63; font-weight:600;}
+.sheet-rolltemplate-MagiDice .sheet-magibox .sheet-info span span {font-size:.9em; opacity:.7; font-weight:400;}
+.sheet-rolltemplate-MagiDice .sheet-magibox .sheet-info span em + span:before {content:" / ";}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-info span + span:before {content:"|"; margin:0 5px; font-size:12px;}
 .sheet-rolltemplate-MagiDice .sheet-magibox .sheet-info .inlinerollresult {color:#fff; font-size:1.05em; vertical-align:bottom;}
 .sheet-rolltemplate-MagiDice .sheet-con {padding:10px 5px 0;}
 .sheet-rolltemplate-MagiDice .sheet-con {line-height:1.5; font-size:12px;}
 .sheet-rolltemplate-MagiDice .sheet-con p {margin:0 0 10px 0;}
-.sheet-rolltemplate-MagiDice .sheet-con p > span {display:inline-block; vertical-align:middle; padding:1px 3px; border-radius:3px; background:#baa98d; color:#fff;}
+.sheet-rolltemplate-MagiDice .sheet-con p > span {display:inline-block; vertical-align:middle; padding:1px 3px; border-radius:3px; font-size:11px; background:#baa98d; color:#fff;}
 .sheet-rolltemplate-MagiDice .sheet-con p > span.sheet-target {background:#73706b;}
 .sheet-rolltemplate-MagiDice .sheet-con p > span.sheet-close {background:red;}
 

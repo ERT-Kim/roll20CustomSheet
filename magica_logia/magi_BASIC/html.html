@@ -234,14 +234,20 @@
 	<div class="sheet-dice-rollBox">
 		<div class="sheet-rolltable">
 			<select name="attr_rolltable">
-				<option value="1">상태이상</option>
-				<option value="2">운명변전</option>
-				<option value="3">장면</option>
-				<option value="4">펌블</option>
-				<option value="5">사건</option>
-				<option value="6">초기 앵커</option>
-				<option value="7">운명 속성</option>
-				<option value="8">프라이즈</option>
+				<option value="">각종 표 선택</option>
+				<option value="4">사건</option>
+				<option value="3">상태이상</option>
+				<option value="6">소원</option>
+				<option value="13">시간의 흐름</option>
+				<option value="2">운명 변전</option>
+				<option value="8">운명 변전(마법사)</option>
+				<option value="9">운명 변전(정신계)</option>
+				<option value="10">운명 변전(광기계)</option>
+				<option value="11">운명 변전(사회계)</option>
+				<option value="12">운명 변전(초자연계)</option>
+				<option value="5">운명 속성</option>
+				<option value="1">펌블</option>
+				<option value="7">프라이즈</option>
 			</select>
 			<button type="roll" class="sheet-btn-dice" value="&{template:MagiDice}{{name=@{character_name}}}{{rolltable=[[@{rolltable}]]}}{{roll1d6=[[1d6]]}}{{roll2d6=[[2d6]]}}"></button>
 		</div>
@@ -2633,6 +2639,13 @@ function getName(type) {
 		'절망': '@{F11_value}',
 		'죽음': '@{F12_value}',
 
+		'별': '-10',
+		'짐승': '-20',
+		'힘': '-30',
+		'노래': '-40',
+		'꿈': '-50',
+		'어둠': '-60',
+
 		'가변': '-2',
 		'랜덤': '-2'
 	}
@@ -3020,50 +3033,21 @@ on("change:bas",
 		{{#rolltable}}
 			<!-- 각종 표 굴림이 있을 경우 -->
 			{{#rollTotal() rolltable 1}}
-				<!-- 상태이상 표 -->
-				<div class="sheet-title">상태이상표</div>
-				
-				{{#rollTotal() roll1d6 1}}
-					<div class="sheet-info">봉인</div>
-					<div class="sheet-con">
-						자신이 습득한 장비 타입 이외의 마법 중에서 무작위로 하나 선택한다. 선택한 마법의 체크칸에 체크한다. 그 마법을 사용하려면 【마력】을 2점 소비해야 한다.
-					</div>
-				{{/rollTotal() roll1d6 1}}
-				{{#rollTotal() roll1d6 2}}
-					<div class="sheet-info">타짐</div>
-					<div class="sheet-con">
-						마법전 동안 각 라운드가 종료할 때 자신의 【마력】이 1점 감소한다.
-					</div>
-				{{/rollTotal() roll1d6 2}}
-				{{#rollTotal() roll1d6 3}}
-					<div class="sheet-info">허약</div>
-					<div class="sheet-con">
-						【공격력】이 1점 감소한다.
-					</div>
-				{{/rollTotal() roll1d6 3}}
-				{{#rollTotal() roll1d6 4}}
-					<div class="sheet-info">병마</div>
-					<div class="sheet-con">
-						【방어력】이 1점 감소한다.
-					</div>
-				{{/rollTotal() roll1d6 4}}
-				{{#rollTotal() roll1d6 5}}
-					<div class="sheet-info">차단</div>
-					<div class="sheet-con">
-						【근원력】이 1점 감소한다.
-					</div>
-				{{/rollTotal() roll1d6 5}}
-				{{#rollTotal() roll1d6 6}}
-					<div class="sheet-info">불운</div>
-					<div class="sheet-con">
-						무작위로 특기 하나를 골라 그 특기의 체크칸에 체크한다. 그 특기를 사용할 수 없게 되며, 그 분야의 특기가 지정특기인 판정을 할 때는 -1의 수정이 붙는다.
-					</div>
-				{{/rollTotal() roll1d6 6}}
+				<!-- 펌블 표 -->
+				<div class="sheet-title">펌블 표</div>
+				<div class="sheet-con">
+					{{#rollTotal() roll1d6 1}}마법재액이 당신의 앵커를 덮친다. 자신에게 「운명 변전」이 발생한다.{{/rollTotal() roll1d6 1}}
+					{{#rollTotal() roll1d6 2}}마법재액이 당신의 마소를 빼앗는다. 충전한 마소를 임의의 조합으로 2점 감소한다.{{/rollTotal() roll1d6 2}}
+					{{#rollTotal() roll1d6 3}}마법의 제어에 실패한다. 【마력】이 1점 감소한다.{{/rollTotal() roll1d6 3}}
+					{{#rollTotal() roll1d6 4}}마법재액이 일어나는 바람에, 그 사이클이 끝날 때까지 자신의 행동판정에 -1의 수정이 붙는다.{{/rollTotal() roll1d6 4}}
+					{{#rollTotal() roll1d6 5}}마법재액이 직접 당신을 덮친다. 상태이상 표(p54)를 사용하여 정해진 상태이상을 받는다.{{/rollTotal() roll1d6 5}}
+					{{#rollTotal() roll1d6 6}}휴우, 큰일날 뻔했다. 아무 일도 일어나지 않는다.{{/rollTotal() roll1d6 6}}
+				</div>
 			{{/rollTotal() rolltable 1}}
-	
+
 			{{#rollTotal() rolltable 2}}
 				<!-- 운명변전 표 -->
-				<div class="sheet-title">운명변전표</div>
+				<div class="sheet-title">운명 변전 표</div>
 				
 				{{#rollTotal() roll1d6 1}}
 					<div class="sheet-info">좌절</div>
@@ -3104,39 +3088,50 @@ on("change:bas",
 			{{/rollTotal() rolltable 2}}
 
 			{{#rollTotal() rolltable 3}}
-				<!-- 장면 표 -->
-				<div class="sheet-title">장면표</div>
-				<div class="sheet-con">
-					{{#rollTotal() roll2d6 2}}여기가 아닌 어딘가. 마법의 힘이 충만한 이경 중 한 곳으로 한순간의 여행을 떠난다. 그 장면에 별 마소가 1점 발생한다.{{/rollTotal() roll2d6 2}}
-					{{#rollTotal() roll2d6 3}}꿈 속. 먼 과거의 풍경이 당신의 앞에 나타난다. 그 장면에 꿈 마소가 1점 발생한다.{{/rollTotal() roll2d6 3}}
-					{{#rollTotal() roll2d6 4}}거센 바람이 불며 구름이 흘러간다. 멀리서 천둥 소리가 들렸다. 그 장면에 힘 마소가 1점 발생한다.{{/rollTotal() roll2d6 4}}
-					{{#rollTotal() roll2d6 5}}고요한 카페 안. 커피 향기와 함께 우아하고 온화한 분위기가 충만하다.{{/rollTotal() roll2d6 5}}
-					{{#rollTotal() roll2d6 6}}아무도 없는 뒷골목. 여기라면 방해받을 일도 없겠지.{{/rollTotal() roll2d6 6}}
-					{{#rollTotal() roll2d6 7}}주위에서 <단장>이 일으킨 마법 재액이 발생한다. 무작위로 특기 하나를 선택해서 판정한다. 성공하면 그 장면에 원하는 마소가 1점 발생한다. 실패하면 「운명 변전 표」를 사용한다.{{/rollTotal() roll2d6 7}}
-					{{#rollTotal() roll2d6 8}}평범하기 그지 없는 평화로운 풍경. 하지만 그런 일상의 배후에서 마법 재액의 그림자를 느낀다.{{/rollTotal() roll2d6 8}}
-					{{#rollTotal() roll2d6 9}}읽던 책을 덮는다. 거기에는 당신이 알고 싶었던 정보가 적혀 있었다. 과연, 그렇게 된 거였나.{{/rollTotal() roll2d6 9}}
-					{{#rollTotal() roll2d6 10}}밤의 길거리를 걷는다. 저 멀리 집집마다 따스하게 빛나는 조명이 보인다. 그 장면에 노래 마소가 1점 발생한다.{{/rollTotal() roll2d6 10}}
-					{{#rollTotal() roll2d6 11}}인파로 북적이는 광장. 축제라도 열었나? 누군가가 부르는 소리가 들린다. 그 장면에 짐승 마소가 1점 발생한다.{{/rollTotal() roll2d6 11}}
-					{{#rollTotal() roll2d6 12}}비극의 예감. 가족의 불행, 친구의 절망, 동료의 죽음…… 이대로 내버려두면 일어날지도 모를 사건의 환각이 보인다. 그 장면에 어둠 마소가 1점 발생한다.{{/rollTotal() roll2d6 12}}
-				</div>
+				<!-- 상태이상 표 -->
+				<div class="sheet-title">상태이상 표</div>
+				
+				{{#rollTotal() roll1d6 1}}
+					<div class="sheet-info">봉인</div>
+					<div class="sheet-con">
+						자신이 습득한 장비 타입 이외의 마법 중에서 무작위로 하나 선택한다. 선택한 마법의 체크칸에 체크한다. 그 마법을 사용하려면 【마력】을 2점 소비해야 한다.
+					</div>
+				{{/rollTotal() roll1d6 1}}
+				{{#rollTotal() roll1d6 2}}
+					<div class="sheet-info">타짐</div>
+					<div class="sheet-con">
+						마법전 동안 각 라운드가 종료할 때 자신의 【마력】이 1점 감소한다.
+					</div>
+				{{/rollTotal() roll1d6 2}}
+				{{#rollTotal() roll1d6 3}}
+					<div class="sheet-info">허약</div>
+					<div class="sheet-con">
+						【공격력】이 1점 감소한다.
+					</div>
+				{{/rollTotal() roll1d6 3}}
+				{{#rollTotal() roll1d6 4}}
+					<div class="sheet-info">병마</div>
+					<div class="sheet-con">
+						【방어력】이 1점 감소한다.
+					</div>
+				{{/rollTotal() roll1d6 4}}
+				{{#rollTotal() roll1d6 5}}
+					<div class="sheet-info">차단</div>
+					<div class="sheet-con">
+						【근원력】이 1점 감소한다.
+					</div>
+				{{/rollTotal() roll1d6 5}}
+				{{#rollTotal() roll1d6 6}}
+					<div class="sheet-info">불운</div>
+					<div class="sheet-con">
+						무작위로 특기 하나를 골라 그 특기의 체크칸에 체크한다. 그 특기를 사용할 수 없게 되며, 그 분야의 특기가 지정특기인 판정을 할 때는 -1의 수정이 붙는다.
+					</div>
+				{{/rollTotal() roll1d6 6}}
 			{{/rollTotal() rolltable 3}}
-		
-			{{#rollTotal() rolltable 4}}
-				<!-- 펌블 표 -->
-				<div class="sheet-title">펌블표</div>
-				<div class="sheet-con">
-					{{#rollTotal() roll1d6 1}}마법재액이 당신의 앵커를 덮친다. 자신에게 「운명 변전」이 발생한다.{{/rollTotal() roll1d6 1}}
-					{{#rollTotal() roll1d6 2}}마법재액이 당신의 마소를 빼앗는다. 충전한 마소를 임의의 조합으로 2점 감소한다.{{/rollTotal() roll1d6 2}}
-					{{#rollTotal() roll1d6 3}}마법의 제어에 실패한다. 【마력】이 1점 감소한다.{{/rollTotal() roll1d6 3}}
-					{{#rollTotal() roll1d6 4}}마법재액이 일어나는 바람에, 그 사이클이 끝날 때까지 자신의 행동판정에 -1의 수정이 붙는다.{{/rollTotal() roll1d6 4}}
-					{{#rollTotal() roll1d6 5}}마법재액이 직접 당신을 덮친다. 상태이상 표(p54)를 사용하여 정해진 상태이상을 받는다.{{/rollTotal() roll1d6 5}}
-					{{#rollTotal() roll1d6 6}}휴우, 큰일날 뻔했다. 아무 일도 일어나지 않는다.{{/rollTotal() roll1d6 6}}
-				</div>
-			{{/rollTotal() rolltable 4}}
 
-			{{#rollTotal() rolltable 5}}
+			{{#rollTotal() rolltable 4}}
 				<!-- 사건 표 -->
-				<div class="sheet-title">사건표</div>
+				<div class="sheet-title">사건 표</div>
 				<div class="sheet-con">
 					{{#rollTotal() roll2d6 2}}예기치 못한 선물, 멋진 아이디어, 악마의 거래……. 목표가 당신이 바라는 것을 주려고 한다. 당신은 아무거나 마소를 1점 획득하거나 【마력】을 1D6점 회복할 수 있다. 어느 한쪽을 선택했다면 목표에 대한 당신의 【운명】이 1점 상승한다. 【운명】의 속성은 GM이 마음대로 결정할 수 있다.{{/rollTotal() roll2d6 2}}
 					{{#rollTotal() roll2d6 3}}고귀한 희생, 진지한 마음, 압도적인 힘……. 목표가 영웅적인 행위를 한다. 목표에 대한 당신의 【운명】이 1점 상승한다. 【운명】의 속성은 「존경」이 된다.{{/rollTotal() roll2d6 3}}
@@ -3150,83 +3145,11 @@ on("change:bas",
 					{{#rollTotal() roll2d6 11}}반가운 표정, 소중한 추억, 반려가 될 예감……. 목표와 함께 행복한 시간을 보내면서 소중한 것을 떠올린다. 목표에 대한 【운명】이 1점 상승한다. 【운명】의 속성은 「혈연」이 된다.{{/rollTotal() roll2d6 11}}
 					{{#rollTotal() roll2d6 12}}헌신적인 간호, 마법의 축복, 기적……. 목표에 대한 【운명】이 1점 상승한다. 【운명】의 속성은 마음대로 결정할 수 있다. 만약 관계칸에 상흔이 있다면, 상흔 하나를 관계칸에서 지울 수 있다.{{/rollTotal() roll2d6 12}}
 				</div>
-			{{/rollTotal() rolltable 5}}
+			{{/rollTotal() rolltable 4}}
 
-			{{#rollTotal() rolltable 6}}
-				<!-- 초기 앵커표 -->
-				<div class="sheet-title">초기 앵커표</div>
-				
-				{{#rollTotal() roll1d6 2}}
-					<div class="sheet-info">은인</div>
-					<div class="sheet-con">
-						당신은 곤란한 상황에서 그 앵커의 도움을 받았다.
-					</div>
-				{{/rollTotal() roll1d6 2}}
-				{{#rollTotal() roll1d6 3}}
-					<div class="sheet-info">식객</div>
-					<div class="sheet-con">
-						당신 또는 앵커는 상대방의 집, 또는 상대가 경영하는 연립주택에 산다.
-					</div>
-				{{/rollTotal() roll1d6 3}}
-				{{#rollTotal() roll1d6 4}}
-					<div class="sheet-info">술친구</div>
-					<div class="sheet-con">
-						당신과 앵커는 술친구다.
-					</div>
-				{{/rollTotal() roll1d6 4}}
-				{{#rollTotal() roll1d6 5}}
-					<div class="sheet-info">단골</div>
-					<div class="sheet-con">
-						당신 또는 앵커는 상대방의 직장에 자주 찾아온다.
-					</div>
-				{{/rollTotal() roll1d6 5}}
-				{{#rollTotal() roll1d6 6}}
-					<div class="sheet-info">동인</div>
-					<div class="sheet-con">
-						당신은 그 앵커와 같은 취미를 애호하는 동호인이다.
-					</div>
-				{{/rollTotal() roll1d6 6}}
-				{{#rollTotal() roll1d6 7}}
-					<div class="sheet-info">이웃</div>
-					<div class="sheet-con">
-						당신은 그 앵커의 이웃에 산다.
-					</div>
-				{{/rollTotal() roll1d6 7}}
-				{{#rollTotal() roll1d6 8}}
-					<div class="sheet-info">동기</div>
-					<div class="sheet-con">
-						당신은 그 앵커와 직장 또는 학교가 같다.
-					</div>
-				{{/rollTotal() roll1d6 8}}
-				{{#rollTotal() roll1d6 9}}
-					<div class="sheet-info">펜팔</div>
-					<div class="sheet-con">
-						당신은 편지나 메일을 통해 그 앵커와 의견을 교환한다.
-					</div>
-				{{/rollTotal() roll1d6 9}}
-				{{#rollTotal() roll1d6 10}}
-					<div class="sheet-info">옛 친구</div>
-					<div class="sheet-con">
-						당신은 예전에 그 앵커와 친교가 있었다.
-					</div>
-				{{/rollTotal() roll1d6 10}}
-				{{#rollTotal() roll1d6 11}}
-					<div class="sheet-info">비호</div>
-					<div class="sheet-con">
-						당신은 그 앵커를 남몰래 지켜본다.
-					</div>
-				{{/rollTotal() roll1d6 11}}
-				{{#rollTotal() roll1d6 12}}
-					<div class="sheet-info">애인</div>
-					<div class="sheet-con">
-						당신은 그 앵커와 육체 관계를 맺고 있다.
-					</div>
-				{{/rollTotal() roll1d6 12}}
-			{{/rollTotal() rolltable 6}}
-
-			{{#rollTotal() rolltable 7}}
+			{{#rollTotal() rolltable 5}}
 				<!-- 운명 속성 표 -->
-				<div class="sheet-title">운명속성표</div>
+				<div class="sheet-title">운명 속성 표</div>
 				
 				{{#rollTotal() roll1d6 1}}
 					<div class="sheet-info">혈연</div>
@@ -3264,10 +3187,23 @@ on("change:bas",
 						그 재능과 사상, 자세에 대해 외경심이나 존경심을 품은 인물.
 					</div>
 				{{/rollTotal() roll1d6 6}}
-			{{/rollTotal() rolltable 7}}
+			{{/rollTotal() rolltable 5}}
 
-			{{#rollTotal() rolltable 8}}
-				<!-- 사건 표 -->
+			{{#rollTotal() rolltable 6}}
+				<!-- 소원 표 -->
+				<div class="sheet-title">소원표</div>
+				<div class="sheet-con">
+					{{#rollTotal() roll1d6 1}}자신 이외의 특정한 누군가를 도와달라.{{/rollTotal() roll1d6 1}}
+					{{#rollTotal() roll1d6 2}}소중한 사람이나 동경하는 사람과 만나게 해달라.{{/rollTotal() roll1d6 2}}
+					{{#rollTotal() roll1d6 3}}자신을 둘러싼 불행을 없애달라.{{/rollTotal() roll1d6 3}}
+					{{#rollTotal() roll1d6 4}}자신이 잃어버린 무언가를 되찾아달라.{{/rollTotal() roll1d6 4}}
+					{{#rollTotal() roll1d6 5}}특정한 누군가를 벌해달라.{{/rollTotal() roll1d6 5}}
+					{{#rollTotal() roll1d6 6}}자신의 욕망(금전욕, 명예욕, 육욕, 지식욕 등)을 충족시켜달라.{{/rollTotal() roll1d6 6}}
+				</div>
+			{{/rollTotal() rolltable 6}}
+
+			{{#rollTotal() rolltable 7}}
+				<!-- 프라이즈 표 -->
 				<div class="sheet-title">프라이즈 표</div>
 				<div class="sheet-con">
 					{{#rollTotal() roll2d6 2}}패자는 안쪽부터 파열하여 산산히 흩어진다. 공적점을 1점 획득한다.{{/rollTotal() roll2d6 2}}
@@ -3282,168 +3218,391 @@ on("change:bas",
 					{{#rollTotal() roll2d6 11}}패자는 말의 파편으로 변해가고, 승자는 거기에서 미래의 운명을 읽어낸다. 승자는 「사건 표」를 사용한 후, 그 결과를 기록해둔다. 그 후, 그 세션 중에 연 드라마 장면에, 같은 장면에 등장한 캐릭터 한 명을 골라서 한 번만 해당 결과를 적용할 수 있다.{{/rollTotal() roll2d6 11}}
 					{{#rollTotal() roll2d6 12}}패자는 그림자가 되어 그 자리에 새겨져서 이경의 입구가 된다. 승자는 아무거나 이경을 하나 선택한다. 그 세션 동안 해당하는 이경으로 이동할 수 있다.{{/rollTotal() roll2d6 12}}
 				</div>
+			{{/rollTotal() rolltable 7}}
+
+			{{#rollTotal() rolltable 8}}
+				<!-- 운명변전 마법사 표 -->
+				<div class="sheet-title">운명 변전:마법사 재액</div>
+				
+				{{#rollTotal() roll1d6 1}}
+					<div class="sheet-info">혐오</div>
+					<div class="sheet-con">
+						우자들을 혐오하고, 〈대법전〉의 방식에 의문을 품게 된다. 이 불행이 두 번 발생하면, 그 마법사는 사망하는 대신 〈서적경〉이 되어 NPC가 된다. 이 불행이 〈서적경〉에게 내렸을 때는 불행이 무효가 된다.
+					</div>
+				{{/rollTotal() roll1d6 1}}
+				{{#rollTotal() roll1d6 2}}
+					<div class="sheet-info">악의</div>
+					<div class="sheet-con">
+						마법과 관련된 절실한 소원이나 사악한 욕망이 점점 비대화한다. 이 불행이 두 번 발생하면, 그 마법사는 사망한 후 〈금서〉가 되어 NPC가 된다.
+					</div>
+				{{/rollTotal() roll1d6 2}}
+				{{#rollTotal() roll1d6 3}}
+					<div class="sheet-info">유령</div>
+					<div class="sheet-con">
+						육체를 거의 잃어 영적인 존재가 된다. 이 불행이 두 번 발생하면, 그 마법사는 사망하는 대신 소멸한다.
+					</div>
+				{{/rollTotal() roll1d6 3}}
+				{{#rollTotal() roll1d6 4}}
+					<div class="sheet-info">연쇄</div>
+					<div class="sheet-con">
+						운명 변전이 발생한다. 이 불행이 두 번 발생해도 사망하지 않는다.
+					</div>
+				{{/rollTotal() roll1d6 4}}
+				{{#rollTotal() roll1d6 5}}
+					<div class="sheet-info">상태이상</div>
+					<div class="sheet-con">
+						무작위로 상태이상을 하나 입는다. 이 불행이 두 번 발생해도 사망하지 않는다.
+					</div>
+				{{/rollTotal() roll1d6 5}}
+				{{#rollTotal() roll1d6 6}}
+					<div class="sheet-info">소모</div>
+					<div class="sheet-con">
+						【마력】이 1점 감소한다. 이 불행이 두 번 발생해도 사망하지 않는다.
+					</div>
+				{{/rollTotal() roll1d6 6}}
 			{{/rollTotal() rolltable 8}}
+
+			{{#rollTotal() rolltable 9}}
+				<!-- 운명변전 정신계 표 -->
+				<div class="sheet-title">운명 변전:정신계 재액</div>
+				
+				{{#rollTotal() roll1d6 1}}
+					<div class="sheet-info">권태</div>
+					<div class="sheet-con">
+						피로감에 사로잡혀 아무 일도 하기 싫어진다.
+					</div>
+				{{/rollTotal() roll1d6 1}}
+				{{#rollTotal() roll1d6 2}}
+					<div class="sheet-info">가출</div>
+					<div class="sheet-con">
+						지금 자신이 있는 장소를 불편하게 여겨 실종된다.
+					</div>
+				{{/rollTotal() roll1d6 2}}
+				{{#rollTotal() roll1d6 3}}
+					<div class="sheet-info">증오</div>
+					<div class="sheet-con">
+						주위의 누군가나 PC에 대해 격심한 증오를 품게 된다.
+					</div>
+				{{/rollTotal() roll1d6 3}}
+				{{#rollTotal() roll1d6 4}}
+					<div class="sheet-info">불면</div>
+					<div class="sheet-con">
+						잠을 자지 못하게 되어 피폐해진다.
+					</div>
+				{{/rollTotal() roll1d6 4}}
+				{{#rollTotal() roll1d6 5}}
+					<div class="sheet-info">허언</div>
+					<div class="sheet-con">
+						사실을 말하지 못하게 된다.
+					</div>
+				{{/rollTotal() roll1d6 5}}
+				{{#rollTotal() roll1d6 6}}
+					<div class="sheet-info">기억상실</div>
+					<div class="sheet-con">
+						친구나 PC를 잊어버린다.
+					</div>
+				{{/rollTotal() roll1d6 6}}
+			{{/rollTotal() rolltable 9}}
+
+			{{#rollTotal() rolltable 10}}
+				<!-- 운명변전 광기계 표 -->
+				<div class="sheet-title">운명 변전:광기계 재액</div>
+				
+				{{#rollTotal() roll1d6 1}}
+					<div class="sheet-info">이중인격</div>
+					<div class="sheet-con">
+						또 하나의 인격이 나타나 제멋대로 행동하기 시작한다.
+					</div>
+				{{/rollTotal() roll1d6 1}}
+				{{#rollTotal() roll1d6 2}}
+					<div class="sheet-info">공포</div>
+					<div class="sheet-con">
+						높은 곳이나 사람, 거미 등 특정 무언가에 대한 공포증에 걸린다.
+					</div>
+				{{/rollTotal() roll1d6 2}}
+				{{#rollTotal() roll1d6 3}}
+					<div class="sheet-info">망상</div>
+					<div class="sheet-con">
+						당치도 않은 기묘한 망상이 머리에서 떠나지 않게 된다.
+					</div>
+				{{/rollTotal() roll1d6 3}}
+				{{#rollTotal() roll1d6 4}}
+					<div class="sheet-info">편애</div>
+					<div class="sheet-con">
+						특정한 물건이나 상황 등에 열정적인 애정을 보이게 된다.
+					</div>
+				{{/rollTotal() roll1d6 4}}
+				{{#rollTotal() roll1d6 5}}
+					<div class="sheet-info">폭주</div>
+					<div class="sheet-con">
+						종종 자신의 감정을 제어하지 못하고 흉포하게 군다.
+					</div>
+				{{/rollTotal() roll1d6 5}}
+				{{#rollTotal() roll1d6 6}}
+					<div class="sheet-info">발정</div>
+					<div class="sheet-con">
+						체온이 상승하고 맥박이 빨라지며 성적인 흥분 상태가 된다.
+					</div>
+				{{/rollTotal() roll1d6 6}}
+			{{/rollTotal() rolltable 10}}
+
+			{{#rollTotal() rolltable 11}}
+				<!-- 운명변전 사회계 표 -->
+				<div class="sheet-title">운명 변전:사회계 재액</div>
+				
+				{{#rollTotal() roll1d6 1}}
+					<div class="sheet-info">체포</div>
+					<div class="sheet-con">
+						저지르지도 않은 죄로 잡혀서 유치된다.
+					</div>
+				{{/rollTotal() roll1d6 1}}
+				{{#rollTotal() roll1d6 2}}
+					<div class="sheet-info">배신</div>
+					<div class="sheet-con">
+						믿었던 인물에게 속거나, 연인이 바람을 피운다.
+					</div>
+				{{/rollTotal() roll1d6 2}}
+				{{#rollTotal() roll1d6 3}}
+					<div class="sheet-info">폭로</div>
+					<div class="sheet-con">
+						숨기고 싶었던 비밀이 폭로당한다.
+					</div>
+				{{/rollTotal() roll1d6 3}}
+				{{#rollTotal() roll1d6 4}}
+					<div class="sheet-info">농락</div>
+					<div class="sheet-con">
+						누가 봐도 건실하지 못한 상대에게 마음을 빼앗긴다.
+					</div>
+				{{/rollTotal() roll1d6 4}}
+				{{#rollTotal() roll1d6 5}}
+					<div class="sheet-info">가해</div>
+					<div class="sheet-con">
+						남을 다치게 하거나 죽여버린다.
+					</div>
+				{{/rollTotal() roll1d6 5}}
+				{{#rollTotal() roll1d6 6}}
+					<div class="sheet-info">과로</div>
+					<div class="sheet-con">
+						터무니 없는 양의 업무에 쫓겨 심신 모두 피로에 찌든다.
+					</div>
+				{{/rollTotal() roll1d6 6}}
+			{{/rollTotal() rolltable 11}}
+
+			{{#rollTotal() rolltable 12}}
+				<!-- 운명변전 초자연계 표 -->
+				<div class="sheet-title">운명 변전:초자연계 재액</div>
+				
+				{{#rollTotal() roll1d6 1}}
+					<div class="sheet-info">영감</div>
+					<div class="sheet-con">
+						보일 리가 없는 것이 보이게 된다.
+					</div>
+				{{/rollTotal() roll1d6 1}}
+				{{#rollTotal() roll1d6 2}}
+					<div class="sheet-info">불운</div>
+					<div class="sheet-con">
+						주위에서 불행한 우연이 빈발하게 된다.
+					</div>
+				{{/rollTotal() roll1d6 2}}
+				{{#rollTotal() roll1d6 3}}
+					<div class="sheet-info">감염</div>
+					<div class="sheet-con">
+						흡혈귀나 좀비 같은 괴물로 변하기 시작한다.
+					</div>
+				{{/rollTotal() roll1d6 3}}
+				{{#rollTotal() roll1d6 4}}
+					<div class="sheet-info">저해</div>
+					<div class="sheet-con">
+						비마법적인 이들의 눈에 보이지 않게 된다.
+					</div>
+				{{/rollTotal() roll1d6 4}}
+				{{#rollTotal() roll1d6 5}}
+					<div class="sheet-info">변신</div>
+					<div class="sheet-con">
+						모습이 동물이나 다른 인간으로 변해버린다.
+					</div>
+				{{/rollTotal() roll1d6 5}}
+				{{#rollTotal() roll1d6 6}}
+					<div class="sheet-info">표적</div>
+					<div class="sheet-con">
+						살인마나 마법 재액 같은 악의적인 존재의 관심을 끌어들이고 만다.
+					</div>
+				{{/rollTotal() roll1d6 6}}
+			{{/rollTotal() rolltable 12}}
+
+			{{#rollTotal() rolltable 13}}
+				<!-- 시간의 흐름 표 -->
+				<div class="sheet-title">시간의 흐름 표</div>
+				<div class="sheet-con">
+					{{#rollTotal() roll1d6 1}}파란만장한 인생을 보낸다. 이 시대에 일어난 유명한 사건의 배후에는 많은 마법적 존재가 암약했다. 당신도 그 사건에 관여하여 〈금서〉나 〈서적경〉들과 싸웠다. 무작위로 특기 하나를 선택해서 판정한다. 판정에 성공하면 세션을 종료할 때 공적점을 1점 더 획득한다. 실패했다면 자신에게 「운명 변전」이 발생한다.{{/rollTotal() roll1d6 1}}
+					{{#rollTotal() roll1d6 2}}모험의 나날을 보내던 도중에 큰 행복이 찾아온다. 무작위로 특기를 하나 선택해서 판정한다. 판정에 성공하면 자신의 앵커가 짊어지고 있는 불행이나 자신이 짊어지고 있는 상흔 하나를 무효로 한다.{{/rollTotal() roll1d6 2}}
+					{{#rollTotal() roll1d6 3}}명상 중이었는지, 아니면 무언가 봉인되어 있었는지……. 오랜 잠에서 눈을 뜬다. 벌써 이런 시간인가. 덕분에 충분히 쉴 수 있었다. 자신이 무작위로 마소를 3개 획득하거나, 자신이 「마력 리셋」을 하거나, 자신에게 걸린 상태이상을 모두 회복한다.{{/rollTotal() roll1d6 3}}
+					{{#rollTotal() roll1d6 4}}특수한 이경을 여행했다. 그 때문인지 인계에서 무슨 일이 일어났는지 전혀 모른다. 신선놀음에 도끼자루 썩는 줄 모르는 기분이다. 이경의 특산물을 구해왔다. 마화 1D6점을 획득한다.{{/rollTotal() roll1d6 4}}
+					{{#rollTotal() roll1d6 5}}거리의 사람들 사이에서 평온하게 살아간다. 그런 나날 속에서 사소한 사건이 일어났다. 자신의 앵커 한 명을 목표로 선택하여 「사건 표」에서 주사위를 굴릴 수 있다.{{/rollTotal() roll1d6 5}}
+					{{#rollTotal() roll1d6 6}}날마다 연찬을 거듭해서 마법 수행에 정진했다. 만약 바란다면 장서 칸에 있는 마법을 자신이 습득할 수 있는 다른 마법으로 변경할 수 있다. 만약 마소가 충전되어 있던 마법을 미습득 상태로 되돌렸다면, 그 마소는 잃는다.{{/rollTotal() roll1d6 6}}
+				</div>
+			{{/rollTotal() rolltable 13}}
 		{{/rolltable}}
 
 		{{#randomspec}}
 			<!-- 가변특기 -->
 			{{#rollTotal() randomspec 7}}
 				{{#rollTotal() roll1d6 1}}
-					{{#rollTotal() roll2d6 2}}<div class="sheet-subject">1. 별 : <em>황금</em></div>{{/rollTotal() roll2d6 2}}
-					{{#rollTotal() roll2d6 3}}<div class="sheet-subject">1. 별 : <em>대지</em></div>{{/rollTotal() roll2d6 3}}
-					{{#rollTotal() roll2d6 4}}<div class="sheet-subject">1. 별 : <em>숲</em></div>{{/rollTotal() roll2d6 4}}
-					{{#rollTotal() roll2d6 5}}<div class="sheet-subject">1. 별 : <em>길</em></div>{{/rollTotal() roll2d6 5}}
-					{{#rollTotal() roll2d6 6}}<div class="sheet-subject">1. 별 : <em>바다</em></div>{{/rollTotal() roll2d6 6}}
-					{{#rollTotal() roll2d6 7}}<div class="sheet-subject">1. 별 : <em>정적</em></div>{{/rollTotal() roll2d6 7}}
-					{{#rollTotal() roll2d6 8}}<div class="sheet-subject">1. 별 : <em>비</em></div>{{/rollTotal() roll2d6 8}}
-					{{#rollTotal() roll2d6 9}}<div class="sheet-subject">1. 별 : <em>폭풍</em></div>{{/rollTotal() roll2d6 9}}
-					{{#rollTotal() roll2d6 10}}<div class="sheet-subject">1. 별 : <em>태양</em></div>{{/rollTotal() roll2d6 10}}
-					{{#rollTotal() roll2d6 11}}<div class="sheet-subject">1. 별 : <em>천공</em></div>{{/rollTotal() roll2d6 11}}
-					{{#rollTotal() roll2d6 12}}<div class="sheet-subject">1. 별 : <em>이계</em></div>{{/rollTotal() roll2d6 12}}
+					{{#rollTotal() roll2d6 2}}<div class="sheet-subject">별 : <em>2.황금</em></div>{{/rollTotal() roll2d6 2}}
+					{{#rollTotal() roll2d6 3}}<div class="sheet-subject">별 : <em>3.대지</em></div>{{/rollTotal() roll2d6 3}}
+					{{#rollTotal() roll2d6 4}}<div class="sheet-subject">별 : <em>4.숲</em></div>{{/rollTotal() roll2d6 4}}
+					{{#rollTotal() roll2d6 5}}<div class="sheet-subject">별 : <em>5.길</em></div>{{/rollTotal() roll2d6 5}}
+					{{#rollTotal() roll2d6 6}}<div class="sheet-subject">별 : <em>6.바다</em></div>{{/rollTotal() roll2d6 6}}
+					{{#rollTotal() roll2d6 7}}<div class="sheet-subject">별 : <em>7.정적</em></div>{{/rollTotal() roll2d6 7}}
+					{{#rollTotal() roll2d6 8}}<div class="sheet-subject">별 : <em>8.비</em></div>{{/rollTotal() roll2d6 8}}
+					{{#rollTotal() roll2d6 9}}<div class="sheet-subject">별 : <em>9.폭풍</em></div>{{/rollTotal() roll2d6 9}}
+					{{#rollTotal() roll2d6 10}}<div class="sheet-subject">별 : <em>10.태양</em></div>{{/rollTotal() roll2d6 10}}
+					{{#rollTotal() roll2d6 11}}<div class="sheet-subject">별 : <em>11.천공</em></div>{{/rollTotal() roll2d6 11}}
+					{{#rollTotal() roll2d6 12}}<div class="sheet-subject">별 : <em>12.이계</em></div>{{/rollTotal() roll2d6 12}}
 				{{/rollTotal() roll1d6 1}}
 				{{#rollTotal() roll1d6 2}}
-					{{#rollTotal() roll2d6 2}}<div class="sheet-subject">2. 짐승 : <em>살</em></div>{{/rollTotal() roll2d6 2}}
-					{{#rollTotal() roll2d6 3}}<div class="sheet-subject">2. 짐승 : <em>벌레</em></div>{{/rollTotal() roll2d6 3}}
-					{{#rollTotal() roll2d6 4}}<div class="sheet-subject">2. 짐승 : <em>꽃</em></div>{{/rollTotal() roll2d6 4}}
-					{{#rollTotal() roll2d6 5}}<div class="sheet-subject">2. 짐승 : <em>피</em></div>{{/rollTotal() roll2d6 5}}
-					{{#rollTotal() roll2d6 6}}<div class="sheet-subject">2. 짐승 : <em>비늘</em></div>{{/rollTotal() roll2d6 6}}
-					{{#rollTotal() roll2d6 7}}<div class="sheet-subject">2. 짐승 : <em>혼돈</em></div>{{/rollTotal() roll2d6 7}}
-					{{#rollTotal() roll2d6 8}}<div class="sheet-subject">2. 짐승 : <em>이빨</em></div>{{/rollTotal() roll2d6 8}}
-					{{#rollTotal() roll2d6 9}}<div class="sheet-subject">2. 짐승 : <em>외침</em></div>{{/rollTotal() roll2d6 9}}
-					{{#rollTotal() roll2d6 10}}<div class="sheet-subject">2. 짐승 : <em>분노</em></div>{{/rollTotal() roll2d6 10}}
-					{{#rollTotal() roll2d6 11}}<div class="sheet-subject">2. 짐승 : <em>날개</em></div>{{/rollTotal() roll2d6 11}}
-					{{#rollTotal() roll2d6 12}}<div class="sheet-subject">2. 짐승 : <em>에로스</em></div>{{/rollTotal() roll2d6 12}}
+					{{#rollTotal() roll2d6 2}}<div class="sheet-subject">짐승 : <em>2.살</em></div>{{/rollTotal() roll2d6 2}}
+					{{#rollTotal() roll2d6 3}}<div class="sheet-subject">짐승 : <em>3.벌레</em></div>{{/rollTotal() roll2d6 3}}
+					{{#rollTotal() roll2d6 4}}<div class="sheet-subject">짐승 : <em>4.꽃</em></div>{{/rollTotal() roll2d6 4}}
+					{{#rollTotal() roll2d6 5}}<div class="sheet-subject">짐승 : <em>5.피</em></div>{{/rollTotal() roll2d6 5}}
+					{{#rollTotal() roll2d6 6}}<div class="sheet-subject">짐승 : <em>6.비늘</em></div>{{/rollTotal() roll2d6 6}}
+					{{#rollTotal() roll2d6 7}}<div class="sheet-subject">짐승 : <em>7.혼돈</em></div>{{/rollTotal() roll2d6 7}}
+					{{#rollTotal() roll2d6 8}}<div class="sheet-subject">짐승 : <em>8.이빨</em></div>{{/rollTotal() roll2d6 8}}
+					{{#rollTotal() roll2d6 9}}<div class="sheet-subject">짐승 : <em>9.외침</em></div>{{/rollTotal() roll2d6 9}}
+					{{#rollTotal() roll2d6 10}}<div class="sheet-subject">짐승 : <em>10.분노</em></div>{{/rollTotal() roll2d6 10}}
+					{{#rollTotal() roll2d6 11}}<div class="sheet-subject">짐승 : <em>11.날개</em></div>{{/rollTotal() roll2d6 11}}
+					{{#rollTotal() roll2d6 12}}<div class="sheet-subject">짐승 : <em>12.에로스</em></div>{{/rollTotal() roll2d6 12}}
 				{{/rollTotal() roll1d6 2}}
 				{{#rollTotal() roll1d6 3}}
-					{{#rollTotal() roll2d6 2}}<div class="sheet-subject">3. 힘 : <em>중력</em></div>{{/rollTotal() roll2d6 2}}
-					{{#rollTotal() roll2d6 3}}<div class="sheet-subject">3. 힘 : <em>바람</em></div>{{/rollTotal() roll2d6 3}}
-					{{#rollTotal() roll2d6 4}}<div class="sheet-subject">3. 힘 : <em>흐름</em></div>{{/rollTotal() roll2d6 4}}
-					{{#rollTotal() roll2d6 5}}<div class="sheet-subject">3. 힘 : <em>물</em></div>{{/rollTotal() roll2d6 5}}
-					{{#rollTotal() roll2d6 6}}<div class="sheet-subject">3. 힘 : <em>파문</em></div>{{/rollTotal() roll2d6 6}}
-					{{#rollTotal() roll2d6 7}}<div class="sheet-subject">3. 힘 : <em>자유</em></div>{{/rollTotal() roll2d6 7}}
-					{{#rollTotal() roll2d6 8}}<div class="sheet-subject">3. 힘 : <em>충격</em></div>{{/rollTotal() roll2d6 8}}
-					{{#rollTotal() roll2d6 9}}<div class="sheet-subject">3. 힘 : <em>우레</em></div>{{/rollTotal() roll2d6 9}}
-					{{#rollTotal() roll2d6 10}}<div class="sheet-subject">3. 힘 : <em>불</em></div>{{/rollTotal() roll2d6 10}}
-					{{#rollTotal() roll2d6 11}}<div class="sheet-subject">3. 힘 : <em>빛</em></div>{{/rollTotal() roll2d6 11}}
-					{{#rollTotal() roll2d6 12}}<div class="sheet-subject">3. 힘 : <em>원환</em></div>{{/rollTotal() roll2d6 12}}
+					{{#rollTotal() roll2d6 2}}<div class="sheet-subject">힘 : <em>2.중력</em></div>{{/rollTotal() roll2d6 2}}
+					{{#rollTotal() roll2d6 3}}<div class="sheet-subject">힘 : <em>3.바람</em></div>{{/rollTotal() roll2d6 3}}
+					{{#rollTotal() roll2d6 4}}<div class="sheet-subject">힘 : <em>4.흐름</em></div>{{/rollTotal() roll2d6 4}}
+					{{#rollTotal() roll2d6 5}}<div class="sheet-subject">힘 : <em>5.물</em></div>{{/rollTotal() roll2d6 5}}
+					{{#rollTotal() roll2d6 6}}<div class="sheet-subject">힘 : <em>6.파문</em></div>{{/rollTotal() roll2d6 6}}
+					{{#rollTotal() roll2d6 7}}<div class="sheet-subject">힘 : <em>7.자유</em></div>{{/rollTotal() roll2d6 7}}
+					{{#rollTotal() roll2d6 8}}<div class="sheet-subject">힘 : <em>8.충격</em></div>{{/rollTotal() roll2d6 8}}
+					{{#rollTotal() roll2d6 9}}<div class="sheet-subject">힘 : <em>9.우레</em></div>{{/rollTotal() roll2d6 9}}
+					{{#rollTotal() roll2d6 10}}<div class="sheet-subject">힘 : <em>10.불</em></div>{{/rollTotal() roll2d6 10}}
+					{{#rollTotal() roll2d6 11}}<div class="sheet-subject">힘 : <em>11.빛</em></div>{{/rollTotal() roll2d6 11}}
+					{{#rollTotal() roll2d6 12}}<div class="sheet-subject">힘 : <em>12.원환</em></div>{{/rollTotal() roll2d6 12}}
 				{{/rollTotal() roll1d6 3}}
 				{{#rollTotal() roll1d6 4}}
-					{{#rollTotal() roll2d6 2}}<div class="sheet-subject">4. 노래 : <em>이야기</em></div>{{/rollTotal() roll2d6 2}}
-					{{#rollTotal() roll2d6 3}}<div class="sheet-subject">4. 노래 : <em>선율</em></div>{{/rollTotal() roll2d6 3}}
-					{{#rollTotal() roll2d6 4}}<div class="sheet-subject">4. 노래 : <em>눈물</em></div>{{/rollTotal() roll2d6 4}}
-					{{#rollTotal() roll2d6 5}}<div class="sheet-subject">4. 노래 : <em>이별</em></div>{{/rollTotal() roll2d6 5}}
-					{{#rollTotal() roll2d6 6}}<div class="sheet-subject">4. 노래 : <em>미소</em></div>{{/rollTotal() roll2d6 6}}
-					{{#rollTotal() roll2d6 7}}<div class="sheet-subject">4. 노래 : <em>마음</em></div>{{/rollTotal() roll2d6 7}}
-					{{#rollTotal() roll2d6 8}}<div class="sheet-subject">4. 노래 : <em>승리</em></div>{{/rollTotal() roll2d6 8}}
-					{{#rollTotal() roll2d6 9}}<div class="sheet-subject">4. 노래 : <em>사랑</em></div>{{/rollTotal() roll2d6 9}}
-					{{#rollTotal() roll2d6 10}}<div class="sheet-subject">4. 노래 : <em>정열</em></div>{{/rollTotal() roll2d6 10}}
-					{{#rollTotal() roll2d6 11}}<div class="sheet-subject">4. 노래 : <em>치유</em></div>{{/rollTotal() roll2d6 11}}
-					{{#rollTotal() roll2d6 12}}<div class="sheet-subject">4. 노래 : <em>시간</em></div>{{/rollTotal() roll2d6 12}}
+					{{#rollTotal() roll2d6 2}}<div class="sheet-subject">노래 : <em>2.이야기</em></div>{{/rollTotal() roll2d6 2}}
+					{{#rollTotal() roll2d6 3}}<div class="sheet-subject">노래 : <em>3.선율</em></div>{{/rollTotal() roll2d6 3}}
+					{{#rollTotal() roll2d6 4}}<div class="sheet-subject">노래 : <em>4.눈물</em></div>{{/rollTotal() roll2d6 4}}
+					{{#rollTotal() roll2d6 5}}<div class="sheet-subject">노래 : <em>5.이별</em></div>{{/rollTotal() roll2d6 5}}
+					{{#rollTotal() roll2d6 6}}<div class="sheet-subject">노래 : <em>6.미소</em></div>{{/rollTotal() roll2d6 6}}
+					{{#rollTotal() roll2d6 7}}<div class="sheet-subject">노래 : <em>7.마음</em></div>{{/rollTotal() roll2d6 7}}
+					{{#rollTotal() roll2d6 8}}<div class="sheet-subject">노래 : <em>8.승리</em></div>{{/rollTotal() roll2d6 8}}
+					{{#rollTotal() roll2d6 9}}<div class="sheet-subject">노래 : <em>9.사랑</em></div>{{/rollTotal() roll2d6 9}}
+					{{#rollTotal() roll2d6 10}}<div class="sheet-subject">노래 : <em>10.정열</em></div>{{/rollTotal() roll2d6 10}}
+					{{#rollTotal() roll2d6 11}}<div class="sheet-subject">노래 : <em>11.치유</em></div>{{/rollTotal() roll2d6 11}}
+					{{#rollTotal() roll2d6 12}}<div class="sheet-subject">노래 : <em>12.시간</em></div>{{/rollTotal() roll2d6 12}}
 				{{/rollTotal() roll1d6 4}}
 				{{#rollTotal() roll1d6 5}}
-					{{#rollTotal() roll2d6 2}}<div class="sheet-subject">5. 꿈 : <em>추억</em></div>{{/rollTotal() roll2d6 2}}
-					{{#rollTotal() roll2d6 3}}<div class="sheet-subject">5. 꿈 : <em>수수께끼</em></div>{{/rollTotal() roll2d6 3}}
-					{{#rollTotal() roll2d6 4}}<div class="sheet-subject">5. 꿈 : <em>거짓</em></div>{{/rollTotal() roll2d6 4}}
-					{{#rollTotal() roll2d6 5}}<div class="sheet-subject">5. 꿈 : <em>불안</em></div>{{/rollTotal() roll2d6 5}}
-					{{#rollTotal() roll2d6 6}}<div class="sheet-subject">5. 꿈 : <em>잠</em></div>{{/rollTotal() roll2d6 6}}
-					{{#rollTotal() roll2d6 7}}<div class="sheet-subject">5. 꿈 : <em>우연</em></div>{{/rollTotal() roll2d6 7}}
-					{{#rollTotal() roll2d6 8}}<div class="sheet-subject">5. 꿈 : <em>환각</em></div>{{/rollTotal() roll2d6 8}}
-					{{#rollTotal() roll2d6 9}}<div class="sheet-subject">5. 꿈 : <em>광기</em></div>{{/rollTotal() roll2d6 9}}
-					{{#rollTotal() roll2d6 10}}<div class="sheet-subject">5. 꿈 : <em>기도</em></div>{{/rollTotal() roll2d6 10}}
-					{{#rollTotal() roll2d6 11}}<div class="sheet-subject">5. 꿈 : <em>희망</em></div>{{/rollTotal() roll2d6 11}}
-					{{#rollTotal() roll2d6 12}}<div class="sheet-subject">5. 꿈 : <em>미래</em></div>{{/rollTotal() roll2d6 12}}
+					{{#rollTotal() roll2d6 2}}<div class="sheet-subject">꿈 : <em>2.추억</em></div>{{/rollTotal() roll2d6 2}}
+					{{#rollTotal() roll2d6 3}}<div class="sheet-subject">꿈 : <em>3.수수께끼</em></div>{{/rollTotal() roll2d6 3}}
+					{{#rollTotal() roll2d6 4}}<div class="sheet-subject">꿈 : <em>4.거짓</em></div>{{/rollTotal() roll2d6 4}}
+					{{#rollTotal() roll2d6 5}}<div class="sheet-subject">꿈 : <em>5.불안</em></div>{{/rollTotal() roll2d6 5}}
+					{{#rollTotal() roll2d6 6}}<div class="sheet-subject">꿈 : <em>6.잠</em></div>{{/rollTotal() roll2d6 6}}
+					{{#rollTotal() roll2d6 7}}<div class="sheet-subject">꿈 : <em>7.우연</em></div>{{/rollTotal() roll2d6 7}}
+					{{#rollTotal() roll2d6 8}}<div class="sheet-subject">꿈 : <em>8.환각</em></div>{{/rollTotal() roll2d6 8}}
+					{{#rollTotal() roll2d6 9}}<div class="sheet-subject">꿈 : <em>9.광기</em></div>{{/rollTotal() roll2d6 9}}
+					{{#rollTotal() roll2d6 10}}<div class="sheet-subject">꿈 : <em>10.기도</em></div>{{/rollTotal() roll2d6 10}}
+					{{#rollTotal() roll2d6 11}}<div class="sheet-subject">꿈 : <em>11.희망</em></div>{{/rollTotal() roll2d6 11}}
+					{{#rollTotal() roll2d6 12}}<div class="sheet-subject">꿈 : <em>12.미래</em></div>{{/rollTotal() roll2d6 12}}
 				{{/rollTotal() roll1d6 5}}
 				{{#rollTotal() roll1d6 6}}
-					{{#rollTotal() roll2d6 2}}<div class="sheet-subject">6. 어둠 : <em>심연</em></div>{{/rollTotal() roll2d6 2}}
-					{{#rollTotal() roll2d6 3}}<div class="sheet-subject">6. 어둠 : <em>부패</em></div>{{/rollTotal() roll2d6 3}}
-					{{#rollTotal() roll2d6 4}}<div class="sheet-subject">6. 어둠 : <em>배신</em></div>{{/rollTotal() roll2d6 4}}
-					{{#rollTotal() roll2d6 5}}<div class="sheet-subject">6. 어둠 : <em>방황</em></div>{{/rollTotal() roll2d6 5}}
-					{{#rollTotal() roll2d6 6}}<div class="sheet-subject">6. 어둠 : <em>나태</em></div>{{/rollTotal() roll2d6 6}}
-					{{#rollTotal() roll2d6 7}}<div class="sheet-subject">6. 어둠 : <em>왜곡</em></div>{{/rollTotal() roll2d6 7}}
-					{{#rollTotal() roll2d6 8}}<div class="sheet-subject">6. 어둠 : <em>불행</em></div>{{/rollTotal() roll2d6 8}}
-					{{#rollTotal() roll2d6 9}}<div class="sheet-subject">6. 어둠 : <em>바보</em></div>{{/rollTotal() roll2d6 9}}
-					{{#rollTotal() roll2d6 10}}<div class="sheet-subject">6. 어둠 : <em>악의</em></div>{{/rollTotal() roll2d6 10}}
-					{{#rollTotal() roll2d6 11}}<div class="sheet-subject">6. 어둠 : <em>절망</em></div>{{/rollTotal() roll2d6 11}}
-					{{#rollTotal() roll2d6 12}}<div class="sheet-subject">6. 어둠 : <em>죽음</em></div>{{/rollTotal() roll2d6 12}}
+					{{#rollTotal() roll2d6 2}}<div class="sheet-subject">어둠 : <em>2.심연</em></div>{{/rollTotal() roll2d6 2}}
+					{{#rollTotal() roll2d6 3}}<div class="sheet-subject">어둠 : <em>3.부패</em></div>{{/rollTotal() roll2d6 3}}
+					{{#rollTotal() roll2d6 4}}<div class="sheet-subject">어둠 : <em>4.배신</em></div>{{/rollTotal() roll2d6 4}}
+					{{#rollTotal() roll2d6 5}}<div class="sheet-subject">어둠 : <em>5.방황</em></div>{{/rollTotal() roll2d6 5}}
+					{{#rollTotal() roll2d6 6}}<div class="sheet-subject">어둠 : <em>6.나태</em></div>{{/rollTotal() roll2d6 6}}
+					{{#rollTotal() roll2d6 7}}<div class="sheet-subject">어둠 : <em>7.왜곡</em></div>{{/rollTotal() roll2d6 7}}
+					{{#rollTotal() roll2d6 8}}<div class="sheet-subject">어둠 : <em>8.불행</em></div>{{/rollTotal() roll2d6 8}}
+					{{#rollTotal() roll2d6 9}}<div class="sheet-subject">어둠 : <em>9.바보</em></div>{{/rollTotal() roll2d6 9}}
+					{{#rollTotal() roll2d6 10}}<div class="sheet-subject">어둠 : <em>10.악의</em></div>{{/rollTotal() roll2d6 10}}
+					{{#rollTotal() roll2d6 11}}<div class="sheet-subject">어둠 : <em>11.절망</em></div>{{/rollTotal() roll2d6 11}}
+					{{#rollTotal() roll2d6 12}}<div class="sheet-subject">어둠 : <em>12.죽음</em></div>{{/rollTotal() roll2d6 12}}
 				{{/rollTotal() roll1d6 6}}
 			{{/rollTotal() randomspec 7}}
 			{{#rollTotal() randomspec 1}}
-				{{#rollTotal() roll2d6 2}}<div class="sheet-subject">1. 별 : <em>황금</em></div>{{/rollTotal() roll2d6 2}}
-				{{#rollTotal() roll2d6 3}}<div class="sheet-subject">1. 별 : <em>대지</em></div>{{/rollTotal() roll2d6 3}}
-				{{#rollTotal() roll2d6 4}}<div class="sheet-subject">1. 별 : <em>숲</em></div>{{/rollTotal() roll2d6 4}}
-				{{#rollTotal() roll2d6 5}}<div class="sheet-subject">1. 별 : <em>길</em></div>{{/rollTotal() roll2d6 5}}
-				{{#rollTotal() roll2d6 6}}<div class="sheet-subject">1. 별 : <em>바다</em></div>{{/rollTotal() roll2d6 6}}
-				{{#rollTotal() roll2d6 7}}<div class="sheet-subject">1. 별 : <em>정적</em></div>{{/rollTotal() roll2d6 7}}
-				{{#rollTotal() roll2d6 8}}<div class="sheet-subject">1. 별 : <em>비</em></div>{{/rollTotal() roll2d6 8}}
-				{{#rollTotal() roll2d6 9}}<div class="sheet-subject">1. 별 : <em>폭풍</em></div>{{/rollTotal() roll2d6 9}}
-				{{#rollTotal() roll2d6 10}}<div class="sheet-subject">1. 별 : <em>태양</em></div>{{/rollTotal() roll2d6 10}}
-				{{#rollTotal() roll2d6 11}}<div class="sheet-subject">1. 별 : <em>천공</em></div>{{/rollTotal() roll2d6 11}}
-				{{#rollTotal() roll2d6 12}}<div class="sheet-subject">1. 별 : <em>이계</em></div>{{/rollTotal() roll2d6 12}}
+				{{#rollTotal() roll2d6 2}}<div class="sheet-subject">별 : <em>2.황금</em></div>{{/rollTotal() roll2d6 2}}
+				{{#rollTotal() roll2d6 3}}<div class="sheet-subject">별 : <em>3.대지</em></div>{{/rollTotal() roll2d6 3}}
+				{{#rollTotal() roll2d6 4}}<div class="sheet-subject">별 : <em>4.숲</em></div>{{/rollTotal() roll2d6 4}}
+				{{#rollTotal() roll2d6 5}}<div class="sheet-subject">별 : <em>5.길</em></div>{{/rollTotal() roll2d6 5}}
+				{{#rollTotal() roll2d6 6}}<div class="sheet-subject">별 : <em>6.바다</em></div>{{/rollTotal() roll2d6 6}}
+				{{#rollTotal() roll2d6 7}}<div class="sheet-subject">별 : <em>7.정적</em></div>{{/rollTotal() roll2d6 7}}
+				{{#rollTotal() roll2d6 8}}<div class="sheet-subject">별 : <em>8.비</em></div>{{/rollTotal() roll2d6 8}}
+				{{#rollTotal() roll2d6 9}}<div class="sheet-subject">별 : <em>9.폭풍</em></div>{{/rollTotal() roll2d6 9}}
+				{{#rollTotal() roll2d6 10}}<div class="sheet-subject">별 : <em>10.태양</em></div>{{/rollTotal() roll2d6 10}}
+				{{#rollTotal() roll2d6 11}}<div class="sheet-subject">별 : <em>11.천공</em></div>{{/rollTotal() roll2d6 11}}
+				{{#rollTotal() roll2d6 12}}<div class="sheet-subject">별 : <em>12.이계</em></div>{{/rollTotal() roll2d6 12}}
 			{{/rollTotal() randomspec 1}}
 			{{#rollTotal() randomspec 2}}
-				{{#rollTotal() roll2d6 2}}<div class="sheet-subject">2. 짐승 : <em>살</em></div>{{/rollTotal() roll2d6 2}}
-				{{#rollTotal() roll2d6 3}}<div class="sheet-subject">2. 짐승 : <em>벌레</em></div>{{/rollTotal() roll2d6 3}}
-				{{#rollTotal() roll2d6 4}}<div class="sheet-subject">2. 짐승 : <em>꽃</em></div>{{/rollTotal() roll2d6 4}}
-				{{#rollTotal() roll2d6 5}}<div class="sheet-subject">2. 짐승 : <em>피</em></div>{{/rollTotal() roll2d6 5}}
-				{{#rollTotal() roll2d6 6}}<div class="sheet-subject">2. 짐승 : <em>비늘</em></div>{{/rollTotal() roll2d6 6}}
-				{{#rollTotal() roll2d6 7}}<div class="sheet-subject">2. 짐승 : <em>혼돈</em></div>{{/rollTotal() roll2d6 7}}
-				{{#rollTotal() roll2d6 8}}<div class="sheet-subject">2. 짐승 : <em>이빨</em></div>{{/rollTotal() roll2d6 8}}
-				{{#rollTotal() roll2d6 9}}<div class="sheet-subject">2. 짐승 : <em>외침</em></div>{{/rollTotal() roll2d6 9}}
-				{{#rollTotal() roll2d6 10}}<div class="sheet-subject">2. 짐승 : <em>분노</em></div>{{/rollTotal() roll2d6 10}}
-				{{#rollTotal() roll2d6 11}}<div class="sheet-subject">2. 짐승 : <em>날개</em></div>{{/rollTotal() roll2d6 11}}
-				{{#rollTotal() roll2d6 12}}<div class="sheet-subject">2. 짐승 : <em>에로스</em></div>{{/rollTotal() roll2d6 12}}
+				{{#rollTotal() roll2d6 2}}<div class="sheet-subject">짐승 : <em>2.살</em></div>{{/rollTotal() roll2d6 2}}
+				{{#rollTotal() roll2d6 3}}<div class="sheet-subject">짐승 : <em>3.벌레</em></div>{{/rollTotal() roll2d6 3}}
+				{{#rollTotal() roll2d6 4}}<div class="sheet-subject">짐승 : <em>4.꽃</em></div>{{/rollTotal() roll2d6 4}}
+				{{#rollTotal() roll2d6 5}}<div class="sheet-subject">짐승 : <em>5.피</em></div>{{/rollTotal() roll2d6 5}}
+				{{#rollTotal() roll2d6 6}}<div class="sheet-subject">짐승 : <em>6.비늘</em></div>{{/rollTotal() roll2d6 6}}
+				{{#rollTotal() roll2d6 7}}<div class="sheet-subject">짐승 : <em>7.혼돈</em></div>{{/rollTotal() roll2d6 7}}
+				{{#rollTotal() roll2d6 8}}<div class="sheet-subject">짐승 : <em>8.이빨</em></div>{{/rollTotal() roll2d6 8}}
+				{{#rollTotal() roll2d6 9}}<div class="sheet-subject">짐승 : <em>9.외침</em></div>{{/rollTotal() roll2d6 9}}
+				{{#rollTotal() roll2d6 10}}<div class="sheet-subject">짐승 : <em>10.분노</em></div>{{/rollTotal() roll2d6 10}}
+				{{#rollTotal() roll2d6 11}}<div class="sheet-subject">짐승 : <em>11.날개</em></div>{{/rollTotal() roll2d6 11}}
+				{{#rollTotal() roll2d6 12}}<div class="sheet-subject">짐승 : <em>12.에로스</em></div>{{/rollTotal() roll2d6 12}}
 			{{/rollTotal() randomspec 2}}
 			{{#rollTotal() randomspec 3}}
-				{{#rollTotal() roll2d6 2}}<div class="sheet-subject">3. 힘 : <em>중력</em></div>{{/rollTotal() roll2d6 2}}
-				{{#rollTotal() roll2d6 3}}<div class="sheet-subject">3. 힘 : <em>바람</em></div>{{/rollTotal() roll2d6 3}}
-				{{#rollTotal() roll2d6 4}}<div class="sheet-subject">3. 힘 : <em>흐름</em></div>{{/rollTotal() roll2d6 4}}
-				{{#rollTotal() roll2d6 5}}<div class="sheet-subject">3. 힘 : <em>물</em></div>{{/rollTotal() roll2d6 5}}
-				{{#rollTotal() roll2d6 6}}<div class="sheet-subject">3. 힘 : <em>파문</em></div>{{/rollTotal() roll2d6 6}}
-				{{#rollTotal() roll2d6 7}}<div class="sheet-subject">3. 힘 : <em>자유</em></div>{{/rollTotal() roll2d6 7}}
-				{{#rollTotal() roll2d6 8}}<div class="sheet-subject">3. 힘 : <em>충격</em></div>{{/rollTotal() roll2d6 8}}
-				{{#rollTotal() roll2d6 9}}<div class="sheet-subject">3. 힘 : <em>우레</em></div>{{/rollTotal() roll2d6 9}}
-				{{#rollTotal() roll2d6 10}}<div class="sheet-subject">3. 힘 : <em>불</em></div>{{/rollTotal() roll2d6 10}}
-				{{#rollTotal() roll2d6 11}}<div class="sheet-subject">3. 힘 : <em>빛</em></div>{{/rollTotal() roll2d6 11}}
-				{{#rollTotal() roll2d6 12}}<div class="sheet-subject">3. 힘 : <em>원환</em></div>{{/rollTotal() roll2d6 12}}
+				{{#rollTotal() roll2d6 2}}<div class="sheet-subject">힘 : <em>2.중력</em></div>{{/rollTotal() roll2d6 2}}
+				{{#rollTotal() roll2d6 3}}<div class="sheet-subject">힘 : <em>3.바람</em></div>{{/rollTotal() roll2d6 3}}
+				{{#rollTotal() roll2d6 4}}<div class="sheet-subject">힘 : <em>4.흐름</em></div>{{/rollTotal() roll2d6 4}}
+				{{#rollTotal() roll2d6 5}}<div class="sheet-subject">힘 : <em>5.물</em></div>{{/rollTotal() roll2d6 5}}
+				{{#rollTotal() roll2d6 6}}<div class="sheet-subject">힘 : <em>6.파문</em></div>{{/rollTotal() roll2d6 6}}
+				{{#rollTotal() roll2d6 7}}<div class="sheet-subject">힘 : <em>7.자유</em></div>{{/rollTotal() roll2d6 7}}
+				{{#rollTotal() roll2d6 8}}<div class="sheet-subject">힘 : <em>8.충격</em></div>{{/rollTotal() roll2d6 8}}
+				{{#rollTotal() roll2d6 9}}<div class="sheet-subject">힘 : <em>9.우레</em></div>{{/rollTotal() roll2d6 9}}
+				{{#rollTotal() roll2d6 10}}<div class="sheet-subject">힘 : <em>10.불</em></div>{{/rollTotal() roll2d6 10}}
+				{{#rollTotal() roll2d6 11}}<div class="sheet-subject">힘 : <em>11.빛</em></div>{{/rollTotal() roll2d6 11}}
+				{{#rollTotal() roll2d6 12}}<div class="sheet-subject">힘 : <em>12.원환</em></div>{{/rollTotal() roll2d6 12}}
 			{{/rollTotal() randomspec 3}}
 			{{#rollTotal() randomspec 4}}
-				{{#rollTotal() roll2d6 2}}<div class="sheet-subject">4. 노래 : <em>이야기</em></div>{{/rollTotal() roll2d6 2}}
-				{{#rollTotal() roll2d6 3}}<div class="sheet-subject">4. 노래 : <em>선율</em></div>{{/rollTotal() roll2d6 3}}
-				{{#rollTotal() roll2d6 4}}<div class="sheet-subject">4. 노래 : <em>눈물</em></div>{{/rollTotal() roll2d6 4}}
-				{{#rollTotal() roll2d6 5}}<div class="sheet-subject">4. 노래 : <em>이별</em></div>{{/rollTotal() roll2d6 5}}
-				{{#rollTotal() roll2d6 6}}<div class="sheet-subject">4. 노래 : <em>미소</em></div>{{/rollTotal() roll2d6 6}}
-				{{#rollTotal() roll2d6 7}}<div class="sheet-subject">4. 노래 : <em>마음</em></div>{{/rollTotal() roll2d6 7}}
-				{{#rollTotal() roll2d6 8}}<div class="sheet-subject">4. 노래 : <em>승리</em></div>{{/rollTotal() roll2d6 8}}
-				{{#rollTotal() roll2d6 9}}<div class="sheet-subject">4. 노래 : <em>사랑</em></div>{{/rollTotal() roll2d6 9}}
-				{{#rollTotal() roll2d6 10}}<div class="sheet-subject">4. 노래 : <em>정열</em></div>{{/rollTotal() roll2d6 10}}
-				{{#rollTotal() roll2d6 11}}<div class="sheet-subject">4. 노래 : <em>치유</em></div>{{/rollTotal() roll2d6 11}}
-				{{#rollTotal() roll2d6 12}}<div class="sheet-subject">4. 노래 : <em>시간</em></div>{{/rollTotal() roll2d6 12}}
+				{{#rollTotal() roll2d6 2}}<div class="sheet-subject">노래 : <em>2.이야기</em></div>{{/rollTotal() roll2d6 2}}
+				{{#rollTotal() roll2d6 3}}<div class="sheet-subject">노래 : <em>3.선율</em></div>{{/rollTotal() roll2d6 3}}
+				{{#rollTotal() roll2d6 4}}<div class="sheet-subject">노래 : <em>4.눈물</em></div>{{/rollTotal() roll2d6 4}}
+				{{#rollTotal() roll2d6 5}}<div class="sheet-subject">노래 : <em>5.이별</em></div>{{/rollTotal() roll2d6 5}}
+				{{#rollTotal() roll2d6 6}}<div class="sheet-subject">노래 : <em>6.미소</em></div>{{/rollTotal() roll2d6 6}}
+				{{#rollTotal() roll2d6 7}}<div class="sheet-subject">노래 : <em>7.마음</em></div>{{/rollTotal() roll2d6 7}}
+				{{#rollTotal() roll2d6 8}}<div class="sheet-subject">노래 : <em>8.승리</em></div>{{/rollTotal() roll2d6 8}}
+				{{#rollTotal() roll2d6 9}}<div class="sheet-subject">노래 : <em>9.사랑</em></div>{{/rollTotal() roll2d6 9}}
+				{{#rollTotal() roll2d6 10}}<div class="sheet-subject">노래 : <em>10.정열</em></div>{{/rollTotal() roll2d6 10}}
+				{{#rollTotal() roll2d6 11}}<div class="sheet-subject">노래 : <em>11.치유</em></div>{{/rollTotal() roll2d6 11}}
+				{{#rollTotal() roll2d6 12}}<div class="sheet-subject">노래 : <em>12.시간</em></div>{{/rollTotal() roll2d6 12}}
 			{{/rollTotal() randomspec 4}}
 			{{#rollTotal() randomspec 5}}
-				{{#rollTotal() roll2d6 2}}<div class="sheet-subject">5. 꿈 : <em>추억</em></div>{{/rollTotal() roll2d6 2}}
-				{{#rollTotal() roll2d6 3}}<div class="sheet-subject">5. 꿈 : <em>수수께끼</em></div>{{/rollTotal() roll2d6 3}}
-				{{#rollTotal() roll2d6 4}}<div class="sheet-subject">5. 꿈 : <em>거짓</em></div>{{/rollTotal() roll2d6 4}}
-				{{#rollTotal() roll2d6 5}}<div class="sheet-subject">5. 꿈 : <em>불안</em></div>{{/rollTotal() roll2d6 5}}
-				{{#rollTotal() roll2d6 6}}<div class="sheet-subject">5. 꿈 : <em>잠</em></div>{{/rollTotal() roll2d6 6}}
-				{{#rollTotal() roll2d6 7}}<div class="sheet-subject">5. 꿈 : <em>우연</em></div>{{/rollTotal() roll2d6 7}}
-				{{#rollTotal() roll2d6 8}}<div class="sheet-subject">5. 꿈 : <em>환각</em></div>{{/rollTotal() roll2d6 8}}
-				{{#rollTotal() roll2d6 9}}<div class="sheet-subject">5. 꿈 : <em>광기</em></div>{{/rollTotal() roll2d6 9}}
-				{{#rollTotal() roll2d6 10}}<div class="sheet-subject">5. 꿈 : <em>기도</em></div>{{/rollTotal() roll2d6 10}}
-				{{#rollTotal() roll2d6 11}}<div class="sheet-subject">5. 꿈 : <em>희망</em></div>{{/rollTotal() roll2d6 11}}
-				{{#rollTotal() roll2d6 12}}<div class="sheet-subject">5. 꿈 : <em>미래</em></div>{{/rollTotal() roll2d6 12}}
+				{{#rollTotal() roll2d6 2}}<div class="sheet-subject">꿈 : <em>2.추억</em></div>{{/rollTotal() roll2d6 2}}
+				{{#rollTotal() roll2d6 3}}<div class="sheet-subject">꿈 : <em>3.수수께끼</em></div>{{/rollTotal() roll2d6 3}}
+				{{#rollTotal() roll2d6 4}}<div class="sheet-subject">꿈 : <em>4.거짓</em></div>{{/rollTotal() roll2d6 4}}
+				{{#rollTotal() roll2d6 5}}<div class="sheet-subject">꿈 : <em>5.불안</em></div>{{/rollTotal() roll2d6 5}}
+				{{#rollTotal() roll2d6 6}}<div class="sheet-subject">꿈 : <em>6.잠</em></div>{{/rollTotal() roll2d6 6}}
+				{{#rollTotal() roll2d6 7}}<div class="sheet-subject">꿈 : <em>7.우연</em></div>{{/rollTotal() roll2d6 7}}
+				{{#rollTotal() roll2d6 8}}<div class="sheet-subject">꿈 : <em>8.환각</em></div>{{/rollTotal() roll2d6 8}}
+				{{#rollTotal() roll2d6 9}}<div class="sheet-subject">꿈 : <em>9.광기</em></div>{{/rollTotal() roll2d6 9}}
+				{{#rollTotal() roll2d6 10}}<div class="sheet-subject">꿈 : <em>10.기도</em></div>{{/rollTotal() roll2d6 10}}
+				{{#rollTotal() roll2d6 11}}<div class="sheet-subject">꿈 : <em>11.희망</em></div>{{/rollTotal() roll2d6 11}}
+				{{#rollTotal() roll2d6 12}}<div class="sheet-subject">꿈 : <em>12.미래</em></div>{{/rollTotal() roll2d6 12}}
 			{{/rollTotal() randomspec 5}}
 			{{#rollTotal() randomspec 6}}
-				{{#rollTotal() roll2d6 2}}<div class="sheet-subject">6. 어둠 : <em>심연</em></div>{{/rollTotal() roll2d6 2}}
-				{{#rollTotal() roll2d6 3}}<div class="sheet-subject">6. 어둠 : <em>부패</em></div>{{/rollTotal() roll2d6 3}}
-				{{#rollTotal() roll2d6 4}}<div class="sheet-subject">6. 어둠 : <em>배신</em></div>{{/rollTotal() roll2d6 4}}
-				{{#rollTotal() roll2d6 5}}<div class="sheet-subject">6. 어둠 : <em>방황</em></div>{{/rollTotal() roll2d6 5}}
-				{{#rollTotal() roll2d6 6}}<div class="sheet-subject">6. 어둠 : <em>나태</em></div>{{/rollTotal() roll2d6 6}}
-				{{#rollTotal() roll2d6 7}}<div class="sheet-subject">6. 어둠 : <em>왜곡</em></div>{{/rollTotal() roll2d6 7}}
-				{{#rollTotal() roll2d6 8}}<div class="sheet-subject">6. 어둠 : <em>불행</em></div>{{/rollTotal() roll2d6 8}}
-				{{#rollTotal() roll2d6 9}}<div class="sheet-subject">6. 어둠 : <em>바보</em></div>{{/rollTotal() roll2d6 9}}
-				{{#rollTotal() roll2d6 10}}<div class="sheet-subject">6. 어둠 : <em>악의</em></div>{{/rollTotal() roll2d6 10}}
-				{{#rollTotal() roll2d6 11}}<div class="sheet-subject">6. 어둠 : <em>절망</em></div>{{/rollTotal() roll2d6 11}}
-				{{#rollTotal() roll2d6 12}}<div class="sheet-subject">6. 어둠 : <em>죽음</em></div>{{/rollTotal() roll2d6 12}}
+				{{#rollTotal() roll2d6 2}}<div class="sheet-subject">어둠 : <em>2.심연</em></div>{{/rollTotal() roll2d6 2}}
+				{{#rollTotal() roll2d6 3}}<div class="sheet-subject">어둠 : <em>3.부패</em></div>{{/rollTotal() roll2d6 3}}
+				{{#rollTotal() roll2d6 4}}<div class="sheet-subject">어둠 : <em>4.배신</em></div>{{/rollTotal() roll2d6 4}}
+				{{#rollTotal() roll2d6 5}}<div class="sheet-subject">어둠 : <em>5.방황</em></div>{{/rollTotal() roll2d6 5}}
+				{{#rollTotal() roll2d6 6}}<div class="sheet-subject">어둠 : <em>6.나태</em></div>{{/rollTotal() roll2d6 6}}
+				{{#rollTotal() roll2d6 7}}<div class="sheet-subject">어둠 : <em>7.왜곡</em></div>{{/rollTotal() roll2d6 7}}
+				{{#rollTotal() roll2d6 8}}<div class="sheet-subject">어둠 : <em>8.불행</em></div>{{/rollTotal() roll2d6 8}}
+				{{#rollTotal() roll2d6 9}}<div class="sheet-subject">어둠 : <em>9.바보</em></div>{{/rollTotal() roll2d6 9}}
+				{{#rollTotal() roll2d6 10}}<div class="sheet-subject">어둠 : <em>10.악의</em></div>{{/rollTotal() roll2d6 10}}
+				{{#rollTotal() roll2d6 11}}<div class="sheet-subject">어둠 : <em>11.절망</em></div>{{/rollTotal() roll2d6 11}}
+				{{#rollTotal() roll2d6 12}}<div class="sheet-subject">어둠 : <em>12.죽음</em></div>{{/rollTotal() roll2d6 12}}
 			{{/rollTotal() randomspec 6}}
 			<!-- //가변특기 -->
 		{{/randomspec}}
@@ -3575,91 +3734,173 @@ on("change:bas",
 						<span>{{skilltarget_txt}}
 							{{#rollTotal() skilltarget -2}}
 								{{#rollTotal() roll1d6 1}}
-									{{#rollTotal() roll2d6 2}}《1. 별 : 황금》{{/rollTotal() roll2d6 2}}
-									{{#rollTotal() roll2d6 3}}《1. 별 : 대지》{{/rollTotal() roll2d6 3}}
-									{{#rollTotal() roll2d6 4}}《1. 별 : 숲》{{/rollTotal() roll2d6 4}}
-									{{#rollTotal() roll2d6 5}}《1. 별 : 길》{{/rollTotal() roll2d6 5}}
-									{{#rollTotal() roll2d6 6}}《1. 별 : 바다》{{/rollTotal() roll2d6 6}}
-									{{#rollTotal() roll2d6 7}}《1. 별 : 정적》{{/rollTotal() roll2d6 7}}
-									{{#rollTotal() roll2d6 8}}《1. 별 : 비》{{/rollTotal() roll2d6 8}}
-									{{#rollTotal() roll2d6 9}}《1. 별 : 폭풍》{{/rollTotal() roll2d6 9}}
-									{{#rollTotal() roll2d6 10}}《1. 별 : 태양》{{/rollTotal() roll2d6 10}}
-									{{#rollTotal() roll2d6 11}}《1. 별 : 천공》{{/rollTotal() roll2d6 11}}
-									{{#rollTotal() roll2d6 12}}《1. 별 : 이계》{{/rollTotal() roll2d6 12}}
+									{{#rollTotal() roll2d6 2}}《<em>황금</em><span>별2</span>》{{/rollTotal() roll2d6 2}}
+									{{#rollTotal() roll2d6 3}}《<em>대지</em><span>별3</span>》{{/rollTotal() roll2d6 3}}
+									{{#rollTotal() roll2d6 4}}《<em>숲</em><span>별4</span>》{{/rollTotal() roll2d6 4}}
+									{{#rollTotal() roll2d6 5}}《<em>길</em><span>별5</span>》{{/rollTotal() roll2d6 5}}
+									{{#rollTotal() roll2d6 6}}《<em>바다</em><span>별6</span>》{{/rollTotal() roll2d6 6}}
+									{{#rollTotal() roll2d6 7}}《<em>정적</em><span>별7</span>》{{/rollTotal() roll2d6 7}}
+									{{#rollTotal() roll2d6 8}}《<em>비</em><span>별8</span>》{{/rollTotal() roll2d6 8}}
+									{{#rollTotal() roll2d6 9}}《<em>폭풍</em><span>별9</span>》{{/rollTotal() roll2d6 9}}
+									{{#rollTotal() roll2d6 10}}《<em>태양</em><span>별10</span>》{{/rollTotal() roll2d6 10}}
+									{{#rollTotal() roll2d6 11}}《<em>천공</em><span>별11</span>》{{/rollTotal() roll2d6 11}}
+									{{#rollTotal() roll2d6 12}}《<em>이계</em><span>별12</span>》{{/rollTotal() roll2d6 12}}
 								{{/rollTotal() roll1d6 1}}
 								{{#rollTotal() roll1d6 2}}
-									{{#rollTotal() roll2d6 2}}《2. 짐승 : 살》{{/rollTotal() roll2d6 2}}
-									{{#rollTotal() roll2d6 3}}《2. 짐승 : 벌레》{{/rollTotal() roll2d6 3}}
-									{{#rollTotal() roll2d6 4}}《2. 짐승 : 꽃》{{/rollTotal() roll2d6 4}}
-									{{#rollTotal() roll2d6 5}}《2. 짐승 : 피》{{/rollTotal() roll2d6 5}}
-									{{#rollTotal() roll2d6 6}}《2. 짐승 : 비늘》{{/rollTotal() roll2d6 6}}
-									{{#rollTotal() roll2d6 7}}《2. 짐승 : 혼돈》{{/rollTotal() roll2d6 7}}
-									{{#rollTotal() roll2d6 8}}《2. 짐승 : 이빨》{{/rollTotal() roll2d6 8}}
-									{{#rollTotal() roll2d6 9}}《2. 짐승 : 외침》{{/rollTotal() roll2d6 9}}
-									{{#rollTotal() roll2d6 10}}《2. 짐승 : 분노》{{/rollTotal() roll2d6 10}}
-									{{#rollTotal() roll2d6 11}}《2. 짐승 : 날개》{{/rollTotal() roll2d6 11}}
-									{{#rollTotal() roll2d6 12}}《2. 짐승 : 에로스》{{/rollTotal() roll2d6 12}}
+									{{#rollTotal() roll2d6 2}}《<em>살</em><span>짐승2</span>》{{/rollTotal() roll2d6 2}}
+									{{#rollTotal() roll2d6 3}}《<em>벌레</em><span>짐승3</span>》{{/rollTotal() roll2d6 3}}
+									{{#rollTotal() roll2d6 4}}《<em>꽃</em><span>짐승4</span>》{{/rollTotal() roll2d6 4}}
+									{{#rollTotal() roll2d6 5}}《<em>피</em><span>짐승5</span>》{{/rollTotal() roll2d6 5}}
+									{{#rollTotal() roll2d6 6}}《<em>비늘</em><span>짐승6</span>》{{/rollTotal() roll2d6 6}}
+									{{#rollTotal() roll2d6 7}}《<em>혼돈</em><span>짐승7</span>》{{/rollTotal() roll2d6 7}}
+									{{#rollTotal() roll2d6 8}}《<em>이빨</em><span>짐승8</span>》{{/rollTotal() roll2d6 8}}
+									{{#rollTotal() roll2d6 9}}《<em>외침</em><span>짐승9</span>》{{/rollTotal() roll2d6 9}}
+									{{#rollTotal() roll2d6 10}}《<em>분노</em><span>짐승10</span>》{{/rollTotal() roll2d6 10}}
+									{{#rollTotal() roll2d6 11}}《<em>날개</em><span>짐승11</span>》{{/rollTotal() roll2d6 11}}
+									{{#rollTotal() roll2d6 12}}《<em>에로스</em><span>짐승12</span>》{{/rollTotal() roll2d6 12}}
 								{{/rollTotal() roll1d6 2}}
 								{{#rollTotal() roll1d6 3}}
-									{{#rollTotal() roll2d6 2}}《3. 힘 : 중력》{{/rollTotal() roll2d6 2}}
-									{{#rollTotal() roll2d6 3}}《3. 힘 : 바람》{{/rollTotal() roll2d6 3}}
-									{{#rollTotal() roll2d6 4}}《3. 힘 : 흐름》{{/rollTotal() roll2d6 4}}
-									{{#rollTotal() roll2d6 5}}《3. 힘 : 물》{{/rollTotal() roll2d6 5}}
-									{{#rollTotal() roll2d6 6}}《3. 힘 : 파문》{{/rollTotal() roll2d6 6}}
-									{{#rollTotal() roll2d6 7}}《3. 힘 : 자유》{{/rollTotal() roll2d6 7}}
-									{{#rollTotal() roll2d6 8}}《3. 힘 : 충격》{{/rollTotal() roll2d6 8}}
-									{{#rollTotal() roll2d6 9}}《3. 힘 : 우레》{{/rollTotal() roll2d6 9}}
-									{{#rollTotal() roll2d6 10}}《3. 힘 : 불》{{/rollTotal() roll2d6 10}}
-									{{#rollTotal() roll2d6 11}}《3. 힘 : 빛》{{/rollTotal() roll2d6 11}}
-									{{#rollTotal() roll2d6 12}}《3. 힘 : 원환》{{/rollTotal() roll2d6 12}}
+									{{#rollTotal() roll2d6 2}}《<em>중력</em><span>힘2</span>》{{/rollTotal() roll2d6 2}}
+									{{#rollTotal() roll2d6 3}}《<em>바람</em><span>힘3</span>》{{/rollTotal() roll2d6 3}}
+									{{#rollTotal() roll2d6 4}}《<em>흐름</em><span>힘4</span>》{{/rollTotal() roll2d6 4}}
+									{{#rollTotal() roll2d6 5}}《<em>물</em><span>힘5</span>》{{/rollTotal() roll2d6 5}}
+									{{#rollTotal() roll2d6 6}}《<em>파문</em><span>힘6</span>》{{/rollTotal() roll2d6 6}}
+									{{#rollTotal() roll2d6 7}}《<em>자유</em><span>힘7</span>》{{/rollTotal() roll2d6 7}}
+									{{#rollTotal() roll2d6 8}}《<em>충격</em><span>힘8</span>》{{/rollTotal() roll2d6 8}}
+									{{#rollTotal() roll2d6 9}}《<em>우레</em><span>힘9</span>》{{/rollTotal() roll2d6 9}}
+									{{#rollTotal() roll2d6 10}}《<em>불</em><span>힘10</span>》{{/rollTotal() roll2d6 10}}
+									{{#rollTotal() roll2d6 11}}《<em>빛</em><span>힘11</span>》{{/rollTotal() roll2d6 11}}
+									{{#rollTotal() roll2d6 12}}《<em>원환</em><span>힘12</span>》{{/rollTotal() roll2d6 12}}
 								{{/rollTotal() roll1d6 3}}
 								{{#rollTotal() roll1d6 4}}
-									{{#rollTotal() roll2d6 2}}《4. 노래 : 이야기》{{/rollTotal() roll2d6 2}}
-									{{#rollTotal() roll2d6 3}}《4. 노래 : 선율》{{/rollTotal() roll2d6 3}}
-									{{#rollTotal() roll2d6 4}}《4. 노래 : 눈물》{{/rollTotal() roll2d6 4}}
-									{{#rollTotal() roll2d6 5}}《4. 노래 : 이별》{{/rollTotal() roll2d6 5}}
-									{{#rollTotal() roll2d6 6}}《4. 노래 : 미소》{{/rollTotal() roll2d6 6}}
-									{{#rollTotal() roll2d6 7}}《4. 노래 : 마음》{{/rollTotal() roll2d6 7}}
-									{{#rollTotal() roll2d6 8}}《4. 노래 : 승리》{{/rollTotal() roll2d6 8}}
-									{{#rollTotal() roll2d6 9}}《4. 노래 : 사랑》{{/rollTotal() roll2d6 9}}
-									{{#rollTotal() roll2d6 10}}《4. 노래 : 정열》{{/rollTotal() roll2d6 10}}
-									{{#rollTotal() roll2d6 11}}《4. 노래 : 치유》{{/rollTotal() roll2d6 11}}
-									{{#rollTotal() roll2d6 12}}《4. 노래 : 시간》{{/rollTotal() roll2d6 12}}
+									{{#rollTotal() roll2d6 2}}《<em>이야기</em><span>노래2</span>》{{/rollTotal() roll2d6 2}}
+									{{#rollTotal() roll2d6 3}}《<em>선율</em><span>노래3</span>》{{/rollTotal() roll2d6 3}}
+									{{#rollTotal() roll2d6 4}}《<em>눈물</em><span>노래4</span>》{{/rollTotal() roll2d6 4}}
+									{{#rollTotal() roll2d6 5}}《<em>이별</em><span>노래5</span>》{{/rollTotal() roll2d6 5}}
+									{{#rollTotal() roll2d6 6}}《<em>미소</em><span>노래6</span>》{{/rollTotal() roll2d6 6}}
+									{{#rollTotal() roll2d6 7}}《<em>마음</em><span>노래7</span>》{{/rollTotal() roll2d6 7}}
+									{{#rollTotal() roll2d6 8}}《<em>승리</em><span>노래8</span>》{{/rollTotal() roll2d6 8}}
+									{{#rollTotal() roll2d6 9}}《<em>사랑</em><span>노래9</span>》{{/rollTotal() roll2d6 9}}
+									{{#rollTotal() roll2d6 10}}《<em>정열</em><span>노래10</span>》{{/rollTotal() roll2d6 10}}
+									{{#rollTotal() roll2d6 11}}《<em>치유</em><span>노래11</span>》{{/rollTotal() roll2d6 11}}
+									{{#rollTotal() roll2d6 12}}《<em>시간</em><span>노래12</span>》{{/rollTotal() roll2d6 12}}
 								{{/rollTotal() roll1d6 4}}
 								{{#rollTotal() roll1d6 5}}
-									{{#rollTotal() roll2d6 2}}《5. 꿈 : 추억》{{/rollTotal() roll2d6 2}}
-									{{#rollTotal() roll2d6 3}}《5. 꿈 : 수수께끼》{{/rollTotal() roll2d6 3}}
-									{{#rollTotal() roll2d6 4}}《5. 꿈 : 거짓》{{/rollTotal() roll2d6 4}}
-									{{#rollTotal() roll2d6 5}}《5. 꿈 : 불안》{{/rollTotal() roll2d6 5}}
-									{{#rollTotal() roll2d6 6}}《5. 꿈 : 잠》{{/rollTotal() roll2d6 6}}
-									{{#rollTotal() roll2d6 7}}《5. 꿈 : 우연》{{/rollTotal() roll2d6 7}}
-									{{#rollTotal() roll2d6 8}}《5. 꿈 : 환각》{{/rollTotal() roll2d6 8}}
-									{{#rollTotal() roll2d6 9}}《5. 꿈 : 광기》{{/rollTotal() roll2d6 9}}
-									{{#rollTotal() roll2d6 10}}《5. 꿈 : 기도》{{/rollTotal() roll2d6 10}}
-									{{#rollTotal() roll2d6 11}}《5. 꿈 : 희망》{{/rollTotal() roll2d6 11}}
-									{{#rollTotal() roll2d6 12}}《5. 꿈 : 미래》{{/rollTotal() roll2d6 12}}
+									{{#rollTotal() roll2d6 2}}《<em>추억</em><span>꿈2</span>》{{/rollTotal() roll2d6 2}}
+									{{#rollTotal() roll2d6 3}}《<em>수수께끼</em><span>꿈3</span>》{{/rollTotal() roll2d6 3}}
+									{{#rollTotal() roll2d6 4}}《<em>거짓</em><span>꿈4</span>》{{/rollTotal() roll2d6 4}}
+									{{#rollTotal() roll2d6 5}}《<em>불안</em><span>꿈5</span>》{{/rollTotal() roll2d6 5}}
+									{{#rollTotal() roll2d6 6}}《<em>잠</em><span>꿈6</span>》{{/rollTotal() roll2d6 6}}
+									{{#rollTotal() roll2d6 7}}《<em>우연</em><span>꿈7</span>》{{/rollTotal() roll2d6 7}}
+									{{#rollTotal() roll2d6 8}}《<em>환각</em><span>꿈8</span>》{{/rollTotal() roll2d6 8}}
+									{{#rollTotal() roll2d6 9}}《<em>광기</em><span>꿈9</span>》{{/rollTotal() roll2d6 9}}
+									{{#rollTotal() roll2d6 10}}《<em>기도</em><span>꿈10</span>》{{/rollTotal() roll2d6 10}}
+									{{#rollTotal() roll2d6 11}}《<em>희망</em><span>꿈11</span>》{{/rollTotal() roll2d6 11}}
+									{{#rollTotal() roll2d6 12}}《<em>미래</em><span>꿈12</span>》{{/rollTotal() roll2d6 12}}
 								{{/rollTotal() roll1d6 5}}
 								{{#rollTotal() roll1d6 6}}
-									{{#rollTotal() roll2d6 2}}《6. 어둠 : 심연》{{/rollTotal() roll2d6 2}}
-									{{#rollTotal() roll2d6 3}}《6. 어둠 : 부패》{{/rollTotal() roll2d6 3}}
-									{{#rollTotal() roll2d6 4}}《6. 어둠 : 배신》{{/rollTotal() roll2d6 4}}
-									{{#rollTotal() roll2d6 5}}《6. 어둠 : 방황》{{/rollTotal() roll2d6 5}}
-									{{#rollTotal() roll2d6 6}}《6. 어둠 : 나태》{{/rollTotal() roll2d6 6}}
-									{{#rollTotal() roll2d6 7}}《6. 어둠 : 왜곡》{{/rollTotal() roll2d6 7}}
-									{{#rollTotal() roll2d6 8}}《6. 어둠 : 불행》{{/rollTotal() roll2d6 8}}
-									{{#rollTotal() roll2d6 9}}《6. 어둠 : 바보》{{/rollTotal() roll2d6 9}}
-									{{#rollTotal() roll2d6 10}}《6. 어둠 : 악의》{{/rollTotal() roll2d6 10}}
-									{{#rollTotal() roll2d6 11}}《6. 어둠 : 절망》{{/rollTotal() roll2d6 11}}
-									{{#rollTotal() roll2d6 12}}《6. 어둠 : 죽음》{{/rollTotal() roll2d6 12}}
+									{{#rollTotal() roll2d6 2}}《<em>심연</em><span>어둠2</span>》{{/rollTotal() roll2d6 2}}
+									{{#rollTotal() roll2d6 3}}《<em>부패</em><span>어둠3</span>》{{/rollTotal() roll2d6 3}}
+									{{#rollTotal() roll2d6 4}}《<em>배신</em><span>어둠4</span>》{{/rollTotal() roll2d6 4}}
+									{{#rollTotal() roll2d6 5}}《<em>방황</em><span>어둠5</span>》{{/rollTotal() roll2d6 5}}
+									{{#rollTotal() roll2d6 6}}《<em>나태</em><span>어둠6</span>》{{/rollTotal() roll2d6 6}}
+									{{#rollTotal() roll2d6 7}}《<em>왜곡</em><span>어둠7</span>》{{/rollTotal() roll2d6 7}}
+									{{#rollTotal() roll2d6 8}}《<em>불행</em><span>어둠8</span>》{{/rollTotal() roll2d6 8}}
+									{{#rollTotal() roll2d6 9}}《<em>바보</em><span>어둠9</span>》{{/rollTotal() roll2d6 9}}
+									{{#rollTotal() roll2d6 10}}《<em>악의</em><span>어둠10</span>》{{/rollTotal() roll2d6 10}}
+									{{#rollTotal() roll2d6 11}}《<em>절망</em><span>어둠11</span>》{{/rollTotal() roll2d6 11}}
+									{{#rollTotal() roll2d6 12}}《<em>죽음</em><span>어둠12</span>》{{/rollTotal() roll2d6 12}}
 								{{/rollTotal() roll1d6 6}}
 							{{/rollTotal() skilltarget -2}}
+
+							{{#rollTotal() skilltarget -10}}
+								{{#rollTotal() roll2d6 2}}《<em>황금</em><span>별2</span>》{{/rollTotal() roll2d6 2}}
+								{{#rollTotal() roll2d6 3}}《<em>대지</em><span>별3</span>》{{/rollTotal() roll2d6 3}}
+								{{#rollTotal() roll2d6 4}}《<em>숲</em><span>별4</span>》{{/rollTotal() roll2d6 4}}
+								{{#rollTotal() roll2d6 5}}《<em>길</em><span>별5</span>》{{/rollTotal() roll2d6 5}}
+								{{#rollTotal() roll2d6 6}}《<em>바다</em><span>별6</span>》{{/rollTotal() roll2d6 6}}
+								{{#rollTotal() roll2d6 7}}《<em>정적</em><span>별7</span>》{{/rollTotal() roll2d6 7}}
+								{{#rollTotal() roll2d6 8}}《<em>비</em><span>별8</span>》{{/rollTotal() roll2d6 8}}
+								{{#rollTotal() roll2d6 9}}《<em>폭풍</em><span>별9</span>》{{/rollTotal() roll2d6 9}}
+								{{#rollTotal() roll2d6 10}}《<em>태양</em><span>별10</span>》{{/rollTotal() roll2d6 10}}
+								{{#rollTotal() roll2d6 11}}《<em>천공</em><span>별11</span>》{{/rollTotal() roll2d6 11}}
+								{{#rollTotal() roll2d6 12}}《<em>이계</em><span>별12</span>》{{/rollTotal() roll2d6 12}}
+							{{/rollTotal() skilltarget -10}}
+
+							{{#rollTotal() skilltarget -20}}
+								{{#rollTotal() roll2d6 2}}《<em>살</em><span>짐승2</span>》{{/rollTotal() roll2d6 2}}
+								{{#rollTotal() roll2d6 3}}《<em>벌레</em><span>짐승3</span>》{{/rollTotal() roll2d6 3}}
+								{{#rollTotal() roll2d6 4}}《<em>꽃</em><span>짐승4</span>》{{/rollTotal() roll2d6 4}}
+								{{#rollTotal() roll2d6 5}}《<em>피</em><span>짐승5</span>》{{/rollTotal() roll2d6 5}}
+								{{#rollTotal() roll2d6 6}}《<em>비늘</em><span>짐승6</span>》{{/rollTotal() roll2d6 6}}
+								{{#rollTotal() roll2d6 7}}《<em>혼돈</em><span>짐승7</span>》{{/rollTotal() roll2d6 7}}
+								{{#rollTotal() roll2d6 8}}《<em>이빨</em><span>짐승8</span>》{{/rollTotal() roll2d6 8}}
+								{{#rollTotal() roll2d6 9}}《<em>외침</em><span>짐승9</span>》{{/rollTotal() roll2d6 9}}
+								{{#rollTotal() roll2d6 10}}《<em>분노</em><span>짐승10</span>》{{/rollTotal() roll2d6 10}}
+								{{#rollTotal() roll2d6 11}}《<em>날개</em><span>짐승11</span>》{{/rollTotal() roll2d6 11}}
+								{{#rollTotal() roll2d6 12}}《<em>에로스</em><span>짐승12</span>》{{/rollTotal() roll2d6 12}}
+							{{/rollTotal() skilltarget -20}}
+
+							{{#rollTotal() skilltarget -30}}
+								{{#rollTotal() roll2d6 2}}《<em>중력</em><span>힘2</span>》{{/rollTotal() roll2d6 2}}
+								{{#rollTotal() roll2d6 3}}《<em>바람</em><span>힘3</span>》{{/rollTotal() roll2d6 3}}
+								{{#rollTotal() roll2d6 4}}《<em>흐름</em><span>힘4</span>》{{/rollTotal() roll2d6 4}}
+								{{#rollTotal() roll2d6 5}}《<em>물</em><span>힘5</span>》{{/rollTotal() roll2d6 5}}
+								{{#rollTotal() roll2d6 6}}《<em>파문</em><span>힘6</span>》{{/rollTotal() roll2d6 6}}
+								{{#rollTotal() roll2d6 7}}《<em>자유</em><span>힘7</span>》{{/rollTotal() roll2d6 7}}
+								{{#rollTotal() roll2d6 8}}《<em>충격</em><span>힘8</span>》{{/rollTotal() roll2d6 8}}
+								{{#rollTotal() roll2d6 9}}《<em>우레</em><span>힘9</span>》{{/rollTotal() roll2d6 9}}
+								{{#rollTotal() roll2d6 10}}《<em>불</em><span>힘10</span>》{{/rollTotal() roll2d6 10}}
+								{{#rollTotal() roll2d6 11}}《<em>빛</em><span>힘11</span>》{{/rollTotal() roll2d6 11}}
+								{{#rollTotal() roll2d6 12}}《<em>원환</em><span>힘12</span>》{{/rollTotal() roll2d6 12}}
+							{{/rollTotal() skilltarget -30}}
+
+							{{#rollTotal() skilltarget -40}}
+								{{#rollTotal() roll2d6 2}}《<em>이야기</em><span>노래2</span>》{{/rollTotal() roll2d6 2}}
+								{{#rollTotal() roll2d6 3}}《<em>선율</em><span>노래3</span>》{{/rollTotal() roll2d6 3}}
+								{{#rollTotal() roll2d6 4}}《<em>눈물</em><span>노래4</span>》{{/rollTotal() roll2d6 4}}
+								{{#rollTotal() roll2d6 5}}《<em>이별</em><span>노래5</span>》{{/rollTotal() roll2d6 5}}
+								{{#rollTotal() roll2d6 6}}《<em>미소</em><span>노래6</span>》{{/rollTotal() roll2d6 6}}
+								{{#rollTotal() roll2d6 7}}《<em>마음</em><span>노래7</span>》{{/rollTotal() roll2d6 7}}
+								{{#rollTotal() roll2d6 8}}《<em>승리</em><span>노래8</span>》{{/rollTotal() roll2d6 8}}
+								{{#rollTotal() roll2d6 9}}《<em>사랑</em><span>노래9</span>》{{/rollTotal() roll2d6 9}}
+								{{#rollTotal() roll2d6 10}}《<em>정열</em><span>노래10</span>》{{/rollTotal() roll2d6 10}}
+								{{#rollTotal() roll2d6 11}}《<em>치유</em><span>노래11</span>》{{/rollTotal() roll2d6 11}}
+								{{#rollTotal() roll2d6 12}}《<em>시간</em><span>노래12</span>》{{/rollTotal() roll2d6 12}}
+							{{/rollTotal() skilltarget -40}}
+
+							{{#rollTotal() skilltarget -50}}
+								{{#rollTotal() roll2d6 2}}《<em>추억</em><span>꿈2</span>》{{/rollTotal() roll2d6 2}}
+								{{#rollTotal() roll2d6 3}}《<em>수수께끼</em><span>꿈3</span>》{{/rollTotal() roll2d6 3}}
+								{{#rollTotal() roll2d6 4}}《<em>거짓</em><span>꿈4</span>》{{/rollTotal() roll2d6 4}}
+								{{#rollTotal() roll2d6 5}}《<em>불안</em><span>꿈5</span>》{{/rollTotal() roll2d6 5}}
+								{{#rollTotal() roll2d6 6}}《<em>잠</em><span>꿈6</span>》{{/rollTotal() roll2d6 6}}
+								{{#rollTotal() roll2d6 7}}《<em>우연</em><span>꿈7</span>》{{/rollTotal() roll2d6 7}}
+								{{#rollTotal() roll2d6 8}}《<em>환각</em><span>꿈8</span>》{{/rollTotal() roll2d6 8}}
+								{{#rollTotal() roll2d6 9}}《<em>광기</em><span>꿈9</span>》{{/rollTotal() roll2d6 9}}
+								{{#rollTotal() roll2d6 10}}《<em>기도</em><span>꿈10</span>》{{/rollTotal() roll2d6 10}}
+								{{#rollTotal() roll2d6 11}}《<em>희망</em><span>꿈11</span>》{{/rollTotal() roll2d6 11}}
+								{{#rollTotal() roll2d6 12}}《<em>미래</em><span>꿈12</span>》{{/rollTotal() roll2d6 12}}
+							{{/rollTotal() skilltarget -50}}
+
+							{{#rollTotal() skilltarget -60}}
+								{{#rollTotal() roll2d6 2}}《<em>심연</em><span>어둠2</span>》{{/rollTotal() roll2d6 2}}
+								{{#rollTotal() roll2d6 3}}《<em>부패</em><span>어둠3</span>》{{/rollTotal() roll2d6 3}}
+								{{#rollTotal() roll2d6 4}}《<em>배신</em><span>어둠4</span>》{{/rollTotal() roll2d6 4}}
+								{{#rollTotal() roll2d6 5}}《<em>방황</em><span>어둠5</span>》{{/rollTotal() roll2d6 5}}
+								{{#rollTotal() roll2d6 6}}《<em>나태</em><span>어둠6</span>》{{/rollTotal() roll2d6 6}}
+								{{#rollTotal() roll2d6 7}}《<em>왜곡</em><span>어둠7</span>》{{/rollTotal() roll2d6 7}}
+								{{#rollTotal() roll2d6 8}}《<em>불행</em><span>어둠8</span>》{{/rollTotal() roll2d6 8}}
+								{{#rollTotal() roll2d6 9}}《<em>바보</em><span>어둠9</span>》{{/rollTotal() roll2d6 9}}
+								{{#rollTotal() roll2d6 10}}《<em>악의</em><span>어둠10</span>》{{/rollTotal() roll2d6 10}}
+								{{#rollTotal() roll2d6 11}}《<em>절망</em><span>어둠11</span>》{{/rollTotal() roll2d6 11}}
+								{{#rollTotal() roll2d6 12}}《<em>죽음</em><span>어둠12</span>》{{/rollTotal() roll2d6 12}}
+							{{/rollTotal() skilltarget -60}}
 						</span>
 						{{#skilltarget}}
-							{{#^rollTotal() skilltarget -1}}
-								{{#^rollTotal() skilltarget -2}}
+							{{#rollGreater() skilltarget 0}}
 									<span>목표치 {{skilltarget}}</span>
-								{{/^rollTotal() skilltarget -2}}
-							{{/^rollTotal() skilltarget -1}}
+							{{/rollGreater() skilltarget 0}}
 						{{/skilltarget}}
 					</div>
 				{{/skilltarget_txt}}
@@ -3668,7 +3909,7 @@ on("change:bas",
 			<div class="sheet-con">
 				<p>
 					{{#skilltype}}<span class="sheet-type">{{skilltype}}</span>{{/skilltype}}
-					{{#cost}}<span class="sheet-cost">{{cost}}</span>{{/cost}}
+					{{#cost}}<span class="sheet-cost">C : {{cost}}</span>{{/cost}}
 					{{#skillwho}}<span class="sheet-target">{{skillwho}}</span>{{/skillwho}}
 					{{#rollTotal() close 1}}<span class="sheet-close">봉인</span>{{/rollTotal() close 1}}
 				</p>
