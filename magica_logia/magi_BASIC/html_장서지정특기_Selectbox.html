@@ -237,11 +237,8 @@
 				<option value="">각종 표 선택</option>
 				<option value="4">사건</option>
 				<option value="3">상태이상</option>
-				<option value="6">소원</option>
 				<option value="2">운명 변전</option>
-				<option value="5">운명 속성</option>
 				<option value="1">펌블</option>
-				<option value="7">프라이즈</option>
 			</select>
 			<button type="roll" class="sheet-btn-dice" value="&{template:MagiDice}{{name=@{character_name}}}{{rolltable=[[@{rolltable}]]}}{{roll1d6=[[1d6]]}}{{roll2d6=[[2d6]]}}"></button>
 		</div>
@@ -4760,121 +4757,6 @@ on("change:bas",
 					{{#rollTotal() roll2d6 12}}헌신적인 간호, 마법의 축복, 기적……. 목표에 대한 【운명】이 1점 상승한다. 【운명】의 속성은 마음대로 결정할 수 있다. 만약 관계칸에 상흔이 있다면, 상흔 하나를 관계칸에서 지울 수 있다.{{/rollTotal() roll2d6 12}}
 				</div>
 			{{/rollTotal() rolltable 4}}
-
-			{{#rollTotal() rolltable 5}}
-				<!-- 운명 속성 표 -->
-				<div class="sheet-title">운명 속성 표</div>
-				
-				{{#rollTotal() roll1d6 1}}
-					<div class="sheet-info">혈연</div>
-					<div class="sheet-con">
-						자신이나 자신이 사랑한 이의 친척 또는 가족.
-					</div>
-				{{/rollTotal() roll1d6 1}}
-				{{#rollTotal() roll1d6 2}}
-					<div class="sheet-info">지배</div>
-					<div class="sheet-con">
-						당신의 부하가 될 운명인 상대.
-					</div>
-				{{/rollTotal() roll1d6 2}}
-				{{#rollTotal() roll1d6 3}}
-					<div class="sheet-info">숙적</div>
-					<div class="sheet-con">
-						어떤 방법으로 싸우고 경쟁하는 불구대천의 적.
-					</div>
-				{{/rollTotal() roll1d6 3}}
-				{{#rollTotal() roll1d6 4}}
-					<div class="sheet-info">연애</div>
-					<div class="sheet-con">
-						마음을 빼앗겨, 상대에게 강한 애정을 품고 있는 존재.
-					</div>
-				{{/rollTotal() roll1d6 4}}
-				{{#rollTotal() roll1d6 5}}
-					<div class="sheet-info">흥미</div>
-					<div class="sheet-con">
-						매우 희귀하거나 불가해하여, 연구나 관찰을 하고 싶어지는 대상.
-					</div>
-				{{/rollTotal() roll1d6 5}}
-				{{#rollTotal() roll1d6 6}}
-					<div class="sheet-info">존경</div>
-					<div class="sheet-con">
-						그 재능과 사상, 자세에 대해 외경심이나 존경심을 품은 인물.
-					</div>
-				{{/rollTotal() roll1d6 6}}
-			{{/rollTotal() rolltable 5}}
-
-			{{#rollTotal() rolltable 6}}
-				<!-- 소원 표 -->
-				<div class="sheet-title">소원표</div>
-				<div class="sheet-con">
-					{{#rollTotal() roll1d6 1}}자신 이외의 특정한 누군가를 도와달라.{{/rollTotal() roll1d6 1}}
-					{{#rollTotal() roll1d6 2}}소중한 사람이나 동경하는 사람과 만나게 해달라.{{/rollTotal() roll1d6 2}}
-					{{#rollTotal() roll1d6 3}}자신을 둘러싼 불행을 없애달라.{{/rollTotal() roll1d6 3}}
-					{{#rollTotal() roll1d6 4}}자신이 잃어버린 무언가를 되찾아달라.{{/rollTotal() roll1d6 4}}
-					{{#rollTotal() roll1d6 5}}특정한 누군가를 벌해달라.{{/rollTotal() roll1d6 5}}
-					{{#rollTotal() roll1d6 6}}자신의 욕망(금전욕, 명예욕, 육욕, 지식욕 등)을 충족시켜달라.{{/rollTotal() roll1d6 6}}
-				</div>
-			{{/rollTotal() rolltable 6}}
-
-			{{#rollTotal() rolltable 7}}
-				<!-- 프라이즈 표 -->
-				<div class="sheet-title">프라이즈 표</div>
-				<div class="sheet-con">
-					{{#rollTotal() roll2d6 2}}패자는 안쪽부터 파열하여 산산히 흩어진다. 공적점을 1점 획득한다.{{/rollTotal() roll2d6 2}}
-					{{#rollTotal() roll2d6 3}}패자는 무수한 벌레나 작은 동물로 변하고, 승자가 그것을 사역마로 삼는다. 승자는 아무거나 특기(혼의 특기는 제외)를 하나 선택한다. 그 세션 동안 지정 특기가 해당 특기인 【정령 소환】, 【마검 소환】, 【악몽 소환】 중 하나를 습득한다.{{/rollTotal() roll2d6 3}}
-					{{#rollTotal() roll2d6 4}}패자는 폭발음과 함께 어딘가로 사라지고, 주위에는 유황 냄새 같은 냄새만이 남는다. 승자는 그 세션 중에 한 번만 원하는 타이밍에 「상태이상」한 종류를 회복할 수 있다.{{/rollTotal() roll2d6 4}}
-					{{#rollTotal() roll2d6 5}}패자는 기묘한 형태의 금화 여러 닢으로 변한다. 승자는 쓰러뜨린 상대의 랭크만큼 마화를 획득한다.{{/rollTotal() roll2d6 5}}
-					{{#rollTotal() roll2d6 6}}패자는 지면에서 갑자기 나타난 무수한 팔에 끌려가면서, 승자를 향해 찬사의 말과 함께 중요한 정보를 이야기한다. 공개된 핸드아웃 하나를 선택하여 해당하는 【비밀】을 공개한다.{{/rollTotal() roll2d6 6}}
-					{{#rollTotal() roll2d6 7}}패자는 무수한 빛의 입자로 변해가고,. 승자는 거기에서 마소를 얻는다. 승자는 아무거나 마소를 2점 획득한다 (자신의 입회인에게 넘겨줄 수도 있다).{{/rollTotal() roll2d6 7}}
-					{{#rollTotal() roll2d6 8}}패자는 무수한 페이지가 되어 지면에 흩어지고, 승자는 거기에서 미지의 힘을 읽어낸다. 승자는 【일시적 마력】을 2점 획득한다.{{/rollTotal() roll2d6 8}}
-					{{#rollTotal() roll2d6 9}}패자는 감미로운 음악으로 변하고, 그 곡은 승자의 마음에 스며든다. 승자는 쓰러뜨린 상대의 랭크와 같은 수치의 마화를 획득한다.{{/rollTotal() roll2d6 9}}
-					{{#rollTotal() roll2d6 10}}패자는 한 송이 꽃이 된다. 승자는 그 세션 동안 한 번만 자신이 굴린 행동판정의 주사위를 다시 굴릴 권리를 얻는다.{{/rollTotal() roll2d6 10}}
-					{{#rollTotal() roll2d6 11}}패자는 말의 파편으로 변해가고, 승자는 거기에서 미래의 운명을 읽어낸다. 승자는 「사건 표」를 사용한 후, 그 결과를 기록해둔다. 그 후, 그 세션 중에 연 드라마 장면에, 같은 장면에 등장한 캐릭터 한 명을 골라서 한 번만 해당 결과를 적용할 수 있다.{{/rollTotal() roll2d6 11}}
-					{{#rollTotal() roll2d6 12}}패자는 그림자가 되어 그 자리에 새겨져서 이경의 입구가 된다. 승자는 아무거나 이경을 하나 선택한다. 그 세션 동안 해당하는 이경으로 이동할 수 있다.{{/rollTotal() roll2d6 12}}
-				</div>
-			{{/rollTotal() rolltable 7}}
-
-			{{#rollTotal() rolltable 8}}
-				<!-- 운명변전 마법사 표 -->
-				<div class="sheet-title">운명 변전:마법사 재액</div>
-				
-				{{#rollTotal() roll1d6 1}}
-					<div class="sheet-info">혐오</div>
-					<div class="sheet-con">
-						우자들을 혐오하고, 〈대법전〉의 방식에 의문을 품게 된다. 이 불행이 두 번 발생하면, 그 마법사는 사망하는 대신 〈서적경〉이 되어 NPC가 된다. 이 불행이 〈서적경〉에게 내렸을 때는 불행이 무효가 된다.
-					</div>
-				{{/rollTotal() roll1d6 1}}
-				{{#rollTotal() roll1d6 2}}
-					<div class="sheet-info">악의</div>
-					<div class="sheet-con">
-						마법과 관련된 절실한 소원이나 사악한 욕망이 점점 비대화한다. 이 불행이 두 번 발생하면, 그 마법사는 사망한 후 〈금서〉가 되어 NPC가 된다.
-					</div>
-				{{/rollTotal() roll1d6 2}}
-				{{#rollTotal() roll1d6 3}}
-					<div class="sheet-info">유령</div>
-					<div class="sheet-con">
-						육체를 거의 잃어 영적인 존재가 된다. 이 불행이 두 번 발생하면, 그 마법사는 사망하는 대신 소멸한다.
-					</div>
-				{{/rollTotal() roll1d6 3}}
-				{{#rollTotal() roll1d6 4}}
-					<div class="sheet-info">연쇄</div>
-					<div class="sheet-con">
-						운명 변전이 발생한다. 이 불행이 두 번 발생해도 사망하지 않는다.
-					</div>
-				{{/rollTotal() roll1d6 4}}
-				{{#rollTotal() roll1d6 5}}
-					<div class="sheet-info">상태이상</div>
-					<div class="sheet-con">
-						무작위로 상태이상을 하나 입는다. 이 불행이 두 번 발생해도 사망하지 않는다.
-					</div>
-				{{/rollTotal() roll1d6 5}}
-				{{#rollTotal() roll1d6 6}}
-					<div class="sheet-info">소모</div>
-					<div class="sheet-con">
-						【마력】이 1점 감소한다. 이 불행이 두 번 발생해도 사망하지 않는다.
-					</div>
-				{{/rollTotal() roll1d6 6}}
-			{{/rollTotal() rolltable 8}}
 		{{/rolltable}}
 
 		{{#randomspec}}
