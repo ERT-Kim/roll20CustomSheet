@@ -9,7 +9,7 @@
 ------------------------------
 
 ### 미리보기
-<img src="https://raw.githubusercontent.com/tateck-develop/roll20CustomSheet/main/inSANe/insane_A_desolate_dream/guide.png" width="500px"></img>
+<img src="https://raw.githubusercontent.com/tateck-develop/roll20CustomSheet/main/inSANe/insane_A_desolate_dream/guide.jpg" width="500px"></img>
 
 * * *
 
