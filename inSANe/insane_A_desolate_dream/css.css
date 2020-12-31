@@ -29,6 +29,7 @@ select, div, button, textarea, span, input, img, label{box-sizing: border-box; o
 .sheet-wrap button {border:none; margin:0; background:transparent;}
 .sheet-wrap textarea {width:100%; background:transparent; border:none; resize:none; color:#e8c06e; line-height:1.5;}
 .sheet-wrap fieldset {margin:0; padding:0; border:none;}
+.sheet-wrap .repcontainer.editmode .repitem .itemcontrol {z-index:99 !mportant;}
 
 .sheet-wrap .sheet-dice {display:inline-block; vertical-align:middle; border:none; padding:0 !important; margin:0 !important; width:25px; height:25px; border-radius:0; background:url('https://i.imgur.com/c1UJFjN.png') no-repeat 50% 50%; background-size:cover; transition:.3s all; -webkit-transition:.3s all;}
 .sheet-wrap .sheet-dice:before {display:none !important;}
