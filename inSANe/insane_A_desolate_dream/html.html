@@ -964,7 +964,7 @@
 				<input type="number" name="attr_evas_target" title="회피목표치" value="0" placeholder="0">
 				<strong>수정</strong>
 				<input type="number" name="attr_evas_mod" title="회피수정치" value="0" placeholder="0">
-				<button class="sheet-dice" type="roll" value="&{template:InsaeDice} {{name=@{character_name}}}{{spec=회피판정}}{{target=[[@{evas_target}]]}}{{mod=[[(@{evas_mod}*1)+(?{명중특기를 획득하고 있습니까?|아니오,0|예,1}*1)+(?{명중특기가 공포심입니까?|아니오,0|예,-2}*1)]]}}{{roll2d6=[[2d6]]}}" title="회피판정"></button>
+				<button class="sheet-dice" type="roll" value="&{template:InsaeDice} {{name=@{character_name}}}{{spec=회피판정}}{{target=[[@{evas_target}]]}}{{mod=[[(@{evas_mod}*1)+(?{명중특기를 획득하고 있습니까?|아니오,0|예,1}*1)+(?{명중특기가 공포심입니까?|아니오,0|예,-2}*1)]]}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}" title="회피판정"></button>
 			</div>
 		</div>
 	</div>
@@ -979,7 +979,7 @@
 			<div class="sheet-ab-item">
 				<input type="checkbox" name="attr_ab_flag_01" value="1"/>
 				<div class="sheet-control">
-					<button class="sheet-dice" type="roll" value="&{template:InsaeDice} {{subject=@{Ab_01_Name}}}{{name=@{character_name}}}{{Types=@{Ab_01_Types}}}{{AssignedSkill=@{Ab_01_spec}}}{{target=@{Ab_01_target}}}{{roll2d6=[[2d6]]}}{{Effect=@{Ab_01_effect}}}{{mod=[[@{Ab_01_mod}+0]]}}"></button>
+					<button class="sheet-dice" type="roll" value="&{template:InsaeDice} {{subject=@{Ab_01_Name}}}{{name=@{character_name}}}{{Types=@{Ab_01_Types}}}{{AssignedSkill=@{Ab_01_spec}}}{{target=@{Ab_01_target}}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{Effect=@{Ab_01_effect}}}{{mod=[[@{Ab_01_mod}+0]]}}"></button>
 				</div>
 				<div class="sheet-name">
 					<input type="text" name="attr_Ab_01_Name" value="기본공격" />
@@ -1003,7 +1003,7 @@
 			<div class="sheet-ab-item">
 				<input type="checkbox" name="attr_ab_flag_02" value="1"/>
 				<div class="sheet-control">
-					<button class="sheet-dice" type="roll" value="&{template:InsaeDice} {{subject=@{Ab_02_Name}}}{{name=@{character_name}}}{{Types=@{Ab_02_Types}}}{{AssignedSkill=@{Ab_02_spec}}}{{target=@{Ab_02_target}}}{{roll2d6=[[2d6]]}}{{Effect=@{Ab_02_effect}}}{{mod=[[@{Ab_02_mod}+0]]}}"></button>
+					<button class="sheet-dice" type="roll" value="&{template:InsaeDice} {{subject=@{Ab_02_Name}}}{{name=@{character_name}}}{{Types=@{Ab_02_Types}}}{{AssignedSkill=@{Ab_02_spec}}}{{target=@{Ab_02_target}}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{Effect=@{Ab_02_effect}}}{{mod=[[@{Ab_02_mod}+0]]}}"></button>
 				</div>
 				<div class="sheet-name">
 					<input type="text" name="attr_Ab_02_Name" value="전장이동" />
@@ -1027,7 +1027,7 @@
 			<div class="sheet-ab-item">
 				<input type="checkbox" name="attr_ab_flag_03" value="1"/>
 				<div class="sheet-control">
-					<button class="sheet-dice" type="roll" value="&{template:InsaeDice} {{subject=@{Ab_03_Name}}}{{name=@{character_name}}}{{Types=@{Ab_03_Types}}}{{AssignedSkill=@{Ab_03_spec}}}{{target=@{Ab_03_target}}}{{roll2d6=[[2d6]]}}{{Effect=@{Ab_03_effect}}}{{mod=[[@{Ab_03_mod}+0]]}}"></button>
+					<button class="sheet-dice" type="roll" value="&{template:InsaeDice} {{subject=@{Ab_03_Name}}}{{name=@{character_name}}}{{Types=@{Ab_03_Types}}}{{AssignedSkill=@{Ab_03_spec}}}{{target=@{Ab_03_target}}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{Effect=@{Ab_03_effect}}}{{mod=[[@{Ab_03_mod}+0]]}}"></button>
 				</div>
 				<div class="sheet-name">
 					<input type="text" name="attr_Ab_03_Name" value="" placeholder="어빌리티 이름"/>
@@ -1053,7 +1053,7 @@
 			<div class="sheet-ab-item">
 				<input type="checkbox" name="attr_ab_flag_04" value="1"/>
 				<div class="sheet-control">
-					<button class="sheet-dice" type="roll" value="&{template:InsaeDice} {{subject=@{Ab_04_Name}}}{{name=@{character_name}}}{{Types=@{Ab_04_Types}}}{{AssignedSkill=@{Ab_04_spec}}}{{target=@{Ab_04_target}}}{{roll2d6=[[2d6]]}}{{Effect=@{Ab_04_effect}}}{{mod=[[@{Ab_04_mod}+0]]}}"></button>
+					<button class="sheet-dice" type="roll" value="&{template:InsaeDice} {{subject=@{Ab_04_Name}}}{{name=@{character_name}}}{{Types=@{Ab_04_Types}}}{{AssignedSkill=@{Ab_04_spec}}}{{target=@{Ab_04_target}}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{Effect=@{Ab_04_effect}}}{{mod=[[@{Ab_04_mod}+0]]}}"></button>
 				</div>
 				<div class="sheet-name">
 					<input type="text" name="attr_Ab_04_Name" value="" placeholder="어빌리티 이름"/>
@@ -1079,7 +1079,7 @@
 			<div class="sheet-ab-item">
 				<input type="checkbox" name="attr_ab_flag_05" value="1"/>
 				<div class="sheet-control">
-					<button class="sheet-dice" type="roll" value="&{template:InsaeDice} {{subject=@{Ab_05_Name}}}{{name=@{character_name}}}{{Types=@{Ab_05_Types}}}{{AssignedSkill=@{Ab_05_spec}}}{{target=@{Ab_05_target}}}{{roll2d6=[[2d6]]}}{{Effect=@{Ab_05_effect}}}{{mod=[[@{Ab_05_mod}+0]]}}"></button>
+					<button class="sheet-dice" type="roll" value="&{template:InsaeDice} {{subject=@{Ab_05_Name}}}{{name=@{character_name}}}{{Types=@{Ab_05_Types}}}{{AssignedSkill=@{Ab_05_spec}}}{{target=@{Ab_05_target}}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{Effect=@{Ab_05_effect}}}{{mod=[[@{Ab_05_mod}+0]]}}"></button>
 				</div>
 				<div class="sheet-name">
 					<input type="text" name="attr_Ab_05_Name" value="" placeholder="어빌리티 이름"/>
@@ -1105,7 +1105,7 @@
 			<div class="sheet-ab-item">
 				<input type="checkbox" name="attr_ab_flag_06" value="1"/>
 				<div class="sheet-control">
-					<button class="sheet-dice" type="roll" value="&{template:InsaeDice} {{subject=@{Ab_06_Name}}}{{name=@{character_name}}}{{Types=@{Ab_06_Types}}}{{AssignedSkill=@{Ab_06_spec}}}{{target=@{Ab_06_target}}}{{roll2d6=[[2d6]]}}{{Effect=@{Ab_06_effect}}}{{mod=[[@{Ab_06_mod}+0]]}}"></button>
+					<button class="sheet-dice" type="roll" value="&{template:InsaeDice} {{subject=@{Ab_06_Name}}}{{name=@{character_name}}}{{Types=@{Ab_06_Types}}}{{AssignedSkill=@{Ab_06_spec}}}{{target=@{Ab_06_target}}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{Effect=@{Ab_06_effect}}}{{mod=[[@{Ab_06_mod}+0]]}}"></button>
 				</div>
 				<div class="sheet-name">
 					<input type="text" name="attr_Ab_06_Name" value="" placeholder="어빌리티 이름"/>
@@ -1132,7 +1132,7 @@
 				<div class="sheet-ab-item">
 					<input type="checkbox" name="attr_ab_flag" value="1"/>
 					<div class="sheet-control">
-						<button class="sheet-dice" type="roll" value="&{template:InsaeDice} {{subject=@{Ab_Name}}}{{name=@{character_name}}}{{Types=@{Ab_Types}}}{{AssignedSkill=@{Ab_spec}}}{{target=@{Ab_target}}}{{roll2d6=[[2d6]]}}{{Effect=@{Ab_effect}}}{{mod=[[@{Ab_mod}+0]]}}"></button>
+						<button class="sheet-dice" type="roll" value="&{template:InsaeDice} {{subject=@{Ab_Name}}}{{name=@{character_name}}}{{Types=@{Ab_Types}}}{{AssignedSkill=@{Ab_spec}}}{{target=@{Ab_target}}}{{roll1=[[1d6]]}}{{roll2=[[1d6]]}}{{Effect=@{Ab_effect}}}{{mod=[[@{Ab_mod}+0]]}}"></button>
 					</div>
 					<div class="sheet-name">
 						<input type="text" name="attr_Ab_Name" value="" placeholder="어빌리티 이름"/>
