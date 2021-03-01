@@ -154,7 +154,7 @@ select, div, button, textarea, span, input, img, label{box-sizing: border-box; o
 .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12,
 .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12,
 .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:#24355e;}
+.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:rgba(36,53,94,.5);}
 
 
 /* 주작 */
@@ -239,7 +239,7 @@ select, div, button, textarea, span, input, img, label{box-sizing: border-box; o
 .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12,
 .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12,
 .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:#630b0b;}
+.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:rgba(99,11,11,.5);}
 
 
 /* 백호 */
@@ -324,7 +324,7 @@ select, div, button, textarea, span, input, img, label{box-sizing: border-box; o
 .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12,
 .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12,
 .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:#999999;}
+.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:rgba(153,153,153,.5);}
 
 
 /* 현무 */
@@ -409,7 +409,7 @@ select, div, button, textarea, span, input, img, label{box-sizing: border-box; o
 .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12,
 .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12,
 .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:#2d2831;}
+.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:rgba(45,40,49,.5);}
 
 
 /* 요괴 */
@@ -494,7 +494,7 @@ select, div, button, textarea, span, input, img, label{box-sizing: border-box; o
 .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12,
 .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12,
 .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:#293b25;}
+.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:rgba(41,59,37,.5);}
 
 
 
@@ -664,7 +664,7 @@ select, div, button, textarea, span, input, img, label{box-sizing: border-box; o
 .sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12,
 .sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12,
 .sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12,
-.sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:#9e808d;}
+.sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:rgba(158,128,141,.5);}
 
 .sheet-element-to-fear-style-A2[value='1'] ~ div .sheet-ins-style-A2 .sheet-spec-roll,
 .sheet-element-to-fear-style-B2[value='1'] ~ div .sheet-ins-style-B2 .sheet-spec-roll,
@@ -863,6 +863,13 @@ select, div, button, textarea, span, input, img, label{box-sizing: border-box; o
 .sheet-rolltemplate-InsaeDice .sheet-dice-box ~ .sheet-effect-box {margin-top:-25px;}
 
 .sheet-rolltemplate-InsaeDice .sheet-effect-box span {display:inline-block; color:#fff; font-size:11px; background:#000; padding:2px 5px 1px;}
+
+.sheet-rolltemplate-InsaeDice .sheet-emotion-box {text-align:center; padding:12px; color:#333; font-size:16px; margin:0 16px; border-top:1px solid rgba(0,0,0,.5); font-weight:600;}
+.sheet-rolltemplate-InsaeDice .sheet-emotion-box .sheet-p {color:#2196f3;}
+.sheet-rolltemplate-InsaeDice .sheet-emotion-box .sheet-p:before {content:"+";}
+.sheet-rolltemplate-InsaeDice .sheet-emotion-box .sheet-p:after {content:" ◇ "; color:#333;}
+.sheet-rolltemplate-InsaeDice .sheet-emotion-box .sheet-m {color:#dc0000;}
+.sheet-rolltemplate-InsaeDice .sheet-emotion-box .sheet-m:after {content:"-";}
 
 /* 청룡 스타일 */
 .sheet-rolltemplate-InsaeDice .sheet-pos-1 ~ * .sheet-name em {color:#24355e;}
