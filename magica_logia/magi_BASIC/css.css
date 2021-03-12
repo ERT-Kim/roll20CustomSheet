@@ -3,7 +3,14 @@
 	Reset : 모든 시트에 공통적으로 들어가는 리셋 코드
 ------------------------------------------ */
 
-select, div, button, textarea, span, input, img, label{box-sizing: border-box; outline:0;}
+.sheet-wrap select,
+.sheet-wrap div,
+.sheet-wrap button,
+.sheet-wrap textarea,
+.sheet-wrap span,
+.sheet-wrap input,
+.sheet-wrap img,
+.sheet-wrap label{box-sizing: border-box; outline:0;}
 .ui-dialog .charsheet {padding:0;}
 .inlinerollresult{background-color:#FEF68E;border:2px solid #FEF68E;padding:0 3px 0 3px; font-weight:bold;cursor:help;font-size:1.1em}
 .inlinerollresult.fullcrit{border:none;}
