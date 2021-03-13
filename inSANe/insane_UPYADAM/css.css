@@ -1,500 +1,507 @@
 /* Reset */
-select, div, button, textarea, span, input, img, label{box-sizing: border-box; outline:0;}
+.charsheet select,
+.charsheet div,
+.charsheet button,
+.charsheet textarea,
+.charsheet span,
+.charsheet input,
+.charsheet img,
+.charsheet label{box-sizing: border-box; outline:0;}
 .ui-dialog .charsheet {padding:0;}
 /*.sheet-wrap:before {content:"Made by. @tateck_trpg"; display:block; position:absolute; top:155px; right:10px; font-size:11px; color:#fff; opacity:.3; z-index:9999;}*/
-.sheet-wrap p {margin:0;}
-.sheet-wrap input,
-.sheet-wrap textarea,
-.sheet-wrap select,
-.sheet-wrap .uneditable-input {margin:0; border-radius:0 !important;}
-.sheet-wrap input[type="checkbox"],
-.sheet-wrap input[type="radio"] {display:block; position:absolute; top:0; left:0; opacity:0;}
-.sheet-wrap input[type="text"],
-.sheet-wrap input[type="number"] {border:none; height:30px; border-radius:0; background:transparent; padding:0 5px; font-size:12px; width:100%; color:#000;}
-.sheet-wrap select {border:none; height:30px; padding:0 5px; font-size:12px; width:100%; background:transparent; color:#000}
-.sheet-wrap input[type="number"]::-webkit-outer-spin-button,
-.sheet-wrap input[type="number"]::-webkit-inner-spin-button {appearance:none; -webkit-appearance:none; -moz-appearance:none; margin:0;}
-.sheet-wrap select,
-.sheet-wrap input[type="checkbox"],
-.sheet-wrap input[type="radio"],
-.sheet-wrap button {cursor:pointer;}
-.sheet-wrap input:-internal-autofill-selected {background-color:transparent !important; appearance:none !important; -webkit-appearance:none !important;  -moz-appearance:none !important;}
-.sheet-wrap input[type="number"] {font-family:'Malgun Gothic'; font-weight:800;}
-.sheet-wrap select * {color:#000 !important;}
-.sheet-wrap input[type="checkbox"],
-.sheet-wrap input[type="radio"],
-.sheet-wrap button,
-.sheet-wrap select {box-shadow: none !important; appearance:none; -webkit-appearance:none; -moz-appearance:none;}
-.sheet-wrap select {padding-right:15px; background:url('https://i.imgur.com/6H0LMI8.png') no-repeat top 50% right 2px;}
-.sheet-wrap button {border:none; margin:0; background:transparent;}
-.sheet-wrap textarea {width:100%; background:transparent; border:none; resize:none; color:#000; line-height:1.5;}
-.sheet-wrap fieldset {margin:0; padding:0; border:none;}
-.sheet-wrap .repcontainer.editmode .repitem .itemcontrol {z-index:990 !important; height:auto; top:-5px; bottom:0;}
-.sheet-wrap .repcontainer.editmode .repitem .itemcontrol button,
-.sheet-wrap .repcontainer.editmode .repitem .itemcontrol a {width:46px; height:46px; border:none; border-radius:0; line-height:46px; padding:0; text-align:center;}
-.sheet-wrap .repcontainer.editmode .repitem .itemcontrol button {background:red;}
+.charsheet .sheet-wrap p {margin:0;}
+.charsheet .sheet-wrap input,
+.charsheet .sheet-wrap textarea,
+.charsheet .sheet-wrap select,
+.charsheet .sheet-wrap .uneditable-input {margin:0; border-radius:0 !important;}
+.charsheet .sheet-wrap input[type="checkbox"],
+.charsheet .sheet-wrap input[type="radio"] {display:block; position:absolute; top:0; left:0; opacity:0;}
+.charsheet .sheet-wrap input[type="text"],
+.charsheet .sheet-wrap input[type="number"] {border:none; height:30px; border-radius:0; background:transparent; padding:0 5px; font-size:12px; width:100%; color:#000;}
+.charsheet .sheet-wrap select {border:none; height:30px; padding:0 5px; font-size:12px; width:100%; background:transparent; color:#000}
+.charsheet .sheet-wrap input[type="number"]::-webkit-outer-spin-button,
+.charsheet .sheet-wrap input[type="number"]::-webkit-inner-spin-button {appearance:none; -webkit-appearance:none; -moz-appearance:none; margin:0;}
+.charsheet .sheet-wrap select,
+.charsheet .sheet-wrap input[type="checkbox"],
+.charsheet .sheet-wrap input[type="radio"],
+.charsheet .sheet-wrap button {cursor:pointer;}
+.charsheet .sheet-wrap input:-internal-autofill-selected {background-color:transparent !important; appearance:none !important; -webkit-appearance:none !important;  -moz-appearance:none !important;}
+.charsheet .sheet-wrap input[type="number"] {font-family:'Malgun Gothic'; font-weight:800;}
+.charsheet .sheet-wrap select * {color:#000 !important;}
+.charsheet .sheet-wrap input[type="checkbox"],
+.charsheet .sheet-wrap input[type="radio"],
+.charsheet .sheet-wrap button,
+.charsheet .sheet-wrap select {box-shadow: none !important; appearance:none; -webkit-appearance:none; -moz-appearance:none;}
+.charsheet .sheet-wrap select {padding-right:15px; background:url('https://i.imgur.com/6H0LMI8.png') no-repeat top 50% right 2px;}
+.charsheet .sheet-wrap button {border:none; margin:0; background:transparent;}
+.charsheet .sheet-wrap textarea {width:100%; background:transparent; border:none; resize:none; color:#000; line-height:1.5;}
+.charsheet .sheet-wrap fieldset {margin:0; padding:0; border:none;}
+.charsheet .sheet-wrap .repcontainer.editmode .repitem .itemcontrol {z-index:990 !important; height:auto; top:-5px; bottom:0;}
+.charsheet .sheet-wrap .repcontainer.editmode .repitem .itemcontrol button,
+.charsheet .sheet-wrap .repcontainer.editmode .repitem .itemcontrol a {width:46px; height:46px; border:none; border-radius:0; line-height:46px; padding:0; text-align:center;}
+.charsheet .sheet-wrap .repcontainer.editmode .repitem .itemcontrol button {background:red;}
 
-.sheet-wrap .sheet-dice {display:inline-block; vertical-align:middle; border:none; padding:0 !important; margin:0 !important; width:30px; height:30px; border-radius:0; background:url('https://i.imgur.com/P08Hd8I.png') no-repeat 50% 50%; background-size:cover; transition:.3s all; -webkit-transition:.3s all;}
-.sheet-wrap .sheet-dice:before {display:none !important;}
+.charsheet .sheet-wrap .sheet-dice {display:inline-block; vertical-align:middle; border:none; padding:0 !important; margin:0 !important; width:30px; height:30px; border-radius:0; background:url('https://i.imgur.com/P08Hd8I.png') no-repeat 50% 50%; background-size:cover; transition:.3s all; -webkit-transition:.3s all;}
+.charsheet .sheet-wrap .sheet-dice:before {display:none !important;}
 
-.sheet-wrap input::placeholder {color:rgba(0, 0, 0, .3);}
-.sheet-wrap textarea::placeholder {color:rgba(0, 0, 0, .3);}
+.charsheet .sheet-wrap input::placeholder {color:rgba(0, 0, 0, .3);}
+.charsheet .sheet-wrap textarea::placeholder {color:rgba(0, 0, 0, .3);}
 
-.sheet-tal {text-align:left !important;}
-.sheet-tar {text-align:right !important;}
-.sheet-tac {text-align:center !important;}
+.charsheet .sheet-tal {text-align:left !important;}
+.charsheet .sheet-tar {text-align:right !important;}
+.charsheet .sheet-tac {text-align:center !important;}
 
-.sheet-wrap .inlinerollresult {display:inline !important; font-size:1em !important; opacity:1 !important; padding:0 !important; background:transparent !important; border:none !important;}
+.charsheet .sheet-wrap .inlinerollresult {display:inline !important; font-size:1em !important; opacity:1 !important; padding:0 !important; background:transparent !important; border:none !important;}
 
 
 /**********************************************************************
 	Layout Style
 **********************************************************************/
-.sheet-wrap {position:relative; width:850px; min-height:550px; margin:0 -10px; font-size:12px; font-family:'Malgun Gothic'; color:#000; line-height:1.2; z-index:0;}
-.sheet-wrap * {font-family:'Malgun Gothic'; box-sizing:border-box;}
-.sheet-wrap-inner {position:relative; min-height:255px; background:url('https://i.imgur.com/R5jblLi.png') no-repeat 50% 0; padding:0 10px; z-index:0; overflow:hidden;}
-.sheet-wrap-inner:before,
-.sheet-wrap-inner:after {content:""; display:block; position:absolute; top:5px; width:55px; height:263px; background:url('https://i.imgur.com/xm7mkyw.png') no-repeat 50% 0; z-index:3;}
-.sheet-wrap-inner:before {left:0;}
-.sheet-wrap-inner:after {right:0;}
+.charsheet .sheet-wrap {position:relative; width:850px; min-height:550px; margin:0 -10px; font-size:12px; font-family:'Malgun Gothic'; color:#000; line-height:1.2; z-index:0;}
+.charsheet .sheet-wrap * {font-family:'Malgun Gothic'; box-sizing:border-box;}
+.charsheet .sheet-wrap-inner {position:relative; min-height:255px; background:url('https://i.imgur.com/R5jblLi.png') no-repeat 50% 0; padding:0 10px; z-index:0; overflow:hidden;}
+.charsheet .sheet-wrap-inner:before,
+.charsheet .sheet-wrap-inner:after {content:""; display:block; position:absolute; top:5px; width:55px; height:263px; background:url('https://i.imgur.com/xm7mkyw.png') no-repeat 50% 0; z-index:3;}
+.charsheet .sheet-wrap-inner:before {left:0;}
+.charsheet .sheet-wrap-inner:after {right:0;}
 
-.sheet-logo {display:block; position:absolute; width:242px; height:187px; top:0; left:50%; margin-left:-121px; background:no-repeat 50% 0; padding-top:120px; z-index:1;}
-.sheet-logo select {display:block; position:relative; width:80px; height:30px; font-size:17px; color:#fff; text-align-last:center; padding:0; margin:0 auto; background:none !important;}
-.sheet-logo select option {font-size:12px;}
+.charsheet .sheet-logo {display:block; position:absolute; width:242px; height:187px; top:0; left:50%; margin-left:-121px; background:no-repeat 50% 0; padding-top:120px; z-index:1;}
+.charsheet .sheet-logo select {display:block; position:relative; width:80px; height:30px; font-size:17px; color:#fff; text-align-last:center; padding:0; margin:0 auto; background:none !important;}
+.charsheet .sheet-logo select option {font-size:12px;}
 
-.sheet-bottom-area {display:block; position:relative; margin:0 -10px; padding:0 20px; background:url('https://i.imgur.com/JXcaMMZ.jpg') repeat 50% 0; overflow:hidden;}
+.charsheet .sheet-bottom-area {display:block; position:relative; margin:0 -10px; padding:0 20px; background:url('https://i.imgur.com/JXcaMMZ.jpg') repeat 50% 0; overflow:hidden;}
 
-.sheet-memo {display:block; position:relative; padding:25px 20px 20px; color:#fff; background:url('https://i.imgur.com/WR4dDJ4.png') no-repeat 50% 0;}
-.sheet-memo textarea {color:#fff; min-height:250px;}
-.sheet-memo textarea::placeholder {color:rgba(255, 255, 255, .4) !important;}
+.charsheet .sheet-memo {display:block; position:relative; padding:25px 20px 20px; color:#fff; background:url('https://i.imgur.com/WR4dDJ4.png') no-repeat 50% 0;}
+.charsheet .sheet-memo textarea {color:#fff; min-height:250px;}
+.charsheet .sheet-memo textarea::placeholder {color:rgba(255, 255, 255, .4) !important;}
 
 /* Layout : Theme */
-.sheet-wrap {background:url('https://i.imgur.com/qJc02lF.jpg') #7c7678;}
-.sheet-logo {background-image:url('https://i.imgur.com/s7Oqai9.png');}
+.charsheet .sheet-wrap {background:url('https://i.imgur.com/qJc02lF.jpg') #7c7678;}
+.charsheet .sheet-logo {background-image:url('https://i.imgur.com/s7Oqai9.png');}
 
 /* 청룡 */
-.sheet-chk-theme-position[value="1"] ~ .sheet-wrap {background:url('https://i.imgur.com/hncHetJ.jpg') #24355e;}
-.sheet-chk-theme-position[value="1"] ~ .sheet-wrap .sheet-logo {background-image:url('https://i.imgur.com/aHPS6Ky.png');}
-.sheet-chk-theme-position[value="1"] ~ .sheet-wrap .sheet-spectable table {border-color:rgba(36,53,94,.3);}
-.sheet-chk-theme-position[value="1"] ~ .sheet-wrap .sheet-spectable table td {border-color:rgba(36,53,94,.3);}
-.sheet-chk-theme-position[value="1"] ~ .sheet-wrap .sheet-spectable table th {background:#24355e;}
-.sheet-chk-theme-position[value="1"] ~ .sheet-wrap .sheet-fight-wrap {background-image:url('https://i.imgur.com/ZZtyYiG.png');}
-.sheet-chk-theme-position[value="1"] ~ .sheet-wrap .sheet-ab-item > input[type="checkbox"] + *:before {border-color:#24355e;}
-.sheet-chk-theme-position[value="1"] ~ .sheet-wrap .sheet-ab-item > input[type="checkbox"]:checked + *:before {background:#24355e;}
-.sheet-chk-theme-position[value="1"] ~ .sheet-wrap .sheet-ab-item .sheet-option input[type="checkbox"] + span:before {border-color:#24355e;}
-.sheet-chk-theme-position[value="1"] ~ .sheet-wrap .sheet-ab-item .sheet-option > input[type="checkbox"]:checked + *:before {background:#24355e;}
-.sheet-chk-theme-position[value="1"] ~ .sheet-wrap .sheet-ab-item .sheet-effect:before {background:#24355e;}
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-determine-style-A[value='1'] ~ div .sheet-ins-style-A {background:#24355e;}
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-determine-style-B[value='1'] ~ div .sheet-ins-style-B {background:#24355e;}
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-determine-style-C[value='1'] ~ div .sheet-ins-style-C {background:#24355e;}
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-determine-style-D[value='1'] ~ div .sheet-ins-style-D {background:#24355e;}
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-determine-style-E[value='1'] ~ div .sheet-ins-style-E {background:#24355e;}
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-A2[value='1'] ~ div .sheet-ins-style-A2,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-B2[value='1'] ~ div .sheet-ins-style-B2,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-C2[value='1'] ~ div .sheet-ins-style-C2,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-D2[value='1'] ~ div .sheet-ins-style-D2,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-E2[value='1'] ~ div .sheet-ins-style-E2,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-F2[value='1'] ~ div .sheet-ins-style-F2,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-A3[value='1'] ~ div .sheet-ins-style-A3,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-B3[value='1'] ~ div .sheet-ins-style-B3,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-C3[value='1'] ~ div .sheet-ins-style-C3,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-D3[value='1'] ~ div .sheet-ins-style-D3,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-E3[value='1'] ~ div .sheet-ins-style-E3,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-F3[value='1'] ~ div .sheet-ins-style-F3,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-A4[value='1'] ~ div .sheet-ins-style-A4,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-B4[value='1'] ~ div .sheet-ins-style-B4,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-C4[value='1'] ~ div .sheet-ins-style-C4,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-D4[value='1'] ~ div .sheet-ins-style-D4,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-E4[value='1'] ~ div .sheet-ins-style-E4,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-F4[value='1'] ~ div .sheet-ins-style-F4,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-A5[value='1'] ~ div .sheet-ins-style-A5,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-B5[value='1'] ~ div .sheet-ins-style-B5,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-C5[value='1'] ~ div .sheet-ins-style-C5,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-D5[value='1'] ~ div .sheet-ins-style-D5,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-E5[value='1'] ~ div .sheet-ins-style-E5,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-F5[value='1'] ~ div .sheet-ins-style-F5,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-A6[value='1'] ~ div .sheet-ins-style-A6,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-B6[value='1'] ~ div .sheet-ins-style-B6,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-C6[value='1'] ~ div .sheet-ins-style-C6,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-D6[value='1'] ~ div .sheet-ins-style-D6,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-E6[value='1'] ~ div .sheet-ins-style-E6,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-F6[value='1'] ~ div .sheet-ins-style-F6,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-A7[value='1'] ~ div .sheet-ins-style-A7,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-B7[value='1'] ~ div .sheet-ins-style-B7,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-C7[value='1'] ~ div .sheet-ins-style-C7,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-D7[value='1'] ~ div .sheet-ins-style-D7,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-E7[value='1'] ~ div .sheet-ins-style-E7,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-F7[value='1'] ~ div .sheet-ins-style-F7,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-A8[value='1'] ~ div .sheet-ins-style-A8,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-B8[value='1'] ~ div .sheet-ins-style-B8,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-C8[value='1'] ~ div .sheet-ins-style-C8,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-D8[value='1'] ~ div .sheet-ins-style-D8,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-E8[value='1'] ~ div .sheet-ins-style-E8,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-F8[value='1'] ~ div .sheet-ins-style-F8,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-A9[value='1'] ~ div .sheet-ins-style-A9,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-B9[value='1'] ~ div .sheet-ins-style-B9,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-C9[value='1'] ~ div .sheet-ins-style-C9,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-D9[value='1'] ~ div .sheet-ins-style-D9,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-E9[value='1'] ~ div .sheet-ins-style-E9,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-F9[value='1'] ~ div .sheet-ins-style-F9,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-A10[value='1'] ~ div .sheet-ins-style-A10,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-B10[value='1'] ~ div .sheet-ins-style-B10,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-C10[value='1'] ~ div .sheet-ins-style-C10,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-D10[value='1'] ~ div .sheet-ins-style-D10,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-E10[value='1'] ~ div .sheet-ins-style-E10,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-F10[value='1'] ~ div .sheet-ins-style-F10,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-A11[value='1'] ~ div .sheet-ins-style-A11,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-B11[value='1'] ~ div .sheet-ins-style-B11,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-C11[value='1'] ~ div .sheet-ins-style-C11,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-D11[value='1'] ~ div .sheet-ins-style-D11,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-E11[value='1'] ~ div .sheet-ins-style-E11,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-F11[value='1'] ~ div .sheet-ins-style-F11,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-A12[value='1'] ~ div .sheet-ins-style-A12,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-B12[value='1'] ~ div .sheet-ins-style-B12,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12,
-.sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:rgba(36,53,94,.5);}
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-wrap {background:url('https://i.imgur.com/hncHetJ.jpg') #24355e;}
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-wrap .sheet-logo {background-image:url('https://i.imgur.com/aHPS6Ky.png');}
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-wrap .sheet-spectable table {border-color:rgba(36,53,94,.3);}
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-wrap .sheet-spectable table td {border-color:rgba(36,53,94,.3);}
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-wrap .sheet-spectable table th {background:#24355e;}
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-wrap .sheet-fight-wrap {background-image:url('https://i.imgur.com/ZZtyYiG.png');}
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-wrap .sheet-ab-item > input[type="checkbox"] + *:before {border-color:#24355e;}
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-wrap .sheet-ab-item > input[type="checkbox"]:checked + *:before {background:#24355e;}
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-wrap .sheet-ab-item .sheet-option input[type="checkbox"] + span:before {border-color:#24355e;}
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-wrap .sheet-ab-item .sheet-option > input[type="checkbox"]:checked + *:before {background:#24355e;}
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-wrap .sheet-ab-item .sheet-effect:before {background:#24355e;}
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-determine-style-A[value='1'] ~ div .sheet-ins-style-A {background:#24355e;}
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-determine-style-B[value='1'] ~ div .sheet-ins-style-B {background:#24355e;}
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-determine-style-C[value='1'] ~ div .sheet-ins-style-C {background:#24355e;}
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-determine-style-D[value='1'] ~ div .sheet-ins-style-D {background:#24355e;}
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-determine-style-E[value='1'] ~ div .sheet-ins-style-E {background:#24355e;}
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-A2[value='1'] ~ div .sheet-ins-style-A2,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-B2[value='1'] ~ div .sheet-ins-style-B2,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-C2[value='1'] ~ div .sheet-ins-style-C2,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-D2[value='1'] ~ div .sheet-ins-style-D2,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-E2[value='1'] ~ div .sheet-ins-style-E2,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-F2[value='1'] ~ div .sheet-ins-style-F2,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-A3[value='1'] ~ div .sheet-ins-style-A3,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-B3[value='1'] ~ div .sheet-ins-style-B3,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-C3[value='1'] ~ div .sheet-ins-style-C3,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-D3[value='1'] ~ div .sheet-ins-style-D3,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-E3[value='1'] ~ div .sheet-ins-style-E3,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-F3[value='1'] ~ div .sheet-ins-style-F3,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-A4[value='1'] ~ div .sheet-ins-style-A4,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-B4[value='1'] ~ div .sheet-ins-style-B4,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-C4[value='1'] ~ div .sheet-ins-style-C4,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-D4[value='1'] ~ div .sheet-ins-style-D4,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-E4[value='1'] ~ div .sheet-ins-style-E4,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-F4[value='1'] ~ div .sheet-ins-style-F4,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-A5[value='1'] ~ div .sheet-ins-style-A5,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-B5[value='1'] ~ div .sheet-ins-style-B5,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-C5[value='1'] ~ div .sheet-ins-style-C5,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-D5[value='1'] ~ div .sheet-ins-style-D5,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-E5[value='1'] ~ div .sheet-ins-style-E5,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-F5[value='1'] ~ div .sheet-ins-style-F5,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-A6[value='1'] ~ div .sheet-ins-style-A6,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-B6[value='1'] ~ div .sheet-ins-style-B6,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-C6[value='1'] ~ div .sheet-ins-style-C6,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-D6[value='1'] ~ div .sheet-ins-style-D6,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-E6[value='1'] ~ div .sheet-ins-style-E6,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-F6[value='1'] ~ div .sheet-ins-style-F6,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-A7[value='1'] ~ div .sheet-ins-style-A7,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-B7[value='1'] ~ div .sheet-ins-style-B7,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-C7[value='1'] ~ div .sheet-ins-style-C7,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-D7[value='1'] ~ div .sheet-ins-style-D7,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-E7[value='1'] ~ div .sheet-ins-style-E7,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-F7[value='1'] ~ div .sheet-ins-style-F7,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-A8[value='1'] ~ div .sheet-ins-style-A8,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-B8[value='1'] ~ div .sheet-ins-style-B8,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-C8[value='1'] ~ div .sheet-ins-style-C8,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-D8[value='1'] ~ div .sheet-ins-style-D8,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-E8[value='1'] ~ div .sheet-ins-style-E8,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-F8[value='1'] ~ div .sheet-ins-style-F8,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-A9[value='1'] ~ div .sheet-ins-style-A9,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-B9[value='1'] ~ div .sheet-ins-style-B9,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-C9[value='1'] ~ div .sheet-ins-style-C9,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-D9[value='1'] ~ div .sheet-ins-style-D9,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-E9[value='1'] ~ div .sheet-ins-style-E9,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-F9[value='1'] ~ div .sheet-ins-style-F9,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-A10[value='1'] ~ div .sheet-ins-style-A10,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-B10[value='1'] ~ div .sheet-ins-style-B10,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-C10[value='1'] ~ div .sheet-ins-style-C10,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-D10[value='1'] ~ div .sheet-ins-style-D10,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-E10[value='1'] ~ div .sheet-ins-style-E10,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-F10[value='1'] ~ div .sheet-ins-style-F10,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-A11[value='1'] ~ div .sheet-ins-style-A11,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-B11[value='1'] ~ div .sheet-ins-style-B11,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-C11[value='1'] ~ div .sheet-ins-style-C11,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-D11[value='1'] ~ div .sheet-ins-style-D11,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-E11[value='1'] ~ div .sheet-ins-style-E11,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-F11[value='1'] ~ div .sheet-ins-style-F11,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-A12[value='1'] ~ div .sheet-ins-style-A12,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-B12[value='1'] ~ div .sheet-ins-style-B12,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12,
+.charsheet .sheet-chk-theme-position[value="1"] ~ .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:rgba(36,53,94,.5);}
 
 
 /* 주작 */
-.sheet-chk-theme-position[value="2"] ~ .sheet-wrap {background:url('https://i.imgur.com/pTxGFqM.jpg') #630b0b;}
-.sheet-chk-theme-position[value="2"] ~ .sheet-wrap .sheet-logo {background-image:url('https://i.imgur.com/eBFCUqu.png');}
-.sheet-chk-theme-position[value="2"] ~ .sheet-wrap .sheet-spectable table {border-color:rgba(99,11,11,.3);}
-.sheet-chk-theme-position[value="2"] ~ .sheet-wrap .sheet-spectable table td {border-color:rgba(99,11,11,.3);}
-.sheet-chk-theme-position[value="2"] ~ .sheet-wrap .sheet-spectable table th {background:#630b0b;}
-.sheet-chk-theme-position[value="2"] ~ .sheet-wrap .sheet-fight-wrap {background-image:url('https://i.imgur.com/2ojlFVf.png');}
-.sheet-chk-theme-position[value="2"] ~ .sheet-wrap .sheet-ab-item > input[type="checkbox"] + *:before {border-color:#630b0b;}
-.sheet-chk-theme-position[value="2"] ~ .sheet-wrap .sheet-ab-item > input[type="checkbox"]:checked + *:before {background:#630b0b;}
-.sheet-chk-theme-position[value="2"] ~ .sheet-wrap .sheet-ab-item .sheet-option input[type="checkbox"] + span:before {border-color:#630b0b;}
-.sheet-chk-theme-position[value="2"] ~ .sheet-wrap .sheet-ab-item .sheet-option > input[type="checkbox"]:checked + *:before {background:#630b0b;}
-.sheet-chk-theme-position[value="2"] ~ .sheet-wrap .sheet-ab-item .sheet-effect:before {background:#630b0b;}
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-determine-style-A[value='1'] ~ div .sheet-ins-style-A {background:#630b0b;}
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-determine-style-B[value='1'] ~ div .sheet-ins-style-B {background:#630b0b;}
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-determine-style-C[value='1'] ~ div .sheet-ins-style-C {background:#630b0b;}
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-determine-style-D[value='1'] ~ div .sheet-ins-style-D {background:#630b0b;}
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-determine-style-E[value='1'] ~ div .sheet-ins-style-E {background:#630b0b;}
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-A2[value='1'] ~ div .sheet-ins-style-A2,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-B2[value='1'] ~ div .sheet-ins-style-B2,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-C2[value='1'] ~ div .sheet-ins-style-C2,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-D2[value='1'] ~ div .sheet-ins-style-D2,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-E2[value='1'] ~ div .sheet-ins-style-E2,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-F2[value='1'] ~ div .sheet-ins-style-F2,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-A3[value='1'] ~ div .sheet-ins-style-A3,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-B3[value='1'] ~ div .sheet-ins-style-B3,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-C3[value='1'] ~ div .sheet-ins-style-C3,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-D3[value='1'] ~ div .sheet-ins-style-D3,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-E3[value='1'] ~ div .sheet-ins-style-E3,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-F3[value='1'] ~ div .sheet-ins-style-F3,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-A4[value='1'] ~ div .sheet-ins-style-A4,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-B4[value='1'] ~ div .sheet-ins-style-B4,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-C4[value='1'] ~ div .sheet-ins-style-C4,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-D4[value='1'] ~ div .sheet-ins-style-D4,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-E4[value='1'] ~ div .sheet-ins-style-E4,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-F4[value='1'] ~ div .sheet-ins-style-F4,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-A5[value='1'] ~ div .sheet-ins-style-A5,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-B5[value='1'] ~ div .sheet-ins-style-B5,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-C5[value='1'] ~ div .sheet-ins-style-C5,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-D5[value='1'] ~ div .sheet-ins-style-D5,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-E5[value='1'] ~ div .sheet-ins-style-E5,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-F5[value='1'] ~ div .sheet-ins-style-F5,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-A6[value='1'] ~ div .sheet-ins-style-A6,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-B6[value='1'] ~ div .sheet-ins-style-B6,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-C6[value='1'] ~ div .sheet-ins-style-C6,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-D6[value='1'] ~ div .sheet-ins-style-D6,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-E6[value='1'] ~ div .sheet-ins-style-E6,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-F6[value='1'] ~ div .sheet-ins-style-F6,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-A7[value='1'] ~ div .sheet-ins-style-A7,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-B7[value='1'] ~ div .sheet-ins-style-B7,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-C7[value='1'] ~ div .sheet-ins-style-C7,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-D7[value='1'] ~ div .sheet-ins-style-D7,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-E7[value='1'] ~ div .sheet-ins-style-E7,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-F7[value='1'] ~ div .sheet-ins-style-F7,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-A8[value='1'] ~ div .sheet-ins-style-A8,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-B8[value='1'] ~ div .sheet-ins-style-B8,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-C8[value='1'] ~ div .sheet-ins-style-C8,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-D8[value='1'] ~ div .sheet-ins-style-D8,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-E8[value='1'] ~ div .sheet-ins-style-E8,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-F8[value='1'] ~ div .sheet-ins-style-F8,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-A9[value='1'] ~ div .sheet-ins-style-A9,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-B9[value='1'] ~ div .sheet-ins-style-B9,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-C9[value='1'] ~ div .sheet-ins-style-C9,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-D9[value='1'] ~ div .sheet-ins-style-D9,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-E9[value='1'] ~ div .sheet-ins-style-E9,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-F9[value='1'] ~ div .sheet-ins-style-F9,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-A10[value='1'] ~ div .sheet-ins-style-A10,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-B10[value='1'] ~ div .sheet-ins-style-B10,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-C10[value='1'] ~ div .sheet-ins-style-C10,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-D10[value='1'] ~ div .sheet-ins-style-D10,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-E10[value='1'] ~ div .sheet-ins-style-E10,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-F10[value='1'] ~ div .sheet-ins-style-F10,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-A11[value='1'] ~ div .sheet-ins-style-A11,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-B11[value='1'] ~ div .sheet-ins-style-B11,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-C11[value='1'] ~ div .sheet-ins-style-C11,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-D11[value='1'] ~ div .sheet-ins-style-D11,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-E11[value='1'] ~ div .sheet-ins-style-E11,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-F11[value='1'] ~ div .sheet-ins-style-F11,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-A12[value='1'] ~ div .sheet-ins-style-A12,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-B12[value='1'] ~ div .sheet-ins-style-B12,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12,
-.sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:rgba(99,11,11,.5);}
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-wrap {background:url('https://i.imgur.com/pTxGFqM.jpg') #630b0b;}
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-wrap .sheet-logo {background-image:url('https://i.imgur.com/eBFCUqu.png');}
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-wrap .sheet-spectable table {border-color:rgba(99,11,11,.3);}
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-wrap .sheet-spectable table td {border-color:rgba(99,11,11,.3);}
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-wrap .sheet-spectable table th {background:#630b0b;}
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-wrap .sheet-fight-wrap {background-image:url('https://i.imgur.com/2ojlFVf.png');}
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-wrap .sheet-ab-item > input[type="checkbox"] + *:before {border-color:#630b0b;}
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-wrap .sheet-ab-item > input[type="checkbox"]:checked + *:before {background:#630b0b;}
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-wrap .sheet-ab-item .sheet-option input[type="checkbox"] + span:before {border-color:#630b0b;}
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-wrap .sheet-ab-item .sheet-option > input[type="checkbox"]:checked + *:before {background:#630b0b;}
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-wrap .sheet-ab-item .sheet-effect:before {background:#630b0b;}
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-determine-style-A[value='1'] ~ div .sheet-ins-style-A {background:#630b0b;}
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-determine-style-B[value='1'] ~ div .sheet-ins-style-B {background:#630b0b;}
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-determine-style-C[value='1'] ~ div .sheet-ins-style-C {background:#630b0b;}
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-determine-style-D[value='1'] ~ div .sheet-ins-style-D {background:#630b0b;}
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-determine-style-E[value='1'] ~ div .sheet-ins-style-E {background:#630b0b;}
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-A2[value='1'] ~ div .sheet-ins-style-A2,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-B2[value='1'] ~ div .sheet-ins-style-B2,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-C2[value='1'] ~ div .sheet-ins-style-C2,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-D2[value='1'] ~ div .sheet-ins-style-D2,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-E2[value='1'] ~ div .sheet-ins-style-E2,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-F2[value='1'] ~ div .sheet-ins-style-F2,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-A3[value='1'] ~ div .sheet-ins-style-A3,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-B3[value='1'] ~ div .sheet-ins-style-B3,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-C3[value='1'] ~ div .sheet-ins-style-C3,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-D3[value='1'] ~ div .sheet-ins-style-D3,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-E3[value='1'] ~ div .sheet-ins-style-E3,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-F3[value='1'] ~ div .sheet-ins-style-F3,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-A4[value='1'] ~ div .sheet-ins-style-A4,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-B4[value='1'] ~ div .sheet-ins-style-B4,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-C4[value='1'] ~ div .sheet-ins-style-C4,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-D4[value='1'] ~ div .sheet-ins-style-D4,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-E4[value='1'] ~ div .sheet-ins-style-E4,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-F4[value='1'] ~ div .sheet-ins-style-F4,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-A5[value='1'] ~ div .sheet-ins-style-A5,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-B5[value='1'] ~ div .sheet-ins-style-B5,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-C5[value='1'] ~ div .sheet-ins-style-C5,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-D5[value='1'] ~ div .sheet-ins-style-D5,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-E5[value='1'] ~ div .sheet-ins-style-E5,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-F5[value='1'] ~ div .sheet-ins-style-F5,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-A6[value='1'] ~ div .sheet-ins-style-A6,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-B6[value='1'] ~ div .sheet-ins-style-B6,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-C6[value='1'] ~ div .sheet-ins-style-C6,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-D6[value='1'] ~ div .sheet-ins-style-D6,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-E6[value='1'] ~ div .sheet-ins-style-E6,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-F6[value='1'] ~ div .sheet-ins-style-F6,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-A7[value='1'] ~ div .sheet-ins-style-A7,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-B7[value='1'] ~ div .sheet-ins-style-B7,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-C7[value='1'] ~ div .sheet-ins-style-C7,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-D7[value='1'] ~ div .sheet-ins-style-D7,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-E7[value='1'] ~ div .sheet-ins-style-E7,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-F7[value='1'] ~ div .sheet-ins-style-F7,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-A8[value='1'] ~ div .sheet-ins-style-A8,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-B8[value='1'] ~ div .sheet-ins-style-B8,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-C8[value='1'] ~ div .sheet-ins-style-C8,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-D8[value='1'] ~ div .sheet-ins-style-D8,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-E8[value='1'] ~ div .sheet-ins-style-E8,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-F8[value='1'] ~ div .sheet-ins-style-F8,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-A9[value='1'] ~ div .sheet-ins-style-A9,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-B9[value='1'] ~ div .sheet-ins-style-B9,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-C9[value='1'] ~ div .sheet-ins-style-C9,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-D9[value='1'] ~ div .sheet-ins-style-D9,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-E9[value='1'] ~ div .sheet-ins-style-E9,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-F9[value='1'] ~ div .sheet-ins-style-F9,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-A10[value='1'] ~ div .sheet-ins-style-A10,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-B10[value='1'] ~ div .sheet-ins-style-B10,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-C10[value='1'] ~ div .sheet-ins-style-C10,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-D10[value='1'] ~ div .sheet-ins-style-D10,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-E10[value='1'] ~ div .sheet-ins-style-E10,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-F10[value='1'] ~ div .sheet-ins-style-F10,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-A11[value='1'] ~ div .sheet-ins-style-A11,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-B11[value='1'] ~ div .sheet-ins-style-B11,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-C11[value='1'] ~ div .sheet-ins-style-C11,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-D11[value='1'] ~ div .sheet-ins-style-D11,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-E11[value='1'] ~ div .sheet-ins-style-E11,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-F11[value='1'] ~ div .sheet-ins-style-F11,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-A12[value='1'] ~ div .sheet-ins-style-A12,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-B12[value='1'] ~ div .sheet-ins-style-B12,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12,
+.charsheet .sheet-chk-theme-position[value="2"] ~ .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:rgba(99,11,11,.5);}
 
 
 /* 백호 */
-.sheet-chk-theme-position[value="3"] ~ .sheet-wrap {background:url('https://i.imgur.com/WxGLXGn.jpg') #999999;}
-.sheet-chk-theme-position[value="3"] ~ .sheet-wrap .sheet-logo {background-image:url('https://i.imgur.com/C1Mw7xT.png');}
-.sheet-chk-theme-position[value="3"] ~ .sheet-wrap .sheet-spectable table {border-color:rgba(153,153,153,.3);}
-.sheet-chk-theme-position[value="3"] ~ .sheet-wrap .sheet-spectable table td {border-color:rgba(153,153,153,.3);}
-.sheet-chk-theme-position[value="3"] ~ .sheet-wrap .sheet-spectable table th {background:#999999;}
-.sheet-chk-theme-position[value="3"] ~ .sheet-wrap .sheet-fight-wrap {background-image:url('https://i.imgur.com/Q10kkhP.png');}
-.sheet-chk-theme-position[value="3"] ~ .sheet-wrap .sheet-ab-item > input[type="checkbox"] + *:before {border-color:#999999;}
-.sheet-chk-theme-position[value="3"] ~ .sheet-wrap .sheet-ab-item > input[type="checkbox"]:checked + *:before {background:#999999;}
-.sheet-chk-theme-position[value="3"] ~ .sheet-wrap .sheet-ab-item .sheet-option input[type="checkbox"] + span:before {border-color:#999999;}
-.sheet-chk-theme-position[value="3"] ~ .sheet-wrap .sheet-ab-item .sheet-option > input[type="checkbox"]:checked + *:before {background:#999999;}
-.sheet-chk-theme-position[value="3"] ~ .sheet-wrap .sheet-ab-item .sheet-effect:before {background:#999999;}
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-determine-style-A[value='1'] ~ div .sheet-ins-style-A {background:#999999;}
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-determine-style-B[value='1'] ~ div .sheet-ins-style-B {background:#999999;}
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-determine-style-C[value='1'] ~ div .sheet-ins-style-C {background:#999999;}
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-determine-style-D[value='1'] ~ div .sheet-ins-style-D {background:#999999;}
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-determine-style-E[value='1'] ~ div .sheet-ins-style-E {background:#999999;}
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-A2[value='1'] ~ div .sheet-ins-style-A2,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-B2[value='1'] ~ div .sheet-ins-style-B2,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-C2[value='1'] ~ div .sheet-ins-style-C2,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-D2[value='1'] ~ div .sheet-ins-style-D2,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-E2[value='1'] ~ div .sheet-ins-style-E2,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-F2[value='1'] ~ div .sheet-ins-style-F2,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-A3[value='1'] ~ div .sheet-ins-style-A3,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-B3[value='1'] ~ div .sheet-ins-style-B3,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-C3[value='1'] ~ div .sheet-ins-style-C3,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-D3[value='1'] ~ div .sheet-ins-style-D3,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-E3[value='1'] ~ div .sheet-ins-style-E3,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-F3[value='1'] ~ div .sheet-ins-style-F3,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-A4[value='1'] ~ div .sheet-ins-style-A4,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-B4[value='1'] ~ div .sheet-ins-style-B4,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-C4[value='1'] ~ div .sheet-ins-style-C4,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-D4[value='1'] ~ div .sheet-ins-style-D4,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-E4[value='1'] ~ div .sheet-ins-style-E4,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-F4[value='1'] ~ div .sheet-ins-style-F4,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-A5[value='1'] ~ div .sheet-ins-style-A5,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-B5[value='1'] ~ div .sheet-ins-style-B5,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-C5[value='1'] ~ div .sheet-ins-style-C5,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-D5[value='1'] ~ div .sheet-ins-style-D5,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-E5[value='1'] ~ div .sheet-ins-style-E5,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-F5[value='1'] ~ div .sheet-ins-style-F5,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-A6[value='1'] ~ div .sheet-ins-style-A6,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-B6[value='1'] ~ div .sheet-ins-style-B6,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-C6[value='1'] ~ div .sheet-ins-style-C6,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-D6[value='1'] ~ div .sheet-ins-style-D6,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-E6[value='1'] ~ div .sheet-ins-style-E6,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-F6[value='1'] ~ div .sheet-ins-style-F6,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-A7[value='1'] ~ div .sheet-ins-style-A7,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-B7[value='1'] ~ div .sheet-ins-style-B7,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-C7[value='1'] ~ div .sheet-ins-style-C7,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-D7[value='1'] ~ div .sheet-ins-style-D7,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-E7[value='1'] ~ div .sheet-ins-style-E7,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-F7[value='1'] ~ div .sheet-ins-style-F7,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-A8[value='1'] ~ div .sheet-ins-style-A8,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-B8[value='1'] ~ div .sheet-ins-style-B8,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-C8[value='1'] ~ div .sheet-ins-style-C8,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-D8[value='1'] ~ div .sheet-ins-style-D8,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-E8[value='1'] ~ div .sheet-ins-style-E8,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-F8[value='1'] ~ div .sheet-ins-style-F8,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-A9[value='1'] ~ div .sheet-ins-style-A9,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-B9[value='1'] ~ div .sheet-ins-style-B9,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-C9[value='1'] ~ div .sheet-ins-style-C9,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-D9[value='1'] ~ div .sheet-ins-style-D9,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-E9[value='1'] ~ div .sheet-ins-style-E9,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-F9[value='1'] ~ div .sheet-ins-style-F9,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-A10[value='1'] ~ div .sheet-ins-style-A10,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-B10[value='1'] ~ div .sheet-ins-style-B10,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-C10[value='1'] ~ div .sheet-ins-style-C10,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-D10[value='1'] ~ div .sheet-ins-style-D10,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-E10[value='1'] ~ div .sheet-ins-style-E10,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-F10[value='1'] ~ div .sheet-ins-style-F10,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-A11[value='1'] ~ div .sheet-ins-style-A11,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-B11[value='1'] ~ div .sheet-ins-style-B11,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-C11[value='1'] ~ div .sheet-ins-style-C11,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-D11[value='1'] ~ div .sheet-ins-style-D11,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-E11[value='1'] ~ div .sheet-ins-style-E11,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-F11[value='1'] ~ div .sheet-ins-style-F11,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-A12[value='1'] ~ div .sheet-ins-style-A12,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-B12[value='1'] ~ div .sheet-ins-style-B12,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12,
-.sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:rgba(153,153,153,.5);}
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-wrap {background:url('https://i.imgur.com/WxGLXGn.jpg') #999999;}
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-wrap .sheet-logo {background-image:url('https://i.imgur.com/C1Mw7xT.png');}
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-wrap .sheet-spectable table {border-color:rgba(153,153,153,.3);}
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-wrap .sheet-spectable table td {border-color:rgba(153,153,153,.3);}
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-wrap .sheet-spectable table th {background:#999999;}
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-wrap .sheet-fight-wrap {background-image:url('https://i.imgur.com/Q10kkhP.png');}
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-wrap .sheet-ab-item > input[type="checkbox"] + *:before {border-color:#999999;}
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-wrap .sheet-ab-item > input[type="checkbox"]:checked + *:before {background:#999999;}
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-wrap .sheet-ab-item .sheet-option input[type="checkbox"] + span:before {border-color:#999999;}
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-wrap .sheet-ab-item .sheet-option > input[type="checkbox"]:checked + *:before {background:#999999;}
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-wrap .sheet-ab-item .sheet-effect:before {background:#999999;}
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-determine-style-A[value='1'] ~ div .sheet-ins-style-A {background:#999999;}
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-determine-style-B[value='1'] ~ div .sheet-ins-style-B {background:#999999;}
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-determine-style-C[value='1'] ~ div .sheet-ins-style-C {background:#999999;}
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-determine-style-D[value='1'] ~ div .sheet-ins-style-D {background:#999999;}
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-determine-style-E[value='1'] ~ div .sheet-ins-style-E {background:#999999;}
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-A2[value='1'] ~ div .sheet-ins-style-A2,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-B2[value='1'] ~ div .sheet-ins-style-B2,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-C2[value='1'] ~ div .sheet-ins-style-C2,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-D2[value='1'] ~ div .sheet-ins-style-D2,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-E2[value='1'] ~ div .sheet-ins-style-E2,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-F2[value='1'] ~ div .sheet-ins-style-F2,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-A3[value='1'] ~ div .sheet-ins-style-A3,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-B3[value='1'] ~ div .sheet-ins-style-B3,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-C3[value='1'] ~ div .sheet-ins-style-C3,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-D3[value='1'] ~ div .sheet-ins-style-D3,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-E3[value='1'] ~ div .sheet-ins-style-E3,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-F3[value='1'] ~ div .sheet-ins-style-F3,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-A4[value='1'] ~ div .sheet-ins-style-A4,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-B4[value='1'] ~ div .sheet-ins-style-B4,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-C4[value='1'] ~ div .sheet-ins-style-C4,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-D4[value='1'] ~ div .sheet-ins-style-D4,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-E4[value='1'] ~ div .sheet-ins-style-E4,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-F4[value='1'] ~ div .sheet-ins-style-F4,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-A5[value='1'] ~ div .sheet-ins-style-A5,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-B5[value='1'] ~ div .sheet-ins-style-B5,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-C5[value='1'] ~ div .sheet-ins-style-C5,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-D5[value='1'] ~ div .sheet-ins-style-D5,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-E5[value='1'] ~ div .sheet-ins-style-E5,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-F5[value='1'] ~ div .sheet-ins-style-F5,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-A6[value='1'] ~ div .sheet-ins-style-A6,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-B6[value='1'] ~ div .sheet-ins-style-B6,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-C6[value='1'] ~ div .sheet-ins-style-C6,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-D6[value='1'] ~ div .sheet-ins-style-D6,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-E6[value='1'] ~ div .sheet-ins-style-E6,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-F6[value='1'] ~ div .sheet-ins-style-F6,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-A7[value='1'] ~ div .sheet-ins-style-A7,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-B7[value='1'] ~ div .sheet-ins-style-B7,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-C7[value='1'] ~ div .sheet-ins-style-C7,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-D7[value='1'] ~ div .sheet-ins-style-D7,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-E7[value='1'] ~ div .sheet-ins-style-E7,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-F7[value='1'] ~ div .sheet-ins-style-F7,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-A8[value='1'] ~ div .sheet-ins-style-A8,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-B8[value='1'] ~ div .sheet-ins-style-B8,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-C8[value='1'] ~ div .sheet-ins-style-C8,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-D8[value='1'] ~ div .sheet-ins-style-D8,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-E8[value='1'] ~ div .sheet-ins-style-E8,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-F8[value='1'] ~ div .sheet-ins-style-F8,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-A9[value='1'] ~ div .sheet-ins-style-A9,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-B9[value='1'] ~ div .sheet-ins-style-B9,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-C9[value='1'] ~ div .sheet-ins-style-C9,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-D9[value='1'] ~ div .sheet-ins-style-D9,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-E9[value='1'] ~ div .sheet-ins-style-E9,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-F9[value='1'] ~ div .sheet-ins-style-F9,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-A10[value='1'] ~ div .sheet-ins-style-A10,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-B10[value='1'] ~ div .sheet-ins-style-B10,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-C10[value='1'] ~ div .sheet-ins-style-C10,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-D10[value='1'] ~ div .sheet-ins-style-D10,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-E10[value='1'] ~ div .sheet-ins-style-E10,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-F10[value='1'] ~ div .sheet-ins-style-F10,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-A11[value='1'] ~ div .sheet-ins-style-A11,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-B11[value='1'] ~ div .sheet-ins-style-B11,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-C11[value='1'] ~ div .sheet-ins-style-C11,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-D11[value='1'] ~ div .sheet-ins-style-D11,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-E11[value='1'] ~ div .sheet-ins-style-E11,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-F11[value='1'] ~ div .sheet-ins-style-F11,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-A12[value='1'] ~ div .sheet-ins-style-A12,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-B12[value='1'] ~ div .sheet-ins-style-B12,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12,
+.charsheet .sheet-chk-theme-position[value="3"] ~ .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:rgba(153,153,153,.5);}
 
 
 /* 현무 */
-.sheet-chk-theme-position[value="4"] ~ .sheet-wrap {background:url('https://i.imgur.com/leSdOSS.jpg') #2d2831;}
-.sheet-chk-theme-position[value="4"] ~ .sheet-wrap .sheet-logo {background-image:url('https://i.imgur.com/F8cr9bW.png');}
-.sheet-chk-theme-position[value="4"] ~ .sheet-wrap .sheet-spectable table {border-color:rgba(45,40,49,.3);}
-.sheet-chk-theme-position[value="4"] ~ .sheet-wrap .sheet-spectable table td {border-color:rgba(45,40,49,.3);}
-.sheet-chk-theme-position[value="4"] ~ .sheet-wrap .sheet-spectable table th {background:#2d2831;}
-.sheet-chk-theme-position[value="4"] ~ .sheet-wrap .sheet-fight-wrap {background-image:url('https://i.imgur.com/q1ItgwA.png');}
-.sheet-chk-theme-position[value="4"] ~ .sheet-wrap .sheet-ab-item > input[type="checkbox"] + *:before {border-color:#2d2831;}
-.sheet-chk-theme-position[value="4"] ~ .sheet-wrap .sheet-ab-item > input[type="checkbox"]:checked + *:before {background:#2d2831;}
-.sheet-chk-theme-position[value="4"] ~ .sheet-wrap .sheet-ab-item .sheet-option input[type="checkbox"] + span:before {border-color:#2d2831;}
-.sheet-chk-theme-position[value="4"] ~ .sheet-wrap .sheet-ab-item .sheet-option > input[type="checkbox"]:checked + *:before {background:#2d2831;}
-.sheet-chk-theme-position[value="4"] ~ .sheet-wrap .sheet-ab-item .sheet-effect:before {background:#2d2831;}
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-determine-style-A[value='1'] ~ div .sheet-ins-style-A {background:#2d2831;}
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-determine-style-B[value='1'] ~ div .sheet-ins-style-B {background:#2d2831;}
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-determine-style-C[value='1'] ~ div .sheet-ins-style-C {background:#2d2831;}
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-determine-style-D[value='1'] ~ div .sheet-ins-style-D {background:#2d2831;}
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-determine-style-E[value='1'] ~ div .sheet-ins-style-E {background:#2d2831;}
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-A2[value='1'] ~ div .sheet-ins-style-A2,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-B2[value='1'] ~ div .sheet-ins-style-B2,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-C2[value='1'] ~ div .sheet-ins-style-C2,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-D2[value='1'] ~ div .sheet-ins-style-D2,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-E2[value='1'] ~ div .sheet-ins-style-E2,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-F2[value='1'] ~ div .sheet-ins-style-F2,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-A3[value='1'] ~ div .sheet-ins-style-A3,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-B3[value='1'] ~ div .sheet-ins-style-B3,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-C3[value='1'] ~ div .sheet-ins-style-C3,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-D3[value='1'] ~ div .sheet-ins-style-D3,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-E3[value='1'] ~ div .sheet-ins-style-E3,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-F3[value='1'] ~ div .sheet-ins-style-F3,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-A4[value='1'] ~ div .sheet-ins-style-A4,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-B4[value='1'] ~ div .sheet-ins-style-B4,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-C4[value='1'] ~ div .sheet-ins-style-C4,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-D4[value='1'] ~ div .sheet-ins-style-D4,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-E4[value='1'] ~ div .sheet-ins-style-E4,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-F4[value='1'] ~ div .sheet-ins-style-F4,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-A5[value='1'] ~ div .sheet-ins-style-A5,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-B5[value='1'] ~ div .sheet-ins-style-B5,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-C5[value='1'] ~ div .sheet-ins-style-C5,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-D5[value='1'] ~ div .sheet-ins-style-D5,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-E5[value='1'] ~ div .sheet-ins-style-E5,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-F5[value='1'] ~ div .sheet-ins-style-F5,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-A6[value='1'] ~ div .sheet-ins-style-A6,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-B6[value='1'] ~ div .sheet-ins-style-B6,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-C6[value='1'] ~ div .sheet-ins-style-C6,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-D6[value='1'] ~ div .sheet-ins-style-D6,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-E6[value='1'] ~ div .sheet-ins-style-E6,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-F6[value='1'] ~ div .sheet-ins-style-F6,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-A7[value='1'] ~ div .sheet-ins-style-A7,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-B7[value='1'] ~ div .sheet-ins-style-B7,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-C7[value='1'] ~ div .sheet-ins-style-C7,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-D7[value='1'] ~ div .sheet-ins-style-D7,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-E7[value='1'] ~ div .sheet-ins-style-E7,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-F7[value='1'] ~ div .sheet-ins-style-F7,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-A8[value='1'] ~ div .sheet-ins-style-A8,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-B8[value='1'] ~ div .sheet-ins-style-B8,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-C8[value='1'] ~ div .sheet-ins-style-C8,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-D8[value='1'] ~ div .sheet-ins-style-D8,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-E8[value='1'] ~ div .sheet-ins-style-E8,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-F8[value='1'] ~ div .sheet-ins-style-F8,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-A9[value='1'] ~ div .sheet-ins-style-A9,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-B9[value='1'] ~ div .sheet-ins-style-B9,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-C9[value='1'] ~ div .sheet-ins-style-C9,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-D9[value='1'] ~ div .sheet-ins-style-D9,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-E9[value='1'] ~ div .sheet-ins-style-E9,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-F9[value='1'] ~ div .sheet-ins-style-F9,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-A10[value='1'] ~ div .sheet-ins-style-A10,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-B10[value='1'] ~ div .sheet-ins-style-B10,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-C10[value='1'] ~ div .sheet-ins-style-C10,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-D10[value='1'] ~ div .sheet-ins-style-D10,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-E10[value='1'] ~ div .sheet-ins-style-E10,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-F10[value='1'] ~ div .sheet-ins-style-F10,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-A11[value='1'] ~ div .sheet-ins-style-A11,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-B11[value='1'] ~ div .sheet-ins-style-B11,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-C11[value='1'] ~ div .sheet-ins-style-C11,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-D11[value='1'] ~ div .sheet-ins-style-D11,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-E11[value='1'] ~ div .sheet-ins-style-E11,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-F11[value='1'] ~ div .sheet-ins-style-F11,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-A12[value='1'] ~ div .sheet-ins-style-A12,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-B12[value='1'] ~ div .sheet-ins-style-B12,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12,
-.sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:rgba(45,40,49,.5);}
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-wrap {background:url('https://i.imgur.com/leSdOSS.jpg') #2d2831;}
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-wrap .sheet-logo {background-image:url('https://i.imgur.com/F8cr9bW.png');}
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-wrap .sheet-spectable table {border-color:rgba(45,40,49,.3);}
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-wrap .sheet-spectable table td {border-color:rgba(45,40,49,.3);}
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-wrap .sheet-spectable table th {background:#2d2831;}
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-wrap .sheet-fight-wrap {background-image:url('https://i.imgur.com/q1ItgwA.png');}
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-wrap .sheet-ab-item > input[type="checkbox"] + *:before {border-color:#2d2831;}
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-wrap .sheet-ab-item > input[type="checkbox"]:checked + *:before {background:#2d2831;}
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-wrap .sheet-ab-item .sheet-option input[type="checkbox"] + span:before {border-color:#2d2831;}
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-wrap .sheet-ab-item .sheet-option > input[type="checkbox"]:checked + *:before {background:#2d2831;}
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-wrap .sheet-ab-item .sheet-effect:before {background:#2d2831;}
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-determine-style-A[value='1'] ~ div .sheet-ins-style-A {background:#2d2831;}
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-determine-style-B[value='1'] ~ div .sheet-ins-style-B {background:#2d2831;}
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-determine-style-C[value='1'] ~ div .sheet-ins-style-C {background:#2d2831;}
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-determine-style-D[value='1'] ~ div .sheet-ins-style-D {background:#2d2831;}
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-determine-style-E[value='1'] ~ div .sheet-ins-style-E {background:#2d2831;}
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-A2[value='1'] ~ div .sheet-ins-style-A2,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-B2[value='1'] ~ div .sheet-ins-style-B2,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-C2[value='1'] ~ div .sheet-ins-style-C2,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-D2[value='1'] ~ div .sheet-ins-style-D2,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-E2[value='1'] ~ div .sheet-ins-style-E2,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-F2[value='1'] ~ div .sheet-ins-style-F2,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-A3[value='1'] ~ div .sheet-ins-style-A3,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-B3[value='1'] ~ div .sheet-ins-style-B3,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-C3[value='1'] ~ div .sheet-ins-style-C3,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-D3[value='1'] ~ div .sheet-ins-style-D3,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-E3[value='1'] ~ div .sheet-ins-style-E3,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-F3[value='1'] ~ div .sheet-ins-style-F3,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-A4[value='1'] ~ div .sheet-ins-style-A4,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-B4[value='1'] ~ div .sheet-ins-style-B4,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-C4[value='1'] ~ div .sheet-ins-style-C4,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-D4[value='1'] ~ div .sheet-ins-style-D4,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-E4[value='1'] ~ div .sheet-ins-style-E4,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-F4[value='1'] ~ div .sheet-ins-style-F4,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-A5[value='1'] ~ div .sheet-ins-style-A5,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-B5[value='1'] ~ div .sheet-ins-style-B5,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-C5[value='1'] ~ div .sheet-ins-style-C5,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-D5[value='1'] ~ div .sheet-ins-style-D5,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-E5[value='1'] ~ div .sheet-ins-style-E5,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-F5[value='1'] ~ div .sheet-ins-style-F5,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-A6[value='1'] ~ div .sheet-ins-style-A6,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-B6[value='1'] ~ div .sheet-ins-style-B6,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-C6[value='1'] ~ div .sheet-ins-style-C6,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-D6[value='1'] ~ div .sheet-ins-style-D6,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-E6[value='1'] ~ div .sheet-ins-style-E6,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-F6[value='1'] ~ div .sheet-ins-style-F6,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-A7[value='1'] ~ div .sheet-ins-style-A7,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-B7[value='1'] ~ div .sheet-ins-style-B7,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-C7[value='1'] ~ div .sheet-ins-style-C7,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-D7[value='1'] ~ div .sheet-ins-style-D7,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-E7[value='1'] ~ div .sheet-ins-style-E7,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-F7[value='1'] ~ div .sheet-ins-style-F7,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-A8[value='1'] ~ div .sheet-ins-style-A8,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-B8[value='1'] ~ div .sheet-ins-style-B8,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-C8[value='1'] ~ div .sheet-ins-style-C8,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-D8[value='1'] ~ div .sheet-ins-style-D8,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-E8[value='1'] ~ div .sheet-ins-style-E8,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-F8[value='1'] ~ div .sheet-ins-style-F8,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-A9[value='1'] ~ div .sheet-ins-style-A9,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-B9[value='1'] ~ div .sheet-ins-style-B9,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-C9[value='1'] ~ div .sheet-ins-style-C9,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-D9[value='1'] ~ div .sheet-ins-style-D9,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-E9[value='1'] ~ div .sheet-ins-style-E9,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-F9[value='1'] ~ div .sheet-ins-style-F9,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-A10[value='1'] ~ div .sheet-ins-style-A10,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-B10[value='1'] ~ div .sheet-ins-style-B10,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-C10[value='1'] ~ div .sheet-ins-style-C10,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-D10[value='1'] ~ div .sheet-ins-style-D10,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-E10[value='1'] ~ div .sheet-ins-style-E10,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-F10[value='1'] ~ div .sheet-ins-style-F10,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-A11[value='1'] ~ div .sheet-ins-style-A11,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-B11[value='1'] ~ div .sheet-ins-style-B11,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-C11[value='1'] ~ div .sheet-ins-style-C11,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-D11[value='1'] ~ div .sheet-ins-style-D11,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-E11[value='1'] ~ div .sheet-ins-style-E11,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-F11[value='1'] ~ div .sheet-ins-style-F11,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-A12[value='1'] ~ div .sheet-ins-style-A12,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-B12[value='1'] ~ div .sheet-ins-style-B12,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12,
+.charsheet .sheet-chk-theme-position[value="4"] ~ .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:rgba(45,40,49,.5);}
 
 
 /* 요괴 */
-.sheet-chk-theme-position[value="5"] ~ .sheet-wrap {background:url('https://i.imgur.com/4wsWkOb.jpg') #293b25;}
-.sheet-chk-theme-position[value="5"] ~ .sheet-wrap .sheet-logo {background-image:url('https://i.imgur.com/i80Q1TB.png');}
-.sheet-chk-theme-position[value="5"] ~ .sheet-wrap .sheet-spectable table {border-color:rgba(41,59,37,.3);}
-.sheet-chk-theme-position[value="5"] ~ .sheet-wrap .sheet-spectable table td {border-color:rgba(41,59,37,.3);}
-.sheet-chk-theme-position[value="5"] ~ .sheet-wrap .sheet-spectable table th {background:#293b25;}
-.sheet-chk-theme-position[value="5"] ~ .sheet-wrap .sheet-fight-wrap {background-image:url('https://i.imgur.com/9KHsz9J.png');}
-.sheet-chk-theme-position[value="5"] ~ .sheet-wrap .sheet-ab-item > input[type="checkbox"] + *:before {border-color:#293b25;}
-.sheet-chk-theme-position[value="5"] ~ .sheet-wrap .sheet-ab-item > input[type="checkbox"]:checked + *:before {background:#293b25;}
-.sheet-chk-theme-position[value="5"] ~ .sheet-wrap .sheet-ab-item .sheet-option input[type="checkbox"] + span:before {border-color:#293b25;}
-.sheet-chk-theme-position[value="5"] ~ .sheet-wrap .sheet-ab-item .sheet-option > input[type="checkbox"]:checked + *:before {background:#293b25;}
-.sheet-chk-theme-position[value="5"] ~ .sheet-wrap .sheet-ab-item .sheet-effect:before {background:#293b25;}
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-determine-style-A[value='1'] ~ div .sheet-ins-style-A {background:#293b25;}
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-determine-style-B[value='1'] ~ div .sheet-ins-style-B {background:#293b25;}
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-determine-style-C[value='1'] ~ div .sheet-ins-style-C {background:#293b25;}
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-determine-style-D[value='1'] ~ div .sheet-ins-style-D {background:#293b25;}
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-determine-style-E[value='1'] ~ div .sheet-ins-style-E {background:#293b25;}
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-A2[value='1'] ~ div .sheet-ins-style-A2,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-B2[value='1'] ~ div .sheet-ins-style-B2,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-C2[value='1'] ~ div .sheet-ins-style-C2,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-D2[value='1'] ~ div .sheet-ins-style-D2,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-E2[value='1'] ~ div .sheet-ins-style-E2,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-F2[value='1'] ~ div .sheet-ins-style-F2,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-A3[value='1'] ~ div .sheet-ins-style-A3,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-B3[value='1'] ~ div .sheet-ins-style-B3,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-C3[value='1'] ~ div .sheet-ins-style-C3,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-D3[value='1'] ~ div .sheet-ins-style-D3,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-E3[value='1'] ~ div .sheet-ins-style-E3,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-F3[value='1'] ~ div .sheet-ins-style-F3,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-A4[value='1'] ~ div .sheet-ins-style-A4,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-B4[value='1'] ~ div .sheet-ins-style-B4,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-C4[value='1'] ~ div .sheet-ins-style-C4,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-D4[value='1'] ~ div .sheet-ins-style-D4,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-E4[value='1'] ~ div .sheet-ins-style-E4,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-F4[value='1'] ~ div .sheet-ins-style-F4,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-A5[value='1'] ~ div .sheet-ins-style-A5,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-B5[value='1'] ~ div .sheet-ins-style-B5,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-C5[value='1'] ~ div .sheet-ins-style-C5,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-D5[value='1'] ~ div .sheet-ins-style-D5,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-E5[value='1'] ~ div .sheet-ins-style-E5,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-F5[value='1'] ~ div .sheet-ins-style-F5,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-A6[value='1'] ~ div .sheet-ins-style-A6,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-B6[value='1'] ~ div .sheet-ins-style-B6,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-C6[value='1'] ~ div .sheet-ins-style-C6,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-D6[value='1'] ~ div .sheet-ins-style-D6,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-E6[value='1'] ~ div .sheet-ins-style-E6,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-F6[value='1'] ~ div .sheet-ins-style-F6,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-A7[value='1'] ~ div .sheet-ins-style-A7,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-B7[value='1'] ~ div .sheet-ins-style-B7,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-C7[value='1'] ~ div .sheet-ins-style-C7,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-D7[value='1'] ~ div .sheet-ins-style-D7,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-E7[value='1'] ~ div .sheet-ins-style-E7,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-F7[value='1'] ~ div .sheet-ins-style-F7,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-A8[value='1'] ~ div .sheet-ins-style-A8,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-B8[value='1'] ~ div .sheet-ins-style-B8,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-C8[value='1'] ~ div .sheet-ins-style-C8,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-D8[value='1'] ~ div .sheet-ins-style-D8,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-E8[value='1'] ~ div .sheet-ins-style-E8,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-F8[value='1'] ~ div .sheet-ins-style-F8,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-A9[value='1'] ~ div .sheet-ins-style-A9,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-B9[value='1'] ~ div .sheet-ins-style-B9,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-C9[value='1'] ~ div .sheet-ins-style-C9,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-D9[value='1'] ~ div .sheet-ins-style-D9,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-E9[value='1'] ~ div .sheet-ins-style-E9,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-F9[value='1'] ~ div .sheet-ins-style-F9,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-A10[value='1'] ~ div .sheet-ins-style-A10,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-B10[value='1'] ~ div .sheet-ins-style-B10,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-C10[value='1'] ~ div .sheet-ins-style-C10,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-D10[value='1'] ~ div .sheet-ins-style-D10,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-E10[value='1'] ~ div .sheet-ins-style-E10,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-F10[value='1'] ~ div .sheet-ins-style-F10,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-A11[value='1'] ~ div .sheet-ins-style-A11,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-B11[value='1'] ~ div .sheet-ins-style-B11,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-C11[value='1'] ~ div .sheet-ins-style-C11,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-D11[value='1'] ~ div .sheet-ins-style-D11,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-E11[value='1'] ~ div .sheet-ins-style-E11,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-F11[value='1'] ~ div .sheet-ins-style-F11,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-A12[value='1'] ~ div .sheet-ins-style-A12,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-B12[value='1'] ~ div .sheet-ins-style-B12,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12,
-.sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:rgba(41,59,37,.5);}
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-wrap {background:url('https://i.imgur.com/4wsWkOb.jpg') #293b25;}
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-wrap .sheet-logo {background-image:url('https://i.imgur.com/i80Q1TB.png');}
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-wrap .sheet-spectable table {border-color:rgba(41,59,37,.3);}
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-wrap .sheet-spectable table td {border-color:rgba(41,59,37,.3);}
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-wrap .sheet-spectable table th {background:#293b25;}
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-wrap .sheet-fight-wrap {background-image:url('https://i.imgur.com/9KHsz9J.png');}
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-wrap .sheet-ab-item > input[type="checkbox"] + *:before {border-color:#293b25;}
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-wrap .sheet-ab-item > input[type="checkbox"]:checked + *:before {background:#293b25;}
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-wrap .sheet-ab-item .sheet-option input[type="checkbox"] + span:before {border-color:#293b25;}
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-wrap .sheet-ab-item .sheet-option > input[type="checkbox"]:checked + *:before {background:#293b25;}
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-wrap .sheet-ab-item .sheet-effect:before {background:#293b25;}
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-determine-style-A[value='1'] ~ div .sheet-ins-style-A {background:#293b25;}
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-determine-style-B[value='1'] ~ div .sheet-ins-style-B {background:#293b25;}
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-determine-style-C[value='1'] ~ div .sheet-ins-style-C {background:#293b25;}
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-determine-style-D[value='1'] ~ div .sheet-ins-style-D {background:#293b25;}
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-determine-style-E[value='1'] ~ div .sheet-ins-style-E {background:#293b25;}
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-A2[value='1'] ~ div .sheet-ins-style-A2,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-B2[value='1'] ~ div .sheet-ins-style-B2,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-C2[value='1'] ~ div .sheet-ins-style-C2,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-D2[value='1'] ~ div .sheet-ins-style-D2,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-E2[value='1'] ~ div .sheet-ins-style-E2,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-F2[value='1'] ~ div .sheet-ins-style-F2,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-A3[value='1'] ~ div .sheet-ins-style-A3,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-B3[value='1'] ~ div .sheet-ins-style-B3,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-C3[value='1'] ~ div .sheet-ins-style-C3,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-D3[value='1'] ~ div .sheet-ins-style-D3,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-E3[value='1'] ~ div .sheet-ins-style-E3,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-F3[value='1'] ~ div .sheet-ins-style-F3,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-A4[value='1'] ~ div .sheet-ins-style-A4,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-B4[value='1'] ~ div .sheet-ins-style-B4,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-C4[value='1'] ~ div .sheet-ins-style-C4,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-D4[value='1'] ~ div .sheet-ins-style-D4,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-E4[value='1'] ~ div .sheet-ins-style-E4,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-F4[value='1'] ~ div .sheet-ins-style-F4,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-A5[value='1'] ~ div .sheet-ins-style-A5,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-B5[value='1'] ~ div .sheet-ins-style-B5,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-C5[value='1'] ~ div .sheet-ins-style-C5,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-D5[value='1'] ~ div .sheet-ins-style-D5,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-E5[value='1'] ~ div .sheet-ins-style-E5,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-F5[value='1'] ~ div .sheet-ins-style-F5,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-A6[value='1'] ~ div .sheet-ins-style-A6,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-B6[value='1'] ~ div .sheet-ins-style-B6,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-C6[value='1'] ~ div .sheet-ins-style-C6,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-D6[value='1'] ~ div .sheet-ins-style-D6,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-E6[value='1'] ~ div .sheet-ins-style-E6,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-F6[value='1'] ~ div .sheet-ins-style-F6,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-A7[value='1'] ~ div .sheet-ins-style-A7,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-B7[value='1'] ~ div .sheet-ins-style-B7,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-C7[value='1'] ~ div .sheet-ins-style-C7,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-D7[value='1'] ~ div .sheet-ins-style-D7,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-E7[value='1'] ~ div .sheet-ins-style-E7,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-F7[value='1'] ~ div .sheet-ins-style-F7,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-A8[value='1'] ~ div .sheet-ins-style-A8,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-B8[value='1'] ~ div .sheet-ins-style-B8,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-C8[value='1'] ~ div .sheet-ins-style-C8,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-D8[value='1'] ~ div .sheet-ins-style-D8,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-E8[value='1'] ~ div .sheet-ins-style-E8,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-F8[value='1'] ~ div .sheet-ins-style-F8,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-A9[value='1'] ~ div .sheet-ins-style-A9,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-B9[value='1'] ~ div .sheet-ins-style-B9,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-C9[value='1'] ~ div .sheet-ins-style-C9,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-D9[value='1'] ~ div .sheet-ins-style-D9,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-E9[value='1'] ~ div .sheet-ins-style-E9,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-F9[value='1'] ~ div .sheet-ins-style-F9,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-A10[value='1'] ~ div .sheet-ins-style-A10,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-B10[value='1'] ~ div .sheet-ins-style-B10,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-C10[value='1'] ~ div .sheet-ins-style-C10,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-D10[value='1'] ~ div .sheet-ins-style-D10,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-E10[value='1'] ~ div .sheet-ins-style-E10,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-F10[value='1'] ~ div .sheet-ins-style-F10,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-A11[value='1'] ~ div .sheet-ins-style-A11,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-B11[value='1'] ~ div .sheet-ins-style-B11,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-C11[value='1'] ~ div .sheet-ins-style-C11,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-D11[value='1'] ~ div .sheet-ins-style-D11,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-E11[value='1'] ~ div .sheet-ins-style-E11,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-F11[value='1'] ~ div .sheet-ins-style-F11,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-A12[value='1'] ~ div .sheet-ins-style-A12,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-B12[value='1'] ~ div .sheet-ins-style-B12,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12,
+.charsheet .sheet-chk-theme-position[value="5"] ~ .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:rgba(41,59,37,.5);}
 
 
 
@@ -502,268 +509,268 @@ select, div, button, textarea, span, input, img, label{box-sizing: border-box; o
 /**********************************************************************
 	Profile Box
 **********************************************************************/
-.sheet-profile {display:block; position:absolute; top:17px; left:65px; width:265px; z-index:2;}
-.sheet-profile .sheet-name {padding-right:30px; margin-bottom:8px;}
-.sheet-profile .sheet-name input {height:20px;}
-.sheet-profile .sheet-name input + input {height:40px; border-bottom:1px solid rgba(0,0,0,.4); font-size:20px;}
-.sheet-profile .sheet-age {margin-bottom:8px; white-space:nowrap;}
-.sheet-profile .sheet-age input {height:30px; border-bottom:1px solid rgba(0,0,0,.4);}
-.sheet-profile .sheet-age select {width:70px; border-bottom:1px solid rgba(0,0,0,.4);}
-.sheet-profile .sheet-age > * {display:inline-block; vertical-align:middle;}
-.sheet-profile .sheet-age .sheet-dot {padding:0 10px;}
-.sheet-profile .sheet-heart {white-space:nowrap;}
-.sheet-profile .sheet-heart > * {display:inline-block; vertical-align:middle;}
-.sheet-profile .sheet-heart input {width:220px; border-bottom:1px solid rgba(0,0,0,.4);}
-.sheet-profile .sheet-heart strong {padding-left:0; padding-right:5px; font-weight:600;}
+.charsheet .sheet-profile {display:block; position:absolute; top:17px; left:65px; width:265px; z-index:2;}
+.charsheet .sheet-profile .sheet-name {padding-right:30px; margin-bottom:8px;}
+.charsheet .sheet-profile .sheet-name input {height:20px;}
+.charsheet .sheet-profile .sheet-name input + input {height:40px; border-bottom:1px solid rgba(0,0,0,.4); font-size:20px;}
+.charsheet .sheet-profile .sheet-age {margin-bottom:8px; white-space:nowrap;}
+.charsheet .sheet-profile .sheet-age input {height:30px; border-bottom:1px solid rgba(0,0,0,.4);}
+.charsheet .sheet-profile .sheet-age select {width:70px; border-bottom:1px solid rgba(0,0,0,.4);}
+.charsheet .sheet-profile .sheet-age > * {display:inline-block; vertical-align:middle;}
+.charsheet .sheet-profile .sheet-age .sheet-dot {padding:0 10px;}
+.charsheet .sheet-profile .sheet-heart {white-space:nowrap;}
+.charsheet .sheet-profile .sheet-heart > * {display:inline-block; vertical-align:middle;}
+.charsheet .sheet-profile .sheet-heart input {width:220px; border-bottom:1px solid rgba(0,0,0,.4);}
+.charsheet .sheet-profile .sheet-heart strong {padding-left:0; padding-right:5px; font-weight:600;}
 
-.sheet-profile .sheet-name input + input:focus,
-.sheet-profile .sheet-age input:focus,
-.sheet-profile .sheet-age select:focus,
-.sheet-profile .sheet-heart input:focus {border-bottom-color:rgba(0,0,0,1);}
+.charsheet .sheet-profile .sheet-name input + input:focus,
+.charsheet .sheet-profile .sheet-age input:focus,
+.charsheet .sheet-profile .sheet-age select:focus,
+.charsheet .sheet-profile .sheet-heart input:focus {border-bottom-color:rgba(0,0,0,1);}
 
 /**********************************************************************
 	Status Box
 **********************************************************************/
-.sheet-status {display:block; position:absolute; top:47px; right:65px; width:265px; z-index:2;}
-.sheet-status .sheet-grade {display:block; position:absolute; top:0; right:0; width:70px; text-align:center;}
-.sheet-status .sheet-grade input {height:55px; text-align:center; font-size:30px;}
-.sheet-status .sheet-group {float:right; margin-right:90px; white-space:nowrap; margin-bottom:8px;}
-.sheet-status .sheet-group > * {display:inline-block; vertical-align:middle;}
-.sheet-status .sheet-group strong {padding-right:5px;}
-.sheet-status .sheet-group input {width:40px; text-align:center; border-bottom:1px solid rgba(0,0,0,.4);}
-.sheet-status .sheet-group input:focus {border-bottom-color:rgba(0,0,0,1);}
-.sheet-status .sheet-items {display:block; position:relative; clear:both; margin-top:-4px;}
-.sheet-status .sheet-items > * {display:inline-block; vertical-align:top;}
-.sheet-status .sheet-items input {width:60px; border-bottom:1px solid rgba(0,0,0,.4); text-align:center;}
-.sheet-status .sheet-items span {margin:0 -5px;}
-.sheet-status .sheet-items input:focus {border-bottom-color:rgba(0,0,0,1);}
+.charsheet .sheet-status {display:block; position:absolute; top:47px; right:65px; width:265px; z-index:2;}
+.charsheet .sheet-status .sheet-grade {display:block; position:absolute; top:0; right:0; width:70px; text-align:center;}
+.charsheet .sheet-status .sheet-grade input {height:55px; text-align:center; font-size:30px;}
+.charsheet .sheet-status .sheet-group {float:right; margin-right:90px; white-space:nowrap; margin-bottom:8px;}
+.charsheet .sheet-status .sheet-group > * {display:inline-block; vertical-align:middle;}
+.charsheet .sheet-status .sheet-group strong {padding-right:5px;}
+.charsheet .sheet-status .sheet-group input {width:40px; text-align:center; border-bottom:1px solid rgba(0,0,0,.4);}
+.charsheet .sheet-status .sheet-group input:focus {border-bottom-color:rgba(0,0,0,1);}
+.charsheet .sheet-status .sheet-items {display:block; position:relative; clear:both; margin-top:-4px;}
+.charsheet .sheet-status .sheet-items > * {display:inline-block; vertical-align:top;}
+.charsheet .sheet-status .sheet-items input {width:60px; border-bottom:1px solid rgba(0,0,0,.4); text-align:center;}
+.charsheet .sheet-status .sheet-items span {margin:0 -5px;}
+.charsheet .sheet-status .sheet-items input:focus {border-bottom-color:rgba(0,0,0,1);}
 
 
 /**********************************************************************
 	Random Box
 **********************************************************************/
-.sheet-random-wrap {display:block; position:relative; height:220px; z-index:0; padding:170px 35px 0;}
-.sheet-random {display:block; position:relative; margin-top:6px; white-space:nowrap;}
-.sheet-random > * {display:inline-block; vertical-align:middle; height:31px; box-sizing:border-box;}
-.sheet-random strong {width:61px; text-align:center; color:#fff; font-size:13px; line-height:31px; background:url('https://i.imgur.com/4xuvsx6.png') no-repeat 50% 50%;}
-.sheet-random strong.sheet-ty2 {width:72px; background-image:url('https://i.imgur.com/k1ofTqY.png');}
-.sheet-random * ~ strong {margin-left:5px;}
-.sheet-random select,
-.sheet-random input[type="text"] {color:#fff; text-align:center;}
-.sheet-random input[type="text"] {border-bottom:1px solid #fff;}
-.sheet-random select {background-image:url('https://i.imgur.com/TjukpNT.png');}
-.sheet-random .sheet-gm {display:inline-block; position:relative; height:35px; top:0; right:0; width:60px;}
-.sheet-random .sheet-gm em {display:block; position:absolute; top:5px; left:0; width:30px; height:25px; line-height:25px; border-radius:5px; background:rgba(255,255,255,.1); font-style:normal; text-align:center; z-index:0; color:#fff; font-weight:800;}
-.sheet-random .sheet-gm input[type="checkbox"] {display:block; position:relative; width:30px; height:100%; z-index:1; opacity:0; cursor:pointer; float:left;}
-.sheet-random .sheet-gm input[type="checkbox"]:checked + em {background:#d3a574;}
-.sheet-random .sheet-gm .sheet-dice {position:absolute; top:5px; right:0; width:25px; height:25px;}
-.sheet-random .sheet-gm .sheet-gm-dice {display:none;}
-.sheet-random .sheet-gm input[type="checkbox"]:checked ~ .sheet-open-dice {display:none;}
-.sheet-random .sheet-gm input[type="checkbox"]:checked ~ .sheet-gm-dice {display:block;}
+.charsheet .sheet-random-wrap {display:block; position:relative; height:220px; z-index:0; padding:170px 35px 0;}
+.charsheet .sheet-random {display:block; position:relative; margin-top:6px; white-space:nowrap;}
+.charsheet .sheet-random > * {display:inline-block; vertical-align:middle; height:31px; box-sizing:border-box;}
+.charsheet .sheet-random strong {width:61px; text-align:center; color:#fff; font-size:13px; line-height:31px; background:url('https://i.imgur.com/4xuvsx6.png') no-repeat 50% 50%;}
+.charsheet .sheet-random strong.sheet-ty2 {width:72px; background-image:url('https://i.imgur.com/k1ofTqY.png');}
+.charsheet .sheet-random * ~ strong {margin-left:5px;}
+.charsheet .sheet-random select,
+.charsheet .sheet-random input[type="text"] {color:#fff; text-align:center;}
+.charsheet .sheet-random input[type="text"] {border-bottom:1px solid #fff;}
+.charsheet .sheet-random select {background-image:url('https://i.imgur.com/TjukpNT.png');}
+.charsheet .sheet-random .sheet-gm {display:inline-block; position:relative; height:35px; top:0; right:0; width:60px;}
+.charsheet .sheet-random .sheet-gm em {display:block; position:absolute; top:5px; left:0; width:30px; height:25px; line-height:25px; border-radius:5px; background:rgba(255,255,255,.1); font-style:normal; text-align:center; z-index:0; color:#fff; font-weight:800;}
+.charsheet .sheet-random .sheet-gm input[type="checkbox"] {display:block; position:relative; width:30px; height:100%; z-index:1; opacity:0; cursor:pointer; float:left;}
+.charsheet .sheet-random .sheet-gm input[type="checkbox"]:checked + em {background:#d3a574;}
+.charsheet .sheet-random .sheet-gm .sheet-dice {position:absolute; top:5px; right:0; width:25px; height:25px;}
+.charsheet .sheet-random .sheet-gm .sheet-gm-dice {display:none;}
+.charsheet .sheet-random .sheet-gm input[type="checkbox"]:checked ~ .sheet-open-dice {display:none;}
+.charsheet .sheet-random .sheet-gm input[type="checkbox"]:checked ~ .sheet-gm-dice {display:block;}
 
 
 /**********************************************************************
 	Spectable Box
 **********************************************************************/
 
-.sheet-spectable {padding:10px 0;}
-.sheet-spectable table {width:100%; font-size:12px; border-spacing:0; border-collapse:collapse; border:1px solid rgba(158,128,141,.3);}
-.sheet-spectable table td {border:1px solid rgba(158,128,141,.3); padding:0;}
-.sheet-spectable table th {border:1px solid rgba(255,255,255,.3); color:#fff; text-align:center; background:#9e808d;}
-.sheet-spectable table tr > *:first-child {border-left-width:0 !important;}
-.sheet-spectable table tr > *:last-child {border-right-width:0 !important;}
-.sheet-spectable table tr {background:rgba(255,255,255,.6);}
-.sheet-spectable table tr:nth-child(even) {background:rgba(255,255,255,.2);}
-.sheet-spectable table thead th {padding:8px 0; border-top-width:0;}
-.sheet-spectable table tbody > tr:hover {background:rgba(255,255,255,1);}
-.sheet-spectable table tbody > tr:last-child > * {border-bottom-width:0 !important;}
+.charsheet .sheet-spectable {padding:10px 0;}
+.charsheet .sheet-spectable table {width:100%; font-size:12px; border-spacing:0; border-collapse:collapse; border:1px solid rgba(158,128,141,.3);}
+.charsheet .sheet-spectable table td {border:1px solid rgba(158,128,141,.3); padding:0;}
+.charsheet .sheet-spectable table th {border:1px solid rgba(255,255,255,.3); color:#fff; text-align:center; background:#9e808d;}
+.charsheet .sheet-spectable table tr > *:first-child {border-left-width:0 !important;}
+.charsheet .sheet-spectable table tr > *:last-child {border-right-width:0 !important;}
+.charsheet .sheet-spectable table tr {background:rgba(255,255,255,.6);}
+.charsheet .sheet-spectable table tr:nth-child(even) {background:rgba(255,255,255,.2);}
+.charsheet .sheet-spectable table thead th {padding:8px 0; border-top-width:0;}
+.charsheet .sheet-spectable table tbody > tr:hover {background:rgba(255,255,255,1);}
+.charsheet .sheet-spectable table tbody > tr:last-child > * {border-bottom-width:0 !important;}
 /*.sheet-spectable .sheet-ins-style-Z {display:none; background:#b39353;}*/
 
-.sheet-spectable p {display:block; position:relative; width:115px; height:30px; box-sizing:border-box; padding: 0 20px 0 0; z-index:0;}
-.sheet-spectable p input[type="checkbox"] {display:block; position:absolute; top:0; left:0; width:20px; height:30px; border:none; background:#d5a776; margin:0; opacity:0; z-index:1; cursor:pointer;}
-.sheet-spectable p input[type="text"] {display:block; position:absolute; top:0; right:0; width:20px; height:30px; border:none; background:transparent; border-radius:0; text-align:right; padding:2px; text-align:center; border-left:1px solid rgba(0,0,0,.1); color:#666; font-size:11px;}
-.sheet-spectable .sheet-spec-roll {display:block; position:relative; width:100% !important; height:100% !important; padding:0 0 0 20px !important; border:none !important; background:transparent !important; z-index:0; margin:0 !important; font-size:12px !important; color:#000 !important; font-weight:600 !important; text-shadow: none;}
-.sheet-spectable .sheet-spec-roll:before {content:"" !important; display:block; position:absolute; top:50%; left:5px; width:12px; height:12px; box-sizing:border-box; margin-top:-7px; border:1px solid #e8c06e; transform:rotate(-45deg); -webkit-transform:rotate(-45deg);}
-.sheet-spectable .sheet-spec-roll:after {content:"" !important; display:block; position:absolute; top:0; bottom:0; left:0px; width:20px; background:rgba(0,0,0,.2); opacity:0;}
-.sheet-spectable p input[type="checkbox"]:checked + .sheet-spec-roll:before {background:#d5a776; border-color:#d5a776;}
-.sheet-spectable p input[type="checkbox"]:hover + .sheet-spec-roll:after {opacity:1;}
+.charsheet .sheet-spectable p {display:block; position:relative; width:115px; height:30px; box-sizing:border-box; padding: 0 20px 0 0; z-index:0;}
+.charsheet .sheet-spectable p input[type="checkbox"] {display:block; position:absolute; top:0; left:0; width:20px; height:30px; border:none; background:#d5a776; margin:0; opacity:0; z-index:1; cursor:pointer;}
+.charsheet .sheet-spectable p input[type="text"] {display:block; position:absolute; top:0; right:0; width:20px; height:30px; border:none; background:transparent; border-radius:0; text-align:right; padding:2px; text-align:center; border-left:1px solid rgba(0,0,0,.1); color:#666; font-size:11px;}
+.charsheet .sheet-spectable .sheet-spec-roll {display:block; position:relative; width:100% !important; height:100% !important; padding:0 0 0 20px !important; border:none !important; background:transparent !important; z-index:0; margin:0 !important; font-size:12px !important; color:#000 !important; font-weight:600 !important; text-shadow: none;}
+.charsheet .sheet-spectable .sheet-spec-roll:before {content:"" !important; display:block; position:absolute; top:50%; left:5px; width:12px; height:12px; box-sizing:border-box; margin-top:-7px; border:1px solid #e8c06e; transform:rotate(-45deg); -webkit-transform:rotate(-45deg);}
+.charsheet .sheet-spectable .sheet-spec-roll:after {content:"" !important; display:block; position:absolute; top:0; bottom:0; left:0px; width:20px; background:rgba(0,0,0,.2); opacity:0;}
+.charsheet .sheet-spectable p input[type="checkbox"]:checked + .sheet-spec-roll:before {background:#d5a776; border-color:#d5a776;}
+.charsheet .sheet-spectable p input[type="checkbox"]:hover + .sheet-spec-roll:after {opacity:1;}
 
-.sheet-spectable .sheet-dice {display:block; float:right; text-align:right; padding:10px 0;}
-.sheet-spectable .sheet-dice > * {display:inline-block; vertical-align:middle;}
-.sheet-spectable .sheet-dice input[type="text"] {width:50px; height:20px; text-align:center; margin-left:5px; background:rgba(0,0,0,.3);}
+.charsheet .sheet-spectable .sheet-dice {display:block; float:right; text-align:right; padding:10px 0;}
+.charsheet .sheet-spectable .sheet-dice > * {display:inline-block; vertical-align:middle;}
+.charsheet .sheet-spectable .sheet-dice input[type="text"] {width:50px; height:20px; text-align:center; margin-left:5px; background:rgba(0,0,0,.3);}
 
-.sheet-element-to-determine-style-Z[value='1'] ~ div .sheet-ins-style-Z {display:table-cell;}
-.sheet-element-to-determine-style-A[value='1'] ~ div .sheet-ins-style-A {background:#9e808d;}
-.sheet-element-to-determine-style-B[value='1'] ~ div .sheet-ins-style-B {background:#9e808d;}
-.sheet-element-to-determine-style-C[value='1'] ~ div .sheet-ins-style-C {background:#9e808d;}
-.sheet-element-to-determine-style-D[value='1'] ~ div .sheet-ins-style-D {background:#9e808d;}
-.sheet-element-to-determine-style-E[value='1'] ~ div .sheet-ins-style-E {background:#9e808d;}
+.charsheet .sheet-element-to-determine-style-Z[value='1'] ~ div .sheet-ins-style-Z {display:table-cell;}
+.charsheet .sheet-element-to-determine-style-A[value='1'] ~ div .sheet-ins-style-A {background:#9e808d;}
+.charsheet .sheet-element-to-determine-style-B[value='1'] ~ div .sheet-ins-style-B {background:#9e808d;}
+.charsheet .sheet-element-to-determine-style-C[value='1'] ~ div .sheet-ins-style-C {background:#9e808d;}
+.charsheet .sheet-element-to-determine-style-D[value='1'] ~ div .sheet-ins-style-D {background:#9e808d;}
+.charsheet .sheet-element-to-determine-style-E[value='1'] ~ div .sheet-ins-style-E {background:#9e808d;}
 
-.sheet-element-to-fear-style-A2[value='1'] ~ div .sheet-ins-style-A2,
-.sheet-element-to-fear-style-B2[value='1'] ~ div .sheet-ins-style-B2,
-.sheet-element-to-fear-style-C2[value='1'] ~ div .sheet-ins-style-C2,
-.sheet-element-to-fear-style-D2[value='1'] ~ div .sheet-ins-style-D2,
-.sheet-element-to-fear-style-E2[value='1'] ~ div .sheet-ins-style-E2,
-.sheet-element-to-fear-style-F2[value='1'] ~ div .sheet-ins-style-F2,
-.sheet-element-to-fear-style-A3[value='1'] ~ div .sheet-ins-style-A3,
-.sheet-element-to-fear-style-B3[value='1'] ~ div .sheet-ins-style-B3,
-.sheet-element-to-fear-style-C3[value='1'] ~ div .sheet-ins-style-C3,
-.sheet-element-to-fear-style-D3[value='1'] ~ div .sheet-ins-style-D3,
-.sheet-element-to-fear-style-E3[value='1'] ~ div .sheet-ins-style-E3,
-.sheet-element-to-fear-style-F3[value='1'] ~ div .sheet-ins-style-F3,
-.sheet-element-to-fear-style-A4[value='1'] ~ div .sheet-ins-style-A4,
-.sheet-element-to-fear-style-B4[value='1'] ~ div .sheet-ins-style-B4,
-.sheet-element-to-fear-style-C4[value='1'] ~ div .sheet-ins-style-C4,
-.sheet-element-to-fear-style-D4[value='1'] ~ div .sheet-ins-style-D4,
-.sheet-element-to-fear-style-E4[value='1'] ~ div .sheet-ins-style-E4,
-.sheet-element-to-fear-style-F4[value='1'] ~ div .sheet-ins-style-F4,
-.sheet-element-to-fear-style-A5[value='1'] ~ div .sheet-ins-style-A5,
-.sheet-element-to-fear-style-B5[value='1'] ~ div .sheet-ins-style-B5,
-.sheet-element-to-fear-style-C5[value='1'] ~ div .sheet-ins-style-C5,
-.sheet-element-to-fear-style-D5[value='1'] ~ div .sheet-ins-style-D5,
-.sheet-element-to-fear-style-E5[value='1'] ~ div .sheet-ins-style-E5,
-.sheet-element-to-fear-style-F5[value='1'] ~ div .sheet-ins-style-F5,
-.sheet-element-to-fear-style-A6[value='1'] ~ div .sheet-ins-style-A6,
-.sheet-element-to-fear-style-B6[value='1'] ~ div .sheet-ins-style-B6,
-.sheet-element-to-fear-style-C6[value='1'] ~ div .sheet-ins-style-C6,
-.sheet-element-to-fear-style-D6[value='1'] ~ div .sheet-ins-style-D6,
-.sheet-element-to-fear-style-E6[value='1'] ~ div .sheet-ins-style-E6,
-.sheet-element-to-fear-style-F6[value='1'] ~ div .sheet-ins-style-F6,
-.sheet-element-to-fear-style-A7[value='1'] ~ div .sheet-ins-style-A7,
-.sheet-element-to-fear-style-B7[value='1'] ~ div .sheet-ins-style-B7,
-.sheet-element-to-fear-style-C7[value='1'] ~ div .sheet-ins-style-C7,
-.sheet-element-to-fear-style-D7[value='1'] ~ div .sheet-ins-style-D7,
-.sheet-element-to-fear-style-E7[value='1'] ~ div .sheet-ins-style-E7,
-.sheet-element-to-fear-style-F7[value='1'] ~ div .sheet-ins-style-F7,
-.sheet-element-to-fear-style-A8[value='1'] ~ div .sheet-ins-style-A8,
-.sheet-element-to-fear-style-B8[value='1'] ~ div .sheet-ins-style-B8,
-.sheet-element-to-fear-style-C8[value='1'] ~ div .sheet-ins-style-C8,
-.sheet-element-to-fear-style-D8[value='1'] ~ div .sheet-ins-style-D8,
-.sheet-element-to-fear-style-E8[value='1'] ~ div .sheet-ins-style-E8,
-.sheet-element-to-fear-style-F8[value='1'] ~ div .sheet-ins-style-F8,
-.sheet-element-to-fear-style-A9[value='1'] ~ div .sheet-ins-style-A9,
-.sheet-element-to-fear-style-B9[value='1'] ~ div .sheet-ins-style-B9,
-.sheet-element-to-fear-style-C9[value='1'] ~ div .sheet-ins-style-C9,
-.sheet-element-to-fear-style-D9[value='1'] ~ div .sheet-ins-style-D9,
-.sheet-element-to-fear-style-E9[value='1'] ~ div .sheet-ins-style-E9,
-.sheet-element-to-fear-style-F9[value='1'] ~ div .sheet-ins-style-F9,
-.sheet-element-to-fear-style-A10[value='1'] ~ div .sheet-ins-style-A10,
-.sheet-element-to-fear-style-B10[value='1'] ~ div .sheet-ins-style-B10,
-.sheet-element-to-fear-style-C10[value='1'] ~ div .sheet-ins-style-C10,
-.sheet-element-to-fear-style-D10[value='1'] ~ div .sheet-ins-style-D10,
-.sheet-element-to-fear-style-E10[value='1'] ~ div .sheet-ins-style-E10,
-.sheet-element-to-fear-style-F10[value='1'] ~ div .sheet-ins-style-F10,
-.sheet-element-to-fear-style-A11[value='1'] ~ div .sheet-ins-style-A11,
-.sheet-element-to-fear-style-B11[value='1'] ~ div .sheet-ins-style-B11,
-.sheet-element-to-fear-style-C11[value='1'] ~ div .sheet-ins-style-C11,
-.sheet-element-to-fear-style-D11[value='1'] ~ div .sheet-ins-style-D11,
-.sheet-element-to-fear-style-E11[value='1'] ~ div .sheet-ins-style-E11,
-.sheet-element-to-fear-style-F11[value='1'] ~ div .sheet-ins-style-F11,
-.sheet-element-to-fear-style-A12[value='1'] ~ div .sheet-ins-style-A12,
-.sheet-element-to-fear-style-B12[value='1'] ~ div .sheet-ins-style-B12,
-.sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12,
-.sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12,
-.sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12,
-.sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:rgba(158,128,141,.5);}
+.charsheet .sheet-element-to-fear-style-A2[value='1'] ~ div .sheet-ins-style-A2,
+.charsheet .sheet-element-to-fear-style-B2[value='1'] ~ div .sheet-ins-style-B2,
+.charsheet .sheet-element-to-fear-style-C2[value='1'] ~ div .sheet-ins-style-C2,
+.charsheet .sheet-element-to-fear-style-D2[value='1'] ~ div .sheet-ins-style-D2,
+.charsheet .sheet-element-to-fear-style-E2[value='1'] ~ div .sheet-ins-style-E2,
+.charsheet .sheet-element-to-fear-style-F2[value='1'] ~ div .sheet-ins-style-F2,
+.charsheet .sheet-element-to-fear-style-A3[value='1'] ~ div .sheet-ins-style-A3,
+.charsheet .sheet-element-to-fear-style-B3[value='1'] ~ div .sheet-ins-style-B3,
+.charsheet .sheet-element-to-fear-style-C3[value='1'] ~ div .sheet-ins-style-C3,
+.charsheet .sheet-element-to-fear-style-D3[value='1'] ~ div .sheet-ins-style-D3,
+.charsheet .sheet-element-to-fear-style-E3[value='1'] ~ div .sheet-ins-style-E3,
+.charsheet .sheet-element-to-fear-style-F3[value='1'] ~ div .sheet-ins-style-F3,
+.charsheet .sheet-element-to-fear-style-A4[value='1'] ~ div .sheet-ins-style-A4,
+.charsheet .sheet-element-to-fear-style-B4[value='1'] ~ div .sheet-ins-style-B4,
+.charsheet .sheet-element-to-fear-style-C4[value='1'] ~ div .sheet-ins-style-C4,
+.charsheet .sheet-element-to-fear-style-D4[value='1'] ~ div .sheet-ins-style-D4,
+.charsheet .sheet-element-to-fear-style-E4[value='1'] ~ div .sheet-ins-style-E4,
+.charsheet .sheet-element-to-fear-style-F4[value='1'] ~ div .sheet-ins-style-F4,
+.charsheet .sheet-element-to-fear-style-A5[value='1'] ~ div .sheet-ins-style-A5,
+.charsheet .sheet-element-to-fear-style-B5[value='1'] ~ div .sheet-ins-style-B5,
+.charsheet .sheet-element-to-fear-style-C5[value='1'] ~ div .sheet-ins-style-C5,
+.charsheet .sheet-element-to-fear-style-D5[value='1'] ~ div .sheet-ins-style-D5,
+.charsheet .sheet-element-to-fear-style-E5[value='1'] ~ div .sheet-ins-style-E5,
+.charsheet .sheet-element-to-fear-style-F5[value='1'] ~ div .sheet-ins-style-F5,
+.charsheet .sheet-element-to-fear-style-A6[value='1'] ~ div .sheet-ins-style-A6,
+.charsheet .sheet-element-to-fear-style-B6[value='1'] ~ div .sheet-ins-style-B6,
+.charsheet .sheet-element-to-fear-style-C6[value='1'] ~ div .sheet-ins-style-C6,
+.charsheet .sheet-element-to-fear-style-D6[value='1'] ~ div .sheet-ins-style-D6,
+.charsheet .sheet-element-to-fear-style-E6[value='1'] ~ div .sheet-ins-style-E6,
+.charsheet .sheet-element-to-fear-style-F6[value='1'] ~ div .sheet-ins-style-F6,
+.charsheet .sheet-element-to-fear-style-A7[value='1'] ~ div .sheet-ins-style-A7,
+.charsheet .sheet-element-to-fear-style-B7[value='1'] ~ div .sheet-ins-style-B7,
+.charsheet .sheet-element-to-fear-style-C7[value='1'] ~ div .sheet-ins-style-C7,
+.charsheet .sheet-element-to-fear-style-D7[value='1'] ~ div .sheet-ins-style-D7,
+.charsheet .sheet-element-to-fear-style-E7[value='1'] ~ div .sheet-ins-style-E7,
+.charsheet .sheet-element-to-fear-style-F7[value='1'] ~ div .sheet-ins-style-F7,
+.charsheet .sheet-element-to-fear-style-A8[value='1'] ~ div .sheet-ins-style-A8,
+.charsheet .sheet-element-to-fear-style-B8[value='1'] ~ div .sheet-ins-style-B8,
+.charsheet .sheet-element-to-fear-style-C8[value='1'] ~ div .sheet-ins-style-C8,
+.charsheet .sheet-element-to-fear-style-D8[value='1'] ~ div .sheet-ins-style-D8,
+.charsheet .sheet-element-to-fear-style-E8[value='1'] ~ div .sheet-ins-style-E8,
+.charsheet .sheet-element-to-fear-style-F8[value='1'] ~ div .sheet-ins-style-F8,
+.charsheet .sheet-element-to-fear-style-A9[value='1'] ~ div .sheet-ins-style-A9,
+.charsheet .sheet-element-to-fear-style-B9[value='1'] ~ div .sheet-ins-style-B9,
+.charsheet .sheet-element-to-fear-style-C9[value='1'] ~ div .sheet-ins-style-C9,
+.charsheet .sheet-element-to-fear-style-D9[value='1'] ~ div .sheet-ins-style-D9,
+.charsheet .sheet-element-to-fear-style-E9[value='1'] ~ div .sheet-ins-style-E9,
+.charsheet .sheet-element-to-fear-style-F9[value='1'] ~ div .sheet-ins-style-F9,
+.charsheet .sheet-element-to-fear-style-A10[value='1'] ~ div .sheet-ins-style-A10,
+.charsheet .sheet-element-to-fear-style-B10[value='1'] ~ div .sheet-ins-style-B10,
+.charsheet .sheet-element-to-fear-style-C10[value='1'] ~ div .sheet-ins-style-C10,
+.charsheet .sheet-element-to-fear-style-D10[value='1'] ~ div .sheet-ins-style-D10,
+.charsheet .sheet-element-to-fear-style-E10[value='1'] ~ div .sheet-ins-style-E10,
+.charsheet .sheet-element-to-fear-style-F10[value='1'] ~ div .sheet-ins-style-F10,
+.charsheet .sheet-element-to-fear-style-A11[value='1'] ~ div .sheet-ins-style-A11,
+.charsheet .sheet-element-to-fear-style-B11[value='1'] ~ div .sheet-ins-style-B11,
+.charsheet .sheet-element-to-fear-style-C11[value='1'] ~ div .sheet-ins-style-C11,
+.charsheet .sheet-element-to-fear-style-D11[value='1'] ~ div .sheet-ins-style-D11,
+.charsheet .sheet-element-to-fear-style-E11[value='1'] ~ div .sheet-ins-style-E11,
+.charsheet .sheet-element-to-fear-style-F11[value='1'] ~ div .sheet-ins-style-F11,
+.charsheet .sheet-element-to-fear-style-A12[value='1'] ~ div .sheet-ins-style-A12,
+.charsheet .sheet-element-to-fear-style-B12[value='1'] ~ div .sheet-ins-style-B12,
+.charsheet .sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12,
+.charsheet .sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12,
+.charsheet .sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12,
+.charsheet .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 {background:rgba(158,128,141,.5);}
 
-.sheet-element-to-fear-style-A2[value='1'] ~ div .sheet-ins-style-A2 .sheet-spec-roll,
-.sheet-element-to-fear-style-B2[value='1'] ~ div .sheet-ins-style-B2 .sheet-spec-roll,
-.sheet-element-to-fear-style-C2[value='1'] ~ div .sheet-ins-style-C2 .sheet-spec-roll,
-.sheet-element-to-fear-style-D2[value='1'] ~ div .sheet-ins-style-D2 .sheet-spec-roll,
-.sheet-element-to-fear-style-E2[value='1'] ~ div .sheet-ins-style-E2 .sheet-spec-roll,
-.sheet-element-to-fear-style-F2[value='1'] ~ div .sheet-ins-style-F2 .sheet-spec-roll,
-.sheet-element-to-fear-style-A3[value='1'] ~ div .sheet-ins-style-A3 .sheet-spec-roll,
-.sheet-element-to-fear-style-B3[value='1'] ~ div .sheet-ins-style-B3 .sheet-spec-roll,
-.sheet-element-to-fear-style-C3[value='1'] ~ div .sheet-ins-style-C3 .sheet-spec-roll,
-.sheet-element-to-fear-style-D3[value='1'] ~ div .sheet-ins-style-D3 .sheet-spec-roll,
-.sheet-element-to-fear-style-E3[value='1'] ~ div .sheet-ins-style-E3 .sheet-spec-roll,
-.sheet-element-to-fear-style-F3[value='1'] ~ div .sheet-ins-style-F3 .sheet-spec-roll,
-.sheet-element-to-fear-style-A4[value='1'] ~ div .sheet-ins-style-A4 .sheet-spec-roll,
-.sheet-element-to-fear-style-B4[value='1'] ~ div .sheet-ins-style-B4 .sheet-spec-roll,
-.sheet-element-to-fear-style-C4[value='1'] ~ div .sheet-ins-style-C4 .sheet-spec-roll,
-.sheet-element-to-fear-style-D4[value='1'] ~ div .sheet-ins-style-D4 .sheet-spec-roll,
-.sheet-element-to-fear-style-E4[value='1'] ~ div .sheet-ins-style-E4 .sheet-spec-roll,
-.sheet-element-to-fear-style-F4[value='1'] ~ div .sheet-ins-style-F4 .sheet-spec-roll,
-.sheet-element-to-fear-style-A5[value='1'] ~ div .sheet-ins-style-A5 .sheet-spec-roll,
-.sheet-element-to-fear-style-B5[value='1'] ~ div .sheet-ins-style-B5 .sheet-spec-roll,
-.sheet-element-to-fear-style-C5[value='1'] ~ div .sheet-ins-style-C5 .sheet-spec-roll,
-.sheet-element-to-fear-style-D5[value='1'] ~ div .sheet-ins-style-D5 .sheet-spec-roll,
-.sheet-element-to-fear-style-E5[value='1'] ~ div .sheet-ins-style-E5 .sheet-spec-roll,
-.sheet-element-to-fear-style-F5[value='1'] ~ div .sheet-ins-style-F5 .sheet-spec-roll,
-.sheet-element-to-fear-style-A6[value='1'] ~ div .sheet-ins-style-A6 .sheet-spec-roll,
-.sheet-element-to-fear-style-B6[value='1'] ~ div .sheet-ins-style-B6 .sheet-spec-roll,
-.sheet-element-to-fear-style-C6[value='1'] ~ div .sheet-ins-style-C6 .sheet-spec-roll,
-.sheet-element-to-fear-style-D6[value='1'] ~ div .sheet-ins-style-D6 .sheet-spec-roll,
-.sheet-element-to-fear-style-E6[value='1'] ~ div .sheet-ins-style-E6 .sheet-spec-roll,
-.sheet-element-to-fear-style-F6[value='1'] ~ div .sheet-ins-style-F6 .sheet-spec-roll,
-.sheet-element-to-fear-style-A7[value='1'] ~ div .sheet-ins-style-A7 .sheet-spec-roll,
-.sheet-element-to-fear-style-B7[value='1'] ~ div .sheet-ins-style-B7 .sheet-spec-roll,
-.sheet-element-to-fear-style-C7[value='1'] ~ div .sheet-ins-style-C7 .sheet-spec-roll,
-.sheet-element-to-fear-style-D7[value='1'] ~ div .sheet-ins-style-D7 .sheet-spec-roll,
-.sheet-element-to-fear-style-E7[value='1'] ~ div .sheet-ins-style-E7 .sheet-spec-roll,
-.sheet-element-to-fear-style-F7[value='1'] ~ div .sheet-ins-style-F7 .sheet-spec-roll,
-.sheet-element-to-fear-style-A8[value='1'] ~ div .sheet-ins-style-A8 .sheet-spec-roll,
-.sheet-element-to-fear-style-B8[value='1'] ~ div .sheet-ins-style-B8 .sheet-spec-roll,
-.sheet-element-to-fear-style-C8[value='1'] ~ div .sheet-ins-style-C8 .sheet-spec-roll,
-.sheet-element-to-fear-style-D8[value='1'] ~ div .sheet-ins-style-D8 .sheet-spec-roll,
-.sheet-element-to-fear-style-E8[value='1'] ~ div .sheet-ins-style-E8 .sheet-spec-roll,
-.sheet-element-to-fear-style-F8[value='1'] ~ div .sheet-ins-style-F8 .sheet-spec-roll,
-.sheet-element-to-fear-style-A9[value='1'] ~ div .sheet-ins-style-A9 .sheet-spec-roll,
-.sheet-element-to-fear-style-B9[value='1'] ~ div .sheet-ins-style-B9 .sheet-spec-roll,
-.sheet-element-to-fear-style-C9[value='1'] ~ div .sheet-ins-style-C9 .sheet-spec-roll,
-.sheet-element-to-fear-style-D9[value='1'] ~ div .sheet-ins-style-D9 .sheet-spec-roll,
-.sheet-element-to-fear-style-E9[value='1'] ~ div .sheet-ins-style-E9 .sheet-spec-roll,
-.sheet-element-to-fear-style-F9[value='1'] ~ div .sheet-ins-style-F9 .sheet-spec-roll,
-.sheet-element-to-fear-style-A10[value='1'] ~ div .sheet-ins-style-A10 .sheet-spec-roll,
-.sheet-element-to-fear-style-B10[value='1'] ~ div .sheet-ins-style-B10 .sheet-spec-roll,
-.sheet-element-to-fear-style-C10[value='1'] ~ div .sheet-ins-style-C10 .sheet-spec-roll,
-.sheet-element-to-fear-style-D10[value='1'] ~ div .sheet-ins-style-D10 .sheet-spec-roll,
-.sheet-element-to-fear-style-E10[value='1'] ~ div .sheet-ins-style-E10 .sheet-spec-roll,
-.sheet-element-to-fear-style-F10[value='1'] ~ div .sheet-ins-style-F10 .sheet-spec-roll,
-.sheet-element-to-fear-style-A11[value='1'] ~ div .sheet-ins-style-A11 .sheet-spec-roll,
-.sheet-element-to-fear-style-B11[value='1'] ~ div .sheet-ins-style-B11 .sheet-spec-roll,
-.sheet-element-to-fear-style-C11[value='1'] ~ div .sheet-ins-style-C11 .sheet-spec-roll,
-.sheet-element-to-fear-style-D11[value='1'] ~ div .sheet-ins-style-D11 .sheet-spec-roll,
-.sheet-element-to-fear-style-E11[value='1'] ~ div .sheet-ins-style-E11 .sheet-spec-roll,
-.sheet-element-to-fear-style-F11[value='1'] ~ div .sheet-ins-style-F11 .sheet-spec-roll,
-.sheet-element-to-fear-style-A12[value='1'] ~ div .sheet-ins-style-A12 .sheet-spec-roll,
-.sheet-element-to-fear-style-B12[value='1'] ~ div .sheet-ins-style-B12 .sheet-spec-roll,
-.sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12 .sheet-spec-roll,
-.sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12 .sheet-spec-roll,
-.sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12 .sheet-spec-roll,
-.sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 .sheet-spec-roll {color:#fff !important;}
+.charsheet .sheet-element-to-fear-style-A2[value='1'] ~ div .sheet-ins-style-A2 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-B2[value='1'] ~ div .sheet-ins-style-B2 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-C2[value='1'] ~ div .sheet-ins-style-C2 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-D2[value='1'] ~ div .sheet-ins-style-D2 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-E2[value='1'] ~ div .sheet-ins-style-E2 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-F2[value='1'] ~ div .sheet-ins-style-F2 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-A3[value='1'] ~ div .sheet-ins-style-A3 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-B3[value='1'] ~ div .sheet-ins-style-B3 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-C3[value='1'] ~ div .sheet-ins-style-C3 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-D3[value='1'] ~ div .sheet-ins-style-D3 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-E3[value='1'] ~ div .sheet-ins-style-E3 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-F3[value='1'] ~ div .sheet-ins-style-F3 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-A4[value='1'] ~ div .sheet-ins-style-A4 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-B4[value='1'] ~ div .sheet-ins-style-B4 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-C4[value='1'] ~ div .sheet-ins-style-C4 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-D4[value='1'] ~ div .sheet-ins-style-D4 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-E4[value='1'] ~ div .sheet-ins-style-E4 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-F4[value='1'] ~ div .sheet-ins-style-F4 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-A5[value='1'] ~ div .sheet-ins-style-A5 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-B5[value='1'] ~ div .sheet-ins-style-B5 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-C5[value='1'] ~ div .sheet-ins-style-C5 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-D5[value='1'] ~ div .sheet-ins-style-D5 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-E5[value='1'] ~ div .sheet-ins-style-E5 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-F5[value='1'] ~ div .sheet-ins-style-F5 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-A6[value='1'] ~ div .sheet-ins-style-A6 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-B6[value='1'] ~ div .sheet-ins-style-B6 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-C6[value='1'] ~ div .sheet-ins-style-C6 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-D6[value='1'] ~ div .sheet-ins-style-D6 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-E6[value='1'] ~ div .sheet-ins-style-E6 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-F6[value='1'] ~ div .sheet-ins-style-F6 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-A7[value='1'] ~ div .sheet-ins-style-A7 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-B7[value='1'] ~ div .sheet-ins-style-B7 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-C7[value='1'] ~ div .sheet-ins-style-C7 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-D7[value='1'] ~ div .sheet-ins-style-D7 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-E7[value='1'] ~ div .sheet-ins-style-E7 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-F7[value='1'] ~ div .sheet-ins-style-F7 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-A8[value='1'] ~ div .sheet-ins-style-A8 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-B8[value='1'] ~ div .sheet-ins-style-B8 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-C8[value='1'] ~ div .sheet-ins-style-C8 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-D8[value='1'] ~ div .sheet-ins-style-D8 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-E8[value='1'] ~ div .sheet-ins-style-E8 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-F8[value='1'] ~ div .sheet-ins-style-F8 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-A9[value='1'] ~ div .sheet-ins-style-A9 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-B9[value='1'] ~ div .sheet-ins-style-B9 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-C9[value='1'] ~ div .sheet-ins-style-C9 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-D9[value='1'] ~ div .sheet-ins-style-D9 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-E9[value='1'] ~ div .sheet-ins-style-E9 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-F9[value='1'] ~ div .sheet-ins-style-F9 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-A10[value='1'] ~ div .sheet-ins-style-A10 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-B10[value='1'] ~ div .sheet-ins-style-B10 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-C10[value='1'] ~ div .sheet-ins-style-C10 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-D10[value='1'] ~ div .sheet-ins-style-D10 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-E10[value='1'] ~ div .sheet-ins-style-E10 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-F10[value='1'] ~ div .sheet-ins-style-F10 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-A11[value='1'] ~ div .sheet-ins-style-A11 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-B11[value='1'] ~ div .sheet-ins-style-B11 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-C11[value='1'] ~ div .sheet-ins-style-C11 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-D11[value='1'] ~ div .sheet-ins-style-D11 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-E11[value='1'] ~ div .sheet-ins-style-E11 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-F11[value='1'] ~ div .sheet-ins-style-F11 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-A12[value='1'] ~ div .sheet-ins-style-A12 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-B12[value='1'] ~ div .sheet-ins-style-B12 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-C12[value='1'] ~ div .sheet-ins-style-C12 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-D12[value='1'] ~ div .sheet-ins-style-D12 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-E12[value='1'] ~ div .sheet-ins-style-E12 .sheet-spec-roll,
+.charsheet .sheet-element-to-fear-style-F12[value='1'] ~ div .sheet-ins-style-F12 .sheet-spec-roll {color:#fff !important;}
 
 
 /**********************************************************************
 	Fight Wrap
 **********************************************************************/
 
-.sheet-fight-wrap {display:block; position:relative; margin:10px 0 20px; padding:0 25px; background:url('https://i.imgur.com/XqxyAII.png') no-repeat 50% 50%; overflow:hidden;}
-.sheet-fight-wrap > * {height:57px;}
-.sheet-fight-wrap > *:before {content:""; display:inline-block; width:0; height:100%; vertical-align:middle;}
-.sheet-fight-wrap .sheet-tit {display:block; position:absolute; font-size:14px; font-weight:800; color:#fff; top:50%; transform:translateY(-50%); -webkit-transform:translateY(-50%);}
-.sheet-fight-wrap .sheet-plot {position:relative; float:left; padding-left:60px; width:59%;}
-.sheet-fight-wrap .sheet-plot .sheet-tit {left:0; padding-bottom:2px;}
-.sheet-fight-wrap .sheet-evg {position:relative; float:right; width:40%; text-align:right; padding-right:60px;}
-.sheet-fight-wrap .sheet-evg .sheet-tit {right:0; padding-bottom:2px;}
+.charsheet .sheet-fight-wrap {display:block; position:relative; margin:10px 0 20px; padding:0 25px; background:url('https://i.imgur.com/XqxyAII.png') no-repeat 50% 50%; overflow:hidden;}
+.charsheet .sheet-fight-wrap > * {height:57px;}
+.charsheet .sheet-fight-wrap > *:before {content:""; display:inline-block; width:0; height:100%; vertical-align:middle;}
+.charsheet .sheet-fight-wrap .sheet-tit {display:block; position:absolute; font-size:14px; font-weight:800; color:#fff; top:50%; transform:translateY(-50%); -webkit-transform:translateY(-50%);}
+.charsheet .sheet-fight-wrap .sheet-plot {position:relative; float:left; padding-left:60px; width:59%;}
+.charsheet .sheet-fight-wrap .sheet-plot .sheet-tit {left:0; padding-bottom:2px;}
+.charsheet .sheet-fight-wrap .sheet-evg {position:relative; float:right; width:40%; text-align:right; padding-right:60px;}
+.charsheet .sheet-fight-wrap .sheet-evg .sheet-tit {right:0; padding-bottom:2px;}
 
-.sheet-plot > *,
-.sheet-evg > * {display:inline-block; vertical-align:middle; color:#fff;}
-.sheet-evg input[type="text"],
-.sheet-evg input[type="number"] {width:40px; text-align:center; color:#fff; border-bottom:1px solid #fff;}
-.sheet-evg .sheet-dice,
-.sheet-plot .sheet-dice {display:inline-block; vertical-align:middle;}
+.charsheet .sheet-plot > *,
+.charsheet .sheet-evg > * {display:inline-block; vertical-align:middle; color:#fff;}
+.charsheet .sheet-evg input[type="text"],
+.charsheet .sheet-evg input[type="number"] {width:40px; text-align:center; color:#fff; border-bottom:1px solid #fff;}
+.charsheet .sheet-evg .sheet-dice,
+.charsheet .sheet-plot .sheet-dice {display:inline-block; vertical-align:middle;}
 
-.sheet-plot span {display:block; float:left; position:relative; width:55px; height:35px; z-index:0; color:#fff;}
-.sheet-plot em {display:block; text-align:center; position:relative; font-style:normal; font-weight:800; line-height:1.2; font-size:14px; padding-top:2px;}
-.sheet-plot i {display:block; text-align:center; position:relative; font-style:normal; line-height:1.2; font-size:11px; opacity:.7;}
-.sheet-plot span input[type="radio"] {display:block; position:absolute; top:0; left:0; right:0; bottom:0; width:100%; height:100%; border:none; background:#fff; margin:0; opacity:0; z-index:1; cursor:pointer;}
-.sheet-plot span input[type="radio"]:checked ~ em,
-.sheet-plot span input[type="radio"]:checked ~ i {color:#fcff00;}
-.sheet-plot span input[type="radio"]:checked ~ em {}
-.sheet-plot span input[type="radio"]:checked ~ i {}
-.sheet-evg input[type="number"] {width:50px; text-align:center; font-family:'Malgun Gothic';}
-.sheet-evg:after {content:""; display:block; position:absolute; width:5px; height:100px; left:0; top:50%; background:#fff; transform:translateY(-50%) rotate(45deg); -webkit-transform:translateY(-50%) rotate(45deg);}
+.charsheet .sheet-plot span {display:block; float:left; position:relative; width:55px; height:35px; z-index:0; color:#fff;}
+.charsheet .sheet-plot em {display:block; text-align:center; position:relative; font-style:normal; font-weight:800; line-height:1.2; font-size:14px; padding-top:2px;}
+.charsheet .sheet-plot i {display:block; text-align:center; position:relative; font-style:normal; line-height:1.2; font-size:11px; opacity:.7;}
+.charsheet .sheet-plot span input[type="radio"] {display:block; position:absolute; top:0; left:0; right:0; bottom:0; width:100%; height:100%; border:none; background:#fff; margin:0; opacity:0; z-index:1; cursor:pointer;}
+.charsheet .sheet-plot span input[type="radio"]:checked ~ em,
+.charsheet .sheet-plot span input[type="radio"]:checked ~ i {color:#fcff00;}
+.charsheet .sheet-plot span input[type="radio"]:checked ~ em {}
+.charsheet .sheet-plot span input[type="radio"]:checked ~ i {}
+.charsheet .sheet-evg input[type="number"] {width:50px; text-align:center; font-family:'Malgun Gothic';}
+.charsheet .sheet-evg:after {content:""; display:block; position:absolute; width:5px; height:100px; left:0; top:50%; background:#fff; transform:translateY(-50%) rotate(45deg); -webkit-transform:translateY(-50%) rotate(45deg);}
 
 
 
@@ -771,51 +778,51 @@ select, div, button, textarea, span, input, img, label{box-sizing: border-box; o
 	Abilly List
 **********************************************************************/
 
-.sheet-abilltyList {position:relative; width:470px; float:left; padding-bottom:20px; margin-top:10px;}
-.sheet-relationList {position:relative; width:320px; float:right; padding-bottom:20px; margin-top:10px;}
+.charsheet .sheet-abilltyList {position:relative; width:470px; float:left; padding-bottom:20px; margin-top:10px;}
+.charsheet .sheet-relationList {position:relative; width:320px; float:right; padding-bottom:20px; margin-top:10px;}
 
-.sheet-ab-title {display:block; position:relative; padding-left:45px; height:50px; margin-bottom:5px; line-height:50px; z-index:0; font-size:14px; font-weight:800; color:#fff; background:url('https://i.imgur.com/eeMwMoI.png') no-repeat 0 0;}
-.sheet-ab-title > div {position:absolute; right:0; bottom:0px; text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;}
+.charsheet .sheet-ab-title {display:block; position:relative; padding-left:45px; height:50px; margin-bottom:5px; line-height:50px; z-index:0; font-size:14px; font-weight:800; color:#fff; background:url('https://i.imgur.com/eeMwMoI.png') no-repeat 0 0;}
+.charsheet .sheet-ab-title > div {position:absolute; right:0; bottom:0px; text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;}
 
-.sheet-dataList {display:block; position:relative;}
-.sheet-ab-item {display:block; position:relative; z-index:0; border-bottom:1px solid rgba(0,0,0,.1);}
-.sheet-ab-item input[type="text"],
-.sheet-ab-item input[type="number"],
-.sheet-ab-item select {height:30px; font-size:12px; border:none;}
-.sheet-ab-item select option {color:#fff;}
-.sheet-ab-item:after {content:""; display:block; clear:both;}
-.sheet-ab-item + * {margin-top:5px !important;}
-.sheet-ab-item > * {float:left; position:relative;}
-.sheet-ab-item > input[type="checkbox"] {display:block; position:absolute; top:0; left:0; width:25px; height:30px; border:none; margin:0; opacity:0; z-index:1; cursor:pointer;}
-.sheet-ab-item > input[type="checkbox"] + * {display:block; position:relative; min-height:30px; padding-left:28px !important; box-sizing:content-box; z-index:0;}
-.sheet-ab-item > input[type="checkbox"] + *:before {content:""; display:block; position:absolute; width:10px; height:10px; border:2px solid #9e808d; background:transparent; top:50%; left:5px; transform:translateY(-50%) rotate(-45deg);}
-.sheet-ab-item > input[type="checkbox"]:checked + *:before {background:#9e808d;}
-.sheet-ab-item > input[type="checkbox"]:checked ~ .sheet-effect {display:block;}
+.charsheet .sheet-dataList {display:block; position:relative;}
+.charsheet .sheet-ab-item {display:block; position:relative; z-index:0; border-bottom:1px solid rgba(0,0,0,.1);}
+.charsheet .sheet-ab-item input[type="text"],
+.charsheet .sheet-ab-item input[type="number"],
+.charsheet .sheet-ab-item select {height:30px; font-size:12px; border:none;}
+.charsheet .sheet-ab-item select option {color:#fff;}
+.charsheet .sheet-ab-item:after {content:""; display:block; clear:both;}
+.charsheet .sheet-ab-item + * {margin-top:5px !important;}
+.charsheet .sheet-ab-item > * {float:left; position:relative;}
+.charsheet .sheet-ab-item > input[type="checkbox"] {display:block; position:absolute; top:0; left:0; width:25px; height:30px; border:none; margin:0; opacity:0; z-index:1; cursor:pointer;}
+.charsheet .sheet-ab-item > input[type="checkbox"] + * {display:block; position:relative; min-height:30px; padding-left:28px !important; box-sizing:content-box; z-index:0;}
+.charsheet .sheet-ab-item > input[type="checkbox"] + *:before {content:""; display:block; position:absolute; width:10px; height:10px; border:2px solid #9e808d; background:transparent; top:50%; left:5px; transform:translateY(-50%) rotate(-45deg);}
+.charsheet .sheet-ab-item > input[type="checkbox"]:checked + *:before {background:#9e808d;}
+.charsheet .sheet-ab-item > input[type="checkbox"]:checked ~ .sheet-effect {display:block;}
 
-.sheet-ab-item:hover input[type="text"],
-.sheet-ab-item:hover input[type="number"],
-.sheet-ab-item:hover select  {border-bottom:1px solid rgba(0,0,0,.5);}
+.charsheet .sheet-ab-item:hover input[type="text"],
+.charsheet .sheet-ab-item:hover input[type="number"],
+.charsheet .sheet-ab-item:hover select  {border-bottom:1px solid rgba(0,0,0,.5);}
 
-.sheet-ab-item .sheet-effect {display:none; padding-left:30px; position:relative; clear:both; float:none; padding-top:5px;}
-.sheet-ab-item .sheet-effect textarea {display:block; width:100%; height:100px; resize:none; border:none; padding:0; box-sizing:border-box; line-height:1.5; border:none; outline:0;}
-.sheet-ab-item .sheet-effect:before {content:""; display:block; position:absolute; left:11px; width:1px; top:-6px; bottom:0; background:#9e808d;}
-.sheet-ab-item .sheet-control {width:25px; padding-top:2px;}
-.sheet-ab-item .sheet-control button:before {font-weight:100;}
-.sheet-ab-item .sheet-name {padding:0 5px; width:200px; float:left; margin-bottom:0; margin-bottom:10px;}
-.sheet-ab-item .sheet-type {width:70px;}
-.sheet-ab-item .sheet-spec {width:80px; padding:0 5px; text-align:center;}
-.sheet-ab-item .sheet-spec input {text-align:center;}
-.sheet-ab-item .sheet-mod {width:60px; text-align:center;}
-.sheet-ab-item .sheet-mod * {text-align:center;}
-.sheet-ab-item .sheet-option {width:50px; text-align:center; margin-right:10px;}
-.sheet-ab-item .sheet-option input[type="checkbox"] {display:block; position:absolute; top:0; left:0; right:0; bottom:0; width:100%; height:100%; border:none; background:#fff; margin:0; opacity:0; z-index:1; cursor:pointer;}
-.sheet-ab-item .sheet-option input[type="checkbox"] + span {display:block; position:relative; padding-left:20px; line-height:30px; font-weight:600; font-size:12px;}
-.sheet-ab-item .sheet-option input[type="checkbox"] + span:before {content:""; display:block; position:absolute; top:50%; left:3px; width:14px; height:14px; box-sizing:border-box; margin-top:-7px; border:2px solid #9e808d; border-radius:100%;}
-.sheet-ab-item .sheet-option input[type="checkbox"]:checked + span:before {background:#9e808d; border-color:#9e808d;}
-.sheet-ab-item .sheet-emotion {width:80px;}
+.charsheet .sheet-ab-item .sheet-effect {display:none; padding-left:30px; position:relative; clear:both; float:none; padding-top:5px;}
+.charsheet .sheet-ab-item .sheet-effect textarea {display:block; width:100%; height:100px; resize:none; border:none; padding:0; box-sizing:border-box; line-height:1.5; border:none; outline:0;}
+.charsheet .sheet-ab-item .sheet-effect:before {content:""; display:block; position:absolute; left:11px; width:1px; top:-6px; bottom:0; background:#9e808d;}
+.charsheet .sheet-ab-item .sheet-control {width:25px; padding-top:2px;}
+.charsheet .sheet-ab-item .sheet-control button:before {font-weight:100;}
+.charsheet .sheet-ab-item .sheet-name {padding:0 5px; width:200px; float:left; margin-bottom:0; margin-bottom:10px;}
+.charsheet .sheet-ab-item .sheet-type {width:70px;}
+.charsheet .sheet-ab-item .sheet-spec {width:80px; padding:0 5px; text-align:center;}
+.charsheet .sheet-ab-item .sheet-spec input {text-align:center;}
+.charsheet .sheet-ab-item .sheet-mod {width:60px; text-align:center;}
+.charsheet .sheet-ab-item .sheet-mod * {text-align:center;}
+.charsheet .sheet-ab-item .sheet-option {width:50px; text-align:center; margin-right:10px;}
+.charsheet .sheet-ab-item .sheet-option input[type="checkbox"] {display:block; position:absolute; top:0; left:0; right:0; bottom:0; width:100%; height:100%; border:none; background:#fff; margin:0; opacity:0; z-index:1; cursor:pointer;}
+.charsheet .sheet-ab-item .sheet-option input[type="checkbox"] + span {display:block; position:relative; padding-left:20px; line-height:30px; font-weight:600; font-size:12px;}
+.charsheet .sheet-ab-item .sheet-option input[type="checkbox"] + span:before {content:""; display:block; position:absolute; top:50%; left:3px; width:14px; height:14px; box-sizing:border-box; margin-top:-7px; border:2px solid #9e808d; border-radius:100%;}
+.charsheet .sheet-ab-item .sheet-option input[type="checkbox"]:checked + span:before {background:#9e808d; border-color:#9e808d;}
+.charsheet .sheet-ab-item .sheet-emotion {width:80px;}
 
 .repcontainer .repitem {margin-top:5px;}
-.sheet-relationList .sheet-ab-item .sheet-name {width:140px;}
+.charsheet .sheet-relationList .sheet-ab-item .sheet-name {width:140px;}
 
 
 
