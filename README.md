@@ -8,9 +8,14 @@ Roll20에서 사용할 수 있는 커스텀시트 코드를 공개하는 곳입�
 ## Character Sheet List
 #### inSANe
 * [기본 캐릭터 시트](inSANe/insane_BASIC)
+* [동양풍 세계관 전용](inSANe/insane_EAST)
 * [『프린세스가 되고싶어!』캠페인 전용](inSANe/insane_PRINARI)
 * [『호그와트』캠페인 전용](inSANe/insane_HOGWARTS)
-* [동양풍 세계관 전용](inSANe/insane_EAST)
+* [『황량일취몽』캠페인 전용](inSANe/insane_A_desolate_dream)
+* [『업야담』캠페인 전용](inSANe/insane_UPYADAM)
+
+#### 크툴로의 부름
+* [블러디 메리 캐슬](CoC/coc_BloodyMaryCastle)
 
 #### 은검의 스텔라나이츠
 * [기본 캐릭터 시트](stella/stella_BASIC)
